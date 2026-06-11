@@ -59,16 +59,27 @@
       var icon = ICONS[it.icon] || '';
       var name = it.name || '';
       var unit = it.unit || '';
-      var val  = it.value_display || it.value || '';
-      var staleBadge = it.stale ? ' <span class="cot-stale" title="Seneste kendte værdi">·</span>' : '';
+      var val;
+      if (it.stale && (it.value === null || it.value === undefined)) {
+        var src = it.source_url || data.source_url || '#';
+        val = '<a class="cot-source-link" href="' + src + '" target="_blank" rel="noopener nofollow">Se kilde →</a>';
+      } else {
+        val = it.value_display || it.value || '—';
+      }
+      var staleBadge = (it.stale && it.value !== null && it.value !== undefined)
+        ? ' <span class="cot-stale" title="Seneste kendte værdi (live-scrape mislykkedes)">·</span>'
+        : '';
+      var dateCell = it.stale && (it.value === null || it.value === undefined)
+        ? '<span class="cot-unit">live ej tilgængelig</span>'
+        : formatDate(it.date);
       return ''
-        + '<tr>'
+        + '<tr' + (it.stale ? ' class="cot-row-stale"' : '') + '>'
         + '  <td class="cot-cell-prod">'
         + '    <span class="cot-icon" aria-hidden="true">' + icon + '</span>'
         + '    <span><strong>' + name + '</strong>' + staleBadge + '<br><span class="cot-unit">' + unit + '</span></span>'
         + '  </td>'
         + '  <td class="cot-cell-val">' + val + '</td>'
-        + '  <td class="cot-cell-date">' + formatDate(it.date) + '</td>'
+        + '  <td class="cot-cell-date">' + dateCell + '</td>'
         + '</tr>';
     }).join('');
 
@@ -100,7 +111,7 @@
   function render(container) {
     container.innerHTML = '<div class="cot-card cot-card--loading">Indlæser noteringer…</div>';
     var variant = container.getAttribute('data-cotacoes-noteringer-dk') || '';
-    var url = variant === 'komplet' ? '/data/noteringer-dk-komplet.json' : '/data/noteringer-dk.json';
+    var url = variant === 'komplet' ? '/data/noteringer-dk-completas.json' : '/data/noteringer-dk.json';
     if (typeof fetch !== 'function') { showPlaceholder(container); return; }
     fetch(url, { cache: 'no-cache' })
       .then(function (r) { if (!r.ok) throw new Error('http ' + r.status); return r.json(); })

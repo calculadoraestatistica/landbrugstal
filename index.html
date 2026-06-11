@@ -70,9 +70,9 @@
     "symbols": [
       { "description": "EUR/DKK", "proName": "FX_IDC:EURDKK" },
       { "description": "USD/DKK", "proName": "FX_IDC:USDDKK" },
-      { "description": "Hvede (Euronext)", "proName": "EURONEXT:EBM1!" },
-      { "description": "Raps (Euronext)", "proName": "EURONEXT:ECO1!" },
-      { "description": "Majs (Euronext)", "proName": "EURONEXT:EMA1!" }
+      { "description": "Hvede (CBOT)", "proName": "OANDA:WHEATUSD" },
+      { "description": "Sojabønner (CBOT proxy for raps)", "proName": "OANDA:SOYBNUSD" },
+      { "description": "Majs (CBOT)", "proName": "OANDA:CORNUSD" }
     ],
     "isTransparent": true,
     "showSymbolLogo": true,
@@ -90,7 +90,7 @@
     <div class="container">
       <span class="hero__eyebrow">Opdateret hver dag.</span>
       <h1>Landbrugsberegnere og daglige noteringer fra danske kilder.</h1>
-      <p class="lead">Spotpriser på <strong>hvede, byg, raps</strong> og <strong>majs</strong>, <strong>mælkepris</strong> fra Arla, <strong>grisenotering</strong> og <strong>kreaturnotering</strong> fra Danish Crown, samt <strong>EUR/DKK</strong> og Euronext-futures — opdateret hver hverdag. Følg markedet ét sted.</p>
+      <p class="lead">Spotpriser på <strong>hvede, byg, raps</strong> og <strong>majs</strong>, <strong>mælkepris</strong> fra Arla, <strong>grisenotering</strong> og <strong>kreaturnotering</strong> fra Danish Crown, samt <strong>EUR/DKK</strong> og internationale ag-futures — opdateret hver hverdag. Følg markedet ét sted.</p>
       <p class="hero__sources">Kilder: <a href="https://farmtalonline.dlbr.dk/" rel="noopener nofollow" target="_blank">Farmtal Online (SEGES)</a>, <a href="https://ejer.danishcrown.com/" rel="noopener nofollow" target="_blank">Danish Crown</a>, <a href="https://catalog.arla.com/ARLA/milk-price/arla-dk/" rel="noopener nofollow" target="_blank">Arla DK</a>, <a href="https://danskesvineproducenter.dk/noteringer/" rel="noopener nofollow" target="_blank">Danske Svineproducenter</a> og <a href="https://www.euronext.com/" rel="noopener nofollow" target="_blank">Euronext</a>.</p>
     </div>
   </section>
@@ -111,21 +111,21 @@
         <div class="widget-card__head">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           <span class="widget-card__title">Futures og valuta — marked i realtid</span>
-          <span class="widget-card__tag">Euronext via TradingView</span>
+          <span class="widget-card__tag">CBOT/Chicago via TradingView</span>
         </div>
         <div class="widget-card__body">
-          <!-- TradingView Symbol Overview: Euronext futures + EUR/DKK + USD/DKK -->
+          <!-- TradingView Symbol Overview: Chicago ag futures proxy + EUR/DKK + USD/DKK -->
           <div class="tradingview-widget-container" style="min-height:380px;">
             <div class="tradingview-widget-container__widget"></div>
             <div class="tradingview-widget-copyright" style="font-size:.78rem;color:var(--c-muted);padding:.4rem .6rem;text-align:right;">
               <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">Priser fra TradingView</a>
             </div>
             <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
-            {"symbols":[["Hvede","EURONEXT:EBM1!|3M"],["Raps","EURONEXT:ECO1!|3M"],["Majs","EURONEXT:EMA1!|3M"],["EUR/DKK","FX_IDC:EURDKK|3M"],["USD/DKK","FX_IDC:USDDKK|3M"]],"chartOnly":false,"width":"100%","height":380,"locale":"da_DK","colorTheme":"light","autosize":true,"showVolume":false,"showMA":false,"hideDateRanges":false,"hideMarketStatus":false,"hideSymbolLogo":false,"scalePosition":"right","scaleMode":"Normal","fontFamily":"Inter, system-ui, sans-serif","fontSize":"10","noTimeScale":false,"valuesTracking":"1","changeMode":"price-and-percent","chartType":"area","maLineColor":"#2F6BC0A","maLineWidth":1,"maLength":9,"backgroundColor":"rgba(255, 255, 255, 1)","lineWidth":2,"lineType":0,"dateRanges":["1d|1","1m|30","3m|60","12m|1D"]}
+            {"symbols":[["Hvede","OANDA:WHEATUSD|3M"],["Raps","OANDA:SOYBNUSD|3M"],["Majs","OANDA:CORNUSD|3M"],["EUR/DKK","FX_IDC:EURDKK|3M"],["USD/DKK","FX_IDC:USDDKK|3M"]],"chartOnly":false,"width":"100%","height":380,"locale":"da_DK","colorTheme":"light","autosize":true,"showVolume":false,"showMA":false,"hideDateRanges":false,"hideMarketStatus":false,"hideSymbolLogo":false,"scalePosition":"right","scaleMode":"Normal","fontFamily":"Inter, system-ui, sans-serif","fontSize":"10","noTimeScale":false,"valuesTracking":"1","changeMode":"price-and-percent","chartType":"area","maLineColor":"#2F6BC0A","maLineWidth":1,"maLength":9,"backgroundColor":"rgba(255, 255, 255, 1)","lineWidth":2,"lineType":0,"dateRanges":["1d|1","1m|30","3m|60","12m|1D"]}
             </script>
           </div>
         </div>
-      <div class="widget-card__source">Kilde: Euronext / TradingView — <a href="https://www.euronext.com/" target="_blank" rel="noopener nofollow">euronext.com</a></div>
+      <div class="widget-card__source">Kilde: Chicago (CBOT) via TradingView — referencepris. Følg Euronext på <a href="https://www.euronext.com/" target="_blank" rel="noopener nofollow">euronext.com</a></div>
     </div>
 
     <div class="cta-row">
@@ -194,7 +194,7 @@
     <div class="container narrow">
       <div class="disclaimer">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-        <div><strong>Bemærk.</strong> Priserne leveres af tredjepart (SEGES Farmtal, Arla, Danish Crown og Euronext via TradingView og direkte links) og kan være forsinkede. Beregnerne giver estimater til planlægning — kontroller altid med din rådgiver eller agronom.</div>
+        <div><strong>Bemærk.</strong> Priserne leveres af tredjepart (SEGES Farmtal, Arla, Danish Crown og CBOT/Chicago via TradingView og direkte links) og kan være forsinkede. Beregnerne giver estimater til planlægning — kontroller altid med din rådgiver eller agronom.</div>
       </div>
     </div>
   </section>
@@ -246,7 +246,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Beregnerne er kun vejledende og giver estimater. Priserne kommer fra tredjepartskilder (SEGES Farmtal, Arla, Danish Crown og Euronext via TradingView og direkte links).</p>
+      <p>Beregnerne er kun vejledende og giver estimater. Priserne kommer fra tredjepartskilder (SEGES Farmtal, Arla, Danish Crown og CBOT/Chicago via TradingView og direkte links).</p>
       <p>© <span data-year>2026</span> Landbrugstal · Lavet i Danmark.</p>
     </div>
   </div>

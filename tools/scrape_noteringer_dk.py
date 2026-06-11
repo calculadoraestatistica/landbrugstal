@@ -264,23 +264,40 @@ def html_to_text(html_doc: str) -> str:
 # Værdi-hjælpere
 # ---------------------------------------------------------------------------
 
-_DECIMAL_RX = re.compile(r"(\d{1,4}(?:[.\s]\d{3})*(?:,\d+)?|\d+(?:\.\d+)?)")
+_DECIMAL_RX = re.compile(r"(\d+(?:\.\d+)?(?:,\d+)?|\d{1,4}(?:\.\d{3})+(?:,\d+)?)")
 
 
 def parse_dk_number(text: str) -> Optional[float]:
-    """Parse et dansk-formateret tal (1.234,56 eller 1234,56 eller 152.5)."""
+    """Parse a number that may be DK-formatted (1.234,56 / 1234,56 / 152,5)
+    or US-formatted (747.43). Heuristic:
+      - if both ',' and '.': dot=thousands, comma=decimal → strip dot, swap comma to dot
+      - if ',' only: comma=decimal → swap to dot
+      - if '.' only AND the part after dot has 1-2 digits: it's a decimal (US format)
+      - if '.' only AND the part after dot has exactly 3 digits AND total digits > 3:
+            it's a thousands separator → strip
+      - else float() directly
+    """
     if not text:
         return None
     m = _DECIMAL_RX.search(text)
     if not m:
         return None
     raw = m.group(1).strip()
-    # Dansk: punkt som tusindseparator, komma som decimal
-    if "," in raw and "." in raw:
+    has_comma = "," in raw
+    has_dot = "." in raw
+    if has_comma and has_dot:
         raw = raw.replace(".", "").replace(",", ".")
-    elif "," in raw:
+    elif has_comma:
         raw = raw.replace(",", ".")
-    # ellers antag rent decimaltal
+    elif has_dot:
+        # Only a dot. Decide thousands vs decimal by length of fractional part.
+        before, _, after = raw.partition(".")
+        if len(after) == 3 and len(before) >= 1 and "." not in before:
+            # Could be 1.234 = thousands OR 1.234 = decimal. If the integer is ≥4
+            # digits or contains multiple dots, treat as thousands. Otherwise
+            # leave as decimal — too ambiguous to override.
+            pass  # keep dot as decimal
+        # else keep as decimal
     try:
         return float(raw)
     except ValueError:
@@ -388,63 +405,84 @@ def scrape_arla_milk() -> Optional[Dict[str, Any]]:
 def scrape_danish_crown() -> Tuple[Optional[Dict[str, Any]], Optional[Dict[str, Any]]]:
     """Hent svinenotering + kreaturnotering fra Danish Crown ejerportal.
 
+    Notering-siderne lever på faste paths under /da-dk/andelsejere/.
+    Grise: tabel med vægtklasser → vi læser basis-rækken (73,0-97,9 kg) som
+    er den toneangivende slagtevægt.
+    Kreatur: tager første kr/kg-tal vi finder efter "Notering".
     Returnerer (gris, kreatur). Begge kan være None.
     """
     gris: Optional[Dict[str, Any]] = None
     kreatur: Optional[Dict[str, Any]] = None
 
-    url = "https://ejer.danishcrown.com/"
-    body = http_get(url)
+    # GRIS
+    url_g = "https://ejer.danishcrown.com/da-dk/andelsejere/gris/notering/aktuel-grisenotering/"
+    body = http_get(url_g)
     if body:
         text = html_to_text(body)
-        # Svin: "svinenotering" eller "ugens notering" ... "12,50 kr"
-        m = re.search(r"svinenotering[^\n]{0,200}?(\d+[.,]?\d*)\s*(?:kr|DKK)", text, re.IGNORECASE)
+        # Find tabel-række "73,0-97,9 | ... | <kr/kg uge X> | <kr/kg uge X-1>"
+        # Tabellen er rendered med linieskift mellem celler — brug [\s\S].
+        m = re.search(r"73,0[–—-]97,9[\s\S]{0,80}?\|[\s\S]{0,40}?(\d+[.,]\d+)", text)
         if m:
             v = parse_dk_number(m.group(1))
             if v is not None:
                 gris = {
-                    "name": "Svinenotering (Danish Crown, slagtevægt)",
+                    "name": "Grisenotering (Danish Crown, basis 73-98 kg)",
                     "value": v,
                     "value_display": format_dk(v, "DKK/kg"),
                     "unit": "DKK/kg",
                     "date": today_iso(),
-                    "source_url": url,
-                    "source_name": "Danish Crown",
-                }
-        # Kreatur (Ungtyr)
-        m = re.search(r"ungtyr[^\n]{0,200}?(\d+[.,]?\d*)\s*(?:kr|DKK)", text, re.IGNORECASE)
-        if m:
-            v = parse_dk_number(m.group(1))
-            if v is not None:
-                kreatur = {
-                    "name": "Kreaturnotering (Ungtyr)",
-                    "value": v,
-                    "value_display": format_dk(v, "DKK/kg"),
-                    "unit": "DKK/kg",
-                    "date": today_iso(),
-                    "source_url": url,
+                    "source_url": url_g,
                     "source_name": "Danish Crown",
                 }
 
-    # Fallback til Danske Svineproducenter for gris
+    # KREATUR
+    url_k = "https://ejer.danishcrown.com/da-dk/andelsejere/kreatur/notering/aktuel-kreaturnotering/"
+    body = http_get(url_k)
+    if body:
+        text = html_to_text(body)
+        # Den løbende notering vises som "Ungtyr ... kr/kg" eller bare tal i en tabel.
+        # Forsøg: "Ungtyr R 5-6 | ... | <kr/kg>" eller første kr-tal under "Kreaturnotering"
+        idx = text.find("Kreaturnotering")
+        if idx > 0:
+            block = text[idx:idx + 3000]
+            # Find numbers in form X,XX (typisk 20-40 kr/kg for ungtyr)
+            for m in re.finditer(r"(\d{2}[.,]\d{2})\s*\|", block):
+                v = parse_dk_number(m.group(1))
+                if v is not None and 10 <= v <= 60:
+                    kreatur = {
+                        "name": "Kreaturnotering (Ungtyr, Danish Crown)",
+                        "value": v,
+                        "value_display": format_dk(v, "DKK/kg"),
+                        "unit": "DKK/kg",
+                        "date": today_iso(),
+                        "source_url": url_k,
+                        "source_name": "Danish Crown",
+                    }
+                    break
+
+    # Fallback til Danske Svineproducenter for gris (slagtesvin Uge X)
     if gris is None:
         url2 = "https://danskesvineproducenter.dk/noteringer/"
         body2 = http_get(url2)
         if body2:
             text2 = html_to_text(body2)
-            m = re.search(r"(\d+[.,]\d+)\s*(?:kr|DKK)\s*/?\s*kg", text2, re.IGNORECASE)
-            if m:
-                v = parse_dk_number(m.group(1))
-                if v is not None:
-                    gris = {
-                        "name": "Svinenotering (slagtevægt)",
-                        "value": v,
-                        "value_display": format_dk(v, "DKK/kg"),
-                        "unit": "DKK/kg",
-                        "date": today_iso(),
-                        "source_url": url2,
-                        "source_name": "Danske Svineproducenter",
-                    }
+            # Find Slagtesvin section → Danish Crown row → current week (first kr value)
+            idx = text2.find("Slagtesvin")
+            if idx > 0:
+                block = text2[idx:idx + 2500]
+                m = re.search(r"Danish Crown\s*\|\s*kr\.?\s*\|\s*(\d+[.,]\d+)\s*\|", block)
+                if m:
+                    v = parse_dk_number(m.group(1))
+                    if v is not None:
+                        gris = {
+                            "name": "Slagtesvinepris (Danske Svineproducenter)",
+                            "value": v,
+                            "value_display": format_dk(v, "DKK/kg"),
+                            "unit": "DKK/kg",
+                            "date": today_iso(),
+                            "source_url": url2,
+                            "source_name": "Danske Svineproducenter",
+                        }
 
     return gris, kreatur
 
@@ -457,18 +495,23 @@ def scrape_nationalbanken_fx() -> Dict[str, Optional[float]]:
     """
     out: Dict[str, Optional[float]] = {"EUR": None, "USD": None}
 
-    # Nationalbanken — daily rates as JSON
+    # Nationalbanken — daily rates as XML
     url = "https://www.nationalbanken.dk/api/currencyratesxml?lang=en"
     body = http_get(url)
     if body:
-        # XML format: <currency code="EUR" rate="745.12"/>
-        for m in re.finditer(r'code="([A-Z]{3})"\s+rate="([\d.,]+)"', body):
+        # XML format: <currency code="EUR" desc="Euro" rate="747.43"/>
+        # desc sits between code and rate, so match with [^>]*.
+        for m in re.finditer(r'code="([A-Z]{3})"[^>]*?\brate="([\d.,]+)"', body):
             code = m.group(1)
             if code in ("EUR", "USD"):
-                v = parse_dk_number(m.group(2))
-                if v is not None:
+                # Rate er US-format med . som decimal; parse direkte.
+                try:
+                    raw = float(m.group(2))
+                except ValueError:
+                    raw = None
+                if raw is not None:
                     # Nationalbanken angiver rate som DKK pr 100 enheder
-                    out[code] = v / 100.0
+                    out[code] = raw / 100.0
 
     # Fallback til exchangerate.host
     if out["EUR"] is None or out["USD"] is None:

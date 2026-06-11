@@ -1882,3 +1882,9 @@ table.data tbody tr:last-child td { border-bottom: 0; }
   .cot-table tbody td.cot-cell-date { display: none; }
   .cot-cell-prod { min-width: 0; }
 }
+
+/* noteringer-dk stale + per-item source link */
+.cot-row-stale td { opacity: 0.78; }
+.cot-source-link { color: #2563eb; text-decoration: underline; font-weight: 600; font-size: 0.92rem; }
+.cot-source-link:hover { color: #1d4ed8; }
+.cot-stale { color: #b45309; font-weight: 900; }

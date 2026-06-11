@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-11T09:48:56Z",
+  "updated_at": "2026-06-11T16:34:50Z",
   "source": "SEGES Farmtal, Arla, Danish Crown, Nationalbanken",
   "source_url": "https://landbrugstal.dk/cotacoes.html",
   "items": [
@@ -41,15 +41,15 @@
     },
     {
       "icon": "gris",
-      "name": "Svinenotering (slagtevægt)",
-      "value": null,
-      "value_display": "—",
+      "name": "Grisenotering (Danish Crown, basis 73-98 kg)",
+      "value": 8.9,
+      "value_display": "8,90 DKK/kg",
       "unit": "DKK/kg",
-      "source_url": "https://ejer.danishcrown.com/",
+      "source_url": "https://ejer.danishcrown.com/da-dk/andelsejere/gris/notering/aktuel-grisenotering/",
       "source_name": "Danish Crown",
       "key": "grisenotering",
-      "stale": true,
-      "date": "2026-06-11"
+      "date": "2026-06-11",
+      "stale": false
     }
   ]
 }
