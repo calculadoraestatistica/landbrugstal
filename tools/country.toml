@@ -1,0 +1,114 @@
+# landbrugstal.dk — country configuration consumed by tools/scrape_country.py.
+# Add a new country by duplicating this file and changing the source list.
+
+[country]
+code     = "DK"
+language = "da-DK"
+timezone = "Europe/Copenhagen"
+currency = "DKK"
+
+[output]
+# JSON files written under data/. Frontend (js/noteringer-dk.js) consumes
+# basico_path on /cotacoes.html and completo_path elsewhere.
+basico_path   = "data/noteringer-dk.json"
+completo_path = "data/noteringer-dk-completas.json"
+
+[indicators]
+# Display order (what the rendered table looks like).
+order = [
+    "hvede", "byg", "raps", "majs",
+    "maelkepris",
+    "grisenotering", "kreaturnotering",
+    "eur_dkk", "usd_dkk",
+]
+# Subset shown on the homepage cards (basico file).
+basico = ["hvede", "raps", "maelkepris", "grisenotering"]
+
+# Each entry under [[sources]] maps a Python module under tools/scrapers/ to
+# a scraper class. The runner instantiates each, calls safe_run(), and merges
+# returned indicators by key.
+
+[[sources]]
+module = "scrapers.nationalbanken_fx"
+klass  = "NationalbankenFX"
+
+[[sources]]
+module = "scrapers.danishcrown"
+klass  = "DanishCrownGris"
+
+[[sources]]
+module = "scrapers.danishcrown"
+klass  = "DanishCrownKreatur"
+
+[[sources]]
+module = "scrapers.farmtal_seges"
+klass  = "FarmtalKorn"
+
+[[sources]]
+module = "scrapers.arla_dk"
+klass  = "ArlaMilk"
+
+# Fallback labels used when a live scrape fails so the UI still has a row to
+# render a "Se kilde →" link.
+[fallback.hvede]
+icon = "hvede"
+name = "Brødhvede"
+unit = "DKK/hkg"
+source_url  = "https://farmtalonline.dlbr.dk/"
+source_name = "SEGES Farmtal Online"
+
+[fallback.byg]
+icon = "byg"
+name = "Foderbyg"
+unit = "DKK/hkg"
+source_url  = "https://farmtalonline.dlbr.dk/"
+source_name = "SEGES Farmtal Online"
+
+[fallback.raps]
+icon = "raps"
+name = "Raps"
+unit = "DKK/hkg"
+source_url  = "https://farmtalonline.dlbr.dk/"
+source_name = "SEGES Farmtal Online"
+
+[fallback.majs]
+icon = "majs"
+name = "Foderhvede (Farmtal)"
+unit = "DKK/hkg"
+source_url  = "https://farmtalonline.dlbr.dk/"
+source_name = "SEGES Farmtal Online"
+
+[fallback.maelkepris]
+icon = "maelk"
+name = "Mælkepris (Arla DK, konventionel)"
+unit = "øre/kg"
+source_url  = "https://catalog.arla.com/ARLA/milk-price/arla-dk/"
+source_name = "Arla DK"
+
+[fallback.grisenotering]
+icon = "gris"
+name = "Grisenotering (basis 73-98 kg)"
+unit = "DKK/kg"
+source_url  = "https://ejer.danishcrown.com/da-dk/andelsejere/gris/notering/aktuel-grisenotering/"
+source_name = "Danish Crown"
+
+[fallback.kreaturnotering]
+icon = "kreatur"
+name = "Kreaturnotering (Ungtyr R)"
+unit = "DKK/kg"
+source_url  = "https://ejer.danishcrown.com/da-dk/andelsejere/kreatur/notering/aktuel-kreaturnotering/"
+source_name = "Danish Crown"
+
+[fallback.eur_dkk]
+icon = "eur_dkk"
+name = "EUR/DKK"
+unit = "DKK"
+source_url  = "https://www.nationalbanken.dk/"
+source_name = "Nationalbanken"
+
+[fallback.usd_dkk]
+icon = "usd_dkk"
+name = "USD/DKK"
+unit = "DKK"
+source_url  = "https://www.nationalbanken.dk/"
+source_name = "Nationalbanken"

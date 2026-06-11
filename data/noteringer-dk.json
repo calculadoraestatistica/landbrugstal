@@ -1,54 +1,55 @@
 {
-  "updated_at": "2026-06-11T16:34:50Z",
-  "source": "SEGES Farmtal, Arla, Danish Crown, Nationalbanken",
-  "source_url": "https://landbrugstal.dk/cotacoes.html",
+  "updated_at": "2026-06-11T17:10:14Z",
+  "country": "DK",
+  "source": "Arla DK; Danish Crown; Nationalbanken; SEGES Farmtal Online",
+  "source_url": "https://dk",
   "items": [
     {
       "icon": "hvede",
       "name": "Brødhvede",
-      "value": null,
-      "value_display": "—",
       "unit": "DKK/hkg",
       "source_url": "https://farmtalonline.dlbr.dk/",
       "source_name": "SEGES Farmtal Online",
       "key": "hvede",
+      "value": null,
+      "value_display": "—",
       "stale": true,
       "date": "2026-06-11"
     },
     {
       "icon": "raps",
       "name": "Raps",
-      "value": null,
-      "value_display": "—",
       "unit": "DKK/hkg",
       "source_url": "https://farmtalonline.dlbr.dk/",
       "source_name": "SEGES Farmtal Online",
       "key": "raps",
-      "stale": true,
-      "date": "2026-06-11"
-    },
-    {
-      "icon": "maelk",
-      "name": "Mælkepris (Arla DK, konventionel)",
       "value": null,
       "value_display": "—",
-      "unit": "øre/kg",
-      "source_url": "https://catalog.arla.com/ARLA/milk-price/arla-dk/",
-      "source_name": "Arla Foods",
-      "key": "maelkepris",
       "stale": true,
       "date": "2026-06-11"
     },
     {
+      "key": "maelkepris",
+      "icon": "maelk",
+      "name": "Mælkepris (Arla DK, konventionel)",
+      "value": 302.2,
+      "value_display": "302,20 øre/kg",
+      "unit": "øre/kg",
+      "date": "2026-06-11",
+      "source_url": "https://catalog.arla.com/ARLA/milk-price/arla-dk/",
+      "source_name": "Arla DK",
+      "stale": false
+    },
+    {
+      "key": "grisenotering",
       "icon": "gris",
-      "name": "Grisenotering (Danish Crown, basis 73-98 kg)",
+      "name": "Grisenotering (basis 73-98 kg)",
       "value": 8.9,
       "value_display": "8,90 DKK/kg",
       "unit": "DKK/kg",
+      "date": "2026-06-11",
       "source_url": "https://ejer.danishcrown.com/da-dk/andelsejere/gris/notering/aktuel-grisenotering/",
       "source_name": "Danish Crown",
-      "key": "grisenotering",
-      "date": "2026-06-11",
       "stale": false
     }
   ]
