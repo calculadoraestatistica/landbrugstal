@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <link rel="preconnect" href="https://s3.tradingview.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.euronext.com">
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
+<title>Beregner de NPK-gødning | Landbrugstal</title>
+<meta name="description" content="Online og gratis beregner af NPK-gødskning. Omregn faglig anbefaling af N, P og K til mængden af formuleret gødning.">
+<link rel="canonical" href="https://landbrugstal.dk/adubacao-npk.html">
+<meta name="theme-color" content="#16a34a">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="da_DK">
+<meta property="og:site_name" content="Landbrugstal">
+<meta property="og:title" content="Beregner af NPK-gødning">
+<meta property="og:description" content="Omregn anbefalingen af gødskning til mængden af handelsgødning.">
+<meta property="og:url" content="https://landbrugstal.dk/adubacao-npk.html">
+<meta property="og:image" content="https://landbrugstal.dk/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/favicon-192.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Beregner af NPK-gødskning",
+  "url": "https://landbrugstal.dk/adubacao-npk.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "da-DK",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
+  "description": "Omregning af gødskningsanbefaling til handelsgødning."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Forside","item":"https://landbrugstal.dk/"},
+    {"@type":"ListItem","position":2,"name":"NPK-gødning","item":"https://landbrugstal.dk/adubacao-npk.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Spring til indhold</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/" aria-label="Landbrugstal — forsiden">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+      <span class="brand__name">Landbrugs <span>tal</span></span>
+      <span class="brand__tagline">Daglige priser og landbrugsberegnere</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Åbn menu" aria-expanded="false" aria-controls="menu">
+      <svg class="nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="nav-toggle__close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <nav class="main-nav" id="menu" aria-label="Hovedmenu">
+      <ul>
+        <li><a href="/">Forside</a></li>
+        <li><a href="/cotacoes.html">Priser</a></li>
+        <li><a href="/futuros.html">Futures</a></li>
+        <li><a href="/sobre.html">Om</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main id="conteudo">
+
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Sti">
+        <ol>
+          <li><a href="/">Forside</a></li>
+          <li>NPK-gødning</li>
+        </ol>
+      </nav>
+      <h1>Beregner af NPK-gødning</h1>
+      <p class="lead">Omregn den faglige anbefaling af N, P₂O₅ og K₂O til mængden af handelsgødning, der skal anvendes pr. hektar.</p>
+    </div>
+  </div>
+
+  <div class="container narrow">
+
+    <form class="calculator" id="calc-form" novalidate>
+      <h2 class="calculator__title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        Beregn gødskningen
+      </h2>
+      <p class="calculator__hint">Indtast anbefalingen og gødningens formel.</p>
+
+      <fieldset class="field-group">
+        <legend>Anbefaling og gødningsformel</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="recN">Anbefaling af N</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="recN" placeholder="F.eks. 20" autocomplete="off">
+              <span class="input-affix__unit">kg/ha</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="recP">Anbefaling af P₂O₅</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="recP" placeholder="F.eks. 70" autocomplete="off">
+              <span class="input-affix__unit">kg/ha</span>
+            </div>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="recK">Anbefaling af K₂O</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="recK" placeholder="F.eks. 40" autocomplete="off">
+              <span class="input-affix__unit">kg/ha</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="pctN">% N i formlen</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="pctN" placeholder="F.eks. 4" autocomplete="off">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="pctP">% P₂O₅ i formlen</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="pctP" placeholder="F.eks. 14" autocomplete="off">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="pctK">% K₂O i formlen</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="pctK" placeholder="F.eks. 8" autocomplete="off">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <p class="field-error" id="calc-error" role="alert"></p>
+
+      <div class="calculator__actions">
+        <button class="btn btn--primary btn--lg" type="submit">Beregn gødning</button>
+        <button class="btn btn--ghost" type="button" id="calc-example">Udfyld med eksempel</button>
+      </div>
+
+      <section class="result" id="calc-result" hidden aria-live="polite"></section>
+    </form>
+
+    <div class="ad-slot" data-ad-slot=""></div>
+
+    <article class="prose">
+
+      <h2>Hvad bruges den til</h2>
+      <p>Denne beregner omregner den <strong>faglige gødskningsanbefaling</strong> (kg/ha N, P₂O₅ og K₂O) til mængden af <strong>formuleret handelsgødning</strong>, der skal anvendes.</p>
+
+      <h2>Sådan beregner du</h2>
+      <p>De tre tal i formlen (f.eks. 04-14-08) er procenter. For hvert næringsstof divideres anbefalingen med procenten og ganges med 100.</p>
+      <div class="formula">kg/ha gødning = (anbefaling af næringsstof ÷ % i formlen) × 100</div>
+
+      <h2>Eksempel</h2>
+      <p>For 70 kg/ha P₂O₅ med gødningen 04-14-08 (14 % P): 70 ÷ 14 × 100 = <strong>500 kg/ha</strong>.</p>
+
+      <div class="callout callout--warning">
+        <div class="callout__title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          De tre rammer næsten aldrig præcist
+        </div>
+        <p>En enkelt formel dækker sjældent N, P og K i de helt rigtige mængder. Det normale er at vælge formuleringen efter det mest krævende næringsstof og supplere de øvrige med simple kilder (urea, superfosfat, kaliumklorid). Følg altid anbefalingen fra jordbundsanalysen.</p>
+      </div>
+
+      <div class="related">
+        <h2>Andre beregnere</h2>
+        <div class="calc-grid">
+          <a class="calc-card" href="/kalkning.html"><h3>Kalkning</h3><p>Behov for kalk.</p></a>
+          <a class="calc-card" href="/populacao-de-plantas.html"><h3>Plantebestand</h3><p>Planter pr. hektar.</p></a>
+          <a class="calc-card" href="/quantidade-de-frøs.html"><h3>Frømængde</h3><p>Frø i kg/ha.</p></a>
+        </div>
+      </div>
+
+    </article>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+          <span class="brand__name">Landbrugstal</span>
+        </a>
+        <p>Landbrugsberegnere og daglige markedspriser, opdateret hver dag.</p>
+      </div>
+      <div>
+        <h3>Beregnere</h3>
+        <ul>
+          <li><a href="/lotacao-græsmark.html">Græsningsbelægning</a></li>
+          <li><a href="/conversao-de-hkgs.html">Vægtomregner</a></li>
+          <li><a href="/adubacao-npk.html">NPK-gødning</a></li>
+          <li><a href="/conversao-de-area.html">Arealomregner</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Marked</h3>
+        <ul>
+          <li><a href="/cotacoes.html">Daglige priser</a></li>
+          <li><a href="/futuros.html">Futures</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Site</h3>
+        <ul>
+          <li><a href="/sobre.html">Om</a></li>
+          <li><a href="/contato.html">Kontakt</a></li>
+          <li><a href="/privacidade.html">Privatlivspolitik</a></li>
+          <li><a href="/termos.html">Vilkår</a></li>
+          <li><a href="/apoiar.html">Støt projektet</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Beregnerne er kun vejledende og giver estimater. Priserne kommer fra tredjepartskilder (Euronext og TradingView).</p>
+      <p>© <span data-year>2026</span> Landbrugstal · Lavet i Danmark.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/agro.js"></script>
+<script src="/js/app.js"></script>
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var form = $('calc-form'), result = $('calc-result'), errBox = $('calc-error');
+  function showError(msg) { errBox.textContent = msg; errBox.classList.add('is-visible'); result.hidden = true; }
+  function clearError() { errBox.textContent = ''; errBox.classList.remove('is-visible'); }
+  $('calc-example').addEventListener('click', function () {
+    $('recN').value = '20';
+    $('recP').value = '70';
+    $('recK').value = '40';
+    $('pctN').value = '4';
+    $('pctP').value = '14';
+    $('pctK').value = '8';
+    compute();
+  });
+  form.addEventListener('submit', function (e) { e.preventDefault(); compute(); });
+  function readForm() {
+      var o = {};
+      o.recN = parseNum($('recN').value);
+      o.recP = parseNum($('recP').value);
+      o.recK = parseNum($('recK').value);
+      o.pctN = parseNum($('pctN').value);
+      o.pctP = parseNum($('pctP').value);
+      o.pctK = parseNum($('pctK').value);
+      return o;
+  }
+  function compute() {
+    clearError();
+    var r = Landbrug.adubacaoNPK(readForm());
+    if (r.error) { showError(r.error); return; }
+    render(r);
+  }
+  function render(r) {
+    result.className = 'result result--neutral';
+    var html = '<div class="result__banner">' + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
+      '<div><div class="result__headline">Gødning der skal anvendes</div>' +
+      '<div class="result__sub">Fra anbefaling til handelsgødning</div></div></div>';
+    html += '<div class="result__body">';
+    html += '<div class="result__main">' + (Fmt.int(r.gødningLimitante) + ' <small>kg/ha gødning</small>') + '</div>';
+      html += '<div class="result__metrics">' + '<div class="metric"><div class="metric__label">For at dække N</div>' + '<div class="metric__value">' + ((r.gødningN !== null ? Fmt.int(r.gødningN) + ' kg/ha' : '—')) + '</div>'  + '</div>' + '<div class="metric"><div class="metric__label">For at dække P₂O₅</div>' + '<div class="metric__value">' + ((r.gødningP !== null ? Fmt.int(r.gødningP) + ' kg/ha' : '—')) + '</div>'  + '</div>' + '<div class="metric"><div class="metric__label">For at dække K₂O</div>' + '<div class="metric__value">' + ((r.gødningK !== null ? Fmt.int(r.gødningK) + ' kg/ha' : '—')) + '</div>'  + '</div>' + '</div>';
+    html += '<div class="result__interpretation"><p>' + ('Hvert næringsstof kræver en forskellig mængde formuleret gødning. I praksis vælges formlen efter det mest krævende næringsstof, og resten suppleres med simple gødninger.') + '</p></div>';
+    html += '</div>';
+    result.innerHTML = html;
+    result.hidden = false;
+    result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+})();
+</script>
+</body>
+</html>

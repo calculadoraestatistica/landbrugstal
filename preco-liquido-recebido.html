@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <link rel="preconnect" href="https://s3.tradingview.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.euronext.com">
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
+<title>Beregner de Preço Líquido Recebido | Landbrugstal</title>
+<meta name="description" content="Beregner de preço líquido recebido. Desconte frete, opbevaring, comissão, secagem, quebra og impostos af preço bruto cotado.">
+<link rel="canonical" href="https://landbrugstal.dk/preco-liquido-recebido.html">
+<meta name="theme-color" content="#16a34a">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="da_DK">
+<meta property="og:site_name" content="Landbrugstal">
+<meta property="og:title" content="Beregner de Preço Líquido Recebido">
+<meta property="og:description" content="Desconte frete, opbevaring, comissão og impostos af preço bruto cotado.">
+<meta property="og:url" content="https://landbrugstal.dk/preco-liquido-recebido.html">
+<meta property="og:image" content="https://landbrugstal.dk/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/favicon-192.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Beregner de Preco Liquido Recebido",
+  "url": "https://landbrugstal.dk/preco-liquido-recebido.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "da-DK",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
+  "description": "Calculo af preco liquido recebido descontando frete, opbevaring, comissao, secagem, quebra og impostos."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Forside","item":"https://landbrugstal.dk/"},
+    {"@type":"ListItem","position":2,"name":"Nettopris modtaget","item":"https://landbrugstal.dk/preco-liquido-recebido.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Spring til indhold</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/" aria-label="Landbrugstal — forsiden">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+      <span class="brand__name">Landbrug <span>do Dia</span></span>
+      <span class="brand__tagline">Daglige priser og landbrugsberegnere</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Åbn menu" aria-expanded="false" aria-controls="menu">
+      <svg class="nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="nav-toggle__close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <nav class="main-nav" id="menu" aria-label="Hovedmenu">
+      <ul>
+        <li><a href="/">Forside</a></li>
+        <li><a href="/cotacoes.html">Priser</a></li>
+        <li><a href="/futuros.html">Futures</a></li>
+        <li><a href="/sobre.html">Om</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main id="conteudo">
+
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Sti">
+        <ol>
+          <li><a href="/">Forside</a></li>
+          <li>Nettopris modtaget</li>
+        </ol>
+      </nav>
+      <h1>Beregner de Preço Líquido Recebido</h1>
+      <p class="lead">Desconte frete, opbevaring, comissão, secagem, quebra og impostos af preço bruto cotado og veja quanto realmente entra i bolso pr. hkg, tonelada ou quilo.</p>
+    </div>
+  </div>
+
+  <div class="container narrow">
+
+    <form class="calculator" id="calc-form" novalidate>
+      <h2 class="calculator__title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        Beregn o preço líquido
+      </h2>
+      <p class="calculator__hint">Indtast o preço bruto cotado og os omkostnings af negociação.</p>
+
+      <fieldset class="field-group">
+        <legend>Preço bruto</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="bruto">Preço bruto cotado</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="bruto" placeholder="Ex.: 130" autocomplete="off">
+              <span class="input-affix__unit">kr</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="unidBase">Unidade de referência</label>
+            <select class="input" id="unidBase">
+              <option value="sc" selected>por hkg (60 kg)</option>
+              <option value="t">por tonelada</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="field-group">
+        <legend>Fragt</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="freteVal">Valor af frete</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="freteVal" placeholder="Ex.: 8" autocomplete="off">
+              <span class="input-affix__unit">kr</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="freteUnid">Unidade af frete</label>
+            <select class="input" id="freteUnid">
+              <option value="sc" selected>kr pr. hkg</option>
+              <option value="t">kr pr. tonelada</option>
+              <option value="km">kr pr. km (frete rodoviário)</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row" id="freteKmRow" hidden>
+          <div class="field">
+            <label for="freteKm">Distância</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="freteKm" placeholder="Ex.: 300" autocomplete="off">
+              <span class="input-affix__unit">km</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="cargaT">Carga af caminhão</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="cargaT" placeholder="Ex.: 30" autocomplete="off">
+              <span class="input-affix__unit">t</span>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="field-group">
+        <legend>Opbevaring</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="armVal">Opbevaringsomkostning</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="armVal" placeholder="Ex.: 1" autocomplete="off">
+              <span class="input-affix__unit">kr ou %</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="armUnid">Unidade af opbevaring</label>
+            <select class="input" id="armUnid">
+              <option value="pct" selected>% af preço bruto</option>
+              <option value="sc">kr pr. hkg</option>
+              <option value="t">kr pr. tonelada</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="field-group">
+        <legend>Comissão, secagem, quebra og impostos</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="comissao">Comissão sobre o bruto</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="comissao" placeholder="Ex.: 1" autocomplete="off" value="1">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="secagemMod">Secagem</label>
+            <select class="input" id="secagemMod">
+              <option value="pct" selected>% de desconto sobre o bruto</option>
+              <option value="sc">kr pr. hkg</option>
+              <option value="t">kr pr. tonelada</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="secagemVal">Valor af secagem</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="secagemVal" placeholder="Ex.: 0,80" autocomplete="off">
+              <span class="input-affix__unit">kr ou %</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="quebra">Quebra técnica</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="quebra" placeholder="Ex.: 0,5" autocomplete="off" value="0,5">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="impostos">Impostos/taxas (Funrural etc.)</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="impostos" placeholder="Ex.: 1,5" autocomplete="off" value="0">
+              <span class="input-affix__unit">% af bruto</span>
+            </div>
+          </div>
+          <div class="field"></div>
+        </div>
+      </fieldset>
+
+      <p class="field-error" id="calc-error" role="alert"></p>
+
+      <div class="calculator__actions">
+        <button class="btn btn--primary btn--lg" type="submit">Beregn preço líquido</button>
+        <button class="btn btn--ghost" type="button" id="calc-example">Udfyld med eksempel</button>
+      </div>
+
+      <section class="result" id="calc-result" hidden aria-live="polite"></section>
+    </form>
+
+    <div class="ad-slot" data-ad-slot=""></div>
+
+    <article class="prose">
+
+      <h2>Hvad bruges den til</h2>
+      <p>Quando o comprador (cooperativa, trader, corretora) faz uma oferta, o preço cotado é o <strong>preço bruto</strong>. O som efetivamente cai i conta af produtor é o <strong>preço líquido</strong>, depois de descontados frete, opbevaring, comissão, secagem, quebra técnica og impostos. Denne beregner permite comparar a oferta med a pris de referência (<a href="/cotacoes.html">Euronext</a>) og decidir se vale fechar negócio.</p>
+
+      <h2>Omkostnings típicos descontados</h2>
+      <ul>
+        <li><strong>Fragt</strong> — rodoviário, af armazém af fazenda até o destino (porto, indústria, esmagadora). Cotado pr. hkg, pr. tonelada ou pr. km × carga.</li>
+        <li><strong>Opbevaring</strong> — taxa fixa pr. período ou percentual af bruto, cobrada pela cooperativa/armazém.</li>
+        <li><strong>Comissão</strong> — corretor ou trader, geralmente 1% af bruto.</li>
+        <li><strong>Secagem</strong> — desconto pr. umidade acima af padrão (~14% til soja/milho). Pode ser kr fixo ou % af bruto.</li>
+        <li><strong>Quebra técnica</strong> — perda durante o transporte/limpeza, tipicamente 0,5% a 1%.</li>
+        <li><strong>Impostos og taxas</strong> — Funrural (1,5% til pessoa física), Senar, ICMS dependendo af operação.</li>
+      </ul>
+
+      <h2>Como calcula</h2>
+      <p>Cada omkostning é convertido til a mesma unidade af preço bruto (hkg ou tonelada). Os percentuais incidem sobre o <strong>bruto</strong> — não sobre o líquido. Depois soma tudo og desconta:</p>
+      <div class="formula">líquido = bruto − (frete + opbevaring + comissão + secagem + quebra + impostos)</div>
+
+      <h2>Eksempel</h2>
+      <p>Sojabønner a kr 130/sc, frete kr 8/sc, opbevaring 1%, comissão 1%, secagem kr 0,80/sc, quebra 0,5%, Funrural 1,5%:</p>
+      <p>Descontos somam kr 8,00 + kr 1,30 + kr 1,30 + kr 0,80 + kr 0,65 + kr 1,95 = kr 14,00/sc. Líquido ≈ <strong>kr 116/sc</strong>.</p>
+
+      <div class="callout callout--warning">
+        <div class="callout__title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Cada cooperativa/trader tem sua tabela
+        </div>
+        <p>Os percentuais og valores cobrados variam pr. região, parceiro comercial og safra. Confirme cada linha de desconto med o comprador <strong>antes de fechar negócio</strong> — uma diferença de 0,5% i comissão ou kr 1/sc i frete muda resultatet final i ponta af lápis.</p>
+      </div>
+
+      <div class="related">
+        <h2>Andre beregnere</h2>
+        <div class="calc-grid">
+          <a class="calc-card" href="/cotacoes.html"><h3>Daglige priser</h3><p>Euronext og futuros.</p></a>
+          <a class="calc-card" href="/conversao-de-hkgs.html"><h3>Vægtomregner</h3><p>Hkgs, toneladas og arrobas.</p></a>
+          <a class="calc-card" href="/futuros.html">
+<h3>Futures</h3><p>Børs og CBOT.</p></a>
+        </div>
+      </div>
+
+    </article>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+          <span class="brand__name">Landbrugstal</span>
+        </a>
+        <p>Landbrugsberegnere og daglige markedspriser, opdateret hver dag.</p>
+      </div>
+      <div>
+        <h3>Beregnere</h3>
+        <ul>
+          <li><a href="/lotacao-græsmark.html">Græsningsbelægning</a></li>
+          <li><a href="/conversao-de-hkgs.html">Vægtomregner</a></li>
+          <li><a href="/adubacao-npk.html">NPK-gødning</a></li>
+          <li><a href="/conversao-de-area.html">Arealomregner</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Marked</h3>
+        <ul>
+          <li><a href="/cotacoes.html">Daglige priser</a></li>
+          <li><a href="/futuros.html">Futures</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Site</h3>
+        <ul>
+          <li><a href="/sobre.html">Om</a></li>
+          <li><a href="/contato.html">Kontakt</a></li>
+          <li><a href="/privacidade.html">Privatlivspolitik</a></li>
+          <li><a href="/termos.html">Vilkår</a></li>
+          <li><a href="/apoiar.html">Støt projektet</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Beregnerne er kun vejledende og giver estimater. Priserne kommer fra tredjepartskilder (Euronext og TradingView).</p>
+      <p>© <span data-year>2026</span> Landbrugstal · Lavet i Danmark.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/agro.js"></script>
+<script src="/js/app.js"></script>
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var form = $('calc-form'), result = $('calc-result'), errBox = $('calc-error');
+  var SC_KG = 60;
+  function showError(msg) { errBox.textContent = msg; errBox.classList.add('is-visible'); result.hidden = true; }
+  function clearError() { errBox.textContent = ''; errBox.classList.remove('is-visible'); }
+
+  // Toggle km row visibility when frete unit is "kr/km"
+  $('freteUnid').addEventListener('change', function () {
+    $('freteKmRow').hidden = ($('freteUnid').value !== 'km');
+  });
+
+  $('calc-example').addEventListener('click', function () {
+    $('bruto').value = '130';
+    $('unidBase').value = 'sc';
+    $('freteVal').value = '8';
+    $('freteUnid').value = 'sc';
+    $('freteKmRow').hidden = true;
+    $('armVal').value = '1';
+    $('armUnid').value = 'pct';
+    $('comissao').value = '1';
+    $('secagemMod').value = 'sc';
+    $('secagemVal').value = '0,80';
+    $('quebra').value = '0,5';
+    $('impostos').value = '1,5';
+    compute();
+  });
+
+  form.addEventListener('submit', function (e) { e.preventDefault(); compute(); });
+
+  function parseN(v) { return parseNum(v); }
+
+  // Convert a value expressed in 'fromUnit' (sc, t, pct, km) to the base unit (sc or t)
+  function toBase(value, fromUnit, baseUnit, bruto, kmDist, cargaT) {
+    if (!isFinite(value) || value <= 0) return 0;
+    if (fromUnit === 'pct') {
+      return bruto * (value / 100);
+    }
+    if (fromUnit === 'km') {
+      // kr/km × km = kr total af viagem. Divide pela carga i t til virar kr/t,
+      // depois converte pra base.
+      if (!isFinite(kmDist) || kmDist <= 0 || !isFinite(cargaT) || cargaT <= 0) return 0;
+      var rsPorT = (value * kmDist) / cargaT;
+      return baseUnit === 't' ? rsPorT : rsPorT * (SC_KG / 1000);
+    }
+    if (fromUnit === baseUnit) return value;
+    // sc → t (1 t = 1000/60 sc)
+    if (fromUnit === 'sc' && baseUnit === 't') return value * (1000 / SC_KG);
+    // t → sc (1 sc = 60/1000 t)
+    if (fromUnit === 't' && baseUnit === 'sc') return value * (SC_KG / 1000);
+    return 0;
+  }
+
+  function compute() {
+    clearError();
+    var bruto = parseN($('bruto').value);
+    if (!isFinite(bruto) || bruto <= 0) { showError('Indtast um preço bruto válido.'); return; }
+    var baseUnit = $('unidBase').value;
+
+    var freteVal = parseN($('freteVal').value) || 0;
+    var freteUnid = $('freteUnid').value;
+    var freteKm = parseN($('freteKm').value) || 0;
+    var cargaT = parseN($('cargaT').value) || 0;
+    if (freteUnid === 'km' && (freteKm <= 0 || cargaT <= 0)) {
+      showError('Para frete i kr/km, indtast distância og carga af caminhão.');
+      return;
+    }
+
+    var armVal = parseN($('armVal').value) || 0;
+    var armUnid = $('armUnid').value;
+    var comissao = parseN($('comissao').value) || 0;
+    var secagemMod = $('secagemMod').value;
+    var secagemVal = parseN($('secagemVal').value) || 0;
+    var quebra = parseN($('quebra').value) || 0;
+    var impostos = parseN($('impostos').value) || 0;
+
+    var omkostnings = [];
+    var frete = toBase(freteVal, freteUnid, baseUnit, bruto, freteKm, cargaT);
+    if (frete > 0) omkostnings.push({ nome: 'Fragt', valor: frete });
+    var arm = toBase(armVal, armUnid, baseUnit, bruto, 0, 0);
+    if (arm > 0) omkostnings.push({ nome: 'Opbevaring', valor: arm });
+    var med = bruto * (comissao / 100);
+    if (com > 0) omkostnings.push({ nome: 'Comissão (' + Fmt.num(comissao, 2) + '%)', valor: med });
+    var sec = toBase(secagemVal, secagemMod, baseUnit, bruto, 0, 0);
+    if (sec > 0) omkostnings.push({ nome: 'Secagem', valor: sec });
+    var quebraR = bruto * (quebra / 100);
+    if (quebraR > 0) omkostnings.push({ nome: 'Quebra técnica (' + Fmt.num(quebra, 2) + '%)', valor: quebraR });
+    var imp = bruto * (impostos / 100);
+    if (imp > 0) omkostnings.push({ nome: 'Impostos/taxas (' + Fmt.num(impostos, 2) + '%)', valor: imp });
+
+    var totalOmkostnings = omkostnings.reduce(function (s, c) { return s + c.valor; }, 0);
+    var liquido = bruto - totalOmkostnings;
+    if (liquido < 0) liquido = 0;
+    var pctDesc = bruto > 0 ? (totalOmkostnings / bruto) * 100 : 0;
+
+    render({
+      bruto: bruto,
+      baseUnit: baseUnit,
+      omkostnings: omkostnings,
+      totalOmkostnings: totalOmkostnings,
+      liquido: liquido,
+      pctDesc: pctDesc
+    });
+  }
+
+  function unitLabel(u) { return u === 't' ? 'tonelada' : 'hkg (60 kg)'; }
+  function unitShort(u) { return u === 't' ? 't' : 'sc'; }
+
+  function render(r) {
+    result.className = 'result result--neutral';
+    var u = unitShort(r.baseUnit);
+    var liquidoPorSc = r.baseUnit === 'sc' ? r.liquido : r.liquido * (SC_KG / 1000);
+    var liquidoPorT  = r.baseUnit === 't'  ? r.liquido : r.liquido * (1000 / SC_KG);
+    var liquidoPorKg = liquidoPorT / 1000;
+
+    var html = '<div class="result__banner">' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
+      '<div><div class="result__headline">Nettopris modtaget</div>' +
+      '<div class="result__sub">Bruto descontado de frete, opbevaring, comissão, secagem, quebra og impostos</div></div></div>';
+    html += '<div class="result__body">';
+    html += '<div class="result__main">kr ' + Fmt.num(r.liquido, 2) + ' <small>por ' + unitLabel(r.baseUnit) + '</small></div>';
+
+    html += '<div class="result__metrics">' +
+      '<div class="metric"><div class="metric__label">Por hkg (60 kg)</div><div class="metric__value">kr ' + Fmt.num(liquidoPorSc, 2) + '</div></div>' +
+      '<div class="metric"><div class="metric__label">Por tonelada</div><div class="metric__value">kr ' + Fmt.num(liquidoPorT, 2) + '</div></div>' +
+      '<div class="metric"><div class="metric__label">Por kg</div><div class="metric__value">kr ' + Fmt.num(liquidoPorKg, 4) + '</div></div>' +
+    '</div>';
+
+    // Detailed cost breakdown
+    var rows = '';
+    for (var i = 0; i < r.omkostnings.length; i++) {
+      var c = r.omkostnings[i];
+      var pct = r.bruto > 0 ? (c.valor / r.bruto) * 100 : 0;
+      rows += '<div class="metric">' +
+        '<div class="metric__label">' + c.nome + '</div>' +
+        '<div class="metric__value">− kr ' + Fmt.num(c.valor, 2) + ' /' + u + ' <small>(' + Fmt.num(pct, 2) + '% af bruto)</small></div>' +
+      '</div>';
+    }
+    if (rows) {
+      html += '<div class="result__metrics">' + rows + '</div>';
+    }
+
+    html += '<div class="result__interpretation"><p>' +
+      'O preço bruto cotado é <strong>kr ' + Fmt.num(r.bruto, 2) + '/' + u + '</strong>. ' +
+      'Os descontos totalizam <strong>kr ' + Fmt.num(r.totalOmkostnings, 2) + '/' + u + '</strong> (' + Fmt.num(r.pctDesc, 2) + '% af bruto). ' +
+      'O som efetivamente entra i bolso é <strong>kr ' + Fmt.num(r.liquido, 2) + '/' + u + '</strong>. Compare med a pris de referência i <a href="/cotacoes.html">Daglige priser</a> antes de fechar negócio.' +
+    '</p></div>';
+    html += '</div>';
+    result.innerHTML = html;
+    result.hidden = false;
+    result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <link rel="preconnect" href="https://s3.tradingview.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.euronext.com">
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
+<title>Plantebestandsberegner | Landbrugstal</title>
+<meta name="description" content="Online og gratis plantebestandsberegner. Beregn planter pr. hektar og frø pr. meter ud fra rækkeafstanden.">
+<link rel="canonical" href="https://landbrugstal.dk/populacao-de-plantas.html">
+<meta name="theme-color" content="#16a34a">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="da_DK">
+<meta property="og:site_name" content="Landbrugstal">
+<meta property="og:title" content="Plantebestandsberegner">
+<meta property="og:description" content="Beregn planter pr. hektar og frø pr. meter ud fra afstanden.">
+<meta property="og:url" content="https://landbrugstal.dk/populacao-de-plantas.html">
+<meta property="og:image" content="https://landbrugstal.dk/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/favicon-192.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Plantebestandsberegner",
+  "url": "https://landbrugstal.dk/populacao-de-plantas.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "da-DK",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
+  "description": "Beregning af planter pr. hektar og frø pr. meter."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Forside","item":"https://landbrugstal.dk/"},
+    {"@type":"ListItem","position":2,"name":"Plantebestand","item":"https://landbrugstal.dk/populacao-de-plantas.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Spring til indhold</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/" aria-label="Landbrugstal — forsiden">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+      <span class="brand__name">Landbrug <span>do Dia</span></span>
+      <span class="brand__tagline">Daglige priser og landbrugsberegnere</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Åbn menu" aria-expanded="false" aria-controls="menu">
+      <svg class="nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="nav-toggle__close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <nav class="main-nav" id="menu" aria-label="Hovedmenu">
+      <ul>
+        <li><a href="/">Forside</a></li>
+        <li><a href="/cotacoes.html">Priser</a></li>
+        <li><a href="/futuros.html">Futures</a></li>
+        <li><a href="/sobre.html">Om</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main id="conteudo">
+
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Sti">
+        <ol>
+          <li><a href="/">Forside</a></li>
+          <li>Plantebestand</li>
+        </ol>
+      </nav>
+      <h1>Plantebestandsberegner</h1>
+      <p class="lead">Beregn plantebestanden pr. hektar og sårate (frø pr. meter) ud fra afstanden.</p>
+    </div>
+  </div>
+
+  <div class="container narrow">
+
+    <form class="calculator" id="calc-form" novalidate>
+      <h2 class="calculator__title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        Beregn plantebestanden
+      </h2>
+      <p class="calculator__hint">Indtast plantningsafstanden.</p>
+
+      <fieldset class="field-group">
+        <legend>Plantningsafstand</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="espacamentoLinhas">Rækkeafstand</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="espacamentoLinhas" placeholder="F.eks.: 0,5" autocomplete="off">
+              <span class="input-affix__unit">m</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="espacamentoPlantas">Afstand mellem planter</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="espacamentoPlantas" placeholder="F.eks.: 0,2" autocomplete="off">
+              <span class="input-affix__unit">m</span>
+            </div>
+            <p class="help">Bruges til at beregne planter pr. hektar.</p>
+          </div>
+        </div>
+          <div class="field">
+            <label for="populacaoDesejada">Ønsket plantebestand</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="populacaoDesejada" placeholder="F.eks.: 70000" autocomplete="off">
+              <span class="input-affix__unit">planter/ha</span>
+            </div>
+            <p class="help">Bruges til at beregne frø pr. meter.</p>
+          </div>
+      </fieldset>
+
+      <p class="field-error" id="calc-error" role="alert"></p>
+
+      <div class="calculator__actions">
+        <button class="btn btn--primary btn--lg" type="submit">Beregn</button>
+        <button class="btn btn--ghost" type="button" id="calc-example">Udfyld med eksempel</button>
+      </div>
+
+      <section class="result" id="calc-result" hidden aria-live="polite"></section>
+    </form>
+
+    <div class="ad-slot" data-ad-slot=""></div>
+
+    <article class="prose">
+
+      <h2>Hvad bruges den til</h2>
+      <p>Denne beregner sammenkobler <strong>plantningsafstanden</strong> med <strong>plantebestanden</strong> pr. hektar og antallet af frø, der skal sås pr. meter.</p>
+
+      <h2>Sådan beregner du</h2>
+      <p>Plantebestanden pr. hektar er 10.000 m² divideret med det areal, hver plante optager. Frø pr. meter beregnes ud fra den ønskede plantebestand og rækkeafstanden.</p>
+      <div class="formula">Planter/ha = 10.000 ÷ (rækkeafstand × afstand mellem planter)</div>
+
+      <h2>Eksempel</h2>
+      <p>Rækker med 0,5 m og planter med 0,2 m giver <strong>100.000 planter/ha</strong>. For 70.000 planter/ha med 0,5 m rækkeafstand skal der sås 3,5 frø pr. meter.</p>
+
+      <div class="callout callout--warning">
+        <div class="callout__title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Juster for spireevne
+        </div>
+        <p>Sårate her angiver planter, ikke rå frø. For at fastsætte hvor mange kilo frø der skal købes, skal der justeres for spireevne og renhed i partiet.</p>
+      </div>
+
+      <div class="related">
+        <h2>Andre beregnere</h2>
+        <div class="calc-grid">
+          <a class="calc-card" href="/quantidade-de-frøs.html"><h3>Frømængde</h3><p>Frøs i kg/ha.</p></a>
+          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Da anbefaling ao gødning.</p></a>
+          <a class="calc-card" href="/udbytte.html"><h3>Konvertering de udbytte</h3><p>Hkgs/ha, kg/ha og t/ha.</p></a>
+        </div>
+      </div>
+
+    </article>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+          <span class="brand__name">Landbrugstal</span>
+        </a>
+        <p>Landbrugsberegnere og daglige markedspriser, opdateret hver dag.</p>
+      </div>
+      <div>
+        <h3>Beregnere</h3>
+        <ul>
+          <li><a href="/lotacao-græsmark.html">Græsningsbelægning</a></li>
+          <li><a href="/conversao-de-hkgs.html">Vægtomregner</a></li>
+          <li><a href="/adubacao-npk.html">NPK-gødning</a></li>
+          <li><a href="/conversao-de-area.html">Arealomregner</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Marked</h3>
+        <ul>
+          <li><a href="/cotacoes.html">Daglige priser</a></li>
+          <li><a href="/futuros.html">Futures</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Site</h3>
+        <ul>
+          <li><a href="/sobre.html">Om</a></li>
+          <li><a href="/contato.html">Kontakt</a></li>
+          <li><a href="/privacidade.html">Privatlivspolitik</a></li>
+          <li><a href="/termos.html">Vilkår</a></li>
+          <li><a href="/apoiar.html">Støt projektet</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Beregnerne er kun vejledende og giver estimater. Priserne kommer fra tredjepartskilder (Euronext og TradingView).</p>
+      <p>© <span data-year>2026</span> Landbrugstal · Lavet i Danmark.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/agro.js"></script>
+<script src="/js/app.js"></script>
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var form = $('calc-form'), result = $('calc-result'), errBox = $('calc-error');
+  function showError(msg) { errBox.textContent = msg; errBox.classList.add('is-visible'); result.hidden = true; }
+  function clearError() { errBox.textContent = ''; errBox.classList.remove('is-visible'); }
+  $('calc-example').addEventListener('click', function () {
+    $('espacamentoLinhas').value = '0,5';
+    $('espacamentoPlantas').value = '0,2';
+    $('populacaoDesejada').value = '70000';
+    compute();
+  });
+  form.addEventListener('submit', function (e) { e.preventDefault(); compute(); });
+  function readForm() {
+      var o = {};
+      o.espacamentoLinhas = parseNum($('espacamentoLinhas').value);
+      o.espacamentoPlantas = parseNum($('espacamentoPlantas').value);
+      o.populacaoDesejada = parseNum($('populacaoDesejada').value);
+      return o;
+  }
+  function compute() {
+    clearError();
+    var r = Landbrug.populacaoPlantas(readForm());
+    if (r.error) { showError(r.error); return; }
+    render(r);
+  }
+  function render(r) {
+    result.className = 'result result--neutral';
+    var html = '<div class="result__banner">' + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
+      '<div><div class="result__headline">Plantebestand</div>' +
+      '<div class="result__sub">Plantas pr. hektar og frøs pr. metro</div></div></div>';
+    html += '<div class="result__body">';
+    html += '<div class="result__main">' + ((r.plantasPorHa !== undefined ? Fmt.int(r.plantasPorHa) + ' <small>plantas/ha</small>' : Fmt.num(r.frøsPorMetro, 2) + ' <small>frøs/m</small>')) + '</div>';
+      html += '<div class="result__metrics">' + ((r.frøsPorMetro !== undefined && r.plantasPorHa !== undefined) ? ('<div class="metric"><div class="metric__label">Frøs pr. metro linear</div>' + '<div class="metric__value">' + (Fmt.num(r.frøsPorMetro, 2) + ' frøs/m') + '</div>'  + '</div>') : '') + '</div>';
+    html += '<div class="result__interpretation"><p>' + ('A população ideal costuma vir recomendada pelo obtentor af híbrido ou af cultivar. Use o espaçamento entre linhas af sua semeadora.') + '</p></div>';
+    html += '</div>';
+    result.innerHTML = html;
+    result.hidden = false;
+    result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+})();
+</script>
+</body>
+</html>

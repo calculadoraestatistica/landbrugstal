@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <link rel="preconnect" href="https://s3.tradingview.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.euronext.com">
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
+<title>Beregner de Mistura de Gødnings NPK | Landbrugstal</title>
+<meta name="description" content="Beregner de mistura de gødnings NPK online og gratuita. Combine até 3 gødnings simples ou formulados til atender a anbefaling de N, P og K.">
+<link rel="canonical" href="https://landbrugstal.dk/mistura-npk.html">
+<meta name="theme-color" content="#16a34a">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="da_DK">
+<meta property="og:site_name" content="Landbrugstal">
+<meta property="og:title" content="Beregner de Mistura de Gødnings NPK">
+<meta property="og:description" content="Combine gødnings til atender a anbefaling de N, P₂O₅ og K₂O.">
+<meta property="og:url" content="https://landbrugstal.dk/mistura-npk.html">
+<meta property="og:image" content="https://landbrugstal.dk/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/favicon-192.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Beregner de Mistura de Gødnings NPK",
+  "url": "https://landbrugstal.dk/mistura-npk.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "da-DK",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
+  "description": "Combinacao de ate 3 gødnings til atender a recomendacao NPK."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Forside","item":"https://landbrugstal.dk/"},
+    {"@type":"ListItem","position":2,"name":"NPK-blanding","item":"https://landbrugstal.dk/mistura-npk.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Spring til indhold</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/" aria-label="Landbrugstal — forsiden">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+      <span class="brand__name">Landbrug <span>do Dia</span></span>
+      <span class="brand__tagline">Daglige priser og landbrugsberegnere</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Åbn menu" aria-expanded="false" aria-controls="menu">
+      <svg class="nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="nav-toggle__close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <nav class="main-nav" id="menu" aria-label="Hovedmenu">
+      <ul>
+        <li><a href="/">Forside</a></li>
+        <li><a href="/cotacoes.html">Priser</a></li>
+        <li><a href="/futuros.html">Futures</a></li>
+        <li><a href="/sobre.html">Om</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main id="conteudo">
+
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Sti">
+        <ol>
+          <li><a href="/">Forside</a></li>
+          <li>NPK-blanding</li>
+        </ol>
+      </nav>
+      <h1>Beregner de Mistura de Gødnings NPK</h1>
+      <p class="lead">Combine até três gødnings (simples ou formulados) til atender, af forma mais próxima possível, a anbefaling de N, P₂O₅ og K₂O pr. hektar.</p>
+    </div>
+  </div>
+
+  <div class="container narrow">
+
+    <form class="calculator" id="calc-form" novalidate>
+      <h2 class="calculator__title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        Beregn a mistura
+      </h2>
+      <p class="calculator__hint">Indtast a anbefaling og a composição de cada gødning disponível.</p>
+
+      <fieldset class="field-group">
+        <legend>Anbefaling técnica</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="recN">Behov de N</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="recN" placeholder="Ex.: 80" autocomplete="off">
+              <span class="input-affix__unit">kg/ha</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="recP">Behov de P₂O₅</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="recP" placeholder="Ex.: 60" autocomplete="off">
+              <span class="input-affix__unit">kg/ha</span>
+            </div>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="recK">Behov de K₂O</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="recK" placeholder="Ex.: 40" autocomplete="off">
+              <span class="input-affix__unit">kg/ha</span>
+            </div>
+          </div>
+          <div class="field"></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="field-group">
+        <legend>Gødning 1</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="f1Nome">Nome (valgfri)</label>
+            <input class="input" type="text" id="f1Nome" placeholder="Ex.: MAP" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="f1N">% de N</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="f1N" placeholder="Ex.: 18" autocomplete="off">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f1P">% de P₂O₅</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="f1P" placeholder="Ex.: 46" autocomplete="off">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f1K">% de K₂O</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="f1K" placeholder="Ex.: 0" autocomplete="off">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f1Max">Dose máxima (valgfri)</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="f1Max" placeholder="sem limite" autocomplete="off">
+              <span class="input-affix__unit">kg/ha</span>
+            </div>
+          </div>
+          <div class="field"></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="field-group">
+        <legend>Gødning 2 (valgfri)</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="f2Nome">Nome (valgfri)</label>
+            <input class="input" type="text" id="f2Nome" placeholder="Ex.: KCl" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="f2N">% de N</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="f2N" placeholder="Ex.: 0" autocomplete="off">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f2P">% de P₂O₅</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="f2P" placeholder="Ex.: 0" autocomplete="off">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f2K">% de K₂O</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="f2K" placeholder="Ex.: 60" autocomplete="off">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f2Max">Dose máxima (valgfri)</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="f2Max" placeholder="sem limite" autocomplete="off">
+              <span class="input-affix__unit">kg/ha</span>
+            </div>
+          </div>
+          <div class="field"></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="field-group">
+        <legend>Gødning 3 (valgfri)</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="f3Nome">Nome (valgfri)</label>
+            <input class="input" type="text" id="f3Nome" placeholder="Ex.: Ureia" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="f3N">% de N</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="f3N" placeholder="Ex.: 45" autocomplete="off">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f3P">% de P₂O₅</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="f3P" placeholder="Ex.: 0" autocomplete="off">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f3K">% de K₂O</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="f3K" placeholder="Ex.: 0" autocomplete="off">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f3Max">Dose máxima (valgfri)</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="f3Max" placeholder="sem limite" autocomplete="off">
+              <span class="input-affix__unit">kg/ha</span>
+            </div>
+          </div>
+          <div class="field"></div>
+        </div>
+      </fieldset>
+
+      <p class="field-error" id="calc-error" role="alert"></p>
+
+      <div class="calculator__actions">
+        <button class="btn btn--primary btn--lg" type="submit">Beregn mistura</button>
+        <button class="btn btn--ghost" type="button" id="calc-example">Udfyld med eksempel</button>
+      </div>
+
+      <section class="result" id="calc-result" hidden aria-live="polite"></section>
+    </form>
+
+    <div class="ad-slot" data-ad-slot=""></div>
+
+    <article class="prose">
+
+      <h2>Hvad bruges den til</h2>
+      <p>Denne beregner combina <strong>até três gødnings</strong> (simples ou formulados) til tentar atender a anbefaling técnica de N, P₂O₅ og K₂O pr. hektar. É útil quando você não tem uma formel pronta som cobre todos os næringsstofs og precisa <strong>misturar gødnings</strong> til chegar perto af alvo.</p>
+
+      <h2>Sådan virker det</h2>
+      <p>A beregner aplica uma <strong>heurística gulosa</strong>: começa pelo næringsstof som tem menos opções entre os gødnings informados (geralmente P ou K) og escolhe o gødning mais rico naquele næringsstof til atendê-lo. Em seguida ajusta o próximo næringsstof descontando o som já foi entregue. O N costuma ser o último, completado med ureia ou outro gødning nitrogenado.</p>
+      <div class="formula">dose af fert (kg/ha) = (behov restante ÷ % af næringsstof) × 100</div>
+
+      <h2>Eksempel</h2>
+      <p>Behov 80-60-40 med MAP (18-46-00), KCl (00-00-60) og Ureia (45-00-00):</p>
+      <ul>
+        <li>MAP opfylder o P: 60 ÷ 46 × 100 ≈ <strong>130 kg/ha</strong>, entregando ~23 kg de N.</li>
+        <li>KCl opfylder o K: 40 ÷ 60 × 100 ≈ <strong>67 kg/ha</strong>.</li>
+        <li>Ureia completa o N restante (80 − 23 = 57): 57 ÷ 45 × 100 ≈ <strong>127 kg/ha</strong>.</li>
+      </ul>
+
+      <div class="callout callout--warning">
+        <div class="callout__title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Begrænsninger
+        </div>
+        <p>Nem altid é possível atender exatamente os três næringsstofs. Quando faltar uma fonte específica (ex.: nenhum gødning med K) o næringsstof fica descoberto. Quando os gødnings têm composições sobrepostas (ex.: dois med N) a heurística pode entregar sobra. <strong>Brugeren precisa decidir a prioridade</strong>: priorizar P og K (caros og pouco móveis i solo) og ajustar N med gødskning de cobertura costuma ser a escolha mais prática.</p>
+      </div>
+
+      <div class="related">
+        <h2>Andre beregnere</h2>
+        <div class="calc-grid">
+          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Quanto de gødning formulado anvende.</p></a>
+          <a class="calc-card" href="/kalkning.html"><h3>Kalkning</h3><p>Behov de kalk.</p></a>
+          <a class="calc-card" href="/populacao-de-plantas.html"><h3>Plantebestand</h3><p>Plantas pr. hektar.</p></a>
+        </div>
+      </div>
+
+    </article>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+          <span class="brand__name">Landbrugstal</span>
+        </a>
+        <p>Landbrugsberegnere og daglige markedspriser, opdateret hver dag.</p>
+      </div>
+      <div>
+        <h3>Beregnere</h3>
+        <ul>
+          <li><a href="/lotacao-græsmark.html">Græsningsbelægning</a></li>
+          <li><a href="/conversao-de-hkgs.html">Vægtomregner</a></li>
+          <li><a href="/adubacao-npk.html">NPK-gødning</a></li>
+          <li><a href="/mistura-npk.html">Mistura de gødnings</a></li>
+          <li><a href="/conversao-de-area.html">Arealomregner</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Marked</h3>
+        <ul>
+          <li><a href="/cotacoes.html">Daglige priser</a></li>
+          <li><a href="/futuros.html">Futures</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Site</h3>
+        <ul>
+          <li><a href="/sobre.html">Om</a></li>
+          <li><a href="/contato.html">Kontakt</a></li>
+          <li><a href="/privacidade.html">Privatlivspolitik</a></li>
+          <li><a href="/termos.html">Vilkår</a></li>
+          <li><a href="/apoiar.html">Støt projektet</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Beregnerne er kun vejledende og giver estimater. Priserne kommer fra tredjepartskilder (Euronext og TradingView).</p>
+      <p>© <span data-year>2026</span> Landbrugstal · Lavet i Danmark.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/agro.js"></script>
+<script src="/js/app.js"></script>
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var form = $('calc-form'), result = $('calc-result'), errBox = $('calc-error');
+  function showError(msg) { errBox.textContent = msg; errBox.classList.add('is-visible'); result.hidden = true; }
+  function clearError() { errBox.textContent = ''; errBox.classList.remove('is-visible'); }
+  function pn(id) { return parseNum($(id).value); }
+  function readFert(i, defNome) {
+    var nome = ($('f' + i + 'Nome').value || '').trim() || defNome;
+    var n = pn('f' + i + 'N'); if (n === null) n = 0;
+    var p = pn('f' + i + 'P'); if (p === null) p = 0;
+    var k = pn('f' + i + 'K'); if (k === null) k = 0;
+    var max = pn('f' + i + 'Max');
+    return { nome: nome, n: n, p: p, k: k, max: max };
+  }
+  function isEmptyFert(f) { return (f.n + f.p + f.k) <= 0; }
+
+  $('calc-example').addEventListener('click', function () {
+    $('recN').value = '80'; $('recP').value = '60'; $('recK').value = '40';
+    $('f1Nome').value = 'MAP';   $('f1N').value = '18'; $('f1P').value = '46'; $('f1K').value = '0';  $('f1Max').value = '';
+    $('f2Nome').value = 'KCl';   $('f2N').value = '0';  $('f2P').value = '0';  $('f2K').value = '60'; $('f2Max').value = '';
+    $('f3Nome').value = 'Ureia'; $('f3N').value = '45'; $('f3P').value = '0';  $('f3K').value = '0';  $('f3Max').value = '';
+    compute();
+  });
+  form.addEventListener('submit', function (e) { e.preventDefault(); compute(); });
+
+  function compute() {
+    clearError();
+    var recN = pn('recN'), recP = pn('recP'), recK = pn('recK');
+    if (recN === null || recP === null || recK === null) {
+      showError('Indtast a behov de N, P₂O₅ og K₂O.'); return;
+    }
+    if (recN < 0 || recP < 0 || recK < 0) {
+      showError('As behovs não podem ser negativas.'); return;
+    }
+    var ferts = [readFert(1, 'Gødning 1'), readFert(2, 'Gødning 2'), readFert(3, 'Gødning 3')];
+    var ativos = [];
+    for (var i = 0; i < ferts.length; i++) {
+      if (!isEmptyFert(ferts[i])) ativos.push({ idx: i, f: ferts[i] });
+    }
+    if (ativos.length === 0) {
+      showError('Indtast ao menos um gødning med composição.'); return;
+    }
+
+    // Heurística gulosa: ordenar næringsstofs pelo número de fontes disponíveis (menos fontes primeiro)
+    var næringsstofs = [
+      { key: 'p', alvo: recP, label: 'P₂O₅' },
+      { key: 'k', alvo: recK, label: 'K₂O' },
+      { key: 'n', alvo: recN, label: 'N' }
+    ];
+    næringsstofs.forEach(function (nut) {
+      nut.fontes = ativos.filter(function (a) { return a.f[nut.key] > 0; }).length;
+    });
+    næringsstofs.sort(function (a, b) {
+      if (a.fontes !== b.fontes) return a.fontes - b.fontes;
+      return b.alvo - a.alvo;
+    });
+
+    var doses = ativos.map(function () { return 0; });
+    var restante = { n: recN, p: recP, k: recK };
+
+    næringsstofs.forEach(function (nut) {
+      if (restante[nut.key] <= 0) return;
+      // escolhe fert ativo med størst % i næringsstof som ainda tem folga de dose máxima
+      var melhor = -1, melhorPct = 0;
+      for (var j = 0; j < ativos.length; j++) {
+        var pct = ativos[j].f[nut.key];
+        if (pct <= 0) continue;
+        var max = ativos[j].f.max;
+        if (max !== null && doses[j] >= max) continue;
+        if (pct > melhorPct) { melhorPct = pct; melhor = j; }
+      }
+      if (melhor < 0) return; // ninguém tem esse næringsstof
+      var doseNec = (restante[nut.key] / melhorPct) * 100;
+      var doseAtual = doses[melhor];
+      var max2 = ativos[melhor].f.max;
+      var doseLim = (max2 !== null) ? Math.max(0, max2 - doseAtual) : doseNec;
+      var dosePut = Math.min(doseNec, doseLim);
+      doses[melhor] += dosePut;
+      // desconta o som esse fert entrega i TODOS os næringsstofs restantes
+      restante.n -= dosePut * ativos[melhor].f.n / 100;
+      restante.p -= dosePut * ativos[melhor].f.p / 100;
+      restante.k -= dosePut * ativos[melhor].f.k / 100;
+    });
+
+    // entrega total
+    var entN = 0, entP = 0, entK = 0;
+    var doseResult = ferts.map(function () { return null; });
+    for (var k = 0; k < ativos.length; k++) {
+      var idx = ativos[k].idx;
+      doseResult[idx] = doses[k];
+      entN += doses[k] * ativos[k].f.n / 100;
+      entP += doses[k] * ativos[k].f.p / 100;
+      entK += doses[k] * ativos[k].f.k / 100;
+    }
+
+    render({
+      ferts: ferts,
+      doses: doseResult,
+      entregue: { n: entN, p: entP, k: entK },
+      alvo:     { n: recN, p: recP, k: recK }
+    });
+  }
+
+  function diffCell(entregue, alvo) {
+    var d = entregue - alvo;
+    var abs = Math.abs(d);
+    var pct = alvo > 0 ? (abs / alvo) * 100 : 0;
+    var status, label;
+    if (alvo === 0 && abs < 0.1) { status = 'neutral'; label = '—'; }
+    else if (abs < 0.5 || pct < 2)   { status = 'good';    label = 'ok'; }
+    else if (d > 0)                  { status = 'warn';    label = '+' + Fmt.int(abs) + ' kg/ha'; }
+    else                              { status = 'bad';     label = '−' + Fmt.int(abs) + ' kg/ha'; }
+    return { status: status, label: label };
+  }
+
+  function render(r) {
+    result.className = 'result result--neutral';
+    var html = '<div class="result__banner">' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
+      '<div><div class="result__headline">Mistura recomendada</div>' +
+      '<div class="result__sub">Dose de cada gødning og balanço NPK</div></div></div>';
+    html += '<div class="result__body">';
+
+    // Dose pr. gødning
+    var metrics = '';
+    for (var i = 0; i < r.ferts.length; i++) {
+      var f = r.ferts[i];
+      var dose = r.doses[i];
+      var nome = (f.nome || ('Gødning ' + (i + 1)));
+      var valor;
+      if (dose === null) { valor = '—'; }
+      else if (dose < 0.5) { valor = '0 kg/ha'; }
+      else { valor = Fmt.int(dose) + ' kg/ha'; }
+      var sub = (f.n + f.p + f.k > 0) ? (Fmt.int(f.n) + '-' + Fmt.int(f.p) + '-' + Fmt.int(f.k)) : 'não usado';
+      metrics += '<div class="metric"><div class="metric__label">' + nome + ' <small>(' + sub + ')</small></div>' +
+                 '<div class="metric__value">' + valor + '</div></div>';
+    }
+    html += '<div class="result__metrics">' + metrics + '</div>';
+
+    // Tabela balanço
+    var rows = [
+      { label: 'N',     entregue: r.entregue.n, alvo: r.alvo.n },
+      { label: 'P₂O₅', entregue: r.entregue.p, alvo: r.alvo.p },
+      { label: 'K₂O',  entregue: r.entregue.k, alvo: r.alvo.k }
+    ];
+    var tabela = '<div class="result__table-wrap"><table class="result__table"><thead><tr>' +
+      '<th>Næringsstof</th><th>Behov</th><th>Entregue</th><th>Diferença</th>' +
+      '</tr></thead><tbody>';
+    rows.forEach(function (row) {
+      var d = diffCell(row.entregue, row.alvo);
+      var color = d.status === 'good' ? '#16a34a' : (d.status === 'warn' ? '#d97706' : (d.status === 'bad' ? '#dc2626' : '#64748b'));
+      tabela += '<tr>' +
+        '<td><strong>' + row.label + '</strong></td>' +
+        '<td>' + Fmt.int(row.alvo) + ' kg/ha</td>' +
+        '<td>' + Fmt.int(row.entregue) + ' kg/ha</td>' +
+        '<td style="color:' + color + ';font-weight:600">' + d.label + '</td>' +
+        '</tr>';
+    });
+    tabela += '</tbody></table></div>';
+    html += tabela;
+
+    html += '<div class="result__interpretation"><p>Verde indica næringsstof atendido. Laranja indica sobra (entregou mais som a behov). Vermelho indica falta — complete med um gødning simples ou ajuste a mistura. Nem altid dá pra atender os três næringsstofs exatamente; priorize P og K og ajuste o N i cobertura.</p></div>';
+
+    html += '</div>';
+    result.innerHTML = html;
+    result.hidden = false;
+    result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+})();
+</script>
+</body>
+</html>

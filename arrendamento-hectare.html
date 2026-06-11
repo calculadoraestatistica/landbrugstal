@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
+<title>Beregner for Forpagtning pr. Hektar | Landbrugstal</title>
+<meta name="description" content="Beregn værdien af forpagtning pr. hektar i hkg, fast beløb eller procent af omsætning. Nettomargin, netto-hkg og break-even udbytte.">
+<link rel="canonical" href="https://landbrugstal.dk/forpagtning-hektar.html">
+<meta name="theme-color" content="#16a34a">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="da_DK">
+<meta property="og:site_name" content="Landbrugstal">
+<meta property="og:title" content="Beregner for Forpagtning pr. Hektar">
+<meta property="og:description" content="Vurder rentabiliteten af landbrugsforpagtning pr. hektar i forskellige typer af forpagtning.">
+<meta property="og:url" content="https://landbrugstal.dk/forpagtning-hektar.html">
+<meta property="og:image" content="https://landbrugstal.dk/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/favicon-192.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Beregner for Forpagtning pr. Hektar",
+  "url": "https://landbrugstal.dk/forpagtning-hektar.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "da-DK",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
+  "description": "Analyser landbrugsforpagtning pr. hektar i hkg, fast beløb eller procent."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Forside","item":"https://landbrugstal.dk/"},
+    {"@type":"ListItem","position":2,"name":"Forpagtning pr. hektar","item":"https://landbrugstal.dk/forpagtning-hektar.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Spring til indhold</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/" aria-label="Landbrugstal — forsiden">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+      <span class="brand__name">Landbrug <span>do Dia</span></span>
+      <span class="brand__tagline">Daglige priser og landbrugsberegnere</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Åbn menu" aria-expanded="false" aria-controls="menu">
+      <svg class="nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="nav-toggle__close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <nav class="main-nav" id="menu" aria-label="Hovedmenu">
+      <ul>
+        <li><a href="/">Forside</a></li>
+        <li><a href="/cotacoes.html">Priser</a></li>
+        <li><a href="/futuros.html">Futures</a></li>
+        <li><a href="/sobre.html">Om</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main id="conteudo">
+
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Sti">
+        <ol>
+          <li><a href="/">Forside</a></li>
+          <li>Forpagtning pr. hektar</li>
+        </ol>
+      </nav>
+      <h1>Forpagtning pr. hektar — analyse</h1>
+      <p class="lead">Beregn værdien af forpagtning i hkg, fast beløb eller procent af omsætning, og se hvilken nettomargin der bliver tilbage til forpagteren.</p>
+    </div>
+  </div>
+
+  <div class="container narrow">
+
+    <form class="calculator" id="calc-form" novalidate>
+      <h2 class="calculator__title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 14l3-3 3 2 5-6"/></svg>
+        Beregn forpagtningen
+      </h2>
+      <p class="calculator__hint">Vælg type af forpagtning og indtast forventet udbytte.</p>
+
+      <fieldset class="field-group">
+        <legend>Type af forpagtning</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="modalidade">Type af forpagtning</label>
+            <select class="input" id="modalidade">
+              <option value="hkgs">Hkg pr. hektar (afgrødeforpagtning/procent)</option>
+              <option value="fixo">Fast beløb kr/ha</option>
+              <option value="pct">% af brutto-omsætning</option>
+            </select>
+          </div>
+          <div class="field" id="campo-cultura">
+            <label for="cultura">Afgrøde</label>
+            <select class="input" id="cultura">
+              <option value="soja">Sojabønner</option>
+              <option value="milho">Majs</option>
+              <option value="trigo">Hvede</option>
+              <option value="cafe">Kaffe</option>
+              <option value="algodao">Bomuld</option>
+              <option value="outra">Anden</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-row" id="campos-hkgs">
+          <div class="field">
+            <label for="arrHkgs">Hkg som forpagtning</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="arrHkgs" placeholder="Eks.: 15" autocomplete="off">
+              <span class="input-affix__unit">hkg/ha</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="precoHkg">Pris pr. hkg</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="precoHkg" placeholder="Eks.: 130" autocomplete="off">
+              <span class="input-affix__unit">kr/hkg</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="field-row" id="campos-fixo" hidden>
+          <div class="field">
+            <label for="arrFixo">Fast forpagtningsbeløb</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="arrFixo" placeholder="Eks.: 2000" autocomplete="off">
+              <span class="input-affix__unit">kr/ha</span>
+            </div>
+          </div>
+          <div class="field"></div>
+        </div>
+
+        <div class="field-row" id="campos-pct" hidden>
+          <div class="field">
+            <label for="arrPct">% af brutto-omsætning</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="arrPct" placeholder="Eks.: 25" autocomplete="off">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+          <div class="field"></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="field-group">
+        <legend>Forventet udbytte og omkostninger pr. hektar</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="udbytte">Forventet udbytte</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="udbytte" placeholder="Eks.: 60" autocomplete="off">
+              <span class="input-affix__unit" id="unitProd">hkg/ha</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="unidProd">Enhed for udbytte</label>
+            <select class="input" id="unidProd">
+              <option value="sc">Hkg</option>
+              <option value="t">Tons (t)</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="precoProd">Salgspris</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="precoProd" placeholder="Eks.: 130" autocomplete="off">
+              <span class="input-affix__unit" id="unitPreco">kr/hkg</span>
+            </div>
+            <p class="help">Brug samme enhed som udbyttet.</p>
+          </div>
+          <div class="field">
+            <label for="omkostning">Produktionsomkostning</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="omkostning" placeholder="Eks.: 4500" autocomplete="off">
+              <span class="input-affix__unit">kr/ha</span>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label for="outras">Andre indtægter (valgfri)</label>
+          <div class="input-affix">
+            <input class="input" type="text" inputmode="decimal" id="outras" placeholder="Eks.: 0" autocomplete="off">
+            <span class="input-affix__unit">kr/ha</span>
+          </div>
+          <p class="help">Biprodukter, halm, restjordfrugtbarhed mv.</p>
+        </div>
+      </fieldset>
+
+      <p class="field-error" id="calc-error" role="alert"></p>
+
+      <div class="calculator__actions">
+        <button class="btn btn--primary btn--lg" type="submit">Beregn forpagtning</button>
+        <button class="btn btn--ghost" type="button" id="calc-example">Udfyld med eksempel</button>
+      </div>
+
+      <section class="result" id="calc-result" hidden aria-live="polite"></section>
+    </form>
+
+    <div class="ad-slot" data-ad-slot=""></div>
+
+    <article class="prose">
+
+      <h2>Hvad bruges den til</h2>
+      <p>Denne beregner hjælper landmanden med at vurdere, om <strong>forpagtning af jord</strong> koster penge, går i nul eller giver overskud i slutningen af sæsonen. Den sammenligner de tre mest anvendte typer af forpagtning — hkg pr. hektar (afgrødeforpagtning), fast beløb i kroner og procent af omsætning — og viser, hvor meget nettoresultat der er tilbage efter betaling af jordleje og produktionsomkostninger.</p>
+
+      <h2>Typer af kontrakt</h2>
+      <p><strong>Hkg pr. hektar:</strong> forpagteren afleverer et fast antal hkg (eller den tilsvarende værdi i kroner efter hkg-prisen på leveringstidspunktet) til ejeren. Det er den mest almindelige type ved sojabønner og majs.</p>
+      <p><strong>Fast beløb kr/ha:</strong> leje i kontanter, fastsat i kontrakten. Beskytter ejeren mod prisfald, men samler markedsrisikoen hos forpagteren.</p>
+      <p><strong>% af brutto-omsætning:</strong> ejeren modtager en procentdel af brutto-indtægten. Deler prisrisikoen bedre, men deler også prisstigninger.</p>
+
+      <h2>Sådan beregner du</h2>
+      <div class="formula">Indtægt/ha = udbytte × pris</div>
+      <div class="formula">Nettomargin/ha = indtægt - omkostning - forpagtning + andre indtægter</div>
+      <div class="formula">Break-even udbytte = (omkostning + forpagtning) ÷ pris</div>
+
+      <h2>Eksempel</h2>
+      <p>Sojabønner, forpagtning på 15 hkg/ha, pris kr 130/hkg, forventet udbytte 60 hkg/ha og omkostning på kr 4.500/ha:</p>
+      <ul>
+        <li>Forpagtning: 15 × 130 = <strong>kr 1.950/ha</strong></li>
+        <li>Brutto-indtægt: 60 × 130 = <strong>kr 7.800/ha</strong></li>
+        <li>Nettomargin: 7.800 − 4.500 − 1.950 = <strong>kr 1.350/ha</strong></li>
+      </ul>
+
+      <div class="callout callout--warning">
+        <div class="callout__title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Estimat før sæsonen
+        </div>
+        <p>Dette er et estimat før sæsonen. Klimarisiko, pris og omkostninger kan ændre resultatet betydeligt. Arbejd med scenarier (pessimistisk, basis, optimistisk) før du underskriver kontrakten, og overvej hkg-prisen på leveringstidspunktet, ikke i dag.</p>
+      </div>
+
+      <div class="related">
+        <h2>Andre beregnere</h2>
+        <div class="calc-grid">
+          <a class="calc-card" href="/margin-bruta.html"><h3>Bruttomargin</h3><p>Indtægt, margin og break-even.</p></a>
+          <a class="calc-card" href="/omkostning-de-producao.html"><h3>Produktionsomkostning</h3><p>Omkostning pr. enhed.</p></a>
+          <a class="calc-card" href="/udbytte.html"><h3>Udbytte</h3><p>Omregning og estimering.</p></a>
+        </div>
+      </div>
+
+    </article>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+          <span class="brand__name">Landbrugstal</span>
+        </a>
+        <p>Landbrugsberegnere og daglige markedspriser, opdateret hver dag.</p>
+      </div>
+      <div>
+        <h3>Beregnere</h3>
+        <ul>
+          <li><a href="/lotacao-græsmark.html">Græsningsbelægning</a></li>
+          <li><a href="/conversao-de-hkgs.html">Vægtomregner</a></li>
+          <li><a href="/adubacao-npk.html">NPK-gødning</a></li>
+          <li><a href="/conversao-de-area.html">Arealomregner</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Marked</h3>
+        <ul>
+          <li><a href="/cotacoes.html">Daglige priser</a></li>
+          <li><a href="/futuros.html">Futures</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Site</h3>
+        <ul>
+          <li><a href="/sobre.html">Om</a></li>
+          <li><a href="/contato.html">Kontakt</a></li>
+          <li><a href="/privacidade.html">Privatlivspolitik</a></li>
+          <li><a href="/termos.html">Vilkår</a></li>
+          <li><a href="/apoiar.html">Støt projektet</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Beregnerne er kun vejledende og giver estimater. Priserne kommer fra tredjepartskilder (Euronext og TradingView).</p>
+      <p>© <span data-year>2026</span> Landbrugstal · Lavet i Danmark.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/agro.js"></script>
+<script src="/js/app.js"></script>
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var form = $('calc-form'), result = $('calc-result'), errBox = $('calc-error');
+
+  function showError(msg) { errBox.textContent = msg; errBox.classList.add('is-visible'); result.hidden = true; }
+  function clearError() { errBox.textContent = ''; errBox.classList.remove('is-visible'); }
+  function money(v) { return 'kr ' + Fmt.num(v, 2); }
+
+  function syncModalidade() {
+    var m = $('modalidade').value;
+    $('campos-hkgs').hidden = (m !== 'hkgs');
+    $('campos-fixo').hidden = (m !== 'fixo');
+    $('campos-pct').hidden = (m !== 'pct');
+    $('campo-cultura').style.display = (m === 'hkgs') ? '' : 'none';
+  }
+  function syncUnidProd() {
+    var u = $('unidProd').value;
+    $('unitProd').textContent = (u === 't') ? 't/ha' : 'hkg/ha';
+    $('unitPreco').textContent = (u === 't') ? 'kr/t' : 'kr/sc';
+  }
+  $('modalidade').addEventListener('change', syncModalidade);
+  $('unidProd').addEventListener('change', syncUnidProd);
+  syncModalidade();
+  syncUnidProd();
+
+  $('calc-example').addEventListener('click', function () {
+    $('modalidade').value = 'hkgs';
+    $('cultura').value = 'soja';
+    $('arrHkgs').value = '15';
+    $('precoHkg').value = '130';
+    $('unidProd').value = 'sc';
+    $('udbytte').value = '60';
+    $('precoProd').value = '130';
+    $('omkostning').value = '4500';
+    $('outras').value = '';
+    syncModalidade();
+    syncUnidProd();
+    compute();
+  });
+
+  form.addEventListener('submit', function (e) { e.preventDefault(); compute(); });
+
+  function readForm() {
+    return {
+      modalidade: $('modalidade').value,
+      cultura: $('cultura').value,
+      arrHkgs: parseNum($('arrHkgs').value),
+      precoHkg: parseNum($('precoHkg').value),
+      arrFixo: parseNum($('arrFixo').value),
+      arrPct: parseNum($('arrPct').value),
+      unidProd: $('unidProd').value,
+      udbytte: parseNum($('udbytte').value),
+      precoProd: parseNum($('precoProd').value),
+      omkostning: parseNum($('omkostning').value),
+      outras: parseNum($('outras').value)
+    };
+  }
+
+  function calcular(o) {
+    if (!isFinite(o.udbytte) || o.udbytte <= 0) return { error: 'Indtast a udbytte esperada.' };
+    if (!isFinite(o.precoProd) || o.precoProd <= 0) return { error: 'Indtast o preço af produção.' };
+    if (!isFinite(o.omkostning) || o.omkostning < 0) return { error: 'Indtast o omkostning de produção pr. hektar.' };
+
+    var receita = o.udbytte * o.precoProd;
+    var outras = isFinite(o.outras) ? o.outras : 0;
+    var forpagtning = 0;
+
+    if (o.modalidade === 'hkgs') {
+      if (!isFinite(o.arrHkgs) || o.arrHkgs < 0) return { error: 'Indtast o número de hkgs af forpagtning.' };
+      if (!isFinite(o.precoHkg) || o.precoHkg <= 0) return { error: 'Indtast o preço af hkg til o forpagtning.' };
+      forpagtning = o.arrHkgs * o.precoHkg;
+    } else if (o.modalidade === 'fixo') {
+      if (!isFinite(o.arrFixo) || o.arrFixo < 0) return { error: 'Indtast o valor fixo af forpagtning.' };
+      forpagtning = o.arrFixo;
+    } else if (o.modalidade === 'pct') {
+      if (!isFinite(o.arrPct) || o.arrPct < 0) return { error: 'Indtast o percentual af faturamento.' };
+      forpagtning = receita * (o.arrPct / 100);
+    }
+
+    var margin = receita - o.omkostning - forpagtning + outras;
+    var pctReceita = receita > 0 ? (forpagtning / receita) * 100 : 0;
+    var breakEvenProd = (o.omkostning + forpagtning) / o.precoProd;
+    var hkgsLiquidas = receita > 0 ? margin / o.precoProd : 0;
+
+    return {
+      modalidade: o.modalidade,
+      unidProd: o.unidProd,
+      receita: receita,
+      omkostning: o.omkostning,
+      forpagtning: forpagtning,
+      outras: outras,
+      margin: margin,
+      pctReceita: pctReceita,
+      breakEvenProd: breakEvenProd,
+      hkgsLiquidas: hkgsLiquidas
+    };
+  }
+
+  function compute() {
+    clearError();
+    var r = calcular(readForm());
+    if (r.error) { showError(r.error); return; }
+    render(r);
+  }
+
+  function render(r) {
+    var unidLabel = (r.unidProd === 't') ? 't/ha' : 'hkg/ha';
+    var unidShort = (r.unidProd === 't') ? 't' : 'sc';
+    var classe = r.margin > 0 ? 'result--ok' : (r.margin < 0 ? 'result--bad' : 'result--neutral');
+    result.className = 'result ' + classe;
+
+    var interpretacao;
+    if (r.margin > 0) {
+      interpretacao = 'Sobra margin til o arrendatário neste cenário. O forpagtning consome ' + Fmt.num(r.pctReceita, 1) + '% af receita bruta esperada.';
+    } else if (r.margin < 0) {
+      interpretacao = 'O cenário não fecha: receita não cobre o omkostning somado ao forpagtning. Seria preciso udbytte størst, preço melhor ou renegociar o valor af terra.';
+    } else {
+      interpretacao = 'O cenário empata exatamente — sem margin, sem prejuízo. Qualquer variação de preço ou udbytte muda resultatet.';
+    }
+
+    var html = '<div class="result__banner">' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
+      '<div><div class="result__headline">Margin líquida</div>' +
+      '<div class="result__sub">Depois af forpagtning og af omkostning de produção</div></div></div>';
+
+    html += '<div class="result__body">';
+    html += '<div class="result__main">' + money(r.margin) + ' <small>/ha</small></div>';
+    html += '<div class="result__metrics">';
+    html += '<div class="metric"><div class="metric__label">Receita bruta/ha</div><div class="metric__value">' + money(r.receita) + '</div></div>';
+    html += '<div class="metric"><div class="metric__label">Produktionsomkostning/ha</div><div class="metric__value">' + money(r.omkostning) + '</div></div>';
+    html += '<div class="metric"><div class="metric__label">Forpagtning/ha</div><div class="metric__value">' + money(r.forpagtning) + '</div></div>';
+    html += '<div class="metric"><div class="metric__label">% af receita p/ forpagtning</div><div class="metric__value">' + Fmt.num(r.pctReceita, 1) + '%</div></div>';
+    html += '<div class="metric"><div class="metric__label">Produção líquida restante</div><div class="metric__value">' + Fmt.num(r.hkgsLiquidas, 1) + ' ' + unidShort + '/ha</div></div>';
+    html += '<div class="metric"><div class="metric__label">Udbytte de equilíbrio</div><div class="metric__value">' + Fmt.num(r.breakEvenProd, 1) + ' ' + unidLabel + '</div></div>';
+    html += '</div>';
+    html += '<div class="result__interpretation"><p>' + interpretacao + '</p></div>';
+    html += '</div>';
+
+    result.innerHTML = html;
+    result.hidden = false;
+    result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+})();
+</script>
+</body>
+</html>

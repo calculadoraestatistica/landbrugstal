@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <link rel="preconnect" href="https://s3.tradingview.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.euronext.com">
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
+<title>Beregner de Capacidade de Lager til Korn | Landbrugstal</title>
+<meta name="description" content="Beregner de capacidade de armazém og silo til korn. Estime volume útil, toneladas og hkgs de 60 kg armazenáveis i silos cilíndricos, retangulares og graneleiros.">
+<link rel="canonical" href="https://landbrugstal.dk/capacidade-armazem.html">
+<meta name="theme-color" content="#16a34a">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="da_DK">
+<meta property="og:site_name" content="Landbrugstal">
+<meta property="og:title" content="Beregner de Capacidade de Lager til Korn">
+<meta property="og:description" content="Volume útil, toneladas og hkgs armazenáveis i silo cilíndrico, retangular og armazém graneleiro.">
+<meta property="og:url" content="https://landbrugstal.dk/capacidade-armazem.html">
+<meta property="og:image" content="https://landbrugstal.dk/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/favicon-192.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Beregner de Capacidade de Armazem til Graos",
+  "url": "https://landbrugstal.dk/capacidade-armazem.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "da-DK",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
+  "description": "Estimativa de capacidade de opbevaring de graos i silos og armazens."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Forside","item":"https://landbrugstal.dk/"},
+    {"@type":"ListItem","position":2,"name":"Lagerkapacitet","item":"https://landbrugstal.dk/capacidade-armazem.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Spring til indhold</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/" aria-label="Landbrugstal — forsiden">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+      <span class="brand__name">Landbrug <span>do Dia</span></span>
+      <span class="brand__tagline">Daglige priser og landbrugsberegnere</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Åbn menu" aria-expanded="false" aria-controls="menu">
+      <svg class="nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="nav-toggle__close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <nav class="main-nav" id="menu" aria-label="Hovedmenu">
+      <ul>
+        <li><a href="/">Forside</a></li>
+        <li><a href="/cotacoes.html">Priser</a></li>
+        <li><a href="/futuros.html">Futures</a></li>
+        <li><a href="/sobre.html">Om</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main id="conteudo">
+
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Sti">
+        <ol>
+          <li><a href="/">Forside</a></li>
+          <li>Lagerkapacitet</li>
+        </ol>
+      </nav>
+      <h1>Beregner de Capacidade de Lager til Korn</h1>
+      <p class="lead">Estime quantas toneladas og hkgs cabem i seu silo ou armazém a partir af dimensões af estrutura og af tipo de grão.</p>
+    </div>
+  </div>
+
+  <div class="container narrow">
+
+    <form class="calculator" id="calc-form" novalidate>
+      <h2 class="calculator__title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        Beregn a capacidade
+      </h2>
+      <p class="calculator__hint">Indtast a estrutura, as dimensões og o grão armazenado.</p>
+
+      <fieldset class="field-group">
+        <legend>Estrutura og dimensões</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="tipo">Tipo de estrutura</label>
+            <select class="input" id="tipo">
+              <option value="cilindrico">Silo cilíndrico (vertical)</option>
+              <option value="retangular">Silo elevado retangular</option>
+              <option value="armazem">Lager (graneleiro horizontal)</option>
+            </select>
+          </div>
+          <div class="field" id="field-fator">
+            <label for="fator">Fator de aproveitamento</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="fator" placeholder="Ex.: 90" autocomplete="off">
+              <span class="input-affix__unit">%</span>
+            </div>
+          </div>
+        </div>
+        <div class="field-row" id="row-cilindrico">
+          <div class="field">
+            <label for="diametro">Diâmetro</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="diametro" placeholder="Ex.: 8" autocomplete="off">
+              <span class="input-affix__unit">m</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="alturaCil">Altura útil</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="alturaCil" placeholder="Ex.: 12" autocomplete="off">
+              <span class="input-affix__unit">m</span>
+            </div>
+          </div>
+        </div>
+        <div class="field-row" id="row-retangular-1" hidden>
+          <div class="field">
+            <label for="comprimento">Comprimento</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="comprimento" placeholder="Ex.: 40" autocomplete="off">
+              <span class="input-affix__unit">m</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="largura">Largura</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="largura" placeholder="Ex.: 20" autocomplete="off">
+              <span class="input-affix__unit">m</span>
+            </div>
+          </div>
+        </div>
+        <div class="field-row" id="row-retangular-2" hidden>
+          <div class="field">
+            <label for="alturaRet">Altura útil</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="alturaRet" placeholder="Ex.: 6" autocomplete="off">
+              <span class="input-affix__unit">m</span>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="field-group">
+        <legend>Grão</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="grao">Tipo de grão</label>
+            <select class="input" id="grao">
+              <option value="720" data-nome="Sojabønner">Sojabønner (720 kg/m³)</option>
+              <option value="720" data-nome="Majs">Majs (720 kg/m³)</option>
+              <option value="770" data-nome="Hvede">Hvede (770 kg/m³)</option>
+              <option value="580" data-nome="Ris casca">Ris i casca (580 kg/m³)</option>
+              <option value="800" data-nome="Ris beneficiado">Ris beneficiado (800 kg/m³)</option>
+              <option value="470" data-nome="Café cereja">Café cereja (470 kg/m³)</option>
+              <option value="580" data-nome="Café beneficiado">Café beneficiado (580 kg/m³)</option>
+              <option value="omkostningm" data-nome="Personalizado">Personalizado</option>
+            </select>
+          </div>
+          <div class="field" id="field-densidade" hidden>
+            <label for="densidade">Densidade aparente</label>
+            <div class="input-affix">
+              <input class="input" type="text" inputmode="decimal" id="densidade" placeholder="Ex.: 720" autocomplete="off">
+              <span class="input-affix__unit">kg/m³</span>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <p class="field-error" id="calc-error" role="alert"></p>
+
+      <div class="calculator__actions">
+        <button class="btn btn--primary btn--lg" type="submit">Beregn capacidade</button>
+        <button class="btn btn--ghost" type="button" id="calc-example">Udfyld med eksempel</button>
+      </div>
+
+      <section class="result" id="calc-result" hidden aria-live="polite"></section>
+    </form>
+
+    <div class="ad-slot" data-ad-slot=""></div>
+
+    <article class="prose">
+
+      <h2>Hvad bruges den til</h2>
+      <p>Denne beregner estima a <strong>capacidade de opbevaring</strong> de silos og armazéns graneleiros. Serve til planejar o volume af høst esperada contra a estrutura disponível, dimensionar projetos novos og avaliar contratos de forpagtning de opbevaring.</p>
+
+      <h2>Sådan beregner du</h2>
+      <p>Primeiro calcula-se o volume geométrico af estrutura, aplica-se um fator de aproveitamento (perdas de canto, ângulo de talude, espaço de aeração) og converte-se med a densidade aparente af grão.</p>
+      <div class="formula">Silo cilíndrico: V = π × (d/2)² × h</div>
+      <div class="formula">Retangular / armazém: V = comprimento × largura × altura</div>
+      <div class="formula">Toneladas = V × fator × densidade ÷ 1.000</div>
+
+      <h2>Densidades aparentes de referência</h2>
+      <p>Valores típicos de densidade aparente (peso pr. metro cúbico de grão a granel) usados til dimensionamento:</p>
+      <ul>
+        <li><strong>Sojabønner</strong>: 720 kg/m³</li>
+        <li><strong>Majs</strong>: 720 kg/m³</li>
+        <li><strong>Hvede</strong>: 770 kg/m³</li>
+        <li><strong>Ris i casca</strong>: 580 kg/m³</li>
+        <li><strong>Ris beneficiado</strong>: 800 kg/m³</li>
+        <li><strong>Café cereja</strong>: 470 kg/m³</li>
+        <li><strong>Café beneficiado</strong>: 580 kg/m³</li>
+      </ul>
+
+      <h2>Eksempel</h2>
+      <p>Silo cilíndrico de 8 m de diâmetro pr. 12 m de altura útil, armazenando soja med 90% de aproveitamento: volume útil ≈ <strong>543 m³</strong>, cerca de <strong>391 t</strong> ou <strong>6.512 hkgs</strong> de 60 kg.</p>
+
+      <div class="callout callout--warning">
+        <div class="callout__title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Densidade varia med umidade og impurezas
+        </div>
+        <p>A densidade aparente muda med o teor de umidade, presença de impurezas og o grau de compactação i enchimento. Para projeto og dimensionamento, use valores conservadores (próximos af limite inferior af faixa) til evitar subestimar o espaço påkrævet.</p>
+      </div>
+
+      <div class="related">
+        <h2>Andre beregnere</h2>
+        <div class="calc-grid">
+          <a class="calc-card" href="/conversao-de-hkgs.html"><h3>Vægtomregner</h3><p>Toneladas, hkgs og arrobas.</p></a>
+          <a class="calc-card" href="/udbytte.html"><h3>Udbytte</h3><p>Hkgs pr. hektar.</p></a>
+          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Gødning a partir af anbefaling.</p></a>
+        </div>
+      </div>
+
+    </article>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+          <span class="brand__name">Landbrugstal</span>
+        </a>
+        <p>Landbrugsberegnere og daglige markedspriser, opdateret hver dag.</p>
+      </div>
+      <div>
+        <h3>Beregnere</h3>
+        <ul>
+          <li><a href="/lotacao-græsmark.html">Græsningsbelægning</a></li>
+          <li><a href="/conversao-de-hkgs.html">Vægtomregner</a></li>
+          <li><a href="/adubacao-npk.html">NPK-gødning</a></li>
+          <li><a href="/conversao-de-area.html">Arealomregner</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Marked</h3>
+        <ul>
+          <li><a href="/cotacoes.html">Daglige priser</a></li>
+          <li><a href="/futuros.html">Futures</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Site</h3>
+        <ul>
+          <li><a href="/sobre.html">Om</a></li>
+          <li><a href="/contato.html">Kontakt</a></li>
+          <li><a href="/privacidade.html">Privatlivspolitik</a></li>
+          <li><a href="/termos.html">Vilkår</a></li>
+          <li><a href="/apoiar.html">Støt projektet</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Beregnerne er kun vejledende og giver estimater. Priserne kommer fra tredjepartskilder (Euronext og TradingView).</p>
+      <p>© <span data-year>2026</span> Landbrugstal · Lavet i Danmark.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/agro.js"></script>
+<script src="/js/app.js"></script>
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var form = $('calc-form'), result = $('calc-result'), errBox = $('calc-error');
+  var tipoSel = $('tipo'), graoSel = $('grao');
+  var rowCil = $('row-cilindrico'), rowRet1 = $('row-retangular-1'), rowRet2 = $('row-retangular-2');
+  var fieldDens = $('field-densidade');
+
+  function showError(msg) { errBox.textContent = msg; errBox.classList.add('is-visible'); result.hidden = true; }
+  function clearError() { errBox.textContent = ''; errBox.classList.remove('is-visible'); }
+
+  function parseNumLocal(v) {
+    if (typeof Fmt !== 'undefined' && Fmt.parseNum) return Fmt.parseNum(v);
+    if (typeof parseNum === 'function') return parseNum(v);
+    if (v === null || v === undefined) return NaN;
+    var s = String(v).trim().replace(/\./g, '').replace(',', '.');
+    if (!s) return NaN;
+    var n = parseFloat(s);
+    return isFinite(n) ? n : NaN;
+  }
+
+  function fmtInt(n) {
+    if (typeof Fmt !== 'undefined' && Fmt.int) return Fmt.int(n);
+    return Math.round(n).toLocaleString('pt-BR');
+  }
+  function fmtDec(n, d) {
+    if (typeof Fmt !== 'undefined' && Fmt.dec) return Fmt.dec(n, d);
+    return Number(n).toLocaleString('pt-BR', { minimumFractionDigits: d, maximumFractionDigits: d });
+  }
+
+  function updateTipo() {
+    var t = tipoSel.value;
+    if (t === 'cilindrico') {
+      rowCil.hidden = false; rowRet1.hidden = true; rowRet2.hidden = true;
+      $('fator').placeholder = 'Ex.: 90';
+      if (!$('fator').value) $('fator').value = '90';
+    } else {
+      rowCil.hidden = true; rowRet1.hidden = false; rowRet2.hidden = false;
+      if (t === 'armazem') {
+        $('fator').placeholder = 'Ex.: 70';
+        if (!$('fator').value || $('fator').value === '90') $('fator').value = '70';
+      } else {
+        $('fator').placeholder = 'Ex.: 90';
+        if (!$('fator').value || $('fator').value === '70') $('fator').value = '90';
+      }
+    }
+  }
+
+  function updateGrao() {
+    if (graoSel.value === 'omkostningm') {
+      fieldDens.hidden = false;
+    } else {
+      fieldDens.hidden = true;
+    }
+  }
+
+  tipoSel.addEventListener('change', updateTipo);
+  graoSel.addEventListener('change', updateGrao);
+  updateTipo();
+  updateGrao();
+
+  $('calc-example').addEventListener('click', function () {
+    tipoSel.value = 'cilindrico';
+    updateTipo();
+    $('diametro').value = '8';
+    $('alturaCil').value = '12';
+    graoSel.value = '720';
+    graoSel.selectedIndex = 0;
+    updateGrao();
+    $('fator').value = '90';
+    compute();
+  });
+
+  form.addEventListener('submit', function (e) { e.preventDefault(); compute(); });
+
+  function readForm() {
+    var o = { tipo: tipoSel.value };
+    o.fator = parseNumLocal($('fator').value);
+    if (o.tipo === 'cilindrico') {
+      o.diametro = parseNumLocal($('diametro').value);
+      o.altura = parseNumLocal($('alturaCil').value);
+    } else {
+      o.comprimento = parseNumLocal($('comprimento').value);
+      o.largura = parseNumLocal($('largura').value);
+      o.altura = parseNumLocal($('alturaRet').value);
+    }
+    var opt = graoSel.options[graoSel.selectedIndex];
+    o.graoNome = opt ? opt.getAttribute('data-nome') : '';
+    if (graoSel.value === 'omkostningm') {
+      o.densidade = parseNumLocal($('densidade').value);
+    } else {
+      o.densidade = parseNumLocal(graoSel.value);
+    }
+    return o;
+  }
+
+  function validate(o) {
+    if (!isFinite(o.fator) || o.fator <= 0 || o.fator > 100) {
+      return 'Indtast um fator de aproveitamento entre 0 og 100%.';
+    }
+    if (!isFinite(o.densidade) || o.densidade <= 0) {
+      return 'Indtast a densidade aparente af grão i kg/m³.';
+    }
+    if (o.tipo === 'cilindrico') {
+      if (!isFinite(o.diametro) || o.diametro <= 0) return 'Indtast o diâmetro af silo i metros.';
+      if (!isFinite(o.altura) || o.altura <= 0) return 'Indtast a altura útil af silo i metros.';
+    } else {
+      if (!isFinite(o.comprimento) || o.comprimento <= 0) return 'Indtast o comprimento i metros.';
+      if (!isFinite(o.largura) || o.largura <= 0) return 'Indtast a largura i metros.';
+      if (!isFinite(o.altura) || o.altura <= 0) return 'Indtast a altura útil i metros.';
+    }
+    return null;
+  }
+
+  function compute() {
+    clearError();
+    var o = readForm();
+    var err = validate(o);
+    if (err) { showError(err); return; }
+    var volBruto;
+    if (o.tipo === 'cilindrico') {
+      var r = o.diametro / 2;
+      volBruto = Math.PI * r * r * o.altura;
+    } else {
+      volBruto = o.comprimento * o.largura * o.altura;
+    }
+    var volUtil = volBruto * (o.fator / 100);
+    var kg = volUtil * o.densidade;
+    var ton = kg / 1000;
+    var sc60 = kg / 60;
+    var sc50 = kg / 50;
+    render({
+      tipo: o.tipo,
+      graoNome: o.graoNome,
+      densidade: o.densidade,
+      fator: o.fator,
+      volBruto: volBruto,
+      volUtil: volUtil,
+      ton: ton,
+      sc60: sc60,
+      sc50: sc50
+    });
+  }
+
+  function tipoLabel(t) {
+    if (t === 'cilindrico') return 'Silo cilíndrico';
+    if (t === 'retangular') return 'Silo retangular';
+    return 'Lager graneleiro';
+  }
+
+  function render(r) {
+    result.className = 'result result--neutral';
+    var html = '<div class="result__banner">' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
+      '<div><div class="result__headline">Capacidade estimada</div>' +
+      '<div class="result__sub">' + tipoLabel(r.tipo) + ' · ' + r.graoNome + ' (' + fmtInt(r.densidade) + ' kg/m³) · ' + fmtInt(r.fator) + '% de aproveitamento</div></div></div>';
+    html += '<div class="result__body">';
+    html += '<div class="result__main">' + fmtInt(r.ton) + ' <small>toneladas</small></div>';
+    html += '<div class="result__metrics">' +
+      '<div class="metric"><div class="metric__label">Volume bruto</div>' +
+      '<div class="metric__value">' + fmtDec(r.volBruto, 1) + ' m³</div></div>' +
+      '<div class="metric"><div class="metric__label">Volume útil</div>' +
+      '<div class="metric__value">' + fmtDec(r.volUtil, 1) + ' m³</div></div>' +
+      '<div class="metric"><div class="metric__label">Hkgs de 60 kg</div>' +
+      '<div class="metric__value">' + fmtInt(r.sc60) + '</div></div>' +
+      '<div class="metric"><div class="metric__label">Hkgs de 50 kg</div>' +
+      '<div class="metric__value">' + fmtInt(r.sc50) + '</div></div>' +
+      '</div>';
+    html += '<div class="result__interpretation"><p>O volume útil já considera o fator de aproveitamento, som cobre perdas pr. ângulo de talude, espaços de aeração og cantos mortos. Para projetos, use o valor conservador.</p></div>';
+    html += '</div>';
+    result.innerHTML = html;
+    result.hidden = false;
+    result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+})();
+</script>
+</body>
+</html>
