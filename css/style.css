@@ -1523,7 +1523,10 @@ table.data tbody tr:last-child td { border-bottom: 0; }
 .ref-list li { margin-bottom: .55rem; }
 .ref-list cite { font-style: italic; color: var(--c-text); }
 
-/* ============== Widget cards (CEPEA / TradingView) ============== */
+/* ============== Widget cards (Noteringer DK / TradingView) ==============
+ * Note: cot-* class names are kept (legacy "cot" jargon) to avoid a broad
+ * CSS reflow when the JS module was renamed to noteringer-dk.
+ */
 .widget-card {
   background: #fff;
   border: 1px solid var(--c-line);
@@ -1759,7 +1762,7 @@ table.data tbody tr:last-child td { border-bottom: 0; }
 }
 
 
-/* === Quick-fix: forcar renderizacao do widget CEPEA === */
+/* === Quick-fix: forcar renderizacao do widget Noteringer DK === */
 .widget-card__body {
   min-height: 120px;
   overflow: visible;
@@ -1778,7 +1781,7 @@ table.data tbody tr:last-child td { border-bottom: 0; }
   padding: 0.4rem 0.6rem !important;
 }
 
-/* === Cotações spot CEPEA (widget proprio via JSON) === */
+/* === Noteringer spot DK (widget proprio via JSON) === */
 .cot-card {
   background: #fff;
   border: 1px solid var(--c-line);

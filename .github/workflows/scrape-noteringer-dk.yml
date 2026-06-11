@@ -1,0 +1,63 @@
+name: Scrape DK noteringer
+
+# Kører scraperen for SEGES Farmtal, Arla, Danish Crown og Nationalbanken
+# 4 gange pr. hverdag og committer JSON-ændringer til main, hvis output ændrer sig.
+#
+# Cron tidspunkter (UTC): 07:05, 11:05, 15:05, 19:05 — alle hverdage.
+# Det rammer dansk arbejdstid (08-21 CET/CEST) og holder data friske flere
+# gange dagligt uden at fyre workflow off uden for noteringernes tidsvindue.
+
+on:
+  schedule:
+    - cron: "5 7,11,15,19 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      which_set:
+        description: "Hvilket sæt at skrive (basico|completo|all)"
+        required: false
+        default: "all"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scrape-noteringer-dk
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run scraper
+        run: |
+          python tools/scrape_noteringer_dk.py --set ${{ github.event.inputs.which_set || 'all' }}
+
+      - name: Show resulting data
+        run: |
+          ls -la data/
+          echo "--- noteringer-dk.json ---"
+          head -c 2000 data/noteringer-dk.json || true
+          echo
+          echo "--- noteringer-dk-completas.json ---"
+          head -c 2000 data/noteringer-dk-completas.json || true
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/noteringer-dk.json data/noteringer-dk-completas.json
+          if git diff --cached --quiet; then
+            echo "No data changes — nothing to commit."
+          else
+            git commit -m "chore(data): refresh DK noteringer ($(date -u +'%Y-%m-%dT%H:%MZ'))"
+            git push origin HEAD:main
+          fi
