@@ -59,19 +59,26 @@
       var icon = ICONS[it.icon] || '';
       var name = it.name || '';
       var unit = it.unit || '';
+      var hasValue = it.value !== null && it.value !== undefined;
       var val;
-      if (it.stale && (it.value === null || it.value === undefined)) {
+      if (it.stale && !hasValue) {
         var src = it.source_url || data.source_url || '#';
         val = '<a class="cot-source-link" href="' + src + '" target="_blank" rel="noopener nofollow">Se kilde →</a>';
       } else {
         val = it.value_display || it.value || '—';
       }
-      var staleBadge = (it.stale && it.value !== null && it.value !== undefined)
+      var staleBadge = (it.stale && hasValue)
         ? ' <span class="cot-stale" title="Seneste kendte værdi (live-scrape mislykkedes)">·</span>'
         : '';
-      var dateCell = it.stale && (it.value === null || it.value === undefined)
-        ? '<span class="cot-unit">live ej tilgængelig</span>'
-        : formatDate(it.date);
+      var dateCell;
+      if (it.stale && !hasValue) {
+        dateCell = '<span class="cot-unit">live ej tilgængelig</span>';
+      } else if (it.stale && hasValue) {
+        var seen = formatDate(it.last_seen_date || it.date);
+        dateCell = '<span class="cot-unit" title="Live-scrape mislykkedes; viser seneste kendte værdi">Senest set: ' + seen + '</span>';
+      } else {
+        dateCell = formatDate(it.date);
+      }
       return ''
         + '<tr' + (it.stale ? ' class="cot-row-stale"' : '') + '>'
         + '  <td class="cot-cell-prod">'

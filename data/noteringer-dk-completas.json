@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-11T17:10:14Z",
+  "updated_at": "2026-06-11T19:07:13Z",
   "country": "DK",
   "source": "Arla DK; Danish Crown; Nationalbanken; SEGES Farmtal Online",
   "source_url": "https://dk",
@@ -11,10 +11,12 @@
       "source_url": "https://farmtalonline.dlbr.dk/",
       "source_name": "SEGES Farmtal Online",
       "key": "hvede",
-      "value": null,
-      "value_display": "—",
       "stale": true,
-      "date": "2026-06-11"
+      "date": "2026-06-11",
+      "value": 152.3,
+      "value_display": "152,30 DKK/hkg",
+      "last_seen_date": "2026-06-05",
+      "last_seen_source": "SEGES Farmtal Online"
     },
     {
       "icon": "byg",
@@ -23,10 +25,12 @@
       "source_url": "https://farmtalonline.dlbr.dk/",
       "source_name": "SEGES Farmtal Online",
       "key": "byg",
-      "value": null,
-      "value_display": "—",
       "stale": true,
-      "date": "2026-06-11"
+      "date": "2026-06-11",
+      "value": 132.1,
+      "value_display": "132,10 DKK/hkg",
+      "last_seen_date": "2026-06-05",
+      "last_seen_source": "SEGES Farmtal Online"
     },
     {
       "icon": "raps",
@@ -35,10 +39,12 @@
       "source_url": "https://farmtalonline.dlbr.dk/",
       "source_name": "SEGES Farmtal Online",
       "key": "raps",
-      "value": null,
-      "value_display": "—",
       "stale": true,
-      "date": "2026-06-11"
+      "date": "2026-06-11",
+      "value": 312.5,
+      "value_display": "312,50 DKK/hkg",
+      "last_seen_date": "2026-06-05",
+      "last_seen_source": "SEGES Farmtal Online"
     },
     {
       "icon": "majs",
@@ -47,10 +53,12 @@
       "source_url": "https://farmtalonline.dlbr.dk/",
       "source_name": "SEGES Farmtal Online",
       "key": "majs",
-      "value": null,
-      "value_display": "—",
       "stale": true,
-      "date": "2026-06-11"
+      "date": "2026-06-11",
+      "value": 178.4,
+      "value_display": "178,40 DKK/hkg",
+      "last_seen_date": "2026-06-05",
+      "last_seen_source": "SEGES Farmtal Online"
     },
     {
       "key": "maelkepris",
@@ -62,7 +70,8 @@
       "date": "2026-06-11",
       "source_url": "https://catalog.arla.com/ARLA/milk-price/arla-dk/",
       "source_name": "Arla DK",
-      "stale": false
+      "stale": false,
+      "last_seen_date": "2026-06-11"
     },
     {
       "key": "grisenotering",
@@ -74,7 +83,8 @@
       "date": "2026-06-11",
       "source_url": "https://ejer.danishcrown.com/da-dk/andelsejere/gris/notering/aktuel-grisenotering/",
       "source_name": "Danish Crown",
-      "stale": false
+      "stale": false,
+      "last_seen_date": "2026-06-11"
     },
     {
       "icon": "kreatur",
@@ -83,10 +93,12 @@
       "source_url": "https://ejer.danishcrown.com/da-dk/andelsejere/kreatur/notering/aktuel-kreaturnotering/",
       "source_name": "Danish Crown",
       "key": "kreaturnotering",
-      "value": null,
-      "value_display": "—",
       "stale": true,
-      "date": "2026-06-11"
+      "date": "2026-06-11",
+      "value": 28.75,
+      "value_display": "28,75 DKK/kg",
+      "last_seen_date": "2026-06-09",
+      "last_seen_source": "Danish Crown"
     },
     {
       "key": "eur_dkk",
@@ -98,7 +110,8 @@
       "date": "2026-06-11",
       "source_url": "https://www.nationalbanken.dk/",
       "source_name": "Nationalbanken",
-      "stale": false
+      "stale": false,
+      "last_seen_date": "2026-06-11"
     },
     {
       "key": "usd_dkk",
@@ -110,7 +123,8 @@
       "date": "2026-06-11",
       "source_url": "https://www.nationalbanken.dk/",
       "source_name": "Nationalbanken",
-      "stale": false
+      "stale": false,
+      "last_seen_date": "2026-06-11"
     }
   ]
 }

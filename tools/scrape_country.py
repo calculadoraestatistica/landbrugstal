@@ -45,18 +45,50 @@ def import_scraper(module: str, klass: str):
     return getattr(mod, klass)
 
 
-def build_fallback(key: str, cfg: dict) -> dict[str, Any]:
+def build_fallback(key: str, cfg: dict, last_known: dict[str, Any] | None = None) -> dict[str, Any]:
+    """Return a stale skeleton for the given indicator.
+
+    If ``last_known`` carries a previous successful value for this key
+    (from the existing on-disk JSON), keep that value visible so users see
+    the most recent known number with a "Senest set: dd/mm" hint instead
+    of a bare "Se kilde →" link. The indicator stays stale=True so the
+    frontend can still flag it.
+    """
     base = dict((cfg.get("fallback") or {}).get(key) or {})
     base["key"] = key
     base.setdefault("name", key)
-    base.setdefault("value", None)
-    base.setdefault("value_display", "—")
     base.setdefault("unit", "")
     base.setdefault("source_url", "")
     base.setdefault("source_name", "")
     base["stale"] = True
     base["date"] = datetime.now(timezone.utc).date().isoformat()
+
+    if last_known and last_known.get("value") is not None:
+        base["value"] = last_known["value"]
+        base["value_display"] = last_known.get("value_display") or base.get("value_display") or "—"
+        base["last_seen_date"] = last_known.get("last_seen_date") or last_known.get("date") or ""
+        base["last_seen_source"] = last_known.get("source_name") or base.get("source_name")
+    else:
+        base.setdefault("value", None)
+        base.setdefault("value_display", "—")
+
     return base
+
+
+def load_existing(path: Path) -> dict[str, dict[str, Any]]:
+    """Return {key: indicator_dict} from an existing JSON file, or empty."""
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    out: dict[str, dict[str, Any]] = {}
+    for item in (data.get("items") or []):
+        key = item.get("key")
+        if key:
+            out[key] = item
+    return out
 
 
 def main() -> int:
@@ -96,17 +128,25 @@ def main() -> int:
     order = indicators.get("order") or []
     basico_keys = set(indicators.get("basico") or order)
 
-    def build_indicator(key: str) -> dict[str, Any]:
-        if key in scraped:
-            return scraped[key]
-        return build_fallback(key, cfg)
-
-    completo_items = [build_indicator(k) for k in order]
-    basico_items = [b for b in completo_items if b["key"] in basico_keys]
-
     out_cfg = cfg.get("output") or {}
     basico_path = ROOT / out_cfg.get("basico_path", "data/noteringer.json")
     completo_path = ROOT / out_cfg.get("completo_path", "data/noteringer-completas.json")
+
+    # Read the previous run's completo file so failed scrapes carry the
+    # last known value forward as "Senest set: dd/mm".
+    previous = load_existing(completo_path)
+
+    def build_indicator(key: str) -> dict[str, Any]:
+        if key in scraped:
+            ind = scraped[key]
+            # Track the date this fresh value was observed so the next run
+            # can carry it forward if needed.
+            ind["last_seen_date"] = ind.get("date", "")
+            return ind
+        return build_fallback(key, cfg, last_known=previous.get(key))
+
+    completo_items = [build_indicator(k) for k in order]
+    basico_items = [b for b in completo_items if b["key"] in basico_keys]
 
     payload_meta = {
         "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
