@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="da-DK">
 <head>
 <meta charset="UTF-8">
+<meta name="google-adsense-account" content="ca-pub-7516029395999799">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
   <link rel="preconnect" href="https://s3.tradingview.com" crossorigin>
@@ -280,7 +282,7 @@
     <article class="prose">
 
       <h2>Hvad bruges den til</h2>
-      <p>Denne beregner combina <strong>até três gødnings</strong> (simples ou formulados) til tentar atender a anbefaling técnica de N, P₂O₅ og K₂O pr. hektar. É útil quando você não tem uma formel pronta som cobre todos os næringsstofs og precisa <strong>misturar gødnings</strong> til chegar perto af alvo.</p>
+      <p>Denne beregner combina <strong>até três gødnings</strong> (simples ou formulados) til tentar atender a anbefaling técnica de N, P₂O₅ og K₂O pr. hektar. É útil quando du ikke tem uma formel pronta som cobre todos os næringsstofs og precisa <strong>misturar gødnings</strong> til chegar perto af alvo.</p>
 
       <h2>Sådan virker det</h2>
       <p>A beregner aplica uma <strong>heurística gulosa</strong>: começa pelo næringsstof som tem menos opções entre os gødnings informados (geralmente P ou K) og escolhe o gødning mais rico naquele næringsstof til atendê-lo. Em seguida ajusta o próximo næringsstof descontando o som já foi entregue. O N costuma ser o último, completado med ureia ou outro gødning nitrogenado.</p>
@@ -306,7 +308,7 @@
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
           <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Quanto de gødning formulado anvende.</p></a>
-          <a class="calc-card" href="/kalkning.html"><h3>Kalkning</h3><p>Behov de kalk.</p></a>
+          <a class="calc-card" href="/calagem.html"><h3>Kalkning</h3><p>Behov de kalk.</p></a>
           <a class="calc-card" href="/populacao-de-plantas.html"><h3>Plantebestand</h3><p>Plantas pr. hektar.</p></a>
         </div>
       </div>
@@ -334,8 +336,8 @@
       <div>
         <h3>Beregnere</h3>
         <ul>
-          <li><a href="/lotacao-græsmark.html">Græsningsbelægning</a></li>
-          <li><a href="/conversao-de-hkgs.html">Vægtomregner</a></li>
+          <li><a href="/lotacao-pastagem.html">Græsningsbelægning</a></li>
+          <li><a href="/conversao-de-sacas.html">Vægtomregner</a></li>
           <li><a href="/adubacao-npk.html">NPK-gødning</a></li>
           <li><a href="/mistura-npk.html">Mistura de gødnings</a></li>
           <li><a href="/conversao-de-area.html">Arealomregner</a></li>
@@ -403,7 +405,7 @@
       showError('Indtast a behov de N, P₂O₅ og K₂O.'); return;
     }
     if (recN < 0 || recP < 0 || recK < 0) {
-      showError('As behovs não podem ser negativas.'); return;
+      showError('As behovs ikke podem ser negativas.'); return;
     }
     var ferts = [readFert(1, 'Gødning 1'), readFert(2, 'Gødning 2'), readFert(3, 'Gødning 3')];
     var ativos = [];
@@ -504,7 +506,7 @@
       if (dose === null) { valor = '—'; }
       else if (dose < 0.5) { valor = '0 kg/ha'; }
       else { valor = Fmt.int(dose) + ' kg/ha'; }
-      var sub = (f.n + f.p + f.k > 0) ? (Fmt.int(f.n) + '-' + Fmt.int(f.p) + '-' + Fmt.int(f.k)) : 'não usado';
+      var sub = (f.n + f.p + f.k > 0) ? (Fmt.int(f.n) + '-' + Fmt.int(f.p) + '-' + Fmt.int(f.k)) : 'ikke usado';
       metrics += '<div class="metric"><div class="metric__label">' + nome + ' <small>(' + sub + ')</small></div>' +
                  '<div class="metric__value">' + valor + '</div></div>';
     }

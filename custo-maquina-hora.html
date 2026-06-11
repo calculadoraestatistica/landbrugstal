@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="da-DK">
 <head>
 <meta charset="UTF-8">
+<meta name="google-adsense-account" content="ca-pub-7516029395999799">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
   <link rel="preconnect" href="https://s3.tradingview.com" crossorigin>
@@ -10,14 +12,14 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
 <title>Beregner de Omkostning de Maskine pr. Hora og pr. Hektar | Landbrugstal</title>
 <meta name="description" content="Beregn o omkostning de maskine landbrugs- pr. time og hektar. Considere depreciação, juros, brændstof, manutenção, operador og lubrificantes.">
-<link rel="canonical" href="https://landbrugstal.dk/omkostning-maquina-hora.html">
+<link rel="canonical" href="https://landbrugstal.dk/custo-maquina-hora.html">
 <meta name="theme-color" content="#16a34a">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="da_DK">
 <meta property="og:site_name" content="Landbrugstal">
 <meta property="og:title" content="Beregner de Omkostning de Maskine pr. Hora og pr. Hektar">
 <meta property="og:description" content="Omkostning operacional de maskine landbrugs- i kr/h og kr/ha.">
-<meta property="og:url" content="https://landbrugstal.dk/omkostning-maquina-hora.html">
+<meta property="og:url" content="https://landbrugstal.dk/custo-maquina-hora.html">
 <meta property="og:image" content="https://landbrugstal.dk/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -32,7 +34,7 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "Beregner de Omkostning de Maquina pr. Hora og pr. Hektar",
-  "url": "https://landbrugstal.dk/omkostning-maquina-hora.html",
+  "url": "https://landbrugstal.dk/custo-maquina-hora.html",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Web",
   "inLanguage": "da-DK",
@@ -46,7 +48,7 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     {"@type":"ListItem","position":1,"name":"Forside","item":"https://landbrugstal.dk/"},
-    {"@type":"ListItem","position":2,"name":"Omkostning de maskine pr. hora","item":"https://landbrugstal.dk/omkostning-maquina-hora.html"}
+    {"@type":"ListItem","position":2,"name":"Omkostning de maskine pr. hora","item":"https://landbrugstal.dk/custo-maquina-hora.html"}
   ]
 }
 </script>
@@ -228,7 +230,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           Vigtige punkter
         </div>
-        <p>O rendimento operacional <strong>real</strong> é mindst som o teórico: vire de cabeceira, paradas, abastecimento og regulagens reduzem facilmente 15% a 30% af capacidade de campo. Use o rendimento efetivo medido a campo, não o catálogo. A depreciação contábil também difere af <strong>valor de mercado</strong> — i maskines muito procuradas a desvalorização real é mindst. Para análises mais conservadoras, refaça o cálculo med vida útil og residual ajustados ao seu mercado.</p>
+        <p>O rendimento operacional <strong>real</strong> é mindst som o teórico: vire de cabeceira, paradas, abastecimento og regulagens reduzem facilmente 15% a 30% af capacidade de campo. Use o rendimento efetivo medido a campo, ikke o catálogo. A depreciação contábil também difere af <strong>valor de mercado</strong> — i maskines muito procuradas a desvalorização real é mindst. Para análises mais conservadoras, refaça o cálculo med vida útil og residual ajustados ao seu mercado.</p>
       </div>
 
       <div class="related">
@@ -236,7 +238,7 @@
         <div class="calc-grid">
           <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Mængde de gødning formulado.</p></a>
           <a class="calc-card" href="/conversao-de-area.html"><h3>Arealomregner</h3><p>Hektar, alqueire og mais.</p></a>
-          <a class="calc-card" href="/conversao-de-hkgs.html"><h3>Vægtomregner</h3><p>Hkgs, toneladas og bushels.</p></a>
+          <a class="calc-card" href="/conversao-de-sacas.html"><h3>Vægtomregner</h3><p>Hkgs, toneladas og bushels.</p></a>
         </div>
       </div>
 
@@ -263,8 +265,8 @@
       <div>
         <h3>Beregnere</h3>
         <ul>
-          <li><a href="/lotacao-græsmark.html">Græsningsbelægning</a></li>
-          <li><a href="/conversao-de-hkgs.html">Vægtomregner</a></li>
+          <li><a href="/lotacao-pastagem.html">Græsningsbelægning</a></li>
+          <li><a href="/conversao-de-sacas.html">Vægtomregner</a></li>
           <li><a href="/adubacao-npk.html">NPK-gødning</a></li>
           <li><a href="/conversao-de-area.html">Arealomregner</a></li>
         </ul>
@@ -400,7 +402,7 @@
     html += row('Operador', r.operador_h, r.rendimento);
     html += row('Lubrificantes', r.lubrificantes_h, r.rendimento);
     html += '</div>';
-    html += '<div class="result__interpretation"><p>O omkostning é uma soma direta de seis componentes; alterar o rendimento operacional (ha/h) muda apenas o valor pr. hektar, não o valor pr. hora. Em operações med baixo aproveitamento real, o omkostning pr. hektar cresce rápido.</p></div>';
+    html += '<div class="result__interpretation"><p>O omkostning é uma soma direta de seis componentes; alterar o rendimento operacional (ha/h) muda apenas o valor pr. hektar, ikke o valor pr. hora. Em operações med baixo aproveitamento real, o omkostning pr. hektar cresce rápido.</p></div>';
     html += '</div>';
     result.innerHTML = html;
     result.hidden = false;

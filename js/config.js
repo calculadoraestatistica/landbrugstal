@@ -1,11 +1,13 @@
 /* ==========================================================================
-   config.js — Configuração do Agro do Dia
+   config.js — Konfiguration for Landbrugstal
    --------------------------------------------------------------------------
-   As cotações vêm de widgets externos (CEPEA e TradingView), incorporados
-   diretamente nas páginas. O campo "adsenseClient" abaixo é usado apenas
-   para posicionamento manual de anúncios nos espaços <div class="ad-slot">.
+   Noteringer kommer fra eksterne widgets (CEPEA og TradingView), indlejret
+   direkte på siderne. Feltet "adsenseClient" nedenfor bruges kun til manuel
+   placering af annoncer i <div class="ad-slot">-pladserne.
    ========================================================================== */
 window.SITE_CONFIG = {
-  adsenseClient: "",
-  baseUrl: "https://agrododia.com.br"
+  adsenseClient: "ca-pub-7516029395999799",
+  baseUrl: "https://landbrugstal.dk",
+  siteName: "Landbrugstal",
+  brandShort: "Landbrugstal"
 };

@@ -1,6 +1,7 @@
 /* ==========================================================================
-   agro.js — Núcleo de cálculo do Agro do Dia
+   agro.js — Núcleo de cálculo do Landbrugstal
    Funções puras, sem DOM. Roda no navegador e no Node (para testes).
+   Exporta window.Landbrug com aliases para chamadas em dinamarquês.
 
    Coeficientes baseados em referências técnicas (Embrapa, IAC, Conab,
    universidades). São estimativas — variam com manejo, cultivar, região e
@@ -423,9 +424,11 @@
   }
 
   /* ----------------------------------------------------------------------
-     Exportação
+     Exportação — namespace Landbrug (versão DK do site)
+     Aliases DA→PT preservam compatibilidade com chamadas em código DK.
      ---------------------------------------------------------------------- */
-  var Agro = {
+  var Landbrug = {
+    // Funções canônicas (mantidas em pt-BR no núcleo de cálculo)
     lotacaoPastagem: lotacaoPastagem, ganhoPeso: ganhoPeso, gestacao: gestacao,
     consumoRebanho: consumoRebanho, cocho: cocho,
     conversaoSacas: conversaoSacas, populacaoPlantas: populacaoPlantas,
@@ -437,9 +440,25 @@
     conversaoArea: conversaoArea, custoProducao: custoProducao,
     freteAgricola: freteAgricola, margemBruta: margemBruta,
     custoArmazenagem: custoArmazenagem, vendaArmazenagem: vendaArmazenagem,
-    GESTACAO: GESTACAO, AREA_M2: AREA_M2
+    GESTACAO: GESTACAO, AREA_M2: AREA_M2,
+
+    // Aliases dinamarquês → função canônica
+    lotacaoGræsmark:     lotacaoPastagem,   // græsmark = pastagem
+    consumoBesætning:    consumoRebanho,    // besætning = rebanho
+    foderbord:           cocho,             // foderbord = cocho/comedouro
+    conversaoHkgs:       conversaoSacas,    // hkg ~ sacas (unidade DK ~50 kg)
+    kalkning:            calagem,           // kalkning = calagem
+    udbytte:             produtividade,     // udbytte = produtividade/rendimento
+    ensilage:            silagem,           // ensilage = silagem
+    perdaHøst:           perdaColheita,     // høst = colheita
+    omkostningSecagem:   custoSecagem,      // omkostning = custo
+    omkostningProducao:  custoProducao,
+    omkostningOpbevaring: custoArmazenagem, // opbevaring = armazenagem
+    marginBruta:         margemBruta,       // margin = margem
+    quantidadeFrøs:      quantidadeSementes, // frø = semente
+    vendaOpbevaring:     vendaArmazenagem
   };
-  global.Agro = Agro;
-  if (typeof module !== 'undefined' && module.exports) module.exports = Agro;
+  global.Landbrug = Landbrug;
+  if (typeof module !== 'undefined' && module.exports) module.exports = Landbrug;
 
 })(typeof window !== 'undefined' ? window : globalThis);
