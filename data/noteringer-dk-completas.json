@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-18T07:06:07Z",
+  "updated_at": "2026-06-18T11:06:15Z",
   "country": "DK",
   "source": "Arla DK; Danish Crown; Nationalbanken; SEGES Farmtal Online",
   "source_url": "https://dk",
@@ -74,17 +74,18 @@
       "last_seen_date": "2026-06-18"
     },
     {
-      "key": "grisenotering",
       "icon": "gris",
       "name": "Grisenotering (basis 73-98 kg)",
-      "value": 8.9,
-      "value_display": "8,90 DKK/kg",
       "unit": "DKK/kg",
-      "date": "2026-06-18",
       "source_url": "https://ejer.danishcrown.com/da-dk/andelsejere/gris/notering/aktuel-grisenotering/",
       "source_name": "Danish Crown",
-      "stale": false,
-      "last_seen_date": "2026-06-18"
+      "key": "grisenotering",
+      "stale": true,
+      "date": "2026-06-18",
+      "value": 8.9,
+      "value_display": "8,90 DKK/kg",
+      "last_seen_date": "2026-06-18",
+      "last_seen_source": "Danish Crown"
     },
     {
       "icon": "kreatur",
