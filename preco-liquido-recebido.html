@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="https://www.euronext.com">
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
-<title>Beregner de Preço Líquido Recebido | Landbrugstal</title>
-<meta name="description" content="Beregner de preço líquido recebido. Desconte frete, opbevaring, comissão, secagem, quebra og impostos af preço bruto cotado.">
+<title>Beregner for nettopris modtaget | Landbrugstal</title>
+<meta name="description" content="Beregner for nettopris modtaget. Træk fragt, lager, kommission, tørring, svind og skatter fra den noterede bruttopris.">
 <link rel="canonical" href="https://landbrugstal.dk/preco-liquido-recebido.html">
 <meta name="theme-color" content="#16a34a">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="da_DK">
 <meta property="og:site_name" content="Landbrugstal">
-<meta property="og:title" content="Beregner de Preço Líquido Recebido">
-<meta property="og:description" content="Desconte frete, opbevaring, comissão og impostos af preço bruto cotado.">
+<meta property="og:title" content="Beregner for nettopris modtaget">
+<meta property="og:description" content="Træk fragt, lager, kommission og skatter fra den noterede bruttopris.">
 <meta property="og:url" content="https://landbrugstal.dk/preco-liquido-recebido.html">
 <meta property="og:image" content="https://landbrugstal.dk/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,13 +33,13 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Beregner de Preco Liquido Recebido",
+  "name": "Beregner for nettopris modtaget",
   "url": "https://landbrugstal.dk/preco-liquido-recebido.html",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Web",
   "inLanguage": "da-DK",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
-  "description": "Calculo af preco liquido recebido descontando frete, opbevaring, comissao, secagem, quebra og impostos."
+  "description": "Beregning af nettopris modtaget efter fragt, lager, kommission, tørring, svind og skatter."
 }
 </script>
 <script type="application/ld+json">
@@ -94,8 +94,8 @@
           <li>Nettopris modtaget</li>
         </ol>
       </nav>
-      <h1>Beregner de Preço Líquido Recebido</h1>
-      <p class="lead">Desconte frete, opbevaring, comissão, secagem, quebra og impostos af preço bruto cotado og veja quanto realmente entra i bolso pr. hkg, tonelada ou quilo.</p>
+      <h1>Beregner for nettopris modtaget</h1>
+      <p class="lead">Træk fragt, lager, kommission, tørring, svind og skatter fra den noterede bruttopris, og se, hvor meget der reelt går i kassen pr. hkg, ton eller kilo.</p>
     </div>
   </div>
 
@@ -104,25 +104,25 @@
     <form class="calculator" id="calc-form" novalidate>
       <h2 class="calculator__title">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        Beregn o preço líquido
+        Beregn nettoprisen
       </h2>
-      <p class="calculator__hint">Indtast o preço bruto cotado og os omkostnings af negociação.</p>
+      <p class="calculator__hint">Indtast den noterede bruttopris og omkostningerne ved handlen.</p>
 
       <fieldset class="field-group">
-        <legend>Preço bruto</legend>
+        <legend>Bruttopris</legend>
         <div class="field-row">
           <div class="field">
-            <label for="bruto">Preço bruto cotado</label>
+            <label for="bruto">Noteret bruttopris</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="bruto" placeholder="Ex.: 130" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="bruto" placeholder="F.eks. 130" autocomplete="off">
               <span class="input-affix__unit">kr</span>
             </div>
           </div>
           <div class="field">
-            <label for="unidBase">Unidade de referência</label>
+            <label for="unidBase">Referenceenhed</label>
             <select class="input" id="unidBase">
-              <option value="sc" selected>por hkg (60 kg)</option>
-              <option value="t">por tonelada</option>
+              <option value="sc" selected>pr. hkg (100 kg)</option>
+              <option value="t">pr. ton</option>
             </select>
           </div>
         </div>
@@ -132,33 +132,33 @@
         <legend>Fragt</legend>
         <div class="field-row">
           <div class="field">
-            <label for="freteVal">Valor af frete</label>
+            <label for="freteVal">Fragtomkostning</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="freteVal" placeholder="Ex.: 8" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="freteVal" placeholder="F.eks. 8" autocomplete="off">
               <span class="input-affix__unit">kr</span>
             </div>
           </div>
           <div class="field">
-            <label for="freteUnid">Unidade af frete</label>
+            <label for="freteUnid">Fragtenhed</label>
             <select class="input" id="freteUnid">
               <option value="sc" selected>kr pr. hkg</option>
-              <option value="t">kr pr. tonelada</option>
-              <option value="km">kr pr. km (frete rodoviário)</option>
+              <option value="t">kr pr. ton</option>
+              <option value="km">kr pr. km (vejtransport)</option>
             </select>
           </div>
         </div>
         <div class="field-row" id="freteKmRow" hidden>
           <div class="field">
-            <label for="freteKm">Distância</label>
+            <label for="freteKm">Afstand</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="freteKm" placeholder="Ex.: 300" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="freteKm" placeholder="F.eks. 300" autocomplete="off">
               <span class="input-affix__unit">km</span>
             </div>
           </div>
           <div class="field">
-            <label for="cargaT">Carga af caminhão</label>
+            <label for="cargaT">Lastbilens last</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="cargaT" placeholder="Ex.: 30" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="cargaT" placeholder="F.eks. 30" autocomplete="off">
               <span class="input-affix__unit">t</span>
             </div>
           </div>
@@ -171,62 +171,62 @@
           <div class="field">
             <label for="armVal">Opbevaringsomkostning</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="armVal" placeholder="Ex.: 1" autocomplete="off">
-              <span class="input-affix__unit">kr ou %</span>
+              <input class="input" type="text" inputmode="decimal" id="armVal" placeholder="F.eks. 1" autocomplete="off">
+              <span class="input-affix__unit">kr eller %</span>
             </div>
           </div>
           <div class="field">
-            <label for="armUnid">Unidade af opbevaring</label>
+            <label for="armUnid">Opbevaringsenhed</label>
             <select class="input" id="armUnid">
-              <option value="pct" selected>% af preço bruto</option>
+              <option value="pct" selected>% af bruttopris</option>
               <option value="sc">kr pr. hkg</option>
-              <option value="t">kr pr. tonelada</option>
+              <option value="t">kr pr. ton</option>
             </select>
           </div>
         </div>
       </fieldset>
 
       <fieldset class="field-group">
-        <legend>Comissão, secagem, quebra og impostos</legend>
+        <legend>Kommission, tørring, svind og skatter</legend>
         <div class="field-row">
           <div class="field">
-            <label for="comissao">Comissão sobre o bruto</label>
+            <label for="comissao">Kommission af brutto</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="comissao" placeholder="Ex.: 1" autocomplete="off" value="1">
+              <input class="input" type="text" inputmode="decimal" id="comissao" placeholder="F.eks. 1" autocomplete="off" value="1">
               <span class="input-affix__unit">%</span>
             </div>
           </div>
           <div class="field">
-            <label for="secagemMod">Secagem</label>
+            <label for="secagemMod">Tørring</label>
             <select class="input" id="secagemMod">
-              <option value="pct" selected>% de desconto sobre o bruto</option>
+              <option value="pct" selected>% fradrag af brutto</option>
               <option value="sc">kr pr. hkg</option>
-              <option value="t">kr pr. tonelada</option>
+              <option value="t">kr pr. ton</option>
             </select>
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="secagemVal">Valor af secagem</label>
+            <label for="secagemVal">Tørringsbeløb</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="secagemVal" placeholder="Ex.: 0,80" autocomplete="off">
-              <span class="input-affix__unit">kr ou %</span>
+              <input class="input" type="text" inputmode="decimal" id="secagemVal" placeholder="F.eks. 0,80" autocomplete="off">
+              <span class="input-affix__unit">kr eller %</span>
             </div>
           </div>
           <div class="field">
-            <label for="quebra">Quebra técnica</label>
+            <label for="quebra">Teknisk svind</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="quebra" placeholder="Ex.: 0,5" autocomplete="off" value="0,5">
+              <input class="input" type="text" inputmode="decimal" id="quebra" placeholder="F.eks. 0,5" autocomplete="off" value="0,5">
               <span class="input-affix__unit">%</span>
             </div>
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="impostos">Impostos/taxas (Funrural etc.)</label>
+            <label for="impostos">Skatter/afgifter</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="impostos" placeholder="Ex.: 1,5" autocomplete="off" value="0">
-              <span class="input-affix__unit">% af bruto</span>
+              <input class="input" type="text" inputmode="decimal" id="impostos" placeholder="F.eks. 0" autocomplete="off" value="0">
+              <span class="input-affix__unit">% af brutto</span>
             </div>
           </div>
           <div class="field"></div>
@@ -236,7 +236,7 @@
       <p class="field-error" id="calc-error" role="alert"></p>
 
       <div class="calculator__actions">
-        <button class="btn btn--primary btn--lg" type="submit">Beregn preço líquido</button>
+        <button class="btn btn--primary btn--lg" type="submit">Beregn nettopris</button>
         <button class="btn btn--ghost" type="button" id="calc-example">Udfyld med eksempel</button>
       </div>
 
@@ -248,39 +248,39 @@
     <article class="prose">
 
       <h2>Hvad bruges den til</h2>
-      <p>Quando o comprador (cooperativa, trader, corretora) faz uma oferta, o preço cotado é o <strong>preço bruto</strong>. O som efetivamente cai i conta af produtor é o <strong>preço líquido</strong>, depois de descontados frete, opbevaring, comissão, secagem, quebra técnica og impostos. Denne beregner permite comparar a oferta med a pris de referência (<a href="/cotacoes.html">Euronext</a>) og decidir se vale fechar negócio.</p>
+      <p>Når køberen (foderstof, mølle, eksportør) afgiver et tilbud, er den noterede pris den <strong>bruttopris</strong>. Det, der reelt går ind på producentens konto, er <strong>nettoprisen</strong> efter fradrag for fragt, lager, kommission, tørring, teknisk svind og skatter. Denne beregner gør det muligt at sammenligne tilbuddet med referenceprisen (<a href="/cotacoes.html">Euronext</a>) og afgøre, om handlen kan betale sig.</p>
 
-      <h2>Omkostnings típicos descontados</h2>
+      <h2>Typiske fradrag</h2>
       <ul>
-        <li><strong>Fragt</strong> — rodoviário, af armazém af fazenda até o destino (porto, indústria, esmagadora). Cotado pr. hkg, pr. tonelada ou pr. km × carga.</li>
-        <li><strong>Opbevaring</strong> — taxa fixa pr. período ou percentual af bruto, cobrada pela cooperativa/armazém.</li>
-        <li><strong>Comissão</strong> — corretor ou trader, geralmente 1% af bruto.</li>
-        <li><strong>Secagem</strong> — desconto pr. umidade acima af padrão (~14% til soja/milho). Pode ser kr fixo ou % af bruto.</li>
-        <li><strong>Quebra técnica</strong> — perda durante o transporte/limpeza, tipicamente 0,5% a 1%.</li>
-        <li><strong>Impostos og taxas</strong> — Funrural (1,5% til pessoa física), Senar, ICMS dependendo af operação.</li>
+        <li><strong>Fragt</strong> — landtransport fra gårdens lager til destinationen (havn, fabrik, mølle). Opgivet pr. hkg, pr. ton eller som kr pr. km × last.</li>
+        <li><strong>Opbevaring</strong> — fast gebyr pr. periode eller procent af brutto, opkrævet af lager/foderstof.</li>
+        <li><strong>Kommission</strong> — mægler eller handler, typisk 1 % af brutto.</li>
+        <li><strong>Tørring</strong> — fradrag for fugtighed over standarden (~14 % for hvede/byg). Kan være et fast kr-beløb eller % af brutto.</li>
+        <li><strong>Teknisk svind</strong> — tab under transport/rensning, typisk 0,5-1 %.</li>
+        <li><strong>Skatter og afgifter</strong> — afhænger af handlen og af landmandens skattestatus.</li>
       </ul>
 
-      <h2>Como calcula</h2>
-      <p>Cada omkostning é convertido til a mesma unidade af preço bruto (hkg ou tonelada). Os percentuais incidem sobre o <strong>bruto</strong> — ikke sobre o líquido. Depois soma tudo og desconta:</p>
-      <div class="formula">líquido = bruto − (frete + opbevaring + comissão + secagem + quebra + impostos)</div>
+      <h2>Sådan beregner du</h2>
+      <p>Hver omkostning omregnes til den samme enhed som bruttoprisen (hkg eller ton). Procentsatser regnes af <strong>brutto</strong> — ikke af netto. Derefter lægges det hele sammen og trækkes fra:</p>
+      <div class="formula">netto = brutto − (fragt + lager + kommission + tørring + svind + skatter)</div>
 
       <h2>Eksempel</h2>
-      <p>Sojabønner a kr 130/sc, frete kr 8/sc, opbevaring 1%, comissão 1%, secagem kr 0,80/sc, quebra 0,5%, Funrural 1,5%:</p>
-      <p>Descontos somam kr 8,00 + kr 1,30 + kr 1,30 + kr 0,80 + kr 0,65 + kr 1,95 = kr 14,00/sc. Líquido ≈ <strong>kr 116/sc</strong>.</p>
+      <p>Hvede til 130 kr/hkg, fragt 8 kr/hkg, lager 1 %, kommission 1 %, tørring 0,80 kr/hkg, svind 0,5 %:</p>
+      <p>Fradrag i alt: 8,00 + 1,30 + 1,30 + 0,80 + 0,65 = <strong>12,05 kr/hkg</strong>. Netto ≈ <strong>118 kr/hkg</strong>.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Cada cooperativa/trader tem sua tabela
+          Hvert lager/handler har sin egen tabel
         </div>
-        <p>Os percentuais og valores cobrados variam pr. região, parceiro comercial og safra. Confirme cada linha de desconto med o comprador <strong>antes de fechar negócio</strong> — uma diferença de 0,5% i comissão ou kr 1/sc i frete muda resultatet final i ponta af lápis.</p>
+        <p>De opkrævede satser og beløb varierer efter region, handelspartner og sæson. Bekræft hver fradragslinje med køberen, <strong>før handlen lukkes</strong> — en forskel på 0,5 % i kommission eller 1 kr/hkg i fragt ændrer det endelige resultat mærkbart.</p>
       </div>
 
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
           <a class="calc-card" href="/cotacoes.html"><h3>Daglige priser</h3><p>Euronext og futuros.</p></a>
-          <a class="calc-card" href="/conversao-de-sacas.html"><h3>Vægtomregner</h3><p>Hkgs, toneladas og arrobas.</p></a>
+          <a class="calc-card" href="/conversao-de-sacas.html"><h3>Vægtomregner</h3><p>Hkg, kg og tons.</p></a>
           <a class="calc-card" href="/futuros.html">
 <h3>Futures</h3><p>Børs og CBOT.</p></a>
         </div>

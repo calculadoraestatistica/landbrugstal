@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="https://www.euronext.com">
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
-<title>Beregner de Omkostning de Maskine pr. Hora og pr. Hektar | Landbrugstal</title>
-<meta name="description" content="Beregn o omkostning de maskine landbrugs- pr. time og hektar. Considere depreciação, juros, brændstof, manutenção, operador og lubrificantes.">
+<title>Maskinomkostning pr. time og pr. hektar | Landbrugstal</title>
+<meta name="description" content="Beregn omkostningerne for en landbrugsmaskine pr. time og pr. hektar. Tag højde for afskrivning, renter, brændstof, vedligehold, operatør og smøremidler.">
 <link rel="canonical" href="https://landbrugstal.dk/custo-maquina-hora.html">
 <meta name="theme-color" content="#16a34a">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="da_DK">
 <meta property="og:site_name" content="Landbrugstal">
-<meta property="og:title" content="Beregner de Omkostning de Maskine pr. Hora og pr. Hektar">
-<meta property="og:description" content="Omkostning operacional de maskine landbrugs- i kr/h og kr/ha.">
+<meta property="og:title" content="Maskinomkostning pr. time og pr. hektar">
+<meta property="og:description" content="Driftsomkostning for landbrugsmaskine i kr/t og kr/ha.">
 <meta property="og:url" content="https://landbrugstal.dk/custo-maquina-hora.html">
 <meta property="og:image" content="https://landbrugstal.dk/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,13 +33,13 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Beregner de Omkostning de Maquina pr. Hora og pr. Hektar",
+  "name": "Maskinomkostning pr. time og pr. hektar",
   "url": "https://landbrugstal.dk/custo-maquina-hora.html",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Web",
   "inLanguage": "da-DK",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
-  "description": "Omkostning operacional de maquina agricola pr. time og hektar."
+  "description": "Driftsomkostning for landbrugsmaskine pr. time og pr. hektar."
 }
 </script>
 <script type="application/ld+json">
@@ -48,7 +48,7 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     {"@type":"ListItem","position":1,"name":"Forside","item":"https://landbrugstal.dk/"},
-    {"@type":"ListItem","position":2,"name":"Omkostning de maskine pr. hora","item":"https://landbrugstal.dk/custo-maquina-hora.html"}
+    {"@type":"ListItem","position":2,"name":"Maskinomkostning pr. time","item":"https://landbrugstal.dk/custo-maquina-hora.html"}
   ]
 }
 </script>
@@ -91,11 +91,11 @@
       <nav class="breadcrumb" aria-label="Sti">
         <ol>
           <li><a href="/">Forside</a></li>
-          <li>Omkostning de maskine pr. hora</li>
+          <li>Maskinomkostning pr. time</li>
         </ol>
       </nav>
-      <h1>Beregner de Omkostning de Maskine pr. Hora og pr. Hektar</h1>
-      <p class="lead">Some depreciação, juros, brændstof, manutenção, operador og lubrificantes til obter o omkostning operacional real i kr/h og kr/ha.</p>
+      <h1>Maskinomkostning pr. time og pr. hektar</h1>
+      <p class="lead">Læg afskrivning, renter, brændstof, vedligehold, operatør og smøremidler sammen for at få den reelle driftsomkostning i kr/t og kr/ha.</p>
     </div>
   </div>
 
@@ -104,93 +104,93 @@
     <form class="calculator" id="calc-form" novalidate>
       <h2 class="calculator__title">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-        Beregn o omkostning af maskine
+        Beregn maskinens omkostning
       </h2>
-      <p class="calculator__hint">Indtast os dados af maskine, af uso og af insumos.</p>
+      <p class="calculator__hint">Indtast oplysninger om maskinen, brugen og driftsmidlerne.</p>
 
       <fieldset class="field-group">
-        <legend>Maskine og vida útil</legend>
+        <legend>Maskine og levetid</legend>
         <div class="field-row">
           <div class="field">
-            <label for="valor">Valor af maskine (nova)</label>
+            <label for="valor">Maskinens pris (ny)</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="valor" placeholder="Ex.: 350000" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="valor" placeholder="F.eks. 350000" autocomplete="off">
               <span class="input-affix__unit">kr</span>
             </div>
           </div>
           <div class="field">
-            <label for="residual">Valor residual estimado</label>
+            <label for="residual">Estimeret restværdi</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="residual" placeholder="Default: 20% af valor" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="residual" placeholder="Standard: 20 % af pris" autocomplete="off">
               <span class="input-affix__unit">kr</span>
             </div>
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="vida">Vida útil</label>
+            <label for="vida">Levetid</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="vida" placeholder="Ex.: 10" autocomplete="off">
-              <span class="input-affix__unit">anos</span>
+              <input class="input" type="text" inputmode="decimal" id="vida" placeholder="F.eks. 10" autocomplete="off">
+              <span class="input-affix__unit">år</span>
             </div>
           </div>
           <div class="field">
-            <label for="horasAno">Horas de uso pr. ano</label>
+            <label for="horasAno">Driftstimer pr. år</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="horasAno" placeholder="Ex.: 1000" autocomplete="off">
-              <span class="input-affix__unit">h/ano</span>
+              <input class="input" type="text" inputmode="decimal" id="horasAno" placeholder="F.eks. 1000" autocomplete="off">
+              <span class="input-affix__unit">t/år</span>
             </div>
           </div>
         </div>
       </fieldset>
 
       <fieldset class="field-group">
-        <legend>Brændstof, manutenção og operador</legend>
+        <legend>Brændstof, vedligehold og operatør</legend>
         <div class="field-row">
           <div class="field">
-            <label for="consumo">Consumo de brændstof</label>
+            <label for="consumo">Brændstofforbrug</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="consumo" placeholder="Ex.: 15" autocomplete="off">
-              <span class="input-affix__unit">L/h</span>
+              <input class="input" type="text" inputmode="decimal" id="consumo" placeholder="F.eks. 15" autocomplete="off">
+              <span class="input-affix__unit">L/t</span>
             </div>
           </div>
           <div class="field">
-            <label for="precoDiesel">Preço af diesel</label>
+            <label for="precoDiesel">Dieselpris</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="precoDiesel" placeholder="Ex.: 6,80" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="precoDiesel" placeholder="F.eks. 6,80" autocomplete="off">
               <span class="input-affix__unit">kr/L</span>
             </div>
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="pctManut">Manutenção og reparos (% af valor/ano)</label>
+            <label for="pctManut">Vedligehold og reparation (% af pris/år)</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="pctManut" placeholder="Default: 8" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="pctManut" placeholder="Standard: 8" autocomplete="off">
               <span class="input-affix__unit">%</span>
             </div>
           </div>
           <div class="field">
-            <label for="operador">Omkostning af operador (com encargos)</label>
+            <label for="operador">Operatørløn (inkl. omkostninger)</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="operador" placeholder="Default: 25" autocomplete="off">
-              <span class="input-affix__unit">kr/h</span>
+              <input class="input" type="text" inputmode="decimal" id="operador" placeholder="Standard: 25" autocomplete="off">
+              <span class="input-affix__unit">kr/t</span>
             </div>
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="pctLubr">Lubrificantes (% af brændstof)</label>
+            <label for="pctLubr">Smøremidler (% af brændstof)</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="pctLubr" placeholder="Default: 15" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="pctLubr" placeholder="Standard: 15" autocomplete="off">
               <span class="input-affix__unit">%</span>
             </div>
           </div>
           <div class="field">
-            <label for="rendimento">Rendimento operacional</label>
+            <label for="rendimento">Kapacitet</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="rendimento" placeholder="Ex.: 2" autocomplete="off">
-              <span class="input-affix__unit">ha/h</span>
+              <input class="input" type="text" inputmode="decimal" id="rendimento" placeholder="F.eks. 2" autocomplete="off">
+              <span class="input-affix__unit">ha/t</span>
             </div>
           </div>
         </div>
@@ -211,34 +211,34 @@
     <article class="prose">
 
       <h2>Hvad bruges den til</h2>
-      <p>Denne beregner estima o <strong>omkostning operacional de uma maskine landbrugs-</strong> i kroner pr. hora trabalhada og i kroner pr. hektar. Ela é útil til precificar serviços terceirizados, decidir entre comprar og alugar, comparar maskines og construir o omkostning de produção af markbrug.</p>
+      <p>Denne beregner estimerer <strong>driftsomkostningen for en landbrugsmaskine</strong> i kr pr. driftstime og i kr pr. hektar. Den er nyttig til prissætning af entreprenørarbejde, vurdering af køb vs. leje, sammenligning af maskiner og opbygning af produktionsomkostningen i marken.</p>
 
       <h2>Sådan beregner du</h2>
-      <p>O omkostning total é a soma de seis componentes: depreciação, juros sobre o capital médio, brændstof, manutenção, operador og lubrificantes. As formels usadas:</p>
-      <div class="formula">Depreciação (kr/h) = (valor − residual) ÷ (vida útil × horas/ano)</div>
-      <div class="formula">Juros (kr/h) = ((valor + residual) ÷ 2) × 6% ÷ horas/ano</div>
-      <div class="formula">Brændstof (kr/h) = consumo × preço af diesel</div>
-      <div class="formula">Manutenção (kr/h) = (valor × % manutenção) ÷ horas/ano</div>
-      <div class="formula">Lubrificantes (kr/h) = brændstof × % lubrificantes</div>
-      <div class="formula">Omkostning kr/ha = omkostning kr/h ÷ rendimento (ha/h)</div>
+      <p>Den samlede omkostning er summen af seks komponenter: afskrivning, renter på den gennemsnitlige kapital, brændstof, vedligehold, operatør og smøremidler. De anvendte formler:</p>
+      <div class="formula">Afskrivning (kr/t) = (pris − restværdi) ÷ (levetid × timer/år)</div>
+      <div class="formula">Renter (kr/t) = ((pris + restværdi) ÷ 2) × 6 % ÷ timer/år</div>
+      <div class="formula">Brændstof (kr/t) = forbrug × dieselpris</div>
+      <div class="formula">Vedligehold (kr/t) = (pris × % vedligehold) ÷ timer/år</div>
+      <div class="formula">Smøremidler (kr/t) = brændstof × % smøremidler</div>
+      <div class="formula">Omkostning kr/ha = omkostning kr/t ÷ kapacitet (ha/t)</div>
 
       <h2>Eksempel</h2>
-      <p>Trator de kr 350.000, residual de kr 70.000, vida útil 10 anos, 1.000 h/ano, 15 L/h, diesel a kr 6,80, manutenção 8%, operador kr 25/h, rendimento 2 ha/h: omkostning total af ordem de <strong>kr 215/h</strong> ou <strong>kr 107/ha</strong>.</p>
+      <p>Traktor til 350.000 kr, restværdi 70.000 kr, levetid 10 år, 1.000 t/år, 15 L/t, diesel til 6,80 kr/L, vedligehold 8 %, operatør 25 kr/t, kapacitet 2 ha/t: samlet omkostning omkring <strong>215 kr/t</strong> eller <strong>107 kr/ha</strong>.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           Vigtige punkter
         </div>
-        <p>O rendimento operacional <strong>real</strong> é mindst som o teórico: vire de cabeceira, paradas, abastecimento og regulagens reduzem facilmente 15% a 30% af capacidade de campo. Use o rendimento efetivo medido a campo, ikke o catálogo. A depreciação contábil também difere af <strong>valor de mercado</strong> — i maskines muito procuradas a desvalorização real é mindst. Para análises mais conservadoras, refaça o cálculo med vida útil og residual ajustados ao seu mercado.</p>
+        <p>Den <strong>reelle</strong> kapacitet er lavere end den teoretiske: vendinger på agerenden, stop, optankning og indstillinger reducerer let markkapaciteten med 15-30 %. Brug den faktisk målte kapacitet, ikke katalogværdien. Den regnskabsmæssige afskrivning afviger også fra <strong>markedsværdien</strong> — for maskiner med høj efterspørgsel er den reelle værdiforringelse mindre. Til mere konservative analyser bør levetiden og restværdien justeres efter dit lokale marked.</p>
       </div>
 
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
-          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Mængde de gødning formulado.</p></a>
-          <a class="calc-card" href="/conversao-de-area.html"><h3>Arealomregner</h3><p>Hektar, alqueire og mais.</p></a>
-          <a class="calc-card" href="/conversao-de-sacas.html"><h3>Vægtomregner</h3><p>Hkgs, toneladas og bushels.</p></a>
+          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Mængde af formuleret gødning.</p></a>
+          <a class="calc-card" href="/conversao-de-area.html"><h3>Arealomregner</h3><p>Hektar, tønde land og m².</p></a>
+          <a class="calc-card" href="/conversao-de-sacas.html"><h3>Vægtomregner</h3><p>Hkg, kg og tons.</p></a>
         </div>
       </div>
 

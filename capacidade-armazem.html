@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="https://www.euronext.com">
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
-<title>Beregner de Capacidade de Lager til Korn | Landbrugstal</title>
-<meta name="description" content="Beregner de capacidade de armazém og silo til korn. Estime volume útil, toneladas og hkgs de 60 kg armazenáveis i silos cilíndricos, retangulares og graneleiros.">
+<title>Lagerkapacitetsberegner til korn | Landbrugstal</title>
+<meta name="description" content="Beregner af lagerkapacitet og silo til korn. Estimér nytteligt volumen, tons og hkg à 60 kg, der kan opbevares i cylindriske, rektangulære silo'er og fladlagre.">
 <link rel="canonical" href="https://landbrugstal.dk/capacidade-armazem.html">
 <meta name="theme-color" content="#16a34a">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="da_DK">
 <meta property="og:site_name" content="Landbrugstal">
-<meta property="og:title" content="Beregner de Capacidade de Lager til Korn">
-<meta property="og:description" content="Volume útil, toneladas og hkgs armazenáveis i silo cilíndrico, retangular og armazém graneleiro.">
+<meta property="og:title" content="Lagerkapacitetsberegner til korn">
+<meta property="og:description" content="Nytteligt volumen, tons og hkg, der kan opbevares i cylindrisk silo, rektangulært silo og fladlager.">
 <meta property="og:url" content="https://landbrugstal.dk/capacidade-armazem.html">
 <meta property="og:image" content="https://landbrugstal.dk/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,13 +33,13 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Beregner de Capacidade de Armazem til Graos",
+  "name": "Lagerkapacitetsberegner til korn",
   "url": "https://landbrugstal.dk/capacidade-armazem.html",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Web",
   "inLanguage": "da-DK",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
-  "description": "Estimativa de capacidade de opbevaring de graos i silos og armazens."
+  "description": "Estimering af opbevaringskapacitet for korn i silo og fladlager."
 }
 </script>
 <script type="application/ld+json">
@@ -94,8 +94,8 @@
           <li>Lagerkapacitet</li>
         </ol>
       </nav>
-      <h1>Beregner de Capacidade de Lager til Korn</h1>
-      <p class="lead">Estime quantas toneladas og hkgs cabem i seu silo ou armazém a partir af dimensões af estrutura og af tipo de grão.</p>
+      <h1>Lagerkapacitetsberegner til korn</h1>
+      <p class="lead">Estimér, hvor mange tons og hkg der er plads til i dit silo eller lager ud fra konstruktionens mål og korntype.</p>
     </div>
   </div>
 
@@ -104,66 +104,66 @@
     <form class="calculator" id="calc-form" novalidate>
       <h2 class="calculator__title">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-        Beregn a capacidade
+        Beregn kapaciteten
       </h2>
-      <p class="calculator__hint">Indtast a estrutura, as dimensões og o grão armazenado.</p>
+      <p class="calculator__hint">Indtast konstruktionen, dens mål og det opbevarede korn.</p>
 
       <fieldset class="field-group">
-        <legend>Estrutura og dimensões</legend>
+        <legend>Konstruktion og mål</legend>
         <div class="field-row">
           <div class="field">
-            <label for="tipo">Tipo de estrutura</label>
+            <label for="tipo">Konstruktionstype</label>
             <select class="input" id="tipo">
-              <option value="cilindrico">Silo cilíndrico (vertical)</option>
-              <option value="retangular">Silo elevado retangular</option>
-              <option value="armazem">Lager (graneleiro horizontal)</option>
+              <option value="cilindrico">Cylindrisk silo (vertikal)</option>
+              <option value="retangular">Forhøjet rektangulært silo</option>
+              <option value="armazem">Fladlager (horisontalt)</option>
             </select>
           </div>
           <div class="field" id="field-fator">
-            <label for="fator">Fator de aproveitamento</label>
+            <label for="fator">Udnyttelsesgrad</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="fator" placeholder="Ex.: 90" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="fator" placeholder="F.eks. 90" autocomplete="off">
               <span class="input-affix__unit">%</span>
             </div>
           </div>
         </div>
         <div class="field-row" id="row-cilindrico">
           <div class="field">
-            <label for="diametro">Diâmetro</label>
+            <label for="diametro">Diameter</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="diametro" placeholder="Ex.: 8" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="diametro" placeholder="F.eks. 8" autocomplete="off">
               <span class="input-affix__unit">m</span>
             </div>
           </div>
           <div class="field">
-            <label for="alturaCil">Altura útil</label>
+            <label for="alturaCil">Brugbar højde</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="alturaCil" placeholder="Ex.: 12" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="alturaCil" placeholder="F.eks. 12" autocomplete="off">
               <span class="input-affix__unit">m</span>
             </div>
           </div>
         </div>
         <div class="field-row" id="row-retangular-1" hidden>
           <div class="field">
-            <label for="comprimento">Comprimento</label>
+            <label for="comprimento">Længde</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="comprimento" placeholder="Ex.: 40" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="comprimento" placeholder="F.eks. 40" autocomplete="off">
               <span class="input-affix__unit">m</span>
             </div>
           </div>
           <div class="field">
-            <label for="largura">Largura</label>
+            <label for="largura">Bredde</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="largura" placeholder="Ex.: 20" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="largura" placeholder="F.eks. 20" autocomplete="off">
               <span class="input-affix__unit">m</span>
             </div>
           </div>
         </div>
         <div class="field-row" id="row-retangular-2" hidden>
           <div class="field">
-            <label for="alturaRet">Altura útil</label>
+            <label for="alturaRet">Brugbar højde</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="alturaRet" placeholder="Ex.: 6" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="alturaRet" placeholder="F.eks. 6" autocomplete="off">
               <span class="input-affix__unit">m</span>
             </div>
           </div>
@@ -171,25 +171,25 @@
       </fieldset>
 
       <fieldset class="field-group">
-        <legend>Grão</legend>
+        <legend>Korn</legend>
         <div class="field-row">
           <div class="field">
-            <label for="grao">Tipo de grão</label>
+            <label for="grao">Korntype</label>
             <select class="input" id="grao">
               <option value="720" data-nome="Sojabønner">Sojabønner (720 kg/m³)</option>
               <option value="720" data-nome="Majs">Majs (720 kg/m³)</option>
               <option value="770" data-nome="Hvede">Hvede (770 kg/m³)</option>
-              <option value="580" data-nome="Ris casca">Ris i casca (580 kg/m³)</option>
-              <option value="800" data-nome="Ris beneficiado">Ris beneficiado (800 kg/m³)</option>
-              <option value="470" data-nome="Café cereja">Café cereja (470 kg/m³)</option>
-              <option value="580" data-nome="Café beneficiado">Café beneficiado (580 kg/m³)</option>
-              <option value="omkostningm" data-nome="Personalizado">Personalizado</option>
+              <option value="580" data-nome="Ris med skal">Ris med skal (580 kg/m³)</option>
+              <option value="800" data-nome="Afskallet ris">Afskallet ris (800 kg/m³)</option>
+              <option value="470" data-nome="Kaffebær">Kaffebær (470 kg/m³)</option>
+              <option value="580" data-nome="Forarbejdet kaffe">Forarbejdet kaffe (580 kg/m³)</option>
+              <option value="omkostningm" data-nome="Brugerdefineret">Brugerdefineret</option>
             </select>
           </div>
           <div class="field" id="field-densidade" hidden>
-            <label for="densidade">Densidade aparente</label>
+            <label for="densidade">Volumenvægt</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="densidade" placeholder="Ex.: 720" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="densidade" placeholder="F.eks. 720" autocomplete="off">
               <span class="input-affix__unit">kg/m³</span>
             </div>
           </div>
@@ -199,7 +199,7 @@
       <p class="field-error" id="calc-error" role="alert"></p>
 
       <div class="calculator__actions">
-        <button class="btn btn--primary btn--lg" type="submit">Beregn capacidade</button>
+        <button class="btn btn--primary btn--lg" type="submit">Beregn kapacitet</button>
         <button class="btn btn--ghost" type="button" id="calc-example">Udfyld med eksempel</button>
       </div>
 
@@ -211,24 +211,24 @@
     <article class="prose">
 
       <h2>Hvad bruges den til</h2>
-      <p>Denne beregner estima a <strong>capacidade de opbevaring</strong> de silos og armazéns graneleiros. Serve til planejar o volume af høst esperada contra a estrutura disponível, dimensionar projetos novos og avaliar contratos de forpagtning de opbevaring.</p>
+      <p>Denne beregner estimerer <strong>opbevaringskapaciteten</strong> for silo'er og fladlagre. Den bruges til at planlægge den forventede høstmængde i forhold til den tilgængelige kapacitet, dimensionere nye projekter og vurdere kontrakter om lejet lagerplads.</p>
 
-      <h2>Sådan beregner du</h2>
-      <p>Primeiro calcula-se o volume geométrico af estrutura, aplica-se um fator de aproveitamento (perdas de canto, ângulo de talude, espaço de aeração) og converte-se med a densidade aparente af grão.</p>
-      <div class="formula">Silo cilíndrico: V = π × (d/2)² × h</div>
-      <div class="formula">Retangular / armazém: V = comprimento × largura × altura</div>
-      <div class="formula">Toneladas = V × fator × densidade ÷ 1.000</div>
+      <h2>Sådan beregnes det</h2>
+      <p>Først beregnes konstruktionens geometriske volumen, dernæst trækkes en udnyttelsesgrad fra (hjørnetab, raseringsvinkel, plads til ventilation), og til sidst omregnes der med kornets volumenvægt.</p>
+      <div class="formula">Cylindrisk silo: V = π × (d/2)² × h</div>
+      <div class="formula">Rektangulær / fladlager: V = længde × bredde × højde</div>
+      <div class="formula">Tons = V × udnyttelsesgrad × volumenvægt ÷ 1.000</div>
 
-      <h2>Densidades aparentes de referência</h2>
-      <p>Valores típicos de densidade aparente (peso pr. metro cúbico de grão a granel) usados til dimensionamento:</p>
+      <h2>Typiske volumenvægte</h2>
+      <p>Typiske volumenvægte (vægt pr. kubikmeter løst korn) til dimensionering:</p>
       <ul>
         <li><strong>Sojabønner</strong>: 720 kg/m³</li>
         <li><strong>Majs</strong>: 720 kg/m³</li>
         <li><strong>Hvede</strong>: 770 kg/m³</li>
-        <li><strong>Ris i casca</strong>: 580 kg/m³</li>
-        <li><strong>Ris beneficiado</strong>: 800 kg/m³</li>
-        <li><strong>Café cereja</strong>: 470 kg/m³</li>
-        <li><strong>Café beneficiado</strong>: 580 kg/m³</li>
+        <li><strong>Ris med skal</strong>: 580 kg/m³</li>
+        <li><strong>Afskallet ris</strong>: 800 kg/m³</li>
+        <li><strong>Kaffebær</strong>: 470 kg/m³</li>
+        <li><strong>Forarbejdet kaffe</strong>: 580 kg/m³</li>
       </ul>
 
       <h2>Eksempel</h2>
@@ -237,17 +237,17 @@
       <div class="callout callout--warning">
         <div class="callout__title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Densidade varia med umidade og impurezas
+          Volumenvægten varierer med fugt og urenheder
         </div>
-        <p>A densidade aparente muda med o teor de umidade, presença de impurezas og o grau de compactação i enchimento. Para projeto og dimensionamento, use valores conservadores (próximos af limite inferior af faixa) til evitar subestimar o espaço påkrævet.</p>
+        <p>Volumenvægten ændrer sig med vandindhold, urenheder og kompakteringsgrad ved fyldning. Til projektering og dimensionering bør der bruges konservative værdier (tæt på intervallets nedre grænse) for ikke at undervurdere den nødvendige plads.</p>
       </div>
 
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
-          <a class="calc-card" href="/conversao-de-sacas.html"><h3>Vægtomregner</h3><p>Toneladas, hkgs og arrobas.</p></a>
-          <a class="calc-card" href="/produtividade.html"><h3>Udbytte</h3><p>Hkgs pr. hektar.</p></a>
-          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Gødning a partir af anbefaling.</p></a>
+          <a class="calc-card" href="/conversao-de-sacas.html"><h3>Vægtomregner</h3><p>Tons, hkg og kg.</p></a>
+          <a class="calc-card" href="/produtividade.html"><h3>Udbytte</h3><p>Hkg pr. hektar.</p></a>
+          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Gødning ud fra anbefaling.</p></a>
         </div>
       </div>
 
@@ -407,18 +407,18 @@
 
   function validate(o) {
     if (!isFinite(o.fator) || o.fator <= 0 || o.fator > 100) {
-      return 'Indtast um fator de aproveitamento entre 0 og 100%.';
+      return 'Indtast en udnyttelsesgrad mellem 0 og 100 %.';
     }
     if (!isFinite(o.densidade) || o.densidade <= 0) {
-      return 'Indtast a densidade aparente af grão i kg/m³.';
+      return 'Indtast kornets volumenvægt i kg/m³.';
     }
     if (o.tipo === 'cilindrico') {
-      if (!isFinite(o.diametro) || o.diametro <= 0) return 'Indtast o diâmetro af silo i metros.';
-      if (!isFinite(o.altura) || o.altura <= 0) return 'Indtast a altura útil af silo i metros.';
+      if (!isFinite(o.diametro) || o.diametro <= 0) return 'Indtast siloens diameter i meter.';
+      if (!isFinite(o.altura) || o.altura <= 0) return 'Indtast siloens brugbare højde i meter.';
     } else {
-      if (!isFinite(o.comprimento) || o.comprimento <= 0) return 'Indtast o comprimento i metros.';
-      if (!isFinite(o.largura) || o.largura <= 0) return 'Indtast a largura i metros.';
-      if (!isFinite(o.altura) || o.altura <= 0) return 'Indtast a altura útil i metros.';
+      if (!isFinite(o.comprimento) || o.comprimento <= 0) return 'Indtast længden i meter.';
+      if (!isFinite(o.largura) || o.largura <= 0) return 'Indtast bredden i meter.';
+      if (!isFinite(o.altura) || o.altura <= 0) return 'Indtast den brugbare højde i meter.';
     }
     return null;
   }
@@ -454,30 +454,30 @@
   }
 
   function tipoLabel(t) {
-    if (t === 'cilindrico') return 'Silo cilíndrico';
-    if (t === 'retangular') return 'Silo retangular';
-    return 'Lager graneleiro';
+    if (t === 'cilindrico') return 'Cylindrisk silo';
+    if (t === 'retangular') return 'Rektangulært silo';
+    return 'Fladlager';
   }
 
   function render(r) {
     result.className = 'result result--neutral';
     var html = '<div class="result__banner">' +
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
-      '<div><div class="result__headline">Capacidade estimada</div>' +
-      '<div class="result__sub">' + tipoLabel(r.tipo) + ' · ' + r.graoNome + ' (' + fmtInt(r.densidade) + ' kg/m³) · ' + fmtInt(r.fator) + '% de aproveitamento</div></div></div>';
+      '<div><div class="result__headline">Estimeret kapacitet</div>' +
+      '<div class="result__sub">' + tipoLabel(r.tipo) + ' · ' + r.graoNome + ' (' + fmtInt(r.densidade) + ' kg/m³) · ' + fmtInt(r.fator) + ' % udnyttelse</div></div></div>';
     html += '<div class="result__body">';
-    html += '<div class="result__main">' + fmtInt(r.ton) + ' <small>toneladas</small></div>';
+    html += '<div class="result__main">' + fmtInt(r.ton) + ' <small>tons</small></div>';
     html += '<div class="result__metrics">' +
-      '<div class="metric"><div class="metric__label">Volume bruto</div>' +
+      '<div class="metric"><div class="metric__label">Bruttovolumen</div>' +
       '<div class="metric__value">' + fmtDec(r.volBruto, 1) + ' m³</div></div>' +
-      '<div class="metric"><div class="metric__label">Volume útil</div>' +
+      '<div class="metric"><div class="metric__label">Nytteligt volumen</div>' +
       '<div class="metric__value">' + fmtDec(r.volUtil, 1) + ' m³</div></div>' +
-      '<div class="metric"><div class="metric__label">Hkgs de 60 kg</div>' +
+      '<div class="metric"><div class="metric__label">Hkg à 60 kg</div>' +
       '<div class="metric__value">' + fmtInt(r.sc60) + '</div></div>' +
-      '<div class="metric"><div class="metric__label">Hkgs de 50 kg</div>' +
+      '<div class="metric"><div class="metric__label">Hkg à 50 kg</div>' +
       '<div class="metric__value">' + fmtInt(r.sc50) + '</div></div>' +
       '</div>';
-    html += '<div class="result__interpretation"><p>O volume útil já considera o fator de aproveitamento, som cobre perdas pr. ângulo de talude, espaços de aeração og cantos mortos. Para projetos, use o valor conservador.</p></div>';
+    html += '<div class="result__interpretation"><p>Det nyttelige volumen tager allerede højde for udnyttelsesgraden, som dækker tab fra raseringsvinkel, plads til ventilation og døde hjørner. Brug en konservativ værdi ved projektering.</p></div>';
     html += '</div>';
     result.innerHTML = html;
     result.hidden = false;

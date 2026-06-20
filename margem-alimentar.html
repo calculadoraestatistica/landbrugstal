@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="https://www.euronext.com">
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
-<title>Beregner de Margin Alimentar | Landbrugstal</title>
-<meta name="description" content="Beregner de margin sobre alimentação online og gratuita. Beregn a margin alimentar diária i leite, boi confinado, suíno og frango.">
+<title>Foderdækningsbidrag — daglig fodermargin | Landbrugstal</title>
+<meta name="description" content="Gratis online beregner af foderdækningsbidrag. Beregn den daglige fodermargin for malkekøer, slagtekvæg, slagtesvin og slagtekyllinger.">
 <link rel="canonical" href="https://landbrugstal.dk/margem-alimentar.html">
 <meta name="theme-color" content="#16a34a">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="da_DK">
 <meta property="og:site_name" content="Landbrugstal">
-<meta property="og:title" content="Beregner de Margin sobre Alimentação">
-<meta property="og:description" content="Foderdækningsbidrag pr. animal/dia i leite, boi, suíno og frango.">
+<meta property="og:title" content="Foderdækningsbidrag — daglig fodermargin">
+<meta property="og:description" content="Foderdækningsbidrag pr. dyr/dag for malkekvæg, slagtekvæg, slagtesvin og slagtekyllinger.">
 <meta property="og:url" content="https://landbrugstal.dk/margem-alimentar.html">
 <meta property="og:image" content="https://landbrugstal.dk/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,13 +33,13 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Beregner de Margin sobre Alimentacao",
+  "name": "Foderdækningsbidrag",
   "url": "https://landbrugstal.dk/margem-alimentar.html",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Web",
   "inLanguage": "da-DK",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
-  "description": "Foderdækningsbidrag diaria i leite, boi confinado, suino og frango."
+  "description": "Dagligt foderdækningsbidrag for malkekvæg, slagtekvæg, slagtesvin og slagtekyllinger."
 }
 </script>
 <script type="application/ld+json">
@@ -104,84 +104,84 @@
     <form class="calculator" id="calc-form" novalidate>
       <h2 class="calculator__title">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-        Beregn a margin alimentar
+        Beregn foderdækningsbidraget
       </h2>
-      <p class="calculator__hint">Indtast o tipo de animal, a produção og os omkostnings diários.</p>
+      <p class="calculator__hint">Indtast dyretype, produktion og daglige omkostninger.</p>
 
       <fieldset class="field-group">
-        <legend>Animal og produção</legend>
+        <legend>Dyr og produktion</legend>
         <div class="field-row">
           <div class="field">
-            <label for="tipo">Tipo de animal</label>
+            <label for="tipo">Dyretype</label>
             <select class="input" id="tipo">
-              <option value="leite">Vaca de leite</option>
-              <option value="boi">Boi (confinamento)</option>
-              <option value="suino">Svinekød</option>
-              <option value="frango">Frango</option>
+              <option value="leite">Malkeko</option>
+              <option value="boi">Slagtekvæg (fedestald)</option>
+              <option value="suino">Svin</option>
+              <option value="frango">Slagtekylling</option>
             </select>
           </div>
           <div class="field">
-            <label for="prod" id="prodLabel">Produção (L/vaca/dia)</label>
+            <label for="prod" id="prodLabel">Produktion (L/ko/dag)</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="prod" placeholder="Ex.: 25" autocomplete="off">
-              <span class="input-affix__unit" id="prodUnit">L/dia</span>
+              <input class="input" type="text" inputmode="decimal" id="prod" placeholder="F.eks. 25" autocomplete="off">
+              <span class="input-affix__unit" id="prodUnit">L/dag</span>
             </div>
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="preco" id="precoLabel">Preço de venda</label>
+            <label for="preco" id="precoLabel">Salgspris</label>
             <div class="input-affix">
               <span class="input-affix__prefix">kr</span>
-              <input class="input" type="text" inputmode="decimal" id="preco" placeholder="Ex.: 2,40" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="preco" placeholder="F.eks. 2,40" autocomplete="off">
               <span class="input-affix__unit" id="precoUnit">/L</span>
             </div>
           </div>
           <div class="field">
-            <label for="consumo">Consumo de ração</label>
+            <label for="consumo">Foderforbrug</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="consumo" placeholder="Ex.: 20" autocomplete="off">
-              <span class="input-affix__unit">kg/dia</span>
+              <input class="input" type="text" inputmode="decimal" id="consumo" placeholder="F.eks. 20" autocomplete="off">
+              <span class="input-affix__unit">kg/dag</span>
             </div>
           </div>
         </div>
       </fieldset>
 
       <fieldset class="field-group">
-        <legend>Omkostnings diários</legend>
+        <legend>Daglige omkostninger</legend>
         <div class="field-row">
           <div class="field">
-            <label for="precoRacao">Preço af ração</label>
+            <label for="precoRacao">Foderpris</label>
             <div class="input-affix">
               <span class="input-affix__prefix">kr</span>
-              <input class="input" type="text" inputmode="decimal" id="precoRacao" placeholder="Ex.: 2000" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="precoRacao" placeholder="F.eks. 2000" autocomplete="off">
               <span class="input-affix__unit">/t</span>
             </div>
           </div>
           <div class="field">
-            <label for="mineral">Mineral (valgfri)</label>
+            <label for="mineral">Mineraler (valgfri)</label>
             <div class="input-affix">
               <span class="input-affix__prefix">kr</span>
-              <input class="input" type="text" inputmode="decimal" id="mineral" placeholder="Ex.: 0,30" autocomplete="off">
-              <span class="input-affix__unit">/dia</span>
+              <input class="input" type="text" inputmode="decimal" id="mineral" placeholder="F.eks. 0,30" autocomplete="off">
+              <span class="input-affix__unit">/dag</span>
             </div>
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="medicamento">Medicamento (valgfri)</label>
+            <label for="medicamento">Medicin (valgfri)</label>
             <div class="input-affix">
               <span class="input-affix__prefix">kr</span>
-              <input class="input" type="text" inputmode="decimal" id="medicamento" placeholder="Ex.: 0,20" autocomplete="off">
-              <span class="input-affix__unit">/dia</span>
+              <input class="input" type="text" inputmode="decimal" id="medicamento" placeholder="F.eks. 0,20" autocomplete="off">
+              <span class="input-affix__unit">/dag</span>
             </div>
           </div>
           <div class="field">
-            <label for="maoObra">Mão de obra rateada (valgfri)</label>
+            <label for="maoObra">Arbejdskraft (valgfri)</label>
             <div class="input-affix">
               <span class="input-affix__prefix">kr</span>
-              <input class="input" type="text" inputmode="decimal" id="maoObra" placeholder="Ex.: 1,00" autocomplete="off">
-              <span class="input-affix__unit">/dia</span>
+              <input class="input" type="text" inputmode="decimal" id="maoObra" placeholder="F.eks. 1,00" autocomplete="off">
+              <span class="input-affix__unit">/dag</span>
             </div>
           </div>
         </div>
@@ -202,34 +202,34 @@
     <article class="prose">
 
       <h2>Hvad bruges den til</h2>
-      <p>A <strong>margin sobre alimentação</strong> (ou margin alimentar) é o KPI número 1 af pecuária intensiva. Como a ração responde pr. <strong>60% a 80%</strong> af omkostning de produção i leite, confinamento, suíno og frango, monitorar a margin alimentar pr. animal/dia é a forma mais rápida de saber se a atividade está pagando o som mais pesa i caixa.</p>
+      <p><strong>Foderdækningsbidraget</strong> er den vigtigste KPI i intensiv husdyrproduktion. Da foder typisk udgør <strong>60-80 %</strong> af produktionsomkostningen ved malkekvæg, fedekvæg, svin og slagtekyllinger, er den daglige fodermargin pr. dyr den hurtigste måde at vurdere, om driften betaler den tungeste post i kassen.</p>
 
       <h2>Sådan beregner du</h2>
-      <p>A conta é simples: receita diária menos omkostning af ração menresten omkostnings variáveis ligados ao manejo i dag.</p>
-      <div class="formula">Foderdækningsbidrag = Receita diária − Omkostning af ração − Outros omkostnings variáveis</div>
-      <p>O omkostning af ração usa o preço pr. tonelada (padrão de mercado) dividido pr. 1.000 til virar kr/kg, multiplicado pelo consumo diário i kg.</p>
+      <p>Beregningen er enkel: daglig omsætning minus foderomkostning minus øvrige variable omkostninger knyttet til den daglige drift.</p>
+      <div class="formula">Foderdækningsbidrag = Daglig omsætning − Foderomkostning − Øvrige variable omkostninger</div>
+      <p>Foderomkostningen bruger prisen pr. ton (markedsstandard), divideret med 1.000 for at få kr/kg, og ganges med det daglige forbrug i kg.</p>
 
       <h2>Eksempel</h2>
-      <p>Uma vaca produzindo 25 L/dia, leite a kr 2,40/L, comendo 20 kg de ração a kr 2.000/t: receita de kr 60,00, omkostning de ração de kr 40,00, <strong>margin alimentar de kr 20,00/vaca/dia</strong>.</p>
+      <p>En ko, der producerer 25 L/dag med mælkepris på 2,40 kr/L og spiser 20 kg foder à 2.000 kr/t: omsætning på 60,00 kr, foderomkostning på 40,00 kr, <strong>foderdækningsbidrag på 20,00 kr/ko/dag</strong>.</p>
 
-      <h2>Como interpretar</h2>
-      <p>Foderdækningsbidrag positiva <strong>ikke é sinônimo de lucro</strong>. Falta descontar amortização de instalações, capital empatado i animais, mão de obra fixa, energia, impostos og morte. A margin alimentar serve til comparar dietas, lotes og fases — é um indicador <strong>relativo og tático</strong>, usado i dia a dia til ajustar formulação og decidir quando vender.</p>
-      <p>Como referência prática: i leite a margin precisa cobrir todos os omkostnings fixos rateados pr. vaca/dia; i confinamento ela precisa pagar o omkostning af boi magro diluído i tempo de foderbord; i suíno og frango, o piso é a integração ikke rejeitar o lote.</p>
+      <h2>Sådan tolker du</h2>
+      <p>Et positivt foderdækningsbidrag <strong>er ikke det samme som overskud</strong>. Der mangler stadig at blive trukket bygningsafskrivning, bundet kapital i dyr, fast arbejdskraft, energi, skatter og dødelighed. Fodermarginen bruges til at sammenligne foderblandinger, hold og faser — det er en <strong>relativ og taktisk</strong> indikator, som anvendes dagligt til at justere foderformuleringen og afgøre, hvornår der skal sælges.</p>
+      <p>Som praktisk reference: ved malkekvæg skal marginen dække alle faste omkostninger pr. ko/dag; ved fedekvæg skal den betale omkostningen til de magre dyr fordelt over fodringstiden; ved svin og slagtekyllinger er bunden, at integrationen ikke kasserer holdet.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Esta é a margin PARCIAL
+          Dette er en DELVIS margin
         </div>
-        <p>Denne beregner mostra a margin <strong>só sobre alimentação</strong> — ikke é lucro líquido. Ikke inclui depreciação de instalações, remuneração af capital, mão de obra fixa, energia, impostos, sanidade preventiva nem mortalidade. Use resultatet til comparar dietas og ajustar manejo, ikke som medida final de rentabilidade.</p>
+        <p>Denne beregner viser marginen <strong>kun på foder</strong> — ikke nettoresultatet. Den indeholder ikke bygningsafskrivning, forrentning af kapital, fast arbejdskraft, energi, skatter, forebyggende sundhed eller dødelighed. Brug resultatet til at sammenligne foderblandinger og justere driften, ikke som endeligt mål for rentabiliteten.</p>
       </div>
 
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
-          <a class="calc-card" href="/lotacao-pastagem.html"><h3>Græsningsbelægning</h3><p>UA/ha i græsmark.</p></a>
-          <a class="calc-card" href="/conversao-de-sacas.html"><h3>Vægtomregner</h3><p>Hkgs, kg og toneladas.</p></a>
-          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Anbefaling i gødning comercial.</p></a>
+          <a class="calc-card" href="/lotacao-pastagem.html"><h3>Græsningsbelægning</h3><p>DE/ha på græsmark.</p></a>
+          <a class="calc-card" href="/conversao-de-sacas.html"><h3>Vægtomregner</h3><p>Hkg, kg og tons.</p></a>
+          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Fra anbefaling til handelsgødning.</p></a>
         </div>
       </div>
 
@@ -296,12 +296,12 @@
   var $ = function (id) { return document.getElementById(id); };
   var form = $('calc-form'), result = $('calc-result'), errBox = $('calc-error');
 
-  // Configuração pr. tipo de animal
+  // Konfiguration pr. dyretype
   var TIPOS = {
-    leite:  { prodLabel: 'Produção (L/vaca/dia)',   prodUnit: 'L/dia',  precoLabel: 'Preço af leite',     precoUnit: '/L',   prodName: 'leite',  prodUnitOut: 'L' },
-    boi:    { prodLabel: 'Vægttilvækst/dia',       prodUnit: 'kg/dia', precoLabel: 'Preço af arroba (@)', precoUnit: '/@',   prodName: 'ganho',  prodUnitOut: 'kg' },
-    suino:  { prodLabel: 'Vægttilvækst/dia',       prodUnit: 'kg/dia', precoLabel: 'Preço af kg vivo',   precoUnit: '/kg',  prodName: 'ganho',  prodUnitOut: 'kg' },
-    frango: { prodLabel: 'Vægttilvækst/dia',       prodUnit: 'kg/dia', precoLabel: 'Preço af kg vivo',   precoUnit: '/kg',  prodName: 'ganho',  prodUnitOut: 'kg' }
+    leite:  { prodLabel: 'Produktion (L/ko/dag)',  prodUnit: 'L/dag',  precoLabel: 'Mælkepris',           precoUnit: '/L',   prodName: 'mælk',     prodUnitOut: 'L' },
+    boi:    { prodLabel: 'Daglig tilvækst',        prodUnit: 'kg/dag', precoLabel: 'Pris pr. kg levende vægt', precoUnit: '/kg',  prodName: 'tilvækst', prodUnitOut: 'kg' },
+    suino:  { prodLabel: 'Daglig tilvækst',        prodUnit: 'kg/dag', precoLabel: 'Pris pr. kg levende vægt', precoUnit: '/kg',  prodName: 'tilvækst', prodUnitOut: 'kg' },
+    frango: { prodLabel: 'Daglig tilvækst',        prodUnit: 'kg/dag', precoLabel: 'Pris pr. kg levende vægt', precoUnit: '/kg',  prodName: 'tilvækst', prodUnitOut: 'kg' }
   };
 
   function applyTipo() {
@@ -355,20 +355,13 @@
     clearError();
     var f = readForm();
 
-    if (isNaN(f.prod) || f.prod <= 0) { showError('Indtast a produção/ganho diário (størst som zero).'); return; }
-    if (isNaN(f.preco) || f.preco <= 0) { showError('Indtast o preço de venda (størst som zero).'); return; }
-    if (isNaN(f.consumo) || f.consumo <= 0) { showError('Indtast o consumo de ração (størst som zero).'); return; }
-    if (isNaN(f.precoRacao) || f.precoRacao <= 0) { showError('Indtast o preço af ração i kr/t (størst som zero).'); return; }
+    if (isNaN(f.prod) || f.prod <= 0) { showError('Indtast den daglige produktion/tilvækst (større end nul).'); return; }
+    if (isNaN(f.preco) || f.preco <= 0) { showError('Indtast salgsprisen (større end nul).'); return; }
+    if (isNaN(f.consumo) || f.consumo <= 0) { showError('Indtast foderforbruget (større end nul).'); return; }
+    if (isNaN(f.precoRacao) || f.precoRacao <= 0) { showError('Indtast foderprisen i kr/t (større end nul).'); return; }
 
-    // Receita: til boi, prod é kg/dia mas o preço é pr. arroba (@ = 15 kg de carcaça).
-    // Convenção prática: ganho vivo -> arroba via rendimento de carcaça ~50%, ou seja kg/30 ~ @.
-    // Usamos kg_vivo / 30 = arrobas equivalentes (15 kg carcaça med 50% rendimento).
-    var receita;
-    if (f.tipo === 'boi') {
-      receita = (f.prod / 30) * f.preco;
-    } else {
-      receita = f.prod * f.preco;
-    }
+    // Omsætning: tilvækst i kg/dag × pris pr. kg levende vægt
+    var receita = f.prod * f.preco;
 
     var omkostningRacao = f.consumo * (f.precoRacao / 1000);
     var outros = f.mineral + f.medicamento + f.maoObra;
@@ -379,13 +372,13 @@
     // Eficiência
     var efic, eficLabel;
     if (f.tipo === 'leite') {
-      // L de leite pr. kg de ração
+      // L mælk pr. kg foder
       efic = f.prod / f.consumo;
-      eficLabel = 'L leite / kg ração';
+      eficLabel = 'L mælk / kg foder';
     } else {
-      // kg ração pr. kg ganho
+      // kg foder pr. kg tilvækst
       efic = f.consumo / f.prod;
-      eficLabel = 'kg ração / kg ganho';
+      eficLabel = 'kg foder / kg tilvækst';
     }
 
     render({
@@ -413,29 +406,29 @@
   function render(r) {
     var pos = r.margin >= 0;
     result.className = 'result ' + (pos ? 'result--positive' : 'result--negative');
-    var animalLabel = ({ leite: 'vaca', boi: 'boi', suino: 'suíno', frango: 'frango' })[r.tipo] || 'animal';
+    var animalLabel = ({ leite: 'ko', boi: 'dyr', suino: 'svin', frango: 'kylling' })[r.tipo] || 'dyr';
     var unidProd = r.tcfg.prodUnitOut;
 
     var html = '<div class="result__banner">' +
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
       '<div><div class="result__headline">Foderdækningsbidrag</div>' +
-      '<div class="result__sub">Receita menos ração og omkostnings variáveis</div></div></div>';
+      '<div class="result__sub">Omsætning minus foder og øvrige variable omkostninger</div></div></div>';
 
     html += '<div class="result__body">';
-    html += '<div class="result__main">' + fmtDKK(r.margin) + ' <small>/' + animalLabel + '/dia</small></div>';
+    html += '<div class="result__main">' + fmtDKK(r.margin) + ' <small>/' + animalLabel + '/dag</small></div>';
     html += '<div class="result__metrics">' +
-      '<div class="metric"><div class="metric__label">Receita bruta</div><div class="metric__value">' + fmtDKK(r.receita) + '/dia</div></div>' +
-      '<div class="metric"><div class="metric__label">Omkostning af ração</div><div class="metric__value">' + fmtDKK(r.omkostningRacao) + '/dia</div></div>' +
-      '<div class="metric"><div class="metric__label">Outros omkostnings</div><div class="metric__value">' + fmtDKK(r.outros) + '/dia</div></div>' +
-      '<div class="metric"><div class="metric__label">Margin pr. ' + unidProd + ' de ' + r.tcfg.prodName + '</div><div class="metric__value">' + fmtDKK(r.marginPorUnid) + '/' + unidProd + '</div></div>' +
-      '<div class="metric"><div class="metric__label">Eficiência</div><div class="metric__value">' + fmtNum(r.efic, 2) + ' ' + r.eficLabel + '</div></div>' +
+      '<div class="metric"><div class="metric__label">Bruttoomsætning</div><div class="metric__value">' + fmtDKK(r.receita) + '/dag</div></div>' +
+      '<div class="metric"><div class="metric__label">Foderomkostning</div><div class="metric__value">' + fmtDKK(r.omkostningRacao) + '/dag</div></div>' +
+      '<div class="metric"><div class="metric__label">Øvrige omkostninger</div><div class="metric__value">' + fmtDKK(r.outros) + '/dag</div></div>' +
+      '<div class="metric"><div class="metric__label">Margin pr. ' + unidProd + ' ' + r.tcfg.prodName + '</div><div class="metric__value">' + fmtDKK(r.marginPorUnid) + '/' + unidProd + '</div></div>' +
+      '<div class="metric"><div class="metric__label">Effektivitet</div><div class="metric__value">' + fmtNum(r.efic, 2) + ' ' + r.eficLabel + '</div></div>' +
       '</div>';
 
     var interp;
     if (pos) {
-      interp = 'Margin positiva: a receita i dag paga a ração og os omkostnings variáveis informados. Lembre-se som isto ainda ikke cobre depreciação, capital, mão de obra fixa og mortalidade — compare med seu histórico til decidir se a margin está saudável.';
+      interp = 'Positiv margin: omsætningen dækker foder og de oplyste variable omkostninger. Husk, at dette stadig ikke dækker afskrivninger, kapital, fast arbejdskraft og dødelighed — sammenlign med din historik for at vurdere, om marginen er sund.';
     } else {
-      interp = 'Margin negativa: a receita ikke cobre nem a ração og os omkostnings variáveis. Revise dieta (preço og konvertering), preço de venda og omkostnings antes de manter o lote.';
+      interp = 'Negativ margin: omsætningen dækker hverken foder eller de variable omkostninger. Gennemgå foderblandingen (pris og foderudnyttelse), salgsprisen og omkostningerne, før holdet videreføres.';
     }
     html += '<div class="result__interpretation"><p>' + interp + '</p></div>';
     html += '</div>';

@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="https://www.euronext.com">
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
-<title>Beregner de Ganho de Peso (GMD) | Landbrugstal</title>
-<meta name="description" content="Beregner de ganho médio diário (GMD) online og gratuita. Indtast as pesagens og veja o GMD og a previsão de abate.">
+<title>Daglig tilvækst (DTV) | Landbrugstal</title>
+<meta name="description" content="Gratis online beregner af daglig tilvækst (DTV). Indtast vejningerne og se den gennemsnitlige daglige tilvækst og slagteprognosen.">
 <link rel="canonical" href="https://landbrugstal.dk/ganho-de-peso.html">
 <meta name="theme-color" content="#16a34a">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="da_DK">
 <meta property="og:site_name" content="Landbrugstal">
-<meta property="og:title" content="Beregner de Ganho de Peso (GMD)">
-<meta property="og:description" content="Beregn o ganho médio diário af gado og estime os dias até o abate.">
+<meta property="og:title" content="Daglig tilvækst (DTV)">
+<meta property="og:description" content="Beregn dyrets gennemsnitlige daglige tilvækst og estimér antal dage til slagt.">
 <meta property="og:url" content="https://landbrugstal.dk/ganho-de-peso.html">
 <meta property="og:image" content="https://landbrugstal.dk/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,13 +33,13 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Beregner de Ganho de Peso",
+  "name": "Daglig tilvækst (DTV)",
   "url": "https://landbrugstal.dk/ganho-de-peso.html",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Web",
   "inLanguage": "da-DK",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
-  "description": "Cálculo af ganho médio diário (GMD) og previsão de abate."
+  "description": "Beregning af daglig tilvækst (DTV) og slagteprognose."
 }
 </script>
 <script type="application/ld+json">
@@ -94,8 +94,8 @@
           <li>Daglig tilvækst (DTV)</li>
         </ol>
       </nav>
-      <h1>Beregner de Ganho de Peso (GMD)</h1>
-      <p class="lead">Beregn o ganho médio diário af animal entre duas pesagens og estime i quantos dias ele chega ao peso de abate.</p>
+      <h1>Daglig tilvækst (DTV)</h1>
+      <p class="lead">Beregn dyrets gennemsnitlige daglige tilvækst mellem to vejninger og estimér, hvor mange dage der går, før det når slagtevægten.</p>
     </div>
   </div>
 
@@ -104,43 +104,43 @@
     <form class="calculator" id="calc-form" novalidate>
       <h2 class="calculator__title">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-        Beregn o GMD
+        Beregn DTV
       </h2>
-      <p class="calculator__hint">Indtast as pesagens og o intervalo entre elas.</p>
+      <p class="calculator__hint">Indtast vejningerne og intervallet mellem dem.</p>
 
       <fieldset class="field-group">
-        <legend>Pesagens</legend>
+        <legend>Vejninger</legend>
         <div class="field-row">
           <div class="field">
-            <label for="pesoInicial">Peso inicial</label>
+            <label for="pesoInicial">Startvægt</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="pesoInicial" placeholder="Ex.: 300" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="pesoInicial" placeholder="F.eks. 300" autocomplete="off">
               <span class="input-affix__unit">kg</span>
             </div>
           </div>
           <div class="field">
-            <label for="pesoFinal">Peso final</label>
+            <label for="pesoFinal">Slutvægt</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="pesoFinal" placeholder="Ex.: 380" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="pesoFinal" placeholder="F.eks. 380" autocomplete="off">
               <span class="input-affix__unit">kg</span>
             </div>
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="dias">Dias entre as pesagens</label>
+            <label for="dias">Dage mellem vejningerne</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="dias" placeholder="Ex.: 90" autocomplete="off">
-              <span class="input-affix__unit">dias</span>
+              <input class="input" type="text" inputmode="decimal" id="dias" placeholder="F.eks. 90" autocomplete="off">
+              <span class="input-affix__unit">dage</span>
             </div>
           </div>
           <div class="field">
-            <label for="pesoAbate">Peso de abate desejado</label>
+            <label for="pesoAbate">Ønsket slagtevægt</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="pesoAbate" placeholder="Ex.: 480" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="pesoAbate" placeholder="F.eks. 480" autocomplete="off">
               <span class="input-affix__unit">kg</span>
             </div>
-            <p class="help">Valgfri — til estimar quantos dias faltam até o abate.</p>
+            <p class="help">Valgfri — til at estimere, hvor mange dage der mangler til slagt.</p>
           </div>
         </div>
       </fieldset>
@@ -148,7 +148,7 @@
       <p class="field-error" id="calc-error" role="alert"></p>
 
       <div class="calculator__actions">
-        <button class="btn btn--primary btn--lg" type="submit">Beregn GMD</button>
+        <button class="btn btn--primary btn--lg" type="submit">Beregn DTV</button>
         <button class="btn btn--ghost" type="button" id="calc-example">Udfyld med eksempel</button>
       </div>
 
@@ -160,29 +160,29 @@
     <article class="prose">
 
       <h2>Hvad bruges den til</h2>
-      <p>O <strong>ganho médio diário (GMD)</strong> mede quanto peso o animal ganha pr. dia. É o principal indicador de desempenho af engorda.</p>
+      <p><strong>Daglig tilvækst (DTV)</strong> måler, hvor meget dyret tager på pr. dag. Det er den vigtigste indikator for præstationen ved opfedning.</p>
 
       <h2>Sådan beregner du</h2>
-      <p>Divide-se o peso ganho (peso final menos o inicial) pelo número de dias entre as pesagens. Com o peso de abate, estima-se quantos dias ainda faltam.</p>
-      <div class="formula">GMD = (peso final − peso inicial) ÷ dias</div>
+      <p>Tilvæksten (slutvægt minus startvægt) divideres med antal dage mellem vejningerne. Hvis slagtevægten angives, estimeres det også, hvor mange dage der mangler.</p>
+      <div class="formula">DTV = (slutvægt − startvægt) ÷ dage</div>
 
       <h2>Eksempel</h2>
-      <p>Um animal som sai de 300 kg og chega a 380 kg i 90 dias tem GMD de <strong>0,889 kg/dia</strong>; til chegar a 480 kg, faltam cerca de 112 dias.</p>
+      <p>Et dyr, der starter på 300 kg og når 380 kg på 90 dage, har en DTV på <strong>0,889 kg/dag</strong>; for at nå 480 kg mangler der ca. 112 dage.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Pese altid nas mesmas condições
+          Vej altid under samme forhold
         </div>
-        <p>Para um GMD confiável, pese os animais altid i mesmo horário og i condições parecidas (jejum, hidratação). O peso vivo varia ao longo i dag.</p>
+        <p>For at få en pålidelig DTV bør dyrene altid vejes på samme tidspunkt og under sammenlignelige forhold (faste, hydrering). Levendevægten svinger gennem døgnet.</p>
       </div>
 
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
-          <a class="calc-card" href="/lotacao-pastagem.html"><h3>Græsningsbelægning</h3><p>Taxa de belægningsgrad i UA/ha.</p></a>
-          <a class="calc-card" href="/consumo-do-rebanho.html"><h3>Foderindtag i besætning</h3><p>Tørstof og sal mineral.</p></a>
-          <a class="calc-card" href="/custo-de-producao.html"><h3>Produktionsomkostning</h3><p>Omkostning pr. arroba og equilíbrio.</p></a>
+          <a class="calc-card" href="/lotacao-pastagem.html"><h3>Græsningsbelægning</h3><p>Belægningsgrad i DE/ha.</p></a>
+          <a class="calc-card" href="/consumo-do-rebanho.html"><h3>Foderindtag i besætning</h3><p>Tørstof og mineraler.</p></a>
+          <a class="calc-card" href="/custo-de-producao.html"><h3>Produktionsomkostning</h3><p>Omkostning pr. kg og break-even.</p></a>
         </div>
       </div>
 
@@ -275,12 +275,12 @@
   function render(r) {
     result.className = 'result result--neutral';
     var html = '<div class="result__banner">' + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
-      '<div><div class="result__headline">Ganho médio diário</div>' +
-      '<div class="result__sub">GMD og previsão de abate</div></div></div>';
+      '<div><div class="result__headline">Daglig tilvækst</div>' +
+      '<div class="result__sub">DTV og slagteprognose</div></div></div>';
     html += '<div class="result__body">';
-    html += '<div class="result__main">' + (Fmt.num(r.gmd, 3) + ' <small>kg pr. dia</small>') + '</div>';
-      html += '<div class="result__metrics">' + ((r.diasAteAbate !== undefined) ? ('<div class="metric"><div class="metric__label">Dias estimados até o abate</div>' + '<div class="metric__value">' + (Fmt.int(r.diasAteAbate) + ' dias') + '</div>'  + '</div>') : '') + '</div>';
-    html += '<div class="result__interpretation"><p>' + ('Um GMD acima de 0,850 kg/dia costuma ser considerado economicamente bom. O ganho varia bastante med a dieta, a categoria og o clima.') + '</p></div>';
+    html += '<div class="result__main">' + (Fmt.num(r.gmd, 3) + ' <small>kg pr. dag</small>') + '</div>';
+      html += '<div class="result__metrics">' + ((r.diasAteAbate !== undefined) ? ('<div class="metric"><div class="metric__label">Estimerede dage til slagt</div>' + '<div class="metric__value">' + (Fmt.int(r.diasAteAbate) + ' dage') + '</div>'  + '</div>') : '') + '</div>';
+    html += '<div class="result__interpretation"><p>' + ('En DTV over 0,850 kg/dag betragtes typisk som økonomisk fornuftig. Tilvæksten varierer meget med foder, dyrekategori og klima.') + '</p></div>';
     html += '</div>';
     result.innerHTML = html;
     result.hidden = false;

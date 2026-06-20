@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="https://www.euronext.com">
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
-<title>Konvertering de Udbytte — Hkgs/ha, t/ha | Landbrugstal</title>
-<meta name="description" content="Conversor de udbytte online og gratuito. Converta a udbytte af markbrug entre hkgs pr. hektar, kg/ha og toneladas/ha.">
+<title>Udbytteomregner — hkg/ha, kg/ha, t/ha | Landbrugstal</title>
+<meta name="description" content="Gratis online udbytteomregner. Omregn udbytte i markbruget mellem hkg pr. hektar, kg/ha og tons/ha.">
 <link rel="canonical" href="https://landbrugstal.dk/produtividade.html">
 <meta name="theme-color" content="#16a34a">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="da_DK">
 <meta property="og:site_name" content="Landbrugstal">
-<meta property="og:title" content="Konvertering de Udbytte">
-<meta property="og:description" content="Converta a udbytte entre hkgs pr. hektar, kg/ha og t/ha.">
+<meta property="og:title" content="Udbytteomregner">
+<meta property="og:description" content="Omregn udbytte mellem hkg pr. hektar, kg/ha og t/ha.">
 <meta property="og:url" content="https://landbrugstal.dk/produtividade.html">
 <meta property="og:image" content="https://landbrugstal.dk/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,13 +33,13 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Conversao de Udbytte",
+  "name": "Udbytteomregner",
   "url": "https://landbrugstal.dk/produtividade.html",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Web",
   "inLanguage": "da-DK",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
-  "description": "Conversao de udbytte entre hkgs/ha, kg/ha og t/ha."
+  "description": "Omregning af udbytte mellem hkg/ha, kg/ha og t/ha."
 }
 </script>
 <script type="application/ld+json">
@@ -48,7 +48,7 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     {"@type":"ListItem","position":1,"name":"Forside","item":"https://landbrugstal.dk/"},
-    {"@type":"ListItem","position":2,"name":"Konvertering de udbytte","item":"https://landbrugstal.dk/produtividade.html"}
+    {"@type":"ListItem","position":2,"name":"Udbytteomregner","item":"https://landbrugstal.dk/produtividade.html"}
   ]
 }
 </script>
@@ -91,11 +91,11 @@
       <nav class="breadcrumb" aria-label="Sti">
         <ol>
           <li><a href="/">Forside</a></li>
-          <li>Konvertering de udbytte</li>
+          <li>Udbytteomregner</li>
         </ol>
       </nav>
-      <h1>Konvertering de Udbytte</h1>
-      <p class="lead">Converta a udbytte af markbrug entre hkgs pr. hektar, quilos pr. hektar og toneladas pr. hektar.</p>
+      <h1>Udbytteomregner</h1>
+      <p class="lead">Omregn udbytte i markbruget mellem hkg pr. hektar, kilo pr. hektar og tons pr. hektar.</p>
     </div>
   </div>
 
@@ -104,45 +104,45 @@
     <form class="calculator" id="calc-form" novalidate>
       <h2 class="calculator__title">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-        Converter udbytte
+        Omregn udbytte
       </h2>
-      <p class="calculator__hint">Indtast o valor og as unidades.</p>
+      <p class="calculator__hint">Indtast værdien og enhederne.</p>
 
       <fieldset class="field-group">
-        <legend>Konvertering</legend>
+        <legend>Omregning</legend>
         <div class="field-row">
           <div class="field">
             <label for="valor">Udbytte</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="valor" placeholder="Ex.: 60" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="valor" placeholder="F.eks. 60" autocomplete="off">
               <span class="input-affix__unit"></span>
             </div>
           </div>
           <div class="field">
-            <label for="de">De</label>
+            <label for="de">Fra</label>
             <select class="input" id="de">
-              <option value="hkgs_ha">Hkgs pr. hektar</option>
-              <option value="kg_ha">Quilos pr. hektar</option>
-              <option value="t_ha">Toneladas pr. hektar</option>
+              <option value="hkgs_ha">Hkg pr. hektar</option>
+              <option value="kg_ha">Kilo pr. hektar</option>
+              <option value="t_ha">Tons pr. hektar</option>
             </select>
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="para">Para</label>
+            <label for="para">Til</label>
             <select class="input" id="para">
-              <option value="t_ha">Toneladas pr. hektar</option>
-              <option value="kg_ha">Quilos pr. hektar</option>
-              <option value="hkgs_ha">Hkgs pr. hektar</option>
+              <option value="t_ha">Tons pr. hektar</option>
+              <option value="kg_ha">Kilo pr. hektar</option>
+              <option value="hkgs_ha">Hkg pr. hektar</option>
             </select>
           </div>
           <div class="field">
-            <label for="pesoHkg">Peso af hkg</label>
+            <label for="pesoHkg">Vægt pr. hkg</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="pesoHkg" placeholder="Ex.: 60" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="pesoHkg" placeholder="F.eks. 100" autocomplete="off">
               <span class="input-affix__unit">kg</span>
             </div>
-            <p class="help">Peso af hkg af cultura. Padrão de 60 kg.</p>
+            <p class="help">Dansk standard: 1 hkg = 100 kg. For specifikke referencer (f.eks. soja eller hvede i international handel) bruges 60 kg.</p>
           </div>
         </div>
       </fieldset>
@@ -150,7 +150,7 @@
       <p class="field-error" id="calc-error" role="alert"></p>
 
       <div class="calculator__actions">
-        <button class="btn btn--primary btn--lg" type="submit">Converter</button>
+        <button class="btn btn--primary btn--lg" type="submit">Omregn</button>
         <button class="btn btn--ghost" type="button" id="calc-example">Udfyld med eksempel</button>
       </div>
 
@@ -162,28 +162,28 @@
     <article class="prose">
 
       <h2>Hvad bruges den til</h2>
-      <p>Este conversor passa a <strong>udbytte af markbrug</strong> entre hkgs pr. hektar, quilos pr. hektar og toneladas pr. hektar.</p>
+      <p>Denne omregner konverterer <strong>udbytte i markbruget</strong> mellem hkg pr. hektar, kilo pr. hektar og tons pr. hektar.</p>
 
       <h2>Sådan beregner du</h2>
-      <p>O valor é convertido til kg/ha e, i seguida, til a unidade de destino. A konvertering de hkgs usa o peso af hkg af cultura.</p>
+      <p>Værdien omregnes først til kg/ha og derefter til den ønskede enhed. Omregning fra/til hkg bruger vægten pr. hkg for den pågældende afgrøde.</p>
 
       <h2>Eksempel</h2>
-      <p>60 hkgs/ha de 60 kg equivalem a 3.600 kg/ha, ou <strong>3,6 t/ha</strong>.</p>
+      <p>60 hkg/ha à 60 kg svarer til 3.600 kg/ha, altså <strong>3,6 t/ha</strong>.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          O peso af hkg importa
+          Vægten pr. hkg betyder noget
         </div>
-        <p>Para korn som soja og milho, a hkg é de 60 kg. O arroz i casca é de 50 kg i RS og SC — usar o peso errado distorce a konvertering de udbytte.</p>
+        <p>I Danmark er standardvægten 100 kg pr. hkg. Hvis du arbejder med en specifik reference (f.eks. soja eller hvede i international handel, hvor en hkg ofte er 60 kg), så juster feltet — ellers bliver omregningen forkert.</p>
       </div>
 
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
-          <a class="calc-card" href="/conversao-de-sacas.html"><h3>Vægtomregner</h3><p>Hkgs, kg og toneladas.</p></a>
-          <a class="calc-card" href="/custo-de-producao.html"><h3>Produktionsomkostning</h3><p>Omkostning pr. hkg og equilíbrio.</p></a>
-          <a class="calc-card" href="/conversao-de-area.html"><h3>Arealomregner</h3><p>Hektar, alqueire og mais.</p></a>
+          <a class="calc-card" href="/conversao-de-sacas.html"><h3>Vægtomregner</h3><p>Hkg, kg og tons.</p></a>
+          <a class="calc-card" href="/custo-de-producao.html"><h3>Produktionsomkostning</h3><p>Omkostning pr. hkg og break-even.</p></a>
+          <a class="calc-card" href="/conversao-de-area.html"><h3>Arealomregner</h3><p>Hektar, tønde land og m².</p></a>
         </div>
       </div>
 
@@ -276,11 +276,11 @@
   function render(r) {
     result.className = 'result result--neutral';
     var html = '<div class="result__banner">' + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
-      '<div><div class="result__headline">Udbytte convertida</div>' +
-      '<div class="result__sub">Hkgs/ha, kg/ha og t/ha</div></div></div>';
+      '<div><div class="result__headline">Omregnet udbytte</div>' +
+      '<div class="result__sub">Hkg/ha, kg/ha og t/ha</div></div></div>';
     html += '<div class="result__body">';
     html += '<div class="result__main">' + (Fmt.num(r.resultado, 2)) + '</div>';
-    html += '<div class="result__interpretation"><p>' + ('A konvertering depende af peso af hkg af cultura — confirme o peso correto, sobretudo til o arroz (50 kg i RS og SC).') + '</p></div>';
+    html += '<div class="result__interpretation"><p>' + ('Omregningen afhænger af vægten pr. hkg — i Danmark er standarden 100 kg, men hvis du arbejder med en specifik reference, så sørg for at justere feltet, ellers bliver resultatet forkert.') + '</p></div>';
     html += '</div>';
     result.innerHTML = html;
     result.hidden = false;

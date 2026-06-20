@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="https://www.euronext.com">
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
-<title>Støt os o Landbrugstal</title>
-<meta name="description" content="Gostou af Landbrugstal? Støt os o projeto med uma contribuição via Pix ou Buy Me a Coffee og ajude a manter siden gratuito.">
+<title>Støt Landbrugstal</title>
+<meta name="description" content="Kan du lide Landbrugstal? Støt projektet med et bidrag via MobilePay, bankoverførsel eller Buy Me a Coffee, og hjælp os med at holde siden gratis.">
 <link rel="canonical" href="https://landbrugstal.dk/apoiar.html">
 <meta name="theme-color" content="#16a34a">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="da_DK">
 <meta property="og:site_name" content="Landbrugstal">
-<meta property="og:title" content="Støt os o Landbrugstal">
-<meta property="og:description" content="Contribua med o projeto via Pix ou Buy Me a Coffee.">
+<meta property="og:title" content="Støt Landbrugstal">
+<meta property="og:description" content="Støt projektet via MobilePay, bankoverførsel eller Buy Me a Coffee.">
 <meta property="og:url" content="https://landbrugstal.dk/apoiar.html">
 <meta property="og:image" content="https://landbrugstal.dk/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -29,7 +29,7 @@
 <link rel="apple-touch-icon" href="/favicon-192.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/css/style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Forside","item":"https://landbrugstal.dk/"},{"@type":"ListItem","position":2,"name":"Apoiar","item":"https://landbrugstal.dk/apoiar.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Forside","item":"https://landbrugstal.dk/"},{"@type":"ListItem","position":2,"name":"Støt projektet","item":"https://landbrugstal.dk/apoiar.html"}]}</script>
 <!-- schema-enhanced -->
 </head>
 <body>
@@ -73,35 +73,41 @@
           <li>Støt projektet</li>
         </ol>
       </nav>
-      <h1>Støt os o projeto</h1>
-      <p class="lead">O Landbrugstal é gratuito og foi feito til ajudar produtores, técnicos og estudantes af agro. Se ele te foi útil, considere contribuir til mantê-lo i ar og i crescimento.</p>
+      <h1>Støt projektet</h1>
+      <p class="lead">Landbrugstal er gratis og er lavet for at hjælpe landmænd, konsulenter og landbrugsstuderende. Hvis siden har været nyttig for dig, så overvej at støtte os, så vi kan holde den i luften og fortsætte med at udvikle den.</p>
     </div>
   </div>
 
   <div class="container narrow">
-    <p>Manter siden i ar, criar novas beregners og melhorar as som já existem dá trabalho — og a sua contribuição, de qualquer valor, ajuda muito. Du pode Støt de duas formas:</p>
+    <p>Det kræver arbejde at holde siden i luften, at lave nye beregnere og at forbedre dem, der allerede findes — og dit bidrag, uanset beløb, hjælper rigtig meget. Du kan støtte på flere måder:</p>
 
     <div class="card-grid card-grid--2 u-mt-md">
 
       <div class="card donate-card">
-        <h3>☕ Pague-me um café</h3>
-        <p>Støt os pelo Buy Me a Coffee — rápido og i poucos cliques.</p>
-        <a class="btn btn--primary btn--block" href="https://buymeacoffee.com/beregnerestatistica" target="_blank" rel="noopener">Støt i Buy Me a Coffee</a>
-        <img class="donate-qr" src="/img/bmc_qr.png" alt="QR code af Buy Me a Coffee" width="190" height="190" loading="lazy">
+        <h3>☕ Køb mig en kop kaffe</h3>
+        <p>Støt os via Buy Me a Coffee — hurtigt og med få klik.</p>
+        <a class="btn btn--primary btn--block" href="https://buymeacoffee.com/beregnerestatistica" target="_blank" rel="noopener">Støt på Buy Me a Coffee</a>
+        <img class="donate-qr" src="/img/bmc_qr.png" alt="QR-kode til Buy Me a Coffee" width="190" height="190" loading="lazy">
       </div>
 
       <div class="card donate-card">
-        <h3>Contribua via Pix</h3>
-        <p>Use a chave Pix abaixo ou escaneie o QR code i app af seu banco.</p>
-        <p class="u-mt-sm">Chave Pix (e-mail):<br><span class="pix-key">beregnerestatistica@gmail.com</span></p>
-        <code class="pix-code" id="pix-code">00020126540014BR.GOV.BCB.PIX0132beregnerestatistica@gmail.com5204000053039865802BR5901N6001C62070503***63046E68</code>
-        <button class="btn btn--ghost btn--block js-copy u-mt-sm" type="button" data-target="pix-code" data-label="Copiar código Pix">Copiar código Pix</button>
-        <img class="donate-qr" src="/img/qrcode-pix.png" alt="QR code af Pix" width="190" height="190" loading="lazy">
+        <h3>MobilePay</h3>
+        <p>Send et bidrag direkte via MobilePay.</p>
+        <p class="u-mt-sm">MobilePay-nummer:<br><span class="pix-key" id="mobilepay-number">[INDSÆT MOBILEPAY-NUMMER]</span></p>
+        <button class="btn btn--ghost btn--block js-copy u-mt-sm" type="button" data-target="mobilepay-number" data-label="Kopiér MobilePay-nummer">Kopiér MobilePay-nummer</button>
+      </div>
+
+      <div class="card donate-card">
+        <h3>Bankoverførsel</h3>
+        <p>Overfør direkte til vores danske bankkonto.</p>
+        <p class="u-mt-sm">Reg.nr.:<br><span class="pix-key" id="bank-reg">[INDSÆT REG.NR.]</span></p>
+        <p class="u-mt-sm">Konto-nr.:<br><span class="pix-key" id="bank-konto">[INDSÆT KONTO-NR.]</span></p>
+        <button class="btn btn--ghost btn--block js-copy u-mt-sm" type="button" data-target="bank-konto" data-label="Kopiér konto-nr.">Kopiér konto-nr.</button>
       </div>
 
     </div>
 
-    <p class="u-mt-lg">Muito obrigado pelo apoio! 🌱 Se preferir ajudar sem gastar nada, compartilhar siden med colegas, produtores og técnicos for landbruget também faz toda a diferença.</p>
+    <p class="u-mt-lg">Mange tak for støtten! 🌱 Hvis du hellere vil hjælpe uden at bruge penge, så er det også en kæmpe hjælp at dele siden med kolleger, landmænd og konsulenter i landbruget.</p>
   </div>
 
 </main>
@@ -168,7 +174,7 @@
       if (!el) return;
       var txt = el.textContent.trim();
       function done() {
-        btn.textContent = 'Copiado!';
+        btn.textContent = 'Kopieret!';
         setTimeout(function () { btn.textContent = btn.getAttribute('data-label'); }, 2000);
       }
       function fallback() {

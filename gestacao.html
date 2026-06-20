@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="https://www.euronext.com">
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
-<title>Beregner de Drægtighed og Previsão de Parto | Landbrugstal</title>
-<meta name="description" content="Beregner de drægtighed animal online og gratuita. Indtast a espécie og a data af cobertura og veja a data provável af parto.">
+<title>Drægtigheds- og Kælvningsberegner | Landbrugstal</title>
+<meta name="description" content="Gratis online drægtighedsberegner for dyr. Vælg art og bedækningsdato, og se den forventede dato for kælvning/læmning/folning.">
 <link rel="canonical" href="https://landbrugstal.dk/gestacao.html">
 <meta name="theme-color" content="#16a34a">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="da_DK">
 <meta property="og:site_name" content="Landbrugstal">
-<meta property="og:title" content="Beregner de Drægtighed Animal">
-<meta property="og:description" content="Beregn a data provável af parto a partir af data af cobertura.">
+<meta property="og:title" content="Drægtigheds- og Kælvningsberegner">
+<meta property="og:description" content="Beregn den forventede dato for kælvning ud fra bedækningsdatoen.">
 <meta property="og:url" content="https://landbrugstal.dk/gestacao.html">
 <meta property="og:image" content="https://landbrugstal.dk/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,13 +33,13 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Beregner de Drægtighed Animal",
+  "name": "Drægtigheds- og Kælvningsberegner",
   "url": "https://landbrugstal.dk/gestacao.html",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Web",
   "inLanguage": "da-DK",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
-  "description": "Previsão af data de parto pr. espécie animal."
+  "description": "Forventet kælvningsdato pr. dyreart."
 }
 </script>
 <script type="application/ld+json">
@@ -94,8 +94,8 @@
           <li>Drægtighed og kælvning</li>
         </ol>
       </nav>
-      <h1>Beregner de Drægtighed og Previsão de Parto</h1>
-      <p class="lead">Descubra a data provável af parto a partir af espécie af animal og af data af cobertura ou inseminação.</p>
+      <h1>Drægtigheds- og kælvningsberegner</h1>
+      <p class="lead">Find den forventede kælvningsdato ud fra dyrets art og bedækningsdatoen eller insemineringsdatoen.</p>
     </div>
   </div>
 
@@ -104,27 +104,27 @@
     <form class="calculator" id="calc-form" novalidate>
       <h2 class="calculator__title">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-        Beregn a previsão de parto
+        Beregn forventet kælvning
       </h2>
-      <p class="calculator__hint">Vælg a espécie og a data af cobertura.</p>
+      <p class="calculator__hint">Vælg art og bedækningsdato.</p>
 
       <fieldset class="field-group">
-        <legend>Dados af cobertura</legend>
+        <legend>Bedækningsoplysninger</legend>
         <div class="field-row">
           <div class="field">
-            <label for="especie">Espécie</label>
+            <label for="especie">Art</label>
             <select class="input" id="especie">
-              <option value="">Vælg a espécie</option>
-              <option value="bovino">Bovino</option>
-              <option value="bufalo">Búfalo</option>
-              <option value="equino">Equino</option>
-              <option value="ovino">Ovino</option>
-              <option value="caprino">Caprino</option>
-              <option value="suino">Svinekød</option>
+              <option value="">Vælg art</option>
+              <option value="bovino">Kvæg</option>
+              <option value="bufalo">Bøffel</option>
+              <option value="equino">Hest</option>
+              <option value="ovino">Får</option>
+              <option value="caprino">Ged</option>
+              <option value="suino">Svin</option>
             </select>
           </div>
           <div class="field">
-            <label for="dataCobertura">Data af cobertura / inseminação</label>
+            <label for="dataCobertura">Dato for bedækning / inseminering</label>
             <input class="input" type="date" id="dataCobertura">
           </div>
         </div>
@@ -133,7 +133,7 @@
       <p class="field-error" id="calc-error" role="alert"></p>
 
       <div class="calculator__actions">
-        <button class="btn btn--primary btn--lg" type="submit">Beregn parto</button>
+        <button class="btn btn--primary btn--lg" type="submit">Beregn kælvning</button>
         <button class="btn btn--ghost" type="button" id="calc-example">Udfyld med eksempel</button>
       </div>
 
@@ -145,28 +145,28 @@
     <article class="prose">
 
       <h2>Hvad bruges den til</h2>
-      <p>Denne beregner estima a <strong>data provável af parto</strong> somando a duração média af drægtighed à data af cobertura ou inseminação.</p>
+      <p>Denne beregner estimerer den <strong>forventede kælvningsdato</strong> ved at lægge den gennemsnitlige drægtighedsperiode til datoen for bedækning eller inseminering.</p>
 
-      <h2>Sådan beregner du</h2>
-      <p>Cada espécie tem um período de drægtighed característico: bovinos cerca de 285 dias, búfalos 310, equinos 340, ovinos og caprinos 150, og suínos 114.</p>
+      <h2>Sådan beregnes det</h2>
+      <p>Hver art har sin egen typiske drægtighedsperiode: kvæg ca. 285 dage, bøfler 310, heste 340, får og geder 150, og svin 114.</p>
 
       <h2>Eksempel</h2>
-      <p>Uma vaca coberta i 15 de março, med drægtighed de 285 dias, deve parir pr. volta de 25 de dezembro af mesmo ano.</p>
+      <p>En ko, der bedækkes den 15. marts med en drægtighed på 285 dage, vil typisk kælve omkring den 25. december samme år.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          É uma estimativa
+          Et estimat
         </div>
-        <p>A duração af drægtighed varia entre raças og indivíduos — bovinos zebuínos, pr. exemplo, tendem a gestações um pouco mais longas som os taurinos. Use a data som referência de planejamento.</p>
+        <p>Drægtighedens længde varierer mellem racer og individer. Brug datoen som planlægningsreference og hold øje med dyret tæt på fødselstidspunktet.</p>
       </div>
 
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
-          <a class="calc-card" href="/lotacao-pastagem.html"><h3>Græsningsbelægning</h3><p>Taxa de belægningsgrad i UA/ha.</p></a>
-          <a class="calc-card" href="/ganho-de-peso.html"><h3>Daglig tilvækst (DTV)</h3><p>Ganho médio diário og abate.</p></a>
-          <a class="calc-card" href="/cocho.html"><h3>Foderbord og drikkekar</h3><p>Dimensionamento af foderbord.</p></a>
+          <a class="calc-card" href="/lotacao-pastagem.html"><h3>Græsningsbelægning</h3><p>Belægningsgrad i DE/ha.</p></a>
+          <a class="calc-card" href="/ganho-de-peso.html"><h3>Daglig tilvækst (DTV)</h3><p>Gennemsnitlig daglig tilvækst og slagteprognose.</p></a>
+          <a class="calc-card" href="/cocho.html"><h3>Foderbord og drikkekar</h3><p>Dimensionering af foderbord.</p></a>
         </div>
       </div>
 
@@ -255,12 +255,12 @@
   function render(r) {
     result.className = 'result result--neutral';
     var html = '<div class="result__banner">' + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
-      '<div><div class="result__headline">Previsão de parto</div>' +
-      '<div class="result__sub">Data provável af parto</div></div></div>';
+      '<div><div class="result__headline">Forventet kælvning</div>' +
+      '<div class="result__sub">Sandsynlig kælvningsdato</div></div></div>';
     html += '<div class="result__body">';
     html += '<div class="result__main">' + (r.dataParto) + '</div>';
-      html += '<div class="result__metrics">' + '<div class="metric"><div class="metric__label">Período de drægtighed af espécie</div>' + '<div class="metric__value">' + (r.dias + ' dias') + '</div>'  + '</div>' + '</div>';
-    html += '<div class="result__interpretation"><p>' + ('A data é uma estimativa pela duração média af drægtighed af espécie. Acompanhe o animal de perto nas semanas próximas ao parto.') + '</p></div>';
+      html += '<div class="result__metrics">' + '<div class="metric"><div class="metric__label">Drægtighedsperiode for arten</div>' + '<div class="metric__value">' + (r.dias + ' dage') + '</div>'  + '</div>' + '</div>';
+    html += '<div class="result__interpretation"><p>' + ('Datoen er et estimat baseret på den gennemsnitlige drægtighedsperiode for arten. Hold dyret tæt under opsyn i ugerne op til kælvning.') + '</p></div>';
     html += '</div>';
     result.innerHTML = html;
     result.hidden = false;

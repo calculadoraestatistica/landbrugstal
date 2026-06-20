@@ -297,7 +297,9 @@
 
   // 14. Conversão de medidas de área rural
   var AREA_M2 = {
-    hectare: 10000, metro: 1, are: 100,
+    hectare: 10000, hektar: 10000, ha: 10000,
+    metro: 1, m2: 1, km2: 1000000,
+    are: 100, tonde_land: 5516.2,
     alqueire_paulista: 24200, alqueire_mineiro: 48400,
     alqueire_goiano: 48400, alqueire_baiano: 96800,
     alqueire_norte: 27225, tarefa_ba: 4356
@@ -424,11 +426,79 @@
   }
 
   /* ----------------------------------------------------------------------
-     Exportação — namespace Landbrug (versão DK do site)
-     Aliases DA→PT preservam compatibilidade com chamadas em código DK.
+     Eksport — namespace Landbrug (DK-version af sitet)
+     DA-aliasserne oversætter inddata-nøgler (DA → core) og uddata-nøgler
+     (core → DA), så HTML-siderne kan tale rent dansk.
      ---------------------------------------------------------------------- */
+
+  // Hjælpefunktion: omdøb felter i et objekt iht. map (kilde → mål)
+  function renameKeys(src, map) {
+    if (!src || typeof src !== 'object') return src;
+    var out = {};
+    for (var k in src) {
+      if (Object.prototype.hasOwnProperty.call(src, k)) {
+        var nk = Object.prototype.hasOwnProperty.call(map, k) ? map[k] : k;
+        out[nk] = src[k];
+      }
+    }
+    return out;
+  }
+
+  // Wrap: oversæt inddata via inMap, kald fn, oversæt uddata via outMap
+  function aliasFn(fn, inMap, outMap) {
+    inMap = inMap || {};
+    outMap = outMap || {};
+    return function (o) {
+      var r = fn(renameKeys(o, inMap));
+      if (r && r.error) return r;
+      return renameKeys(r, outMap);
+    };
+  }
+
+  // Hkg-omregner: 1 hkg = 100 kg (dansk standard), men feltet pesoHkg
+  // bevarer fleksibilitet. Tilføjer også lbs-håndtering oven på kernen.
+  function conversaoHkgs(o) {
+    o = o || {};
+    var ps = num(o.pesoHkg) && o.pesoHkg > 0 ? o.pesoHkg : 100;
+    var v = o.quantidade;
+    if (!num(v) || v < 0) return { error: 'Indtast en mængde.' };
+    var emKg;
+    if (o.de === 'hkgs') emKg = v * ps;
+    else if (o.de === 't') emKg = v * 1000;
+    else if (o.de === 'kg') emKg = v;
+    else if (o.de === 'lbs') emKg = v * 0.45359237;
+    else return { error: 'Vælg kildeenhed.' };
+    var r;
+    if (o.para === 'hkgs') r = emKg / ps;
+    else if (o.para === 't') r = emKg / 1000;
+    else if (o.para === 'kg') r = emKg;
+    else if (o.para === 'lbs') r = emKg / 0.45359237;
+    else return { error: 'Vælg målenhed.' };
+    return { resultado: r, emKg: emKg };
+  }
+
+  // Udbytte: ligesom kernen, men accepterer hkgs_ha/kg_ha/t_ha med
+  // dansk hkg (100 kg som standard).
+  function udbytte(o) {
+    o = o || {};
+    var ps = num(o.pesoHkg) && o.pesoHkg > 0 ? o.pesoHkg : 100;
+    var v = o.valor;
+    if (!num(v) || v < 0) return { error: 'Indtast udbytteværdien.' };
+    var kgHa;
+    if (o.de === 'hkgs_ha') kgHa = v * ps;
+    else if (o.de === 'kg_ha') kgHa = v;
+    else if (o.de === 't_ha') kgHa = v * 1000;
+    else return { error: 'Vælg kildeenhed.' };
+    var r;
+    if (o.para === 'hkgs_ha') r = kgHa / ps;
+    else if (o.para === 'kg_ha') r = kgHa;
+    else if (o.para === 't_ha') r = kgHa / 1000;
+    else return { error: 'Vælg målenhed.' };
+    return { resultado: r };
+  }
+
   var Landbrug = {
-    // Funções canônicas (mantidas em pt-BR no núcleo de cálculo)
+    // Kanoniske funktioner (kernen er stadig på pt-BR-nøgler)
     lotacaoPastagem: lotacaoPastagem, ganhoPeso: ganhoPeso, gestacao: gestacao,
     consumoRebanho: consumoRebanho, cocho: cocho,
     conversaoSacas: conversaoSacas, populacaoPlantas: populacaoPlantas,
@@ -442,21 +512,124 @@
     custoArmazenagem: custoArmazenagem, vendaArmazenagem: vendaArmazenagem,
     GESTACAO: GESTACAO, AREA_M2: AREA_M2,
 
-    // Aliases dinamarquês → função canônica
-    lotacaoGræsmark:     lotacaoPastagem,   // græsmark = pastagem
-    consumoBesætning:    consumoRebanho,    // besætning = rebanho
-    foderbord:           cocho,             // foderbord = cocho/comedouro
-    conversaoHkgs:       conversaoSacas,    // hkg ~ sacas (unidade DK ~50 kg)
-    kalkning:            calagem,           // kalkning = calagem
-    udbytte:             produtividade,     // udbytte = produtividade/rendimento
-    ensilage:            silagem,           // ensilage = silagem
-    perdaHøst:           perdaColheita,     // høst = colheita
-    omkostningSecagem:   custoSecagem,      // omkostning = custo
-    omkostningProducao:  custoProducao,
-    omkostningOpbevaring: custoArmazenagem, // opbevaring = armazenagem
-    marginBruta:         margemBruta,       // margin = margem
-    quantidadeFrøs:      quantidadeSementes, // frø = semente
-    vendaOpbevaring:     vendaArmazenagem
+    // Direkte aliasser (felterne matcher allerede mellem HTML og kerne)
+    lotacaoGræsmark: lotacaoPastagem,
+    consumoBesætning: consumoRebanho,
+    kalkning: calagem,
+    ensilage: silagem,
+
+    // Hkg-omregner (egne funktioner — hkg ≠ saca)
+    conversaoHkgs: conversaoHkgs,
+    udbytte: udbytte,
+
+    // Foderbord: HTML læser comprimentoFoderbord; kernen returnerer comprimentoCocho
+    foderbord: aliasFn(cocho, {}, {
+      comprimentoCocho: 'comprimentoFoderbord'
+    }),
+
+    // NPK-gødning: HTML læser gødningN/P/K/Limitante; kernen returnerer aduboN/P/K/Limitante
+    adubacaoNPK: aliasFn(adubacaoNPK, {}, {
+      aduboN: 'gødningN',
+      aduboP: 'gødningP',
+      aduboK: 'gødningK',
+      aduboLimitante: 'gødningLimitante'
+    }),
+
+    // Plantepopulation: HTML læser frøsPorMetro; kernen returnerer sementesPorMetro
+    populacaoPlantas: aliasFn(populacaoPlantas, {}, {
+      sementesPorMetro: 'frøsPorMetro'
+    }),
+
+    // Frømængde: HTML sender margin og læser frøsPorHa; kerne hedder margem/sementesPorHa
+    quantidadeFrøs: aliasFn(quantidadeSementes, {
+      margin: 'margem'
+    }, {
+      sementesPorHa: 'frøsPorHa'
+    }),
+
+    // Høsttab: HTML sender pesoHkg/precoHkg og læser perdaHkgsHa/perdaHkgsTotal
+    perdaHøst: aliasFn(perdaColheita, {
+      pesoHkg: 'pesoSaca',
+      precoHkg: 'precoSaca'
+    }, {
+      perdaSacasHa: 'perdaHkgsHa',
+      perdaSacasTotal: 'perdaHkgsTotal'
+    }),
+
+    // Sprøjteblanding: HTML læser volumeTotalSprøjtevæske og hektarsPorTanque
+    caldaPulverizacao: aliasFn(caldaPulverizacao, {}, {
+      volumeTotalCalda: 'volumeTotalSprøjtevæske',
+      hectaresPorTanque: 'hektarsPorTanque'
+    }),
+
+    // Tørringsomkostning: oversæt både ind- og uddata
+    omkostningSecagem: aliasFn(custoSecagem, {
+      omkostningUnitario: 'custoUnitario',
+      modoOmkostning: 'modoCusto',
+      pesoHkg: 'pesoSaca'
+    }, {
+      custoTotal: 'omkostningTotal',
+      custoPorTFinal: 'omkostningPorTFinal',
+      custoPorSacaFinal: 'omkostningPorHkgFinal'
+    }),
+
+    // Produktionsomkostning: oversæt både ind- og uddata
+    omkostningProducao: aliasFn(custoProducao, {
+      omkostningTotal: 'custoTotal'
+    }, {
+      custoUnitario: 'omkostningUnitario',
+      margem: 'margin'
+    }),
+
+    // Opbevaringsomkostning: form bruger hkg-baseret nomenklatur
+    omkostningOpbevaring: aliasFn(custoArmazenagem, {
+      pesoHkg: 'pesoSaca',
+      precoHkg: 'precoSaca',
+      omkostningMensal: 'custoMensal',
+      omkostningFixo: 'custoFixo',
+      baseOmkostning: 'baseCusto'
+    }, {
+      sacas: 'hkgs',
+      custoTotal: 'omkostningTotal',
+      custoPorSaca: 'omkostningPorHkg',
+      custoPorT: 'omkostningPorT'
+    }),
+
+    // Landbrugsfragt: oversæt både ind- og uddata
+    freteAgricola: aliasFn(freteAgricola, {
+      pesoHkg: 'pesoSaca',
+      outrosOmkostnings: 'outrosCustos'
+    }, {
+      custoTotal: 'omkostningTotal',
+      custoPorT: 'omkostningPorT',
+      custoPorSaca: 'omkostningPorHkg'
+    }),
+
+    // Bruttomargin: omkostning- på input, margin på output
+    marginBruta: aliasFn(margemBruta, {
+      udbytte: 'produtividade',
+      omkostningVariavel: 'custoVariavel',
+      omkostningFixo: 'custoFixo'
+    }, {
+      margemBrutaHa: 'marginBrutaHa',
+      margemBrutaTotal: 'marginBrutaTotal',
+      margemPercentual: 'marginPercentual'
+    }),
+
+    // Arealomregner: håndteres allerede via AREA_M2-aliasser (hektar, m2, ha)
+    // og output-nøglen emHectares oversættes til emHektars
+    conversaoArea: aliasFn(conversaoArea, {}, {
+      emHectares: 'emHektars'
+    }),
+
+    // Sælge eller opbevare: omfattende nøgleomdøbning
+    vendaOpbevaring: aliasFn(vendaArmazenagem, {
+      quantidadeHkgs: 'quantidadeSacas',
+      omkostningMensalHkg: 'custoMensalSaca'
+    }, {
+      custoArmazenagem: 'omkostningOpbevaring',
+      custoOportunidade: 'omkostningOportunidade'
+    })
   };
   global.Landbrug = Landbrug;
   if (typeof module !== 'undefined' && module.exports) module.exports = Landbrug;

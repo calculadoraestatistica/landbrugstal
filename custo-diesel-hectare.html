@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="https://www.euronext.com">
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
-<title>Beregner de Omkostning de Brændstof pr. Hektar | Landbrugstal</title>
-<meta name="description" content="Beregner de omkostning de diesel pr. hektar online og gratuita. Estime litros/ha, omkostning/ha, omkostning/hora og o omkostning total af operação landbrugs-.">
+<title>Brændstofomkostning pr. hektar | Landbrugstal</title>
+<meta name="description" content="Gratis online beregner af dieselomkostning pr. hektar. Estimér liter/ha, omkostning/ha, omkostning/time og den samlede omkostning ved en markoperation.">
 <link rel="canonical" href="https://landbrugstal.dk/custo-diesel-hectare.html">
 <meta name="theme-color" content="#16a34a">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="da_DK">
 <meta property="og:site_name" content="Landbrugstal">
-<meta property="og:title" content="Beregner de Omkostning de Brændstof pr. Hektar">
-<meta property="og:description" content="Estime litros og omkostning af brændstof pr. hektar og pr. hora de operação.">
+<meta property="og:title" content="Brændstofomkostning pr. hektar">
+<meta property="og:description" content="Estimér liter og brændstofomkostning pr. hektar og pr. driftstime.">
 <meta property="og:url" content="https://landbrugstal.dk/custo-diesel-hectare.html">
 <meta property="og:image" content="https://landbrugstal.dk/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,13 +33,13 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Beregner de Omkostning de Combustivel pr. Hektar",
+  "name": "Brændstofomkostning pr. hektar",
   "url": "https://landbrugstal.dk/custo-diesel-hectare.html",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Web",
   "inLanguage": "da-DK",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
-  "description": "Estimativa de litros og omkostning de combustivel pr. hektar og pr. hora de operacao."
+  "description": "Estimering af brændstofforbrug og -omkostning pr. hektar og pr. driftstime."
 }
 </script>
 <script type="application/ld+json">
@@ -48,7 +48,7 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     {"@type":"ListItem","position":1,"name":"Forside","item":"https://landbrugstal.dk/"},
-    {"@type":"ListItem","position":2,"name":"Omkostning de brændstof pr. hektar","item":"https://landbrugstal.dk/custo-diesel-hectare.html"}
+    {"@type":"ListItem","position":2,"name":"Brændstofomkostning pr. hektar","item":"https://landbrugstal.dk/custo-diesel-hectare.html"}
   ]
 }
 </script>
@@ -91,11 +91,11 @@
       <nav class="breadcrumb" aria-label="Sti">
         <ol>
           <li><a href="/">Forside</a></li>
-          <li>Omkostning de brændstof pr. hektar</li>
+          <li>Brændstofomkostning pr. hektar</li>
         </ol>
       </nav>
-      <h1>Beregner de Omkostning de Brændstof pr. Hektar</h1>
-      <p class="lead">Estime litros pr. hektar, omkostning pr. hora, omkostning pr. hektar og o omkostning total af operação a partir af consumo af trator ou af colhedora.</p>
+      <h1>Brændstofomkostning pr. hektar</h1>
+      <p class="lead">Estimér liter pr. hektar, omkostning pr. time, omkostning pr. hektar og samlet operationsomkostning ud fra traktorens eller mejetærskerens forbrug.</p>
     </div>
   </div>
 
@@ -104,55 +104,55 @@
     <form class="calculator" id="calc-form" novalidate>
       <h2 class="calculator__title">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 22h12V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v17z"/><path d="M15 9h3a2 2 0 0 1 2 2v6a2 2 0 0 0 2 2 2 2 0 0 0 2-2V8l-3-3"/></svg>
-        Beregn omkostning de brændstof
+        Beregn brændstofomkostning
       </h2>
-      <p class="calculator__hint">Indtast o consumo af equipamento, o preço af brændstof og o rendimento operacional.</p>
+      <p class="calculator__hint">Indtast maskinens forbrug, brændstofprisen og kapaciteten.</p>
 
       <fieldset class="field-group">
-        <legend>Consumo og preço</legend>
+        <legend>Forbrug og pris</legend>
         <div class="field-row">
           <div class="field">
-            <label for="consumo">Consumo af equipamento</label>
+            <label for="consumo">Maskinens forbrug</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="consumo" placeholder="Ex.: 15" autocomplete="off">
-              <span class="input-affix__unit">L/h</span>
+              <input class="input" type="text" inputmode="decimal" id="consumo" placeholder="F.eks. 15" autocomplete="off">
+              <span class="input-affix__unit">L/t</span>
             </div>
           </div>
           <div class="field">
-            <label for="preco">Preço af brændstof</label>
+            <label for="preco">Brændstofpris</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="preco" placeholder="Ex.: 6,80" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="preco" placeholder="F.eks. 6,80" autocomplete="off">
               <span class="input-affix__unit">kr/L</span>
             </div>
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="rendimento">Rendimento operacional</label>
+            <label for="rendimento">Kapacitet</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="rendimento" placeholder="Ex.: 2" autocomplete="off">
-              <span class="input-affix__unit">ha/h</span>
+              <input class="input" type="text" inputmode="decimal" id="rendimento" placeholder="F.eks. 2" autocomplete="off">
+              <span class="input-affix__unit">ha/t</span>
             </div>
           </div>
           <div class="field">
             <label for="combustivel">Brændstof</label>
             <select class="input" id="combustivel">
-              <option value="Diesel S10">Diesel S10</option>
-              <option value="Diesel S500">Diesel S500</option>
-              <option value="Ethanol">Ethanol</option>
-              <option value="Gasolina">Gasolina</option>
+              <option value="Diesel">Diesel</option>
+              <option value="Biodiesel">Biodiesel</option>
+              <option value="HVO">HVO (vedvarende diesel)</option>
+              <option value="Benzin">Benzin</option>
             </select>
           </div>
         </div>
       </fieldset>
 
       <fieldset class="field-group">
-        <legend>Operação (valgfri)</legend>
+        <legend>Operation (valgfri)</legend>
         <div class="field-row">
           <div class="field">
-            <label for="area">Areal af operação</label>
+            <label for="area">Operationsareal</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="area" placeholder="Ex.: 50" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="area" placeholder="F.eks. 50" autocomplete="off">
               <span class="input-affix__unit">ha</span>
             </div>
           </div>
@@ -174,47 +174,47 @@
     <article class="prose">
 
       <h2>Hvad bruges den til</h2>
-      <p>Denne beregner estima quanto o <strong>brændstof</strong> pesa i omkostning de uma operação mecanizada — preparo de solo, plantio, sprøjtning ou høst. Com consumo af equipamento, preço af litro og rendimento operacional, ela devolve litros pr. hektar, omkostning pr. hora, omkostning pr. hektar e, se a areal for informada, o omkostning total af operação.</p>
+      <p>Denne beregner estimerer, hvor meget <strong>brændstof</strong> vejer i omkostningen ved en mekaniseret operation — jordbearbejdning, såning, sprøjtning eller høst. Med maskinens forbrug, literprisen og kapaciteten returnerer den liter pr. hektar, omkostning pr. time, omkostning pr. hektar og — hvis et areal angives — den samlede operationsomkostning.</p>
 
       <h2>Sådan beregner du</h2>
-      <p>O cálculo parte af consumo horário af equipamento (L/h), af preço af brændstof (kr/L) og af rendimento operacional (ha/h) — quantos hektars o equipamento entrega i uma hora de trabalho efetivo.</p>
-      <div class="formula">litros/ha = consumo (L/h) ÷ rendimento (ha/h)</div>
-      <div class="formula">omkostning/hora = consumo (L/h) × preço (kr/L)</div>
-      <div class="formula">omkostning/ha = omkostning/hora ÷ rendimento (ha/h)</div>
-      <div class="formula">omkostning total = omkostning/ha × areal (ha)</div>
+      <p>Beregningen tager udgangspunkt i maskinens timeforbrug (L/t), brændstofprisen (kr/L) og kapaciteten (ha/t) — hvor mange hektar maskinen klarer på en times effektivt arbejde.</p>
+      <div class="formula">liter/ha = forbrug (L/t) ÷ kapacitet (ha/t)</div>
+      <div class="formula">omkostning/time = forbrug (L/t) × pris (kr/L)</div>
+      <div class="formula">omkostning/ha = omkostning/time ÷ kapacitet (ha/t)</div>
+      <div class="formula">samlet omkostning = omkostning/ha × areal (ha)</div>
 
       <h2>Eksempel</h2>
-      <p>Trator med consumo de 15 L/h, diesel a kr 6,80/L og rendimento de 2 ha/h i uma operação de 50 hektars:</p>
+      <p>Traktor med forbrug på 15 L/t, diesel til 6,80 kr/L og kapacitet på 2 ha/t i en operation på 50 hektar:</p>
       <ul>
-        <li>litros/ha = 15 ÷ 2 = <strong>7,5 L/ha</strong></li>
-        <li>omkostning/hora = 15 × 6,80 = <strong>kr 102,00/h</strong></li>
+        <li>liter/ha = 15 ÷ 2 = <strong>7,5 L/ha</strong></li>
+        <li>omkostning/time = 15 × 6,80 = <strong>kr 102,00/t</strong></li>
         <li>omkostning/ha = 102 ÷ 2 = <strong>kr 51,00/ha</strong></li>
-        <li>omkostning total = 51 × 50 = <strong>kr 2.550,00</strong> (375 L i total)</li>
+        <li>samlet omkostning = 51 × 50 = <strong>kr 2.550,00</strong> (375 L i alt)</li>
       </ul>
 
       <h2>God praksis</h2>
       <ul>
-        <li><strong>Regulagem af motor</strong>: motor desregulado, filtro de ar sujo ou bicos injetores gastos elevam o consumo i 10 a 20%. Mantenha as revisões i dia.</li>
-        <li><strong>Lastro adequado</strong>: lastro a mais aumenta o consumo sem ganho de tração; lastro a menos provoca patinagem og desperdiça diesel. Ajuste conforme o implemento.</li>
-        <li><strong>Profundidade de trabalho</strong>: cada centímetro a mais i grade ou subsolador eleva muito a demanda de potência. Trabalhe i profundidade técnica recomendada, ikke i máxima.</li>
-        <li><strong>Marcha og rotação</strong>: prefira marcha højest med rotação reduzida quando a operação permitir (regra "marcha alta, motor baixo") — reduz consumo sem perder velocidade de campo.</li>
-        <li><strong>Calibração de pneus og velocidade</strong>: pneus i pressão correta og velocidade compatível med a operação evitam consumo extra og perdas de qualidade.</li>
+        <li><strong>Motorindstilling</strong>: en motor, der ikke er korrekt indstillet, et snavset luftfilter eller slidte dyser kan øge forbruget med 10-20 %. Hold serviceintervallerne.</li>
+        <li><strong>Korrekt ballast</strong>: for meget ballast øger forbruget uden ekstra trækkraft; for lidt giver hjulspin og spilder diesel. Tilpas efter redskabet.</li>
+        <li><strong>Arbejdsdybde</strong>: hver ekstra centimeter med harve eller grubber kræver markant mere effekt. Arbejd i den faglige anbefalede dybde, ikke maksimal.</li>
+        <li><strong>Gear og omdrejninger</strong>: brug høj gear og lave omdrejninger, når operationen tillader det ("højt gear, lav motor") — det reducerer forbruget uden at miste markhastighed.</li>
+        <li><strong>Dæktryk og hastighed</strong>: korrekt dæktryk og en hastighed, der passer til opgaven, undgår ekstra forbrug og kvalitetstab.</li>
       </ul>
 
       <div class="callout callout--warning">
         <div class="callout__title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Brændstof ikke é o omkostning total
+          Brændstof er ikke den samlede omkostning
         </div>
-        <p>Denne beregner estima apenas a parcela de brændstof. O omkostning operacional completo inclui também depreciação, manutenção, mão de obra, lubrificantes og juros sobre o capital empatado i maskine. Para o omkostning cheio, use a beregner de omkostning de produção.</p>
+        <p>Denne beregner estimerer kun brændstofandelen. Den fulde driftsomkostning indeholder også afskrivning, vedligehold, arbejdskraft, smøremidler og renter på den bundne kapital. Brug beregneren for produktionsomkostning for det samlede billede.</p>
       </div>
 
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
-          <a class="calc-card" href="/custo-de-producao.html"><h3>Produktionsomkostning</h3><p>Omkostning total pr. hektar og pr. hkg.</p></a>
-          <a class="calc-card" href="/margem-bruta.html"><h3>Bruttomargin</h3><p>Receita menos omkostnings variáveis.</p></a>
-          <a class="calc-card" href="/frete-agricola.html"><h3>Landbrugsfragt</h3><p>Omkostning de transporte pr. hkg.</p></a>
+          <a class="calc-card" href="/custo-de-producao.html"><h3>Produktionsomkostning</h3><p>Samlet omkostning pr. hektar og pr. hkg.</p></a>
+          <a class="calc-card" href="/margem-bruta.html"><h3>Bruttomargin</h3><p>Omsætning minus variable omkostninger.</p></a>
+          <a class="calc-card" href="/frete-agricola.html"><h3>Landbrugsfragt</h3><p>Transportomkostning pr. hkg.</p></a>
         </div>
       </div>
 

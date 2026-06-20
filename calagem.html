@@ -10,14 +10,14 @@
   <link rel="dns-prefetch" href="https://www.euronext.com">
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
-<title>Beregner de Kalkning (Kalk) | Landbrugstal</title>
+<title>Kalkningsberegner | Landbrugstal</title>
 <meta name="description" content="Online og gratis beregner af kalkning. Beregn kalkbehovet med basemætningsmetoden (V %).">
 <link rel="canonical" href="https://landbrugstal.dk/calagem.html">
 <meta name="theme-color" content="#16a34a">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="da_DK">
 <meta property="og:site_name" content="Landbrugstal">
-<meta property="og:title" content="Beregner af kalkning">
+<meta property="og:title" content="Kalkningsberegner">
 <meta property="og:description" content="Beregn kalkbehovet med basemætningsmetoden.">
 <meta property="og:url" content="https://landbrugstal.dk/calagem.html">
 <meta property="og:image" content="https://landbrugstal.dk/og-image.png">
@@ -33,7 +33,7 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Beregner de Kalkning",
+  "name": "Kalkningsberegner",
   "url": "https://landbrugstal.dk/calagem.html",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Web",
@@ -94,8 +94,8 @@
           <li>Kalkning</li>
         </ol>
       </nav>
-      <h1>Beregner de Kalkning (Kalk)</h1>
-      <p class="lead">Beregn a behov de kalk af solo pelo método af saturação pr. bases, a partir af jordanalyse.</p>
+      <h1>Kalkningsberegner</h1>
+      <p class="lead">Beregn jordens kalkbehov ud fra jordanalysen via basemætningsmetoden.</p>
     </div>
   </div>
 
@@ -104,46 +104,46 @@
     <form class="calculator" id="calc-form" novalidate>
       <h2 class="calculator__title">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-        Beregn a kalkning
+        Beregn kalkning
       </h2>
-      <p class="calculator__hint">Indtast os dados af jordanalyse og o PRNT af kalk.</p>
+      <p class="calculator__hint">Indtast jordanalysens data og kalkens PRNT.</p>
 
       <fieldset class="field-group">
         <legend>Jordanalyse og kalk</legend>
         <div class="field-row">
           <div class="field">
-            <label for="v1">Saturação atual (V1)</label>
+            <label for="v1">Nuværende basemætning (V1)</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="v1" placeholder="Ex.: 40" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="v1" placeholder="F.eks. 40" autocomplete="off">
               <span class="input-affix__unit">%</span>
             </div>
-            <p class="help">Saturação pr. bases atual, af jordanalyse.</p>
+            <p class="help">Nuværende basemætning fra jordanalysen.</p>
           </div>
           <div class="field">
-            <label for="v2">Saturação desejada (V2)</label>
+            <label for="v2">Ønsket basemætning (V2)</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="v2" placeholder="Ex.: 60" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="v2" placeholder="F.eks. 60" autocomplete="off">
               <span class="input-affix__unit">%</span>
             </div>
-            <p class="help">Nível ideal til a cultura.</p>
+            <p class="help">Det ideelle niveau for afgrøden.</p>
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="ctc">CTC af solo</label>
+            <label for="ctc">Jordens CEC</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="ctc" placeholder="Ex.: 8" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="ctc" placeholder="F.eks. 8" autocomplete="off">
               <span class="input-affix__unit">cmolc/dm³</span>
             </div>
-            <p class="help">Capacidade de troca de cátions a pH 7,0.</p>
+            <p class="help">Kationbytningskapacitet ved pH 7,0.</p>
           </div>
           <div class="field">
-            <label for="prnt">PRNT af kalk</label>
+            <label for="prnt">Kalkens PRNT</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="prnt" placeholder="Ex.: 90" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="prnt" placeholder="F.eks. 90" autocomplete="off">
               <span class="input-affix__unit">%</span>
             </div>
-            <p class="help">Poder Relativo de Neutralização Total, informado i embalagem.</p>
+            <p class="help">Den relative neutraliseringsevne, oplyst på emballagen.</p>
           </div>
         </div>
       </fieldset>
@@ -163,29 +163,29 @@
     <article class="prose">
 
       <h2>Hvad bruges den til</h2>
-      <p>A <strong>kalkning</strong> corrige a acidez af solo og eleva a saturação pr. bases. Denne beregner estima a behov de kalk pelo método af saturação pr. bases (V%).</p>
+      <p><strong>Kalkning</strong> retter op på jordens surhedsgrad og hæver basemætningen. Denne beregner estimerer kalkbehovet ved basemætningsmetoden (V %).</p>
 
       <h2>Sådan beregner du</h2>
-      <p>A dose depende af diferença entre a saturação atual (V1) og a desejada (V2), af CTC af solo og af PRNT af kalk — todos vindos af jordanalyse og af embalagem.</p>
-      <div class="formula">NC (t/ha) = (V2 − V1) × CTC ÷ PRNT</div>
+      <p>Doseringen afhænger af forskellen mellem den nuværende basemætning (V1) og den ønskede (V2), af jordens CEC og af kalkens PRNT — alle hentet fra jordanalysen og emballagen.</p>
+      <div class="formula">NC (t/ha) = (V2 − V1) × CEC ÷ PRNT</div>
 
       <h2>Eksempel</h2>
-      <p>Para subir a saturação de 40% til 60%, med CTC de 8 cmolc/dm³ og kalk de PRNT 90%: (60 − 40) × 8 ÷ 90 = <strong>1,78 t/ha</strong>.</p>
+      <p>For at hæve basemætningen fra 40 % til 60 % med CEC på 8 cmolc/dm³ og kalk med PRNT 90 %: (60 − 40) × 8 ÷ 90 = <strong>1,78 t/ha</strong>.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Jordanalyse é indispensável
+          Jordanalysen er afgørende
         </div>
-        <p>A kalkning só funciona med base numa jordanalyse recente. A saturação desejada (V2) varia conforme a cultura og a região — siga a anbefaling oficial af seu estado.</p>
+        <p>Kalkning kræver en aktuel jordanalyse. Den ønskede basemætning (V2) varierer efter afgrøde og region — følg de faglige anbefalinger.</p>
       </div>
 
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
-          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Da anbefaling ao gødning.</p></a>
-          <a class="calc-card" href="/populacao-de-plantas.html"><h3>Plantebestand</h3><p>Plantas pr. hektar.</p></a>
-          <a class="calc-card" href="/conversao-de-area.html"><h3>Arealomregner</h3><p>Hektar, alqueire og mais.</p></a>
+          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Fra anbefaling til handelsgødning.</p></a>
+          <a class="calc-card" href="/populacao-de-plantas.html"><h3>Plantebestand</h3><p>Planter pr. hektar.</p></a>
+          <a class="calc-card" href="/conversao-de-area.html"><h3>Arealomregner</h3><p>Hektar, tønde land og m².</p></a>
         </div>
       </div>
 

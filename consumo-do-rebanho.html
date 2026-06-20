@@ -179,9 +179,9 @@
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
-          <a class="calc-card" href="/silagem.html"><h3>Ensilage og silo</h3><p>Capacidade af silo.</p></a>
-          <a class="calc-card" href="/lotacao-pastagem.html"><h3>Græsningsbelægning</h3><p>Taxa de belægningsgrad i UA/ha.</p></a>
-          <a class="calc-card" href="/cocho.html"><h3>Foderbord og drikkekar</h3><p>Dimensionamento af foderbord.</p></a>
+          <a class="calc-card" href="/silagem.html"><h3>Ensilage og silo</h3><p>Siloens kapacitet.</p></a>
+          <a class="calc-card" href="/lotacao-pastagem.html"><h3>Græsningsbelægning</h3><p>Belægningsgrad i DE/ha.</p></a>
+          <a class="calc-card" href="/cocho.html"><h3>Foderbord og drikkekar</h3><p>Dimensionering af foderbord.</p></a>
         </div>
       </div>
 
@@ -275,11 +275,11 @@
     result.className = 'result result--neutral';
     var html = '<div class="result__banner">' + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
       '<div><div class="result__headline">Foderindtag i besætning</div>' +
-      '<div class="result__sub">Tørstof og sal mineral pr. dia</div></div></div>';
+      '<div class="result__sub">Tørstof og mineraler pr. dag</div></div></div>';
     html += '<div class="result__body">';
-    html += '<div class="result__main">' + (Fmt.int(r.consumoMSDia) + ' <small>kg de tørstof pr. dia</small>') + '</div>';
-      html += '<div class="result__metrics">' + '<div class="metric"><div class="metric__label">Consumo de MS pr. animal</div>' + '<div class="metric__value">' + (Fmt.num(r.consumoMSPorAnimal, 1) + ' kg/dia') + '</div>'  + '</div>' + '<div class="metric"><div class="metric__label">Sal mineral pr. dia</div>' + '<div class="metric__value">' + (Fmt.num(r.salDia, 1) + ' kg') + '</div>'  + '</div>' + ((r.estoqueMS !== undefined) ? ('<div class="metric"><div class="metric__label">Estoque de tørstof til o período</div>' + '<div class="metric__value">' + (Fmt.int(r.estoqueMS) + ' kg') + '</div>'  + '</div>') : '') + ((r.estoqueSal !== undefined) ? ('<div class="metric"><div class="metric__label">Estoque de sal til o período</div>' + '<div class="metric__value">' + (Fmt.int(r.estoqueSal) + ' kg') + '</div>'  + '</div>') : '') + '</div>';
-    html += '<div class="result__interpretation"><p>' + ('O consumo de tørstof foi estimado i ' + Fmt.num(r.pct, 1) + '% af peso vivo. Ajuste conforme a dieta og a categoria af animais.') + '</p></div>';
+    html += '<div class="result__main">' + (Fmt.int(r.consumoMSDia) + ' <small>kg tørstof pr. dag</small>') + '</div>';
+      html += '<div class="result__metrics">' + '<div class="metric"><div class="metric__label">Tørstofindtag pr. dyr</div>' + '<div class="metric__value">' + (Fmt.num(r.consumoMSPorAnimal, 1) + ' kg/dag') + '</div>'  + '</div>' + '<div class="metric"><div class="metric__label">Mineraler pr. dag</div>' + '<div class="metric__value">' + (Fmt.num(r.salDia, 1) + ' kg') + '</div>'  + '</div>' + ((r.estoqueMS !== undefined) ? ('<div class="metric"><div class="metric__label">Tørstoflager til perioden</div>' + '<div class="metric__value">' + (Fmt.int(r.estoqueMS) + ' kg') + '</div>'  + '</div>') : '') + ((r.estoqueSal !== undefined) ? ('<div class="metric"><div class="metric__label">Minerallager til perioden</div>' + '<div class="metric__value">' + (Fmt.int(r.estoqueSal) + ' kg') + '</div>'  + '</div>') : '') + '</div>';
+    html += '<div class="result__interpretation"><p>' + ('Tørstofindtaget er estimeret til ' + Fmt.num(r.pct, 1) + ' % af levendevægten. Juster efter foderration og dyrekategori.') + '</p></div>';
     html += '</div>';
     result.innerHTML = html;
     result.hidden = false;

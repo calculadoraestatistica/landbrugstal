@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="https://www.euronext.com">
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
-<title>Beregner de Belægningsgrad de Græsmark (UA/ha) | Landbrugstal</title>
-<meta name="description" content="Beregner de belægningsgrad de græsmark online og gratuita. Indtast o besætning og a areal og veja a taxa de belægningsgrad i UA pr. hektar.">
+<title>Beregner for græsningsbelægning (DE/ha) | Landbrugstal</title>
+<meta name="description" content="Gratis online beregner af græsningsbelægning. Indtast besætning og areal og se belægningsgraden i dyreenheder (DE) pr. hektar.">
 <link rel="canonical" href="https://landbrugstal.dk/lotacao-pastagem.html">
 <meta name="theme-color" content="#16a34a">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="da_DK">
 <meta property="og:site_name" content="Landbrugstal">
-<meta property="og:title" content="Beregner de Belægningsgrad de Græsmark">
-<meta property="og:description" content="Beregn a taxa de belægningsgrad af græsmark i Unidades Animais pr. hektar.">
+<meta property="og:title" content="Beregner for græsningsbelægning">
+<meta property="og:description" content="Beregn græsningsbelægningen i dyreenheder pr. hektar.">
 <meta property="og:url" content="https://landbrugstal.dk/lotacao-pastagem.html">
 <meta property="og:image" content="https://landbrugstal.dk/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,13 +33,13 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Beregner de Belægningsgrad de Græsmark",
+  "name": "Beregner for græsningsbelægning",
   "url": "https://landbrugstal.dk/lotacao-pastagem.html",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Web",
   "inLanguage": "da-DK",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
-  "description": "Cálculo af taxa de belægningsgrad af græsmark i UA/ha."
+  "description": "Beregning af græsningsbelægning i DE/ha."
 }
 </script>
 <script type="application/ld+json">
@@ -94,8 +94,8 @@
           <li>Græsningsbelægning</li>
         </ol>
       </nav>
-      <h1>Beregner de Belægningsgrad de Græsmark</h1>
-      <p class="lead">Beregn a taxa de belægningsgrad af seu pasto i Unidades Animais pr. hektar (UA/ha), a partir af besætning og af areal.</p>
+      <h1>Beregner for græsningsbelægning</h1>
+      <p class="lead">Beregn belægningsgraden på din græsmark i dyreenheder pr. hektar (DE/ha) ud fra besætning og areal.</p>
     </div>
   </div>
 
@@ -104,32 +104,32 @@
     <form class="calculator" id="calc-form" novalidate>
       <h2 class="calculator__title">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-        Beregn a belægningsgrad
+        Beregn belægningsgraden
       </h2>
-      <p class="calculator__hint">Indtast o besætning og a areal de græsmark.</p>
+      <p class="calculator__hint">Indtast besætningen og græsmarkens areal.</p>
 
       <fieldset class="field-group">
         <legend>Besætning og areal</legend>
         <div class="field-row">
           <div class="field">
-            <label for="numAnimais">Número de animais</label>
+            <label for="numAnimais">Antal dyr</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="numAnimais" placeholder="Ex.: 120" autocomplete="off">
-              <span class="input-affix__unit">animais</span>
+              <input class="input" type="text" inputmode="decimal" id="numAnimais" placeholder="F.eks. 120" autocomplete="off">
+              <span class="input-affix__unit">dyr</span>
             </div>
           </div>
           <div class="field">
-            <label for="pesoMedio">Peso médio af animais</label>
+            <label for="pesoMedio">Gennemsnitlig vægt pr. dyr</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="pesoMedio" placeholder="Ex.: 400" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="pesoMedio" placeholder="F.eks. 400" autocomplete="off">
               <span class="input-affix__unit">kg</span>
             </div>
           </div>
         </div>
           <div class="field">
-            <label for="area">Areal de græsmark</label>
+            <label for="area">Græsmarkens areal</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="area" placeholder="Ex.: 60" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="area" placeholder="F.eks. 60" autocomplete="off">
               <span class="input-affix__unit">ha</span>
             </div>
           </div>
@@ -150,29 +150,29 @@
     <article class="prose">
 
       <h2>Hvad bruges den til</h2>
-      <p>A <strong>taxa de belægningsgrad</strong> indica quantos animais uma græsmark comporta, padronizados i <strong>Unidades Animais (UA)</strong>. É a conta de base af manejo de pasto.</p>
+      <p><strong>Græsningsbelægningen</strong> angiver, hvor mange dyr en græsmark kan bære, standardiseret i <strong>dyreenheder (DE)</strong>. Det er den grundlæggende beregning i græsmarksforvaltning.</p>
 
       <h2>Sådan beregner du</h2>
-      <p>Soma-se o peso vivo de todo o besætning, divider pr. 450 kg (1 UA) og divider resultatet pela areal. Assim categorias diferentes — bezerros, novilhas, vacas — entram i mesma régua.</p>
-      <div class="formula">UA/ha = (nº de animais × peso médio ÷ 450) ÷ areal (ha)</div>
+      <p>Levendevægten på hele besætningen lægges sammen, divideres med 500 kg (1 DE efter dansk standard) og divideres med arealet. På den måde kan forskellige kategorier — kalve, kvier og køer — sammenlignes på samme skala.</p>
+      <div class="formula">DE/ha = (antal dyr × gennemsnitsvægt ÷ 500) ÷ areal (ha)</div>
 
       <h2>Eksempel</h2>
-      <p>120 animais de 400 kg i 60 ha somam 48.000 kg → 106,7 UA → <strong>1,78 UA/ha</strong>.</p>
+      <p>120 dyr à 400 kg på 60 ha giver 48.000 kg → 96 DE → <strong>1,60 DE/ha</strong>.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Belægningsgrad x capacidade de suporte
+          Belægningsgrad vs. græsudbud
         </div>
-        <p>Denne beregner mostra a belægningsgrad atual. A capacidade de suporte real af pasto depende af produção de forragem (kg de tørstof pr. hektar), som varia med a espécie forrageira, a gødskning og a estação af ano.</p>
+        <p>Denne beregner viser den aktuelle belægningsgrad. Det reelle græsudbud afhænger af foderproduktionen (kg tørstof pr. hektar), som varierer med græsart, gødskning og årstid.</p>
       </div>
 
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
-          <a class="calc-card" href="/ganho-de-peso.html"><h3>Daglig tilvækst (DTV)</h3><p>Ganho médio diário og abate.</p></a>
-          <a class="calc-card" href="/consumo-do-rebanho.html"><h3>Foderindtag i besætning</h3><p>Tørstof og sal mineral.</p></a>
-          <a class="calc-card" href="/cocho.html"><h3>Foderbord og drikkekar</h3><p>Dimensionamento af foderbord.</p></a>
+          <a class="calc-card" href="/ganho-de-peso.html"><h3>Daglig tilvækst (DTV)</h3><p>Gennemsnitlig daglig tilvækst og slagteprognose.</p></a>
+          <a class="calc-card" href="/consumo-do-rebanho.html"><h3>Foderindtag i besætning</h3><p>Tørstof og mineraler.</p></a>
+          <a class="calc-card" href="/cocho.html"><h3>Foderbord og drikkekar</h3><p>Dimensionering af foderbord.</p></a>
         </div>
       </div>
 
@@ -263,12 +263,12 @@
   function render(r) {
     result.className = 'result result--neutral';
     var html = '<div class="result__banner">' + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
-      '<div><div class="result__headline">Taxa de belægningsgrad</div>' +
-      '<div class="result__sub">Græsningsbelægning i UA/ha</div></div></div>';
+      '<div><div class="result__headline">Belægningsgrad</div>' +
+      '<div class="result__sub">Græsningsbelægning i DE/ha</div></div></div>';
     html += '<div class="result__body">';
-    html += '<div class="result__main">' + (Fmt.num(r.uaPorHa, 2) + ' <small>UA/ha</small>') + '</div>';
-      html += '<div class="result__metrics">' + '<div class="metric"><div class="metric__label">Total i Unidades Animais</div>' + '<div class="metric__value">' + (Fmt.num(r.ua, 1) + ' UA') + '</div>'  + '</div>' + '<div class="metric"><div class="metric__label">Peso vivo total af besætning</div>' + '<div class="metric__value">' + (Fmt.int(r.pesoTotal) + ' kg') + '</div>'  + '</div>' + '</div>';
-    html += '<div class="result__interpretation"><p>' + ('1 Unidade Animal (UA) equivale a 450 kg de peso vivo. A belægningsgrad ideal depende af produção de forragem af pasto og af época af ano.') + '</p></div>';
+    html += '<div class="result__main">' + (Fmt.num(r.uaPorHa, 2) + ' <small>DE/ha</small>') + '</div>';
+      html += '<div class="result__metrics">' + '<div class="metric"><div class="metric__label">Dyreenheder i alt</div>' + '<div class="metric__value">' + (Fmt.num(r.ua, 1) + ' DE') + '</div>'  + '</div>' + '<div class="metric"><div class="metric__label">Samlet levendevægt</div>' + '<div class="metric__value">' + (Fmt.int(r.pesoTotal) + ' kg') + '</div>'  + '</div>' + '</div>';
+    html += '<div class="result__interpretation"><p>' + ('1 dyreenhed (DE) svarer i Danmark til 500 kg levendevægt. Den ideelle belægningsgrad afhænger af græsmarkens foderudbud og af årstiden.') + '</p></div>';
     html += '</div>';
     result.innerHTML = html;
     result.hidden = false;

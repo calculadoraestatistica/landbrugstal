@@ -164,28 +164,28 @@
     <article class="prose">
 
       <h2>Hvad bruges den til</h2>
-      <p>Este conversor passa quantidades entre <strong>hkgs, quilos og toneladas</strong>. Como o peso af hkg muda pr. cultura, ele é um campo ajustável.</p>
+      <p>Denne omregner konverterer mængder mellem <strong>hkg, kilo og tons</strong>. Da vægten pr. hkg kan variere efter afgrøde, er det et justerbart felt.</p>
 
       <h2>Sådan beregner du</h2>
-      <p>Tudo é convertido primeiro til quilos og depois til a unidade de destino. A hkg padrão de korn é de 60 kg.</p>
+      <p>Alt omregnes først til kilo og derefter til den ønskede enhed. Standardvægten for en hkg korn er 100 kg i Danmark; for ældre referencer kan 60 kg forekomme.</p>
 
       <h2>Eksempel</h2>
-      <p>100 hkgs de 60 kg equivalem a 6.000 kg, ou seja, <strong>6 toneladas</strong>.</p>
+      <p>100 hkg à 60 kg svarer til 6.000 kg, altså <strong>6 tons</strong>.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Tjek o peso af hkg
+          Tjek vægten pr. hkg
         </div>
-        <p>Sojabønner, milho, trigo, feijão og café usam hkg de 60 kg. O arroz i casca é exceção: 50 kg i Rio Grande af Sul og i Santa Catarina, 60 kg nas demais regiões.</p>
+        <p>I Danmark er én hkg lig 100 kg. Hvis du arbejder med en specifik reference (f.eks. ældre kornhandel eller udenlandske afgrøder), så juster feltet — typiske eksempler er 60 kg for soja, majs og hvede, og 50 kg for risafgrøder med skal.</p>
       </div>
 
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
-          <a class="calc-card" href="/produtividade.html"><h3>Konvertering de udbytte</h3><p>Hkgs/ha, kg/ha og t/ha.</p></a>
-          <a class="calc-card" href="/conversao-de-area.html"><h3>Arealomregner</h3><p>Hektar, alqueire og mais.</p></a>
-          <a class="calc-card" href="/custo-de-producao.html"><h3>Produktionsomkostning</h3><p>Omkostning pr. hkg og equilíbrio.</p></a>
+          <a class="calc-card" href="/produtividade.html"><h3>Udbytteomregner</h3><p>Hkg/ha, kg/ha og t/ha.</p></a>
+          <a class="calc-card" href="/conversao-de-area.html"><h3>Arealomregner</h3><p>Hektar, tønde land og m².</p></a>
+          <a class="calc-card" href="/custo-de-producao.html"><h3>Produktionsomkostning</h3><p>Omkostning pr. hkg og break-even.</p></a>
         </div>
       </div>
 
@@ -278,12 +278,12 @@
   function render(r) {
     result.className = 'result result--neutral';
     var html = '<div class="result__banner">' + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
-      '<div><div class="result__headline">Resultat af konvertering</div>' +
-      '<div class="result__sub">Hkgs, quilos og toneladas</div></div></div>';
+      '<div><div class="result__headline">Resultat af omregning</div>' +
+      '<div class="result__sub">Hkg, kg og tons</div></div></div>';
     html += '<div class="result__body">';
     html += '<div class="result__main">' + (Fmt.num(r.resultado, 2)) + '</div>';
-      html += '<div class="result__metrics">' + '<div class="metric"><div class="metric__label">Equivalente i quilos</div>' + '<div class="metric__value">' + (Fmt.int(r.emKg) + ' kg') + '</div>'  + '</div>' + '</div>';
-    html += '<div class="result__interpretation"><p>' + ('A hkg de korn i Danmark costuma ter 60 kg. Atenção ao arroz i casca, som é de 50 kg i Rio Grande af Sul og i Santa Catarina.') + '</p></div>';
+      html += '<div class="result__metrics">' + '<div class="metric"><div class="metric__label">Tilsvarende i kilo</div>' + '<div class="metric__value">' + (Fmt.int(r.emKg) + ' kg') + '</div>'  + '</div>' + '</div>';
+    html += '<div class="result__interpretation"><p>' + ('I Danmark er 1 hkg = 100 kg. Tjek altid vægten pr. hkg, hvis du arbejder med en specifik reference eller en udenlandsk afgrøde, hvor en hkg traditionelt har en anden vægt.') + '</p></div>';
     html += '</div>';
     result.innerHTML = html;
     result.hidden = false;

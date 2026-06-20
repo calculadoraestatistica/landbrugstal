@@ -80,7 +80,7 @@
     });
   }
 
-  /* --- Utilitários de número / formatação (pt-BR) ----------------------- */
+  /* --- Tal-/formateringsværktøjer (da-DK) ------------------------------ */
   function parseNum(v) {
     if (typeof v === 'number') return v;
     if (v == null) return NaN;
@@ -97,12 +97,12 @@
   function fmtNum(n, dec) {
     if (dec === undefined) dec = 2;
     if (!isFinite(n)) return '—';
-    return n.toLocaleString('pt-BR', {
+    return n.toLocaleString('da-DK', {
       minimumFractionDigits: dec, maximumFractionDigits: dec
     });
   }
   function fmtInt(n) {
-    return isFinite(n) ? Math.round(n).toLocaleString('pt-BR') : '—';
+    return isFinite(n) ? Math.round(n).toLocaleString('da-DK') : '—';
   }
   function radioValue(name) {
     var el = document.querySelector('input[name="' + name + '"]:checked');

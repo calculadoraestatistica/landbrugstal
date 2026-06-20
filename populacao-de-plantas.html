@@ -172,9 +172,9 @@
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
-          <a class="calc-card" href="/quantidade-de-sementes.html"><h3>Frømængde</h3><p>Frøs i kg/ha.</p></a>
-          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Da anbefaling ao gødning.</p></a>
-          <a class="calc-card" href="/produtividade.html"><h3>Konvertering de udbytte</h3><p>Hkgs/ha, kg/ha og t/ha.</p></a>
+          <a class="calc-card" href="/quantidade-de-sementes.html"><h3>Frømængde</h3><p>Frø i kg/ha.</p></a>
+          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Fra anbefaling til handelsgødning.</p></a>
+          <a class="calc-card" href="/produtividade.html"><h3>Udbytteomregner</h3><p>Hkg/ha, kg/ha og t/ha.</p></a>
         </div>
       </div>
 
@@ -266,11 +266,11 @@
     result.className = 'result result--neutral';
     var html = '<div class="result__banner">' + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
       '<div><div class="result__headline">Plantebestand</div>' +
-      '<div class="result__sub">Plantas pr. hektar og frøs pr. metro</div></div></div>';
+      '<div class="result__sub">Planter pr. hektar og frø pr. meter</div></div></div>';
     html += '<div class="result__body">';
-    html += '<div class="result__main">' + ((r.plantasPorHa !== undefined ? Fmt.int(r.plantasPorHa) + ' <small>plantas/ha</small>' : Fmt.num(r.frøsPorMetro, 2) + ' <small>frøs/m</small>')) + '</div>';
-      html += '<div class="result__metrics">' + ((r.frøsPorMetro !== undefined && r.plantasPorHa !== undefined) ? ('<div class="metric"><div class="metric__label">Frøs pr. metro linear</div>' + '<div class="metric__value">' + (Fmt.num(r.frøsPorMetro, 2) + ' frøs/m') + '</div>'  + '</div>') : '') + '</div>';
-    html += '<div class="result__interpretation"><p>' + ('A população ideal costuma vir recomendada pelo obtentor af híbrido ou af cultivar. Use o espaçamento entre linhas af sua semeadora.') + '</p></div>';
+    html += '<div class="result__main">' + ((r.plantasPorHa !== undefined ? Fmt.int(r.plantasPorHa) + ' <small>planter/ha</small>' : Fmt.num(r.frøsPorMetro, 2) + ' <small>frø/m</small>')) + '</div>';
+      html += '<div class="result__metrics">' + ((r.frøsPorMetro !== undefined && r.plantasPorHa !== undefined) ? ('<div class="metric"><div class="metric__label">Frø pr. løbende meter</div>' + '<div class="metric__value">' + (Fmt.num(r.frøsPorMetro, 2) + ' frø/m') + '</div>'  + '</div>') : '') + '</div>';
+    html += '<div class="result__interpretation"><p>' + ('Den ideelle bestand anbefales typisk af forædleren for den valgte hybrid eller sort. Brug rækkeafstanden på din sårings­maskine.') + '</p></div>';
     html += '</div>';
     result.innerHTML = html;
     result.hidden = false;

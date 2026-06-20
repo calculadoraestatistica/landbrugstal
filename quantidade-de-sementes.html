@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="https://www.euronext.com">
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
-<title>Beregner de Mængde de Frøs | Landbrugstal</title>
-<meta name="description" content="Beregner de quantidade de frøs online og gratuita. Beregn os kg de frø pr. hektar pelo peso de mil frøs og a germinação.">
+<title>Frømængdeberegner | Landbrugstal</title>
+<meta name="description" content="Gratis online frømængdeberegner. Beregn kilo udsæd pr. hektar ud fra tusindkornsvægten og spireevnen.">
 <link rel="canonical" href="https://landbrugstal.dk/quantidade-de-sementes.html">
 <meta name="theme-color" content="#16a34a">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="da_DK">
 <meta property="og:site_name" content="Landbrugstal">
-<meta property="og:title" content="Beregner de Mængde de Frøs">
-<meta property="og:description" content="Beregn quantos quilos de frø pr. hektar semear.">
+<meta property="og:title" content="Frømængdeberegner">
+<meta property="og:description" content="Beregn kilo udsæd pr. hektar.">
 <meta property="og:url" content="https://landbrugstal.dk/quantidade-de-sementes.html">
 <meta property="og:image" content="https://landbrugstal.dk/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,13 +33,13 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Beregner de Mængde de Frøs",
+  "name": "Frømængdeberegner",
   "url": "https://landbrugstal.dk/quantidade-de-sementes.html",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Web",
   "inLanguage": "da-DK",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
-  "description": "Calculo de kg de frø pr. hektar."
+  "description": "Beregning af kg udsæd pr. hektar."
 }
 </script>
 <script type="application/ld+json">
@@ -94,8 +94,8 @@
           <li>Frømængde</li>
         </ol>
       </nav>
-      <h1>Beregner de Mængde de Frøs</h1>
-      <p class="lead">Beregn quantos quilos de frø pr. hektar semear, já ajustando pela germinação og pela pureza af lote.</p>
+      <h1>Frømængdeberegner</h1>
+      <p class="lead">Beregn hvor mange kilo udsæd pr. hektar du skal så — korrigeret for spireevne og partiets renhed.</p>
     </div>
   </div>
 
@@ -104,59 +104,59 @@
     <form class="calculator" id="calc-form" novalidate>
       <h2 class="calculator__title">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-        Beregn as frøs
+        Beregn frømængden
       </h2>
-      <p class="calculator__hint">Indtast a população desejada og os dados af lote.</p>
+      <p class="calculator__hint">Indtast den ønskede plantebestand og partidata.</p>
 
       <fieldset class="field-group">
-        <legend>População og lote de frøs</legend>
+        <legend>Plantebestand og udsædsparti</legend>
         <div class="field-row">
           <div class="field">
-            <label for="populacaoDesejada">População desejada</label>
+            <label for="populacaoDesejada">Ønsket plantebestand</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="populacaoDesejada" placeholder="Ex.: 300000" autocomplete="off">
-              <span class="input-affix__unit">plantas/ha</span>
+              <input class="input" type="text" inputmode="decimal" id="populacaoDesejada" placeholder="Eks.: 300000" autocomplete="off">
+              <span class="input-affix__unit">planter/ha</span>
             </div>
           </div>
           <div class="field">
-            <label for="pms">Peso de mil frøs</label>
+            <label for="pms">Tusindkornsvægt (TKV)</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="pms" placeholder="Ex.: 200" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="pms" placeholder="Eks.: 200" autocomplete="off">
               <span class="input-affix__unit">g</span>
             </div>
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="germinacao">Germinação</label>
+            <label for="germinacao">Spireevne</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="germinacao" placeholder="Ex.: 95" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="germinacao" placeholder="Eks.: 95" autocomplete="off">
               <span class="input-affix__unit">%</span>
             </div>
           </div>
           <div class="field">
-            <label for="pureza">Pureza</label>
+            <label for="pureza">Renhed</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="pureza" placeholder="Ex.: 98" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="pureza" placeholder="Eks.: 98" autocomplete="off">
               <span class="input-affix__unit">%</span>
             </div>
-            <p class="help">Valgfri — padrão de 98%.</p>
+            <p class="help">Valgfri — standard 98 %.</p>
           </div>
         </div>
           <div class="field">
-            <label for="margin">Margin de perda</label>
+            <label for="margin">Tabsmargin</label>
             <div class="input-affix">
-              <input class="input" type="text" inputmode="decimal" id="margin" placeholder="Ex.: 5" autocomplete="off">
+              <input class="input" type="text" inputmode="decimal" id="margin" placeholder="Eks.: 5" autocomplete="off">
               <span class="input-affix__unit">%</span>
             </div>
-            <p class="help">Valgfri — folga til falhas i campo.</p>
+            <p class="help">Valgfri — buffer mod fejlspiring i marken.</p>
           </div>
       </fieldset>
 
       <p class="field-error" id="calc-error" role="alert"></p>
 
       <div class="calculator__actions">
-        <button class="btn btn--primary btn--lg" type="submit">Beregn frøs</button>
+        <button class="btn btn--primary btn--lg" type="submit">Beregn frømængde</button>
         <button class="btn btn--ghost" type="button" id="calc-example">Udfyld med eksempel</button>
       </div>
 
@@ -168,29 +168,29 @@
     <article class="prose">
 
       <h2>Hvad bruges den til</h2>
-      <p>Denne beregner estima quantos <strong>quilos de frø pr. hektar</strong> comprar og semear til atingir a população de plantas desejada.</p>
+      <p>Denne beregner estimerer, hvor mange <strong>kilo udsæd pr. hektar</strong> du skal købe og så for at nå den ønskede plantebestand.</p>
 
-      <h2>Sådan beregner du</h2>
-      <p>A população desejada é ajustada pelo valor cultural (germinação × pureza) og convertida i quilos pelo peso de mil frøs (PMS).</p>
-      <div class="formula">kg/ha = (frøs/ha ajustadas × PMS i gramas) ÷ 1.000.000</div>
+      <h2>Sådan beregnes det</h2>
+      <p>Den ønskede plantebestand korrigeres med den kulturelle værdi (spireevne × renhed) og omregnes til kilo via tusindkornsvægten (TKV).</p>
+      <div class="formula">kg/ha = (korrigerede frø/ha × TKV i gram) ÷ 1.000.000</div>
 
       <h2>Eksempel</h2>
-      <p>Para 300.000 plantas/ha, PMS de 200 g og valor cultural de 93%, med 5% de margin, são cerca de <strong>68 kg/ha</strong> de frø.</p>
+      <p>Ved 300.000 planter/ha, TKV på 200 g og kulturel værdi på 93 %, med 5 % margin, giver det ca. <strong>68 kg/ha</strong> udsæd.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          O peso de mil frøs varia
+          TKV varierer
         </div>
-        <p>O PMS muda de lote til lote og de cultivar til cultivar. Use o valor informado i embalagem af lote som du vai plantar, ikke um valor genérico.</p>
+        <p>TKV varierer mellem partier og mellem sorter. Brug værdien fra pakningen på det parti, du faktisk skal så — ikke en generisk værdi.</p>
       </div>
 
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
-          <a class="calc-card" href="/populacao-de-plantas.html"><h3>Plantebestand</h3><p>Plantas pr. hektar.</p></a>
-          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Da anbefaling ao gødning.</p></a>
-          <a class="calc-card" href="/produtividade.html"><h3>Konvertering de udbytte</h3><p>Hkgs/ha, kg/ha og t/ha.</p></a>
+          <a class="calc-card" href="/populacao-de-plantas.html"><h3>Plantebestand</h3><p>Planter pr. hektar.</p></a>
+          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Fra anbefaling til handelsgødning.</p></a>
+          <a class="calc-card" href="/produtividade.html"><h3>Udbytte</h3><p>Hkg/ha, kg/ha og t/ha.</p></a>
         </div>
       </div>
 
@@ -285,12 +285,12 @@
   function render(r) {
     result.className = 'result result--neutral';
     var html = '<div class="result__banner">' + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
-      '<div><div class="result__headline">Frøs pr. hektar</div>' +
-      '<div class="result__sub">Mængde de frø a comprar</div></div></div>';
+      '<div><div class="result__headline">Udsæd pr. hektar</div>' +
+      '<div class="result__sub">Mængde frø der skal købes</div></div></div>';
     html += '<div class="result__body">';
     html += '<div class="result__main">' + (Fmt.num(r.kgPorHa, 1) + ' <small>kg/ha</small>') + '</div>';
-      html += '<div class="result__metrics">' + '<div class="metric"><div class="metric__label">Frøs pr. hektar</div>' + '<div class="metric__value">' + (Fmt.int(r.frøsPorHa)) + '</div>'  + '</div>' + '<div class="metric"><div class="metric__label">Valor cultural (germinação × pureza)</div>' + '<div class="metric__value">' + (Fmt.num(r.vc, 1) + '%') + '</div>'  + '</div>' + '</div>';
-    html += '<div class="result__interpretation"><p>' + ('O cálculo já compensa a germinação og a pureza af lote pelo valor cultural. Tjek esses dados i embalagem af frøs.') + '</p></div>';
+      html += '<div class="result__metrics">' + '<div class="metric"><div class="metric__label">Frø pr. hektar</div>' + '<div class="metric__value">' + (Fmt.int(r.frøsPorHa)) + '</div>'  + '</div>' + '<div class="metric"><div class="metric__label">Kulturel værdi (spireevne × renhed)</div>' + '<div class="metric__value">' + (Fmt.num(r.vc, 1) + '%') + '</div>'  + '</div>' + '</div>';
+    html += '<div class="result__interpretation"><p>' + ('Beregningen tager allerede højde for spireevne og renhed via den kulturelle værdi. Tjek de data på pakken på dit udsædsparti.') + '</p></div>';
     html += '</div>';
     result.innerHTML = html;
     result.hidden = false;
