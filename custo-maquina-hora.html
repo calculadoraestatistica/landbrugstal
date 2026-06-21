@@ -350,11 +350,11 @@
     if (isNaN(vida) || vida <= 0) { showError('Indtast a vida útil i anos.'); return; }
     if (isNaN(horasAno) || horasAno <= 0) { showError('Indtast as horas de uso pr. ano.'); return; }
     if (isNaN(consumo) || consumo < 0) { showError('Indtast o consumo de brændstof.'); return; }
-    if (isNaN(precoDiesel) || precoDiesel < 0) { showError('Indtast o preço af diesel.'); return; }
+    if (isNaN(precoDiesel) || precoDiesel < 0) { showError('Indtast dieselprisen.'); return; }
     if (isNaN(pctManut)) pctManut = 8;
     if (isNaN(operador)) operador = 25;
     if (isNaN(pctLubr)) pctLubr = 15;
-    if (isNaN(rendimento) || rendimento <= 0) { showError('Indtast o rendimento operacional (ha/h).'); return; }
+    if (isNaN(rendimento) || rendimento <= 0) { showError('Indtast den operationelle ydelse (ha/t).'); return; }
     if (residual >= valor) { showError('O valor residual deve ser mindst som o valor af maskine.'); return; }
 
     var depreciacao_h = (valor - residual) / (vida * horasAno);

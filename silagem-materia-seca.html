@@ -11,14 +11,14 @@
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
 <title>Hø, palha og ensilage: omkostning pr. kg de tørstof | Landbrugstal</title>
-<meta name="description" content="Beregner online og gratuita af omkostning pr. kg de tørstof i silagens, høs, palhas og pré-secado. Compare volumosos pelo som entregam de fato.">
+<meta name="description" content="Beregner online og gratuita af omkostning pr. kg de tørstof i silagens, høs, palhas og pré-secado. Compare grovfoders pelo som entregam de fato.">
 <link rel="canonical" href="https://landbrugstal.dk/silagem-materia-seca.html">
 <meta name="theme-color" content="#16a34a">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="da_DK">
 <meta property="og:site_name" content="Landbrugstal">
 <meta property="og:title" content="Hø, palha og ensilage: omkostning pr. kg de tørstof">
-<meta property="og:description" content="Compare silagens, høs og palhas pelo omkostning real af som entregam de tørstof.">
+<meta property="og:description" content="Sammenlign ensilage, hø og halm efter den reelle omkostning pr. tørstof.">
 <meta property="og:url" content="https://landbrugstal.dk/silagem-materia-seca.html">
 <meta property="og:image" content="https://landbrugstal.dk/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,13 +33,13 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Omkostning pr. kg de materia seca i volumosos",
+  "name": "Omkostning pr. kg tørstof i grovfoder",
   "url": "https://landbrugstal.dk/silagem-materia-seca.html",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Web",
   "inLanguage": "da-DK",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
-  "description": "Calculo af omkostning pr. kg de materia seca i silagens, høs, palhas og pre-secado."
+  "description": "Beregning af omkostning pr. kg tørstof i ensilage, hø, halm og pre-tørret grovfoder."
 }
 </script>
 <script type="application/ld+json">
@@ -95,7 +95,7 @@
         </ol>
       </nav>
       <h1>Hø, palha og ensilage: omkostning pr. kg de tørstof</h1>
-      <p class="lead">Compare silagens, høs, palhas og pré-secado pelo som de fato entregam: o omkostning af kg de tørstof (MS) som vai pro animal.</p>
+      <p class="lead">Sammenlign ensilage, hø, halm og pre-tørret grovfoder efter hvad de reelt leverer: omkostningen pr. kg tørstof (TS) som ender hos dyret.</p>
     </div>
   </div>
 
@@ -106,32 +106,32 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
         Beregn omkostning pr. kg de MS
       </h2>
-      <p class="calculator__hint">Escolha o volumoso og indtast o preço.</p>
+      <p class="calculator__hint">Vælg grovfodertype og indtast prisen.</p>
 
       <fieldset class="field-group">
-        <legend>Volumoso, preço og perdas</legend>
+        <legend>Grovfoder, pris og tab</legend>
         <div class="field-row">
           <div class="field">
-            <label for="tipo">Tipo de volumoso</label>
+            <label for="tipo">Tipo de grovfoder</label>
             <select class="input" id="tipo">
-              <option value="">Vælg o volumoso</option>
-              <option value="ensilage_milho">Ensilage de milho</option>
-              <option value="ensilage_sorgo">Ensilage de sorgo</option>
-              <option value="hø_tifton">Hø de tifton</option>
-              <option value="hø_alfafa">Hø de alfafa</option>
+              <option value="">Vælg grovfoder</option>
+              <option value="ensilage_milho">Majsensilage</option>
+              <option value="ensilage_sorgo">Sorghum-ensilage</option>
+              <option value="hø_tifton">Tifton-hø</option>
+              <option value="hø_alfafa">Lucerne-hø</option>
               <option value="cana">Sukkerrør</option>
-              <option value="presecado">Pré-secado</option>
-              <option value="palha_soja">Palha de soja</option>
-              <option value="personalizado">Personalizado</option>
+              <option value="presecado">Forvejret ensilage</option>
+              <option value="palha_soja">Sojahalm</option>
+              <option value="personalizado">Andet</option>
             </select>
           </div>
           <div class="field">
-            <label for="preco">Preço af volumoso</label>
+            <label for="preco">Pris på grovfoderet</label>
             <div class="input-affix">
               <input class="input" type="text" inputmode="decimal" id="preco" placeholder="Ex.: 280" autocomplete="off">
               <span class="input-affix__unit">kr/t</span>
             </div>
-            <p class="help">Preço pr. tonelada bruta (incluindo a água).</p>
+            <p class="help">Pris pr. ton brutto (inklusive vand).</p>
           </div>
         </div>
         <div class="field-row">
@@ -141,7 +141,7 @@
               <input class="input" type="text" inputmode="decimal" id="ms" placeholder="Ex.: 32" autocomplete="off">
               <span class="input-affix__unit">%</span>
             </div>
-            <p class="help">Preenchido conforme o tipo. Edite se tiver a análise bromatológica.</p>
+            <p class="help">Udfyldes automatisk efter typen. Tilret hvis du har en foderanalyse.</p>
           </div>
           <div class="field">
             <label for="perdas">Perdas de fermentação/conservação</label>
@@ -149,17 +149,17 @@
               <input class="input" type="text" inputmode="decimal" id="perdas" placeholder="Ex.: 10" autocomplete="off">
               <span class="input-affix__unit">%</span>
             </div>
-            <p class="help">Valgfri — padrão de 10%. Inclui perdas de painel, fundo og sobra de foderbord.</p>
+            <p class="help">Valgfri — standard 10 %. Inkluderer tab fra siloflader, bund og rester ved foderbordet.</p>
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="fornec">Omkostning de fornecimento</label>
+            <label for="fornec">Leveringsomkostning</label>
             <div class="input-affix">
               <input class="input" type="text" inputmode="decimal" id="fornec" placeholder="Ex.: 20" autocomplete="off">
               <span class="input-affix__unit">kr/t</span>
             </div>
-            <p class="help">Valgfri — transporte, tratoreio og mão de obra pr. tonelada.</p>
+            <p class="help">Valgfri — transport, traktorarbejde og arbejdskraft pr. ton.</p>
           </div>
         </div>
       </fieldset>
@@ -285,7 +285,7 @@
     cana:          'cana de sukker',
     presecado:     'pré-secado',
     palha_soja:    'palha de soja',
-    personalizado: 'volumoso'
+    personalizado: 'grovfoder'
   };
 
   function showError(msg) { errBox.textContent = msg; errBox.classList.add('is-visible'); result.hidden = true; }
@@ -318,8 +318,8 @@
   }
 
   function calc(o) {
-    if (!o.tipo) return { error: 'Vælg o tipo de volumoso.' };
-    if (!(o.preco > 0)) return { error: 'Indtast o preço pr. tonelada.' };
+    if (!o.tipo) return { error: 'Vælg grovfodertype.' };
+    if (!(o.preco > 0)) return { error: 'Indtast prisen pr. ton.' };
     if (!(o.ms > 0) || o.ms > 100) return { error: 'Indtast a % de tørstof entre 0 og 100.' };
     var perdas = (o.perdas >= 0 && o.perdas < 100) ? o.perdas : 10;
     var fornec = (o.fornec > 0) ? o.fornec : 0;
@@ -350,7 +350,7 @@
 
   function render(r) {
     result.className = 'result result--neutral';
-    var nome = TIPO_NOME[r.tipo] || 'volumoso';
+    var nome = TIPO_NOME[r.tipo] || 'grovfoder';
     var html = '<div class="result__banner">' + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
       '<div><div class="result__headline">Omkostning pr. kg de tørstof</div>' +
       '<div class="result__sub">Para o ' + nome + '</div></div></div>';
@@ -365,7 +365,7 @@
       '<div class="metric__value">kr ' + Fmt.num(r.omkostningBruto, 2) + '</div></div>' +
       '</div>';
     html += '<div class="result__interpretation"><p>' +
-      'Compare este valor med os outros volumosos disponíveis. O kg de tørstof é o som de fato vai entrar i dieta af animal — preço pr. tonelada bruta esconde grandes diferenças entre silagens (cheias de água) og høs (quase tudo MS).' +
+      'Sammenlign denne værdi med andre tilgængelige grovfodertyper. Kg tørstof er det, der reelt ender i dyrets foderration — pris pr. ton brutto skjuler store forskelle mellem ensilager (våde de água) og høs (quase tudo MS).' +
       '</p></div>';
     html += '</div>';
     result.innerHTML = html;

@@ -401,7 +401,7 @@
   function compute() {
     clearError();
     var bruto = parseN($('bruto').value);
-    if (!isFinite(bruto) || bruto <= 0) { showError('Indtast um preço bruto válido.'); return; }
+    if (!isFinite(bruto) || bruto <= 0) { showError('Indtast en gyldig bruttopris.'); return; }
     var baseUnit = $('unidBase').value;
 
     var freteVal = parseN($('freteVal').value) || 0;
@@ -450,8 +450,8 @@
     });
   }
 
-  function unitLabel(u) { return u === 't' ? 'tonelada' : 'hkg (60 kg)'; }
-  function unitShort(u) { return u === 't' ? 't' : 'sc'; }
+  function unitLabel(u) { return u === 't' ? 'ton' : 'hkg (60 kg)'; }
+  function unitShort(u) { return u === 't' ? 't' : 'hkg'; }
 
   function render(r) {
     result.className = 'result result--neutral';
@@ -463,14 +463,14 @@
     var html = '<div class="result__banner">' +
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
       '<div><div class="result__headline">Nettopris modtaget</div>' +
-      '<div class="result__sub">Bruto descontado de frete, opbevaring, comissão, secagem, quebra og impostos</div></div></div>';
+      '<div class="result__sub">Brutto fratrukket fragt, opbevaring, kommission, tørring, svind og afgifter</div></div></div>';
     html += '<div class="result__body">';
-    html += '<div class="result__main">kr ' + Fmt.num(r.liquido, 2) + ' <small>por ' + unitLabel(r.baseUnit) + '</small></div>';
+    html += '<div class="result__main">kr ' + Fmt.num(r.liquido, 2) + ' <small>pr. ' + unitLabel(r.baseUnit) + '</small></div>';
 
     html += '<div class="result__metrics">' +
-      '<div class="metric"><div class="metric__label">Por hkg (60 kg)</div><div class="metric__value">kr ' + Fmt.num(liquidoPorSc, 2) + '</div></div>' +
-      '<div class="metric"><div class="metric__label">Por tonelada</div><div class="metric__value">kr ' + Fmt.num(liquidoPorT, 2) + '</div></div>' +
-      '<div class="metric"><div class="metric__label">Por kg</div><div class="metric__value">kr ' + Fmt.num(liquidoPorKg, 4) + '</div></div>' +
+      '<div class="metric"><div class="metric__label">Pr. hkg (60 kg)</div><div class="metric__value">kr ' + Fmt.num(liquidoPorSc, 2) + '</div></div>' +
+      '<div class="metric"><div class="metric__label">Pr. ton</div><div class="metric__value">kr ' + Fmt.num(liquidoPorT, 2) + '</div></div>' +
+      '<div class="metric"><div class="metric__label">Pr. kg</div><div class="metric__value">kr ' + Fmt.num(liquidoPorKg, 4) + '</div></div>' +
     '</div>';
 
     // Detailed cost breakdown
@@ -488,7 +488,7 @@
     }
 
     html += '<div class="result__interpretation"><p>' +
-      'O preço bruto cotado é <strong>kr ' + Fmt.num(r.bruto, 2) + '/' + u + '</strong>. ' +
+      'Den noterede bruttopris er <strong>kr ' + Fmt.num(r.bruto, 2) + '/' + u + '</strong>. ' +
       'Os descontos totalizam <strong>kr ' + Fmt.num(r.totalOmkostnings, 2) + '/' + u + '</strong> (' + Fmt.num(r.pctDesc, 2) + '% af bruto). ' +
       'O som efetivamente entra i bolso é <strong>kr ' + Fmt.num(r.liquido, 2) + '/' + u + '</strong>. Compare med a pris de referência i <a href="/cotacoes.html">Daglige priser</a> antes de fechar negócio.' +
     '</p></div>';

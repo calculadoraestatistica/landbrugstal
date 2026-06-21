@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="https://www.euronext.com">
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
-<title>Beregner af Valor de Husdyrgødning og Gødning Økologisk | Landbrugstal</title>
-<meta name="description" content="Beregner af valor de husdyrgødning, gylle og gødning økologisk online og gratuita. Estime os næringsstofs entregues og o valor econômico pr. hektar.">
+<title>Beregner af husdyrgødningens værdi | Landbrugstal</title>
+<meta name="description" content="Beregn værdien af husdyrgødning, gylle og kompost online og gratis. Estimer leverede næringsstoffer og den økonomiske værdi pr. hektar.">
 <link rel="canonical" href="https://landbrugstal.dk/valor-esterco.html">
 <meta name="theme-color" content="#16a34a">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="da_DK">
 <meta property="og:site_name" content="Landbrugstal">
-<meta property="og:title" content="Beregner af Valor de Husdyrgødning og Gødning Økologisk">
-<meta property="og:description" content="Estime næringsstofs entregues og o valor econômico de husdyrgødning, gylle og composto.">
+<meta property="og:title" content="Beregner af husdyrgødningens værdi">
+<meta property="og:description" content="Estimer leverede næringsstoffer og den økonomiske værdi af husdyrgødning, gylle og kompost.">
 <meta property="og:url" content="https://landbrugstal.dk/valor-esterco.html">
 <meta property="og:image" content="https://landbrugstal.dk/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,13 +33,13 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Beregner af Valor de Husdyrgødning og Gødning Organico",
+  "name": "Beregner af husdyrgødningens værdi",
   "url": "https://landbrugstal.dk/valor-esterco.html",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Web",
   "inLanguage": "da-DK",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
-  "description": "Estimativa de næringsstofs entregues og valor economico de husdyrgødning, gylle og composto."
+  "description": "Estimat af leverede næringsstoffer og økonomisk værdi af husdyrgødning, gylle og kompost."
 }
 </script>
 <script type="application/ld+json">
@@ -48,7 +48,7 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     {"@type":"ListItem","position":1,"name":"Forside","item":"https://landbrugstal.dk/"},
-    {"@type":"ListItem","position":2,"name":"Valor de Husdyrgødning","item":"https://landbrugstal.dk/valor-esterco.html"}
+    {"@type":"ListItem","position":2,"name":"Husdyrgødningens værdi","item":"https://landbrugstal.dk/valor-esterco.html"}
   ]
 }
 </script>
@@ -91,11 +91,11 @@
       <nav class="breadcrumb" aria-label="Sti">
         <ol>
           <li><a href="/">Forside</a></li>
-          <li>Valor de Husdyrgødning</li>
+          <li>Husdyrgødningens værdi</li>
         </ol>
       </nav>
-      <h1>Valor de husdyrgødning / gylle / gødning økologisk</h1>
-      <p class="lead">Estime os næringsstofs (N, P₂O₅ og K₂O) entregues pr. hektar og o valor econômico de uma aplicação de husdyrgødning, gylle ou composto.</p>
+      <h1>Husdyrgødning, gylle og kompost — værdi pr. hektar</h1>
+      <p class="lead">Estimer næringsstofferne (N, P₂O₅ og K₂O) leveret pr. hektar og den økonomiske værdi af en udbringning af husdyrgødning, gylle eller kompost.</p>
     </div>
   </div>
 
@@ -104,15 +104,15 @@
     <form class="calculator" id="calc-form" novalidate>
       <h2 class="calculator__title">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-        Beregn o valor af økologisk
+        Beregn værdien af gødningen
       </h2>
-      <p class="calculator__hint">Indtast a quantidade aplicada, os teores og a eficiência de aproveitamento.</p>
+      <p class="calculator__hint">Indtast den udbragte mængde, indholdet og udnyttelsesgraden.</p>
 
       <fieldset class="field-group">
-        <legend>Aplicação og tipo</legend>
+        <legend>Udbringning og type</legend>
         <div class="field-row">
           <div class="field">
-            <label for="quantidade">Mængde aplicada</label>
+            <label for="quantidade">Udbragt mængde</label>
             <input class="input" type="text" inputmode="decimal" id="quantidade" placeholder="Ex.: 20" autocomplete="off">
           </div>
           <div class="field">
@@ -125,12 +125,12 @@
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="tipo">Tipo de økologisk</label>
+            <label for="tipo">Type gødning</label>
             <select class="input" id="tipo">
               <option value="bovino">Husdyrgødning bovino curtido</option>
               <option value="aviario">Cama de aviário</option>
               <option value="suino">Husdyrgødning suíno (gylle líquido)</option>
-              <option value="composto">Composto</option>
+              <option value="composto">Kompost</option>
               <option value="omkostningm">Personalizado</option>
             </select>
           </div>
@@ -167,17 +167,17 @@
       </fieldset>
 
       <fieldset class="field-group">
-        <legend>Eficiência de aproveitamento</legend>
+        <legend>Udnyttelsesgrad</legend>
         <div class="field-row">
           <div class="field">
-            <label for="efN">Aproveitamento af N</label>
+            <label for="efN">Udnyttelse af N</label>
             <div class="input-affix">
               <input class="input" type="text" inputmode="decimal" id="efN" placeholder="50" value="50" autocomplete="off">
               <span class="input-affix__unit">%</span>
             </div>
           </div>
           <div class="field">
-            <label for="efP">Aproveitamento af P₂O₅</label>
+            <label for="efP">Udnyttelse af P₂O₅</label>
             <div class="input-affix">
               <input class="input" type="text" inputmode="decimal" id="efP" placeholder="80" value="80" autocomplete="off">
               <span class="input-affix__unit">%</span>
@@ -186,7 +186,7 @@
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="efK">Aproveitamento af K₂O</label>
+            <label for="efK">Udnyttelse af K₂O</label>
             <div class="input-affix">
               <input class="input" type="text" inputmode="decimal" id="efK" placeholder="100" value="100" autocomplete="off">
               <span class="input-affix__unit">%</span>
@@ -196,17 +196,17 @@
       </fieldset>
 
       <fieldset class="field-group">
-        <legend>Preço af gødning mineral equivalente</legend>
+        <legend>Pris på tilsvarende mineralsk gødning</legend>
         <div class="field-row">
           <div class="field">
-            <label for="precoN">Preço af kg de N</label>
+            <label for="precoN">Pris pr. kg N</label>
             <div class="input-affix">
               <input class="input" type="text" inputmode="decimal" id="precoN" placeholder="6,00" value="6,00" autocomplete="off">
               <span class="input-affix__unit">kr/kg</span>
             </div>
           </div>
           <div class="field">
-            <label for="precoP">Preço af kg de P₂O₅</label>
+            <label for="precoP">Pris pr. kg P₂O₅</label>
             <div class="input-affix">
               <input class="input" type="text" inputmode="decimal" id="precoP" placeholder="5,00" value="5,00" autocomplete="off">
               <span class="input-affix__unit">kr/kg</span>
@@ -215,7 +215,7 @@
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="precoK">Preço af kg de K₂O</label>
+            <label for="precoK">Pris pr. kg K₂O</label>
             <div class="input-affix">
               <input class="input" type="text" inputmode="decimal" id="precoK" placeholder="4,50" value="4,50" autocomplete="off">
               <span class="input-affix__unit">kr/kg</span>
@@ -239,15 +239,15 @@
     <article class="prose">
 
       <h2>Hvad bruges den til</h2>
-      <p>Denne beregner estima quanto de <strong>N, P₂O₅ og K₂O</strong> uma aplicação de husdyrgødning, gylle ou composto entrega pr. hektar og qual o <strong>valor econômico</strong> dessa gødskning i relação ao gødning mineral equivalente. Útil til precificar o husdyrgødning gerado i propriedade, comparar alternativas og justificar transporte og aplicação.</p>
+      <p>Denne beregner estimerer hvor meget <strong>N, P₂O₅ og K₂O</strong> en udbringning af husdyrgødning, gylle eller kompost leverer pr. hektar, og hvad den <strong>økonomiske værdi</strong> af den gødskning udgør sammenlignet med tilsvarende mineralsk gødning. Nyttig til at prissætte den husdyrgødning, der produceres på bedriften, sammenligne alternativer og retfærdiggøre transport og udbringning.</p>
 
       <h2>Sådan virker det</h2>
-      <p>A partir af quantidade aplicada og af teores af økologisk, calculamos a massa de cada næringsstof entregue. A eficiência de aproveitamento reduz essa massa ao som efetivamente fica disponível til a cultura i ciclo. O valor econômico é a soma af næringsstofs aproveitados multiplicados pelo preço af gødning mineral correspondente.</p>
-      <div class="formula">kg/ha de N = quantidade (t/ha) × 1000 × (%N ÷ 100) × (aproveitamento ÷ 100)</div>
-      <div class="formula">Valor (kr/ha) = kg N × preço N + kg P₂O₅ × preço P + kg K₂O × preço K</div>
+      <p>Ud fra den udbragte mængde og indholdet af gødningen beregner vi mængden af hvert næringsstof, der leveres. Udnyttelsesgraden reducerer denne mængde til det, der faktisk er tilgængeligt for afgrøden i sæsonen. Den økonomiske værdi er summen af de udnyttede næringsstoffer ganget med prisen på den tilsvarende mineralske gødning.</p>
+      <div class="formula">kg/ha N = mængde (t/ha) × 1000 × (%N ÷ 100) × (udnyttelse ÷ 100)</div>
+      <div class="formula">Værdi (kr/ha) = kg N × pris N + kg P₂O₅ × pris P + kg K₂O × pris K</div>
 
       <h2>Om udnyttelsesgraden</h2>
-      <p>O <strong>N</strong> é o næringsstof mais variável: parte volatiliza som amônia, parte é imobilizada pela microbiota og só uma fração mineraliza i ciclo. Em condições típicas de campo, o aproveitamento af N varia de <strong>30% a 70%</strong> conforme manejo, tipo de økologisk, incorporação og clima. O <strong>P₂O₅</strong> tem aproveitamento mais alto (cerca de 80%) pr. ser pouco perdido, og o <strong>K₂O</strong> chega perto de 100% pr. estar predominantemente i forma solúvel.</p>
+      <p><strong>N</strong> er det mest variable næringsstof: en del fordamper som ammoniak, en del immobiliseres af mikrobiotaen, og kun en fraktion mineraliseres i sæsonen. Under typiske markforhold varierer udnyttelsen af N fra <strong>30 % til 70 %</strong> afhængigt af håndtering, gødningstype, nedfældning og klima. <strong>P₂O₅</strong> har højere udnyttelse (omkring 80 %), fordi det tabes lidt, og <strong>K₂O</strong> når næsten 100 %, fordi det overvejende er på opløselig form.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -261,8 +261,8 @@
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
           <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Anbefaling til handelsgødning.</p></a>
-          <a class="calc-card" href="/calagem.html"><h3>Kalkning</h3><p>Behov de kalk.</p></a>
-          <a class="calc-card" href="/populacao-de-plantas.html"><h3>Plantebestand</h3><p>Plantas pr. hektar.</p></a>
+          <a class="calc-card" href="/calagem.html"><h3>Kalkning</h3><p>Kalkbehov.</p></a>
+          <a class="calc-card" href="/populacao-de-plantas.html"><h3>Plantebestand</h3><p>Planter pr. hektar.</p></a>
         </div>
       </div>
 
@@ -388,11 +388,11 @@
     clearError();
     var f = readForm();
 
-    if (!(f.quantidade > 0)) { showError('Indtast uma quantidade aplicada størst som zero.'); return; }
+    if (!(f.quantidade > 0)) { showError('Indtast en udbragt mængde større end nul.'); return; }
     if (!(f.pctN >= 0) || !(f.pctP >= 0) || !(f.pctK >= 0)) { showError('Indtast os teores de N, P₂O₅ og K₂O.'); return; }
     if (f.pctN + f.pctP + f.pctK <= 0) { showError('Pelo menos um teor (N, P ou K) deve ser størst som zero.'); return; }
-    if (!(f.efN >= 0) || !(f.efP >= 0) || !(f.efK >= 0)) { showError('Indtast a eficiência de aproveitamento.'); return; }
-    if (!(f.precoN >= 0) || !(f.precoP >= 0) || !(f.precoK >= 0)) { showError('Indtast o preço pr. kg af næringsstofs.'); return; }
+    if (!(f.efN >= 0) || !(f.efP >= 0) || !(f.efK >= 0)) { showError('Indtast udnyttelsesgraden.'); return; }
+    if (!(f.precoN >= 0) || !(f.precoP >= 0) || !(f.precoK >= 0)) { showError('Indtast prisen pr. kg næringsstof.'); return; }
 
     // Aproximamos 1 m³ ≈ 1 t til gylles líquidos (densidade próxima a 1 t/m³)
     var massa_t = f.quantidade;

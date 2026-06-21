@@ -385,23 +385,23 @@
   }
 
   function calcular(o) {
-    if (!isFinite(o.udbytte) || o.udbytte <= 0) return { error: 'Indtast a udbytte esperada.' };
-    if (!isFinite(o.precoProd) || o.precoProd <= 0) return { error: 'Indtast o preço af produção.' };
-    if (!isFinite(o.omkostning) || o.omkostning < 0) return { error: 'Indtast o omkostning de produção pr. hektar.' };
+    if (!isFinite(o.udbytte) || o.udbytte <= 0) return { error: 'Indtast forventet udbytte.' };
+    if (!isFinite(o.precoProd) || o.precoProd <= 0) return { error: 'Indtast salgsprisen.' };
+    if (!isFinite(o.omkostning) || o.omkostning < 0) return { error: 'Indtast produktionsomkostningen pr. hektar.' };
 
     var receita = o.udbytte * o.precoProd;
     var outras = isFinite(o.outras) ? o.outras : 0;
     var forpagtning = 0;
 
     if (o.modalidade === 'hkgs') {
-      if (!isFinite(o.arrHkgs) || o.arrHkgs < 0) return { error: 'Indtast o número de hkgs af forpagtning.' };
-      if (!isFinite(o.precoHkg) || o.precoHkg <= 0) return { error: 'Indtast o preço af hkg til o forpagtning.' };
+      if (!isFinite(o.arrHkgs) || o.arrHkgs < 0) return { error: 'Indtast antal hkg i forpagtning.' };
+      if (!isFinite(o.precoHkg) || o.precoHkg <= 0) return { error: 'Indtast prisen pr. hkg til forpagtningen.' };
       forpagtning = o.arrHkgs * o.precoHkg;
     } else if (o.modalidade === 'fixo') {
-      if (!isFinite(o.arrFixo) || o.arrFixo < 0) return { error: 'Indtast o valor fixo af forpagtning.' };
+      if (!isFinite(o.arrFixo) || o.arrFixo < 0) return { error: 'Indtast den faste forpagtningsværdi.' };
       forpagtning = o.arrFixo;
     } else if (o.modalidade === 'pct') {
-      if (!isFinite(o.arrPct) || o.arrPct < 0) return { error: 'Indtast o percentual af faturamento.' };
+      if (!isFinite(o.arrPct) || o.arrPct < 0) return { error: 'Indtast procentdel af omsætningen.' };
       forpagtning = receita * (o.arrPct / 100);
     }
 
