@@ -57,11 +57,22 @@ jobs:
           echo "--- noteringer-dk-completas.json ---"
           head -c 2000 data/noteringer-dk-completas.json || true
 
+      - name: Upload scraper debug dumps (artifact)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scraper-debug-${{ github.run_id }}
+          path: data/_debug_*.txt
+          if-no-files-found: ignore
+          retention-days: 14
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/noteringer-dk.json data/noteringer-dk-completas.json
+          # Debug dumps stay out of the repo — they live in workflow artifacts only.
+          rm -f data/_debug_*.txt
           if git diff --cached --quiet; then
             echo "No data changes — nothing to commit."
           else
