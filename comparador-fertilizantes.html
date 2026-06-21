@@ -95,7 +95,7 @@
         </ol>
       </nav>
       <h1>Comparador de Gødnings</h1>
-      <p class="lead">Descubra qual gødning é o mais barato pr. kg de næringsstof (N, P₂O₅ og K₂O) — og ikke apenas pelo preço af saco.</p>
+      <p class="lead">Find ud af hvilken gødning der er billigst pr. kg næringsstof (N, P₂O₅ og K₂O) — ikke kun målt på sækprisen.</p>
     </div>
   </div>
 
@@ -119,25 +119,25 @@
             </div>
           </div>
           <div class="field">
-            <label for="unidA">Unidade af preço</label>
+            <label for="unidA">Prisenhed</label>
             <select class="input" id="unidA">
-              <option value="kg">por kg</option>
-              <option value="sc50">por sc 50 kg</option>
-              <option value="sc60">por sc 60 kg</option>
-              <option value="t">por tonelada</option>
+              <option value="kg">pr. kg</option>
+              <option value="sc50">pr. sæk 50 kg</option>
+              <option value="sc60">pr. sæk 60 kg</option>
+              <option value="t">pr. ton</option>
             </select>
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="nA">% de N</label>
+            <label for="nA">% N</label>
             <div class="input-affix">
               <input class="input" type="text" inputmode="decimal" id="nA" placeholder="Ex.: 4" autocomplete="off">
               <span class="input-affix__unit">%</span>
             </div>
           </div>
           <div class="field">
-            <label for="pA">% de P₂O₅</label>
+            <label for="pA">% P₂O₅</label>
             <div class="input-affix">
               <input class="input" type="text" inputmode="decimal" id="pA" placeholder="Ex.: 14" autocomplete="off">
               <span class="input-affix__unit">%</span>
@@ -146,7 +146,7 @@
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="kA">% de K₂O</label>
+            <label for="kA">% K₂O</label>
             <div class="input-affix">
               <input class="input" type="text" inputmode="decimal" id="kA" placeholder="Ex.: 8" autocomplete="off">
               <span class="input-affix__unit">%</span>
@@ -167,25 +167,25 @@
             </div>
           </div>
           <div class="field">
-            <label for="unidB">Unidade af preço</label>
+            <label for="unidB">Prisenhed</label>
             <select class="input" id="unidB">
-              <option value="kg">por kg</option>
-              <option value="sc50">por sc 50 kg</option>
-              <option value="sc60">por sc 60 kg</option>
-              <option value="t">por tonelada</option>
+              <option value="kg">pr. kg</option>
+              <option value="sc50">pr. sæk 50 kg</option>
+              <option value="sc60">pr. sæk 60 kg</option>
+              <option value="t">pr. ton</option>
             </select>
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="nB">% de N</label>
+            <label for="nB">% N</label>
             <div class="input-affix">
               <input class="input" type="text" inputmode="decimal" id="nB" placeholder="Ex.: 8" autocomplete="off">
               <span class="input-affix__unit">%</span>
             </div>
           </div>
           <div class="field">
-            <label for="pB">% de P₂O₅</label>
+            <label for="pB">% P₂O₅</label>
             <div class="input-affix">
               <input class="input" type="text" inputmode="decimal" id="pB" placeholder="Ex.: 20" autocomplete="off">
               <span class="input-affix__unit">%</span>
@@ -194,7 +194,7 @@
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="kB">% de K₂O</label>
+            <label for="kB">% K₂O</label>
             <div class="input-affix">
               <input class="input" type="text" inputmode="decimal" id="kB" placeholder="Ex.: 20" autocomplete="off">
               <span class="input-affix__unit">%</span>
@@ -219,29 +219,29 @@
     <article class="prose">
 
       <h2>Hvad bruges den til</h2>
-      <p>Denne beregner compara gødnings pelo <strong>omkostning pr. kg de næringsstof</strong> (N, P₂O₅ og K₂O) — og ikke pelo preço af saco. É a forma correta de avaliar o som sai realmente mais barato.</p>
+      <p>Denne beregner sammenligner gødninger på <strong>omkostning pr. kg næringsstof</strong> (N, P₂O₅ og K₂O) — ikke på sækprisen alene. Det er den rigtige måde at vurdere, hvilken gødning der reelt er billigst.</p>
 
       <h2>Sådan beregner du</h2>
-      <p>Primeiro, converte-se o preço til kr/kg de gødning. Depois, divider pelo teor decimal de cada næringsstof til descobrir quanto custa o kg puro de N, P₂O₅ ou K₂O.</p>
-      <div class="formula">kr/kg de næringsstof = (kr/kg af gødning) ÷ (% af næringsstof ÷ 100)</div>
+      <p>Først omregnes prisen til kr/kg gødning. Derefter divideres med den decimale andel af hvert næringsstof for at finde ud af, hvad et rent kg N, P₂O₅ eller K₂O koster.</p>
+      <div class="formula">kr/kg næringsstof = (kr/kg gødning) ÷ (% næringsstof ÷ 100)</div>
 
       <h2>Eksempel</h2>
-      <p>Um gødning 04-14-08 a <strong>kr 4,50/kg</strong> tem: N a kr 112,50/kg (4,50 ÷ 0,04), P₂O₅ a kr 32,14/kg (4,50 ÷ 0,14) og K₂O a kr 56,25/kg (4,50 ÷ 0,08).</p>
+      <p>En gødning 04-14-08 til <strong>kr 4,50/kg</strong> giver: N til kr 112,50/kg (4,50 ÷ 0,04), P₂O₅ til kr 32,14/kg (4,50 ÷ 0,14) og K₂O til kr 56,25/kg (4,50 ÷ 0,08).</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Compare pr. næringsstof, ikke pr. saco
+          Sammenlign pr. næringsstof, ikke pr. sæk
         </div>
-        <p>Compare gødnings pelo omkostning pr. næringsstof — ikke pelo preço af saco. Um gødning barato med baixo teor pode sair mais caro pr. kg de N, P₂O₅ ou K₂O af som outro mais concentrado.</p>
+        <p>Sammenlign gødninger på omkostningen pr. næringsstof — ikke på sækprisen. En billig gødning med lavt indhold kan ende dyrere pr. kg N, P₂O₅ eller K₂O end en mere koncentreret gødning.</p>
       </div>
 
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
-          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Converta a anbefaling i gødning comercial.</p></a>
-          <a class="calc-card" href="/mistura-npk.html"><h3>NPK-blanding</h3><p>Monte uma formel med gødnings simples.</p></a>
-          <a class="calc-card" href="/calagem.html"><h3>Kalkning</h3><p>Behov de kalk.</p></a>
+          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Omregn anbefalingen til handelsgødning.</p></a>
+          <a class="calc-card" href="/mistura-npk.html"><h3>NPK-blanding</h3><p>Sammensæt en blanding fra enkeltgødninger.</p></a>
+          <a class="calc-card" href="/calagem.html"><h3>Kalkning</h3><p>Kalkbehov.</p></a>
         </div>
       </div>
 
@@ -374,11 +374,11 @@
     var hasA = isFinite(A.precoKg) && A.precoKg > 0;
     var hasB = isFinite(B.precoKg) && B.precoKg > 0;
     if (!hasA && !hasB) {
-      showError('Indtast ao menos o preço af Gødning A.');
+      showError('Indtast mindst prisen for Gødning A.');
       return;
     }
     if (!hasA) {
-      showError('Indtast o preço af Gødning A.');
+      showError('Indtast prisen for Gødning A.');
       return;
     }
     var a = {
@@ -414,7 +414,7 @@
     if (bUA == null) return 'Gødning A é mais barato pr. unidade ativa';
     if (aUA < bUA) return 'Gødning A é mais barato pr. unidade ativa';
     if (bUA < aUA) return 'Gødning B é mais barato pr. unidade ativa';
-    return 'Os dois saem pelo mesmo preço pr. unidade ativa';
+    return 'Begge har samme pris pr. aktiv næringsstof-enhed';
   }
   function rowMetrics(label, valA, valB) {
     var html = '<div class="metric"><div class="metric__label">' + label + '</div>';
@@ -446,7 +446,7 @@
       html += '</div>';
       html += '<div class="result__interpretation"><p>Unidade ativa é a soma af teores de N + P₂O₅ + K₂O. Quanto mindst o omkostning pr. unidade ativa, mais barato o næringsstof concentrado i saco.</p></div>';
     } else {
-      html += '<div class="result__main">' + fmtDKK(a.omkostningUA) + ' <small>por kg de unidade ativa (N+P+K)</small></div>';
+      html += '<div class="result__main">' + fmtDKK(a.omkostningUA) + ' <small>pr. kg aktivt næringsstof (N+P+K)</small></div>';
       html += '<div class="result__metrics">' +
         '<div class="metric"><div class="metric__label">Preço pr. kg de gødning</div><div class="metric__value">' + fmtDKK(a.precoKg) + '</div></div>' +
         '<div class="metric"><div class="metric__label">Omkostning af kg de N</div><div class="metric__value">' + fmtDKK(a.omkostningN) + '</div></div>' +

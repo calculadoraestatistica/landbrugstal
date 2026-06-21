@@ -138,17 +138,17 @@
       </fieldset>
 
       <fieldset class="field-group">
-        <legend>Teores i økologisk (% peso bruto)</legend>
+        <legend>Indhold i gødningen (% af friskvægt)</legend>
         <div class="field-row">
           <div class="field">
-            <label for="pctN">Teor de N</label>
+            <label for="pctN">Indhold af N</label>
             <div class="input-affix">
               <input class="input" type="text" inputmode="decimal" id="pctN" placeholder="Ex.: 0,5" autocomplete="off">
               <span class="input-affix__unit">%</span>
             </div>
           </div>
           <div class="field">
-            <label for="pctP">Teor de P₂O₅</label>
+            <label for="pctP">Indhold af P₂O₅</label>
             <div class="input-affix">
               <input class="input" type="text" inputmode="decimal" id="pctP" placeholder="Ex.: 0,3" autocomplete="off">
               <span class="input-affix__unit">%</span>
@@ -157,7 +157,7 @@
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="pctK">Teor de K₂O</label>
+            <label for="pctK">Indhold af K₂O</label>
             <div class="input-affix">
               <input class="input" type="text" inputmode="decimal" id="pctK" placeholder="Ex.: 0,4" autocomplete="off">
               <span class="input-affix__unit">%</span>
@@ -227,7 +227,7 @@
       <p class="field-error" id="calc-error" role="alert"></p>
 
       <div class="calculator__actions">
-        <button class="btn btn--primary btn--lg" type="submit">Beregn valor</button>
+        <button class="btn btn--primary btn--lg" type="submit">Beregn værdien</button>
         <button class="btn btn--ghost" type="button" id="calc-example">Udfyld med eksempel</button>
       </div>
 
@@ -389,7 +389,7 @@
     var f = readForm();
 
     if (!(f.quantidade > 0)) { showError('Indtast en udbragt mængde større end nul.'); return; }
-    if (!(f.pctN >= 0) || !(f.pctP >= 0) || !(f.pctK >= 0)) { showError('Indtast os teores de N, P₂O₅ og K₂O.'); return; }
+    if (!(f.pctN >= 0) || !(f.pctP >= 0) || !(f.pctK >= 0)) { showError('Indtast indholdet af N, P₂O₅ og K₂O.'); return; }
     if (f.pctN + f.pctP + f.pctK <= 0) { showError('Pelo menos um teor (N, P ou K) deve ser størst som zero.'); return; }
     if (!(f.efN >= 0) || !(f.efP >= 0) || !(f.efK >= 0)) { showError('Indtast udnyttelsesgraden.'); return; }
     if (!(f.precoN >= 0) || !(f.precoP >= 0) || !(f.precoK >= 0)) { showError('Indtast prisen pr. kg næringsstof.'); return; }

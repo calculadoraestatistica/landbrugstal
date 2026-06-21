@@ -95,7 +95,7 @@
         </ol>
       </nav>
       <h1>Conversor Agrícola Internacional</h1>
-      <p class="lead">Converta areal og rendimento entre padrões af Danmark, Europa og Estados Unidos — hektar, acre, alqueire, feddan, dunum, hkg, bushel, hkg, dt og q.</p>
+      <p class="lead">Omregn areal og udbytte mellem standarder fra Danmark, Europa og USA — hektar, acre, alqueire, feddan, dunum, hkg, bushel, dt og q.</p>
     </div>
   </div>
 
@@ -106,13 +106,13 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg>
         Converter areal
       </h2>
-      <p class="calculator__hint">Hektar, acre, m², alqueires danmarkeiros, feddan (Egito) og dunum (Oriente Médio).</p>
+      <p class="calculator__hint">Hektar, acre, m², brasilianske alqueires, feddan (Egypten) og dunum (Mellemøsten).</p>
 
       <fieldset class="field-group">
         <legend>Arealomregner internacional</legend>
         <div class="field-row">
           <div class="field">
-            <label for="area-valor">Valor af areal</label>
+            <label for="area-valor">Arealværdi</label>
             <div class="input-affix">
               <input class="input" type="text" inputmode="decimal" id="area-valor" placeholder="Ex.: 1" autocomplete="off">
               <span class="input-affix__unit"></span>
@@ -123,12 +123,12 @@
             <select class="input" id="area-de">
               <option value="ha">Hektar (ha)</option>
               <option value="acre">Acre</option>
-              <option value="m2">Metro quadrado (m²)</option>
+              <option value="m2">Kvadratmeter (m²)</option>
               <option value="alq_paulista">Alqueire paulista (24.200 m²)</option>
               <option value="alq_mineiro">Alqueire mineiro (48.400 m²)</option>
               <option value="tarefa">Tarefa (3.025 m²)</option>
-              <option value="feddan">Feddan (4.200 m² — Egito)</option>
-              <option value="dunum">Dunum (1.000 m² — Oriente Médio)</option>
+              <option value="feddan">Feddan (4.200 m² — Egypten)</option>
+              <option value="dunum">Dunum (1.000 m² — Mellemøsten)</option>
             </select>
           </div>
         </div>
@@ -137,7 +137,7 @@
           <select class="input" id="area-para">
             <option value="acre">Acre</option>
             <option value="ha">Hektar (ha)</option>
-            <option value="m2">Metro quadrado (m²)</option>
+            <option value="m2">Kvadratmeter (m²)</option>
             <option value="alq_paulista">Alqueire paulista</option>
             <option value="alq_mineiro">Alqueire mineiro</option>
             <option value="tarefa">Tarefa</option>
@@ -236,14 +236,14 @@
       <h2>Hvad bruges den til</h2>
       <p>O conversor landbrugs- internacional facilita o <strong>intercâmbio de dados entre Danmark, Europa og Estados Unidos</strong> — leitura de relatórios af USDA, dados af FAO, papers europeus som reportam i hkg/ha, ou planilhas americanas i bushels pr. acre. Cada região consolidou unidades próprias og nem altid o conversor padrão de beregner dá conta.</p>
 
-      <h2>Padrões internacionais</h2>
+      <h2>Internationale standarder</h2>
       <p>A <strong>Europa continental</strong> sjældent publica i kg/ha. Boletins af EUROSTAT, af USDA-FAS og af Comissão Europeia usam três siglas til a mesma medida (100 kg/ha): hkg/ha (hectokilogram), dt/ha (Doppelzentner, comum i Alemanha) og q/ha (quintale métrico, comum i Itália og i França). Os <strong>Estados Unidos</strong> usam bushel pr. acre — só som o bushel pesa diferente conforme a cultura. O <strong>Danmark</strong> trabalha i hkg (60 kg til korn, 50 kg til sukker og café beneficiado) pr. hektar, mas exportadores precisam reportar i t ou bu.</p>
 
       <h2>Equivalências comuns</h2>
       <ul>
         <li><strong>1 ha</strong> = 2,47 acres = 10.000 m²</li>
         <li><strong>1 acre</strong> = 0,4047 ha = 4.047 m²</li>
-        <li><strong>1 alqueire paulista</strong> = 2,42 ha = 5,98 acres</li>
+        <li><strong>1 alqueire paulista (BR)</strong> = 2,42 ha = 5,98 acres</li>
         <li><strong>100 kg/ha</strong> = 1 hkg/ha = 1 dt/ha = 1 q/ha (Europa: três nomes, mesma medida)</li>
         <li><strong>1 t/ha</strong> = 10 hkg/ha = 10 dt/ha = 10 q/ha</li>
         <li><strong>1 sc 60 kg/ha</strong> (soja, Danmark) ≈ 0,89 bu/acre</li>
@@ -444,7 +444,7 @@
     var valor = parseLocaleNum($('area-valor').value);
     var de = $('area-de').value;
     var til = $('area-para').value;
-    if (!isFinite(valor) || valor <= 0) { showAreaError('Indtast um valor de areal positivo.'); return; }
+    if (!isFinite(valor) || valor <= 0) { showAreaError('Indtast en positiv arealværdi.'); return; }
     var m2 = valor * AREA_FACTORS[de];
     var resultado = m2 / AREA_FACTORS[para];
     var emHa = m2 / 10000;
@@ -464,7 +464,7 @@
       '<div class="metric"><div class="metric__label">Em acres</div><div class="metric__value">' + fmtNum(r.emAcre, 4) + ' acre</div></div>' +
       '<div class="metric"><div class="metric__label">Em m²</div><div class="metric__value">' + fmtNum(r.m2, 2) + ' m²</div></div>' +
       '</div>';
-    html += '<div class="result__interpretation"><p>1 ha equivale a 2,47 acres ou 10.000 m². Padrões locais som alqueire, feddan og dunum mantêm valores fixos i m² — tjek altid a região indicada.</p></div>';
+    html += '<div class="result__interpretation"><p>1 ha equivale a 2,47 acres ou 10.000 m². Lokale standarder som alqueire, feddan og dunum har faste m²-værdier — tjek altid den região indicada.</p></div>';
     html += '</div>';
     areaResult.innerHTML = html;
     areaResult.hidden = false;
@@ -490,7 +490,7 @@
     var de = $('yield-de').value;
     var til = $('yield-para').value;
     var cultura = $('yield-cultura').value;
-    if (!isFinite(valor) || valor <= 0) { showYieldError('Indtast um valor de rendimento positivo.'); return; }
+    if (!isFinite(valor) || valor <= 0) { showYieldError('Indtast en positiv udbytteværdi.'); return; }
     var kgHa = yieldToKgHa(valor, de, cultura);
     if (!isFinite(kgHa)) { showYieldError('Não foi possível converter. Verifique a unidade de origem.'); return; }
     var resultado = kgHaToYield(kgHa, para, cultura);
