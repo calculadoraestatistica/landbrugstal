@@ -439,27 +439,27 @@
 
     var interpretacao;
     if (r.margin > 0) {
-      interpretacao = 'Sobra margin til o arrendatário neste cenário. O forpagtning consome ' + Fmt.num(r.pctReceita, 1) + '% af receita bruta esperada.';
+      interpretacao = 'Der er overskud til forpagteren i dette scenarie. Forpagtningen lægger beslag på ' + Fmt.num(r.pctReceita, 1) + '% af den forventede bruttoindtægt.';
     } else if (r.margin < 0) {
-      interpretacao = 'O cenário ikke fecha: receita ikke cobre o omkostning somado ao forpagtning. Seria preciso udbytte størst, preço melhor ou renegociar o valor af terra.';
+      interpretacao = 'Scenariet løber ikke rundt: indtægten dækker ikke omkostningerne sammen med forpagtningen. Der skal større udbytte, bedre pris eller en genforhandling af jordens værdi til.';
     } else {
-      interpretacao = 'O cenário empata exatamente — sem margin, sem prejuízo. Qualquer variação de preço ou udbytte muda resultatet.';
+      interpretacao = 'Scenariet går nøjagtigt op — hverken overskud eller tab. Enhver ændring i pris eller udbytte ændrer resultatet.';
     }
 
     var html = '<div class="result__banner">' +
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
-      '<div><div class="result__headline">Margin líquida</div>' +
-      '<div class="result__sub">Depois af forpagtning og af omkostning de produção</div></div></div>';
+      '<div><div class="result__headline">Nettomargin</div>' +
+      '<div class="result__sub">Efter forpagtning og produktionsomkostninger</div></div></div>';
 
     html += '<div class="result__body">';
     html += '<div class="result__main">' + money(r.margin) + ' <small>/ha</small></div>';
     html += '<div class="result__metrics">';
-    html += '<div class="metric"><div class="metric__label">Receita bruta/ha</div><div class="metric__value">' + money(r.receita) + '</div></div>';
+    html += '<div class="metric"><div class="metric__label">Bruttoindtægt/ha</div><div class="metric__value">' + money(r.receita) + '</div></div>';
     html += '<div class="metric"><div class="metric__label">Produktionsomkostning/ha</div><div class="metric__value">' + money(r.omkostning) + '</div></div>';
     html += '<div class="metric"><div class="metric__label">Forpagtning/ha</div><div class="metric__value">' + money(r.forpagtning) + '</div></div>';
-    html += '<div class="metric"><div class="metric__label">% af receita p/ forpagtning</div><div class="metric__value">' + Fmt.num(r.pctReceita, 1) + '%</div></div>';
-    html += '<div class="metric"><div class="metric__label">Produção líquida restante</div><div class="metric__value">' + Fmt.num(r.hkgsLiquidas, 1) + ' ' + unidShort + '/ha</div></div>';
-    html += '<div class="metric"><div class="metric__label">Udbytte de equilíbrio</div><div class="metric__value">' + Fmt.num(r.breakEvenProd, 1) + ' ' + unidLabel + '</div></div>';
+    html += '<div class="metric"><div class="metric__label">% af indtægt til forpagtning</div><div class="metric__value">' + Fmt.num(r.pctReceita, 1) + '%</div></div>';
+    html += '<div class="metric"><div class="metric__label">Restproduktion netto</div><div class="metric__value">' + Fmt.num(r.hkgsLiquidas, 1) + ' ' + unidShort + '/ha</div></div>';
+    html += '<div class="metric"><div class="metric__label">Break-even-udbytte</div><div class="metric__value">' + Fmt.num(r.breakEvenProd, 1) + ' ' + unidLabel + '</div></div>';
     html += '</div>';
     html += '<div class="result__interpretation"><p>' + interpretacao + '</p></div>';
     html += '</div>';

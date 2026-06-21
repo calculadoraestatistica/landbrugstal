@@ -252,15 +252,15 @@
       <div class="callout callout--warning">
         <div class="callout__title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Os teores variam muito
+          Indholdet varierer meget
         </div>
-        <p>Os valores padrão pr. tipo de økologisk são médias de literatura. Os teores kroner variam bastante conforme manejo, alimentação af animais, tempo og forma de armazenamento og umidade. Para precisão, <strong>analise uma amostra</strong> af økologisk som du vai anvende.</p>
+        <p>Standardværdierne pr. type husdyrgødning er gennemsnit fra litteraturen. Næringsstofindholdet varierer meget afhængigt af håndtering, dyrenes foder, tid og opbevaringsform samt fugt. For præcision, <strong>analysér en prøve</strong> af den husdyrgødning, du vil anvende.</p>
       </div>
 
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
-          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Da anbefaling til o gødning comercial.</p></a>
+          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Anbefaling til handelsgødning.</p></a>
           <a class="calc-card" href="/calagem.html"><h3>Kalkning</h3><p>Behov de kalk.</p></a>
           <a class="calc-card" href="/populacao-de-plantas.html"><h3>Plantebestand</h3><p>Plantas pr. hektar.</p></a>
         </div>
@@ -435,29 +435,29 @@
     result.className = 'result result--neutral';
     var html = '<div class="result__banner">' +
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
-      '<div><div class="result__headline">Valor af økologisk aplicado</div>' +
-      '<div class="result__sub">Equivalente i gødning mineral</div></div></div>';
+      '<div><div class="result__headline">Værdi af tilført husdyrgødning</div>' +
+      '<div class="result__sub">Svarende til mineralsk gødning</div></div></div>';
     html += '<div class="result__body">';
     html += '<div class="result__main">' + brl(r.valorTotal) + ' <small>/ha</small></div>';
     html += '<div class="result__metrics">' +
-      '<div class="metric"><div class="metric__label">Valor pr. ' + unitLabel + ' aplicado</div>' +
+      '<div class="metric"><div class="metric__label">Værdi pr. ' + unitLabel + ' tilført</div>' +
         '<div class="metric__value">' + brl(r.valorPorUnidade) + '/' + unitLabel + '</div></div>' +
-      '<div class="metric"><div class="metric__label">N aproveitado</div>' +
+      '<div class="metric"><div class="metric__label">N udnyttet</div>' +
         '<div class="metric__value">' + num1(r.kgN) + ' kg/ha</div></div>' +
-      '<div class="metric"><div class="metric__label">P₂O₅ aproveitado</div>' +
+      '<div class="metric"><div class="metric__label">P₂O₅ udnyttet</div>' +
         '<div class="metric__value">' + num1(r.kgP) + ' kg/ha</div></div>' +
-      '<div class="metric"><div class="metric__label">K₂O aproveitado</div>' +
+      '<div class="metric"><div class="metric__label">K₂O udnyttet</div>' +
         '<div class="metric__value">' + num1(r.kgK) + ' kg/ha</div></div>' +
       '</div>';
     html += '<div class="result__interpretation">' +
-      '<p><strong>Næringsstofs brutos entregues:</strong> ' +
-        num1(r.kgN_bruto) + ' kg/ha de N, ' +
-        num1(r.kgP_bruto) + ' kg/ha de P₂O₅ og ' +
-        num1(r.kgK_bruto) + ' kg/ha de K₂O. Após a eficiência de aproveitamento, sobra o som está listado acima.</p>' +
-      '<p><strong>Comparação med mineral:</strong> ' +
+      '<p><strong>Brutto næringsstoffer tilført:</strong> ' +
+        num1(r.kgN_bruto) + ' kg/ha N, ' +
+        num1(r.kgP_bruto) + ' kg/ha P₂O₅ og ' +
+        num1(r.kgK_bruto) + ' kg/ha K₂O. Efter udnyttelsesgraden bliver det, der står ovenfor, tilbage.</p>' +
+      '<p><strong>Sammenligning med mineralsk:</strong> ' +
         brl(r.valorN) + ' i N, ' +
         brl(r.valorP) + ' i P₂O₅ og ' +
-        brl(r.valorK) + ' i K₂O. Esse é o valor som du economiza med o økologisk i vez de comprar gødning mineral.</p>' +
+        brl(r.valorK) + ' i K₂O. Dette er den værdi, du sparer ved at bruge husdyrgødning i stedet for at købe mineralsk gødning.</p>' +
       '</div>';
     html += '</div>';
     result.innerHTML = html;

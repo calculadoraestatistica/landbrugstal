@@ -390,19 +390,19 @@
     result.className = 'result result--neutral';
     var html = '<div class="result__banner">' +
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
-      '<div><div class="result__headline">Omkostning operacional af maskine</div>' +
-      '<div class="result__sub">Soma de depreciação, juros, brændstof, manutenção, operador og lubrificantes</div></div></div>';
+      '<div><div class="result__headline">Driftsomkostning for maskine</div>' +
+      '<div class="result__sub">Sum af afskrivning, renter, brændstof, vedligehold, fører og smøremidler</div></div></div>';
     html += '<div class="result__body">';
     html += '<div class="result__main">' + fmtDKK(r.total_h) + ' <small>/h</small> &nbsp;·&nbsp; ' + fmtDKK(r.total_ha) + ' <small>/ha</small></div>';
     html += '<div class="result__metrics">';
-    html += row('Depreciação', r.depreciacao_h, r.rendimento);
-    html += row('Juros sobre capital médio (6% a.a.)', r.juros_h, r.rendimento);
+    html += row('Afskrivning', r.depreciacao_h, r.rendimento);
+    html += row('Renter af gennemsnitlig kapital (6% p.a.)', r.juros_h, r.rendimento);
     html += row('Brændstof', r.combustivel_h, r.rendimento);
-    html += row('Manutenção og reparos', r.manutencao_h, r.rendimento);
-    html += row('Operador', r.operador_h, r.rendimento);
-    html += row('Lubrificantes', r.lubrificantes_h, r.rendimento);
+    html += row('Vedligehold og reparationer', r.manutencao_h, r.rendimento);
+    html += row('Fører', r.operador_h, r.rendimento);
+    html += row('Smøremidler', r.lubrificantes_h, r.rendimento);
     html += '</div>';
-    html += '<div class="result__interpretation"><p>O omkostning é uma soma direta de seis componentes; alterar o rendimento operacional (ha/h) muda apenas o valor pr. hektar, ikke o valor pr. hora. Em operações med baixo aproveitamento real, o omkostning pr. hektar cresce rápido.</p></div>';
+    html += '<div class="result__interpretation"><p>Omkostningen er en direkte sum af seks komponenter; ændring af den operationelle ydelse (ha/t) ændrer kun værdien pr. hektar, ikke værdien pr. time. Ved drift med lav reel udnyttelse stiger omkostningen pr. hektar hurtigt.</p></div>';
     html += '</div>';
     result.innerHTML = html;
     result.hidden = false;
