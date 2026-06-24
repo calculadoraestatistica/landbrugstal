@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-23T21:06:52Z",
+  "updated_at": "2026-06-24T07:06:33Z",
   "country": "DK",
   "source": "Arla DK; Danish Crown; Nationalbanken; SEGES Farmtal Online",
   "source_url": "https://dk",
@@ -12,7 +12,7 @@
       "source_name": "SEGES Farmtal Online",
       "key": "hvede",
       "stale": true,
-      "date": "2026-06-23",
+      "date": "2026-06-24",
       "value": 152.3,
       "value_display": "152,30 DKK/hkg",
       "last_seen_date": "2026-06-05",
@@ -26,7 +26,7 @@
       "source_name": "SEGES Farmtal Online",
       "key": "raps",
       "stale": true,
-      "date": "2026-06-23",
+      "date": "2026-06-24",
       "value": 312.5,
       "value_display": "312,50 DKK/hkg",
       "last_seen_date": "2026-06-05",
@@ -39,11 +39,11 @@
       "value": 302.2,
       "value_display": "302,20 øre/kg",
       "unit": "øre/kg",
-      "date": "2026-06-23",
+      "date": "2026-06-24",
       "source_url": "https://catalog.arla.com/ARLA/milk-price/arla-dk/",
       "source_name": "Arla DK",
       "stale": false,
-      "last_seen_date": "2026-06-23"
+      "last_seen_date": "2026-06-24"
     },
     {
       "icon": "gris",
@@ -53,7 +53,7 @@
       "source_name": "Danish Crown",
       "key": "grisenotering",
       "stale": true,
-      "date": "2026-06-23",
+      "date": "2026-06-24",
       "value": 8.9,
       "value_display": "8,90 DKK/kg",
       "last_seen_date": "2026-06-18",
