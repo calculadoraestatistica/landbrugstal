@@ -52,6 +52,46 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Hvad er en hkg?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "En hkg (hektokilogram) er 100 kg. Det er standardenheden i dansk kornhandel og udbyttestatistik, hvor udbytter angives i hkg pr. hektar."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hvor mange hkg går der på et ton?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "10. Et ton er 1.000 kg, og en hkg er 100 kg, så 170 tons svarer til 1.700 hkg."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hvordan omregner jeg bushels til kg?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Gang antallet af bushels med afgrødens bushelvægt: 27,2 kg for hvede og sojabønner, 25,4 kg for majs. 1.000 bushels hvede er altså cirka 27,2 tons."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hvorfor kan jeg justere vægten pr. hkg?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Feltet er tænkt til udenlandske sækstandarder, fx den brasilianske saca à 60 kg, der bruges i kaffe- og sojanoteringer. I dansk sammenhæng skal der stå 100 kg."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -162,23 +202,33 @@
     <div class="ad-slot" data-ad-slot=""></div>
 
     <article class="prose">
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Denne omregner konverterer mængder mellem <strong>hkg, kilogram, ton og pund (lbs)</strong>. I dansk kornhandel og udbyttestatistik er hkg — hektokilogram à 100 kg — standardenheden, mens kontrakter og fragt ofte opgøres i ton, og amerikanske markedsrapporter arbejder i pund og bushels. Beregneren bruges, når afregninger skal kontrolleres, når udbytter i hkg/ha skal omsættes til lastbillæs og lagerbehov, og når udenlandske tal skal læses. Feltet &raquo;vægt pr. hkg&laquo; kan justeres, hvis du arbejder med en udenlandsk sækstandard, fx den brasilianske saca à 60 kg, som optræder i internationale kaffe- og sojanoteringer.</p>
 
-      <h2>Hvad bruges den til</h2>
-      <p>Denne omregner konverterer mængder mellem <strong>hkg, kilo og tons</strong>. Da vægten pr. hkg kan variere efter afgrøde, er det et justerbart felt.</p>
+      <h2>Input, enheder og omregninger</h2>
+      <p>Du indtaster mængden og vælger enhed fra og til; alt regnes via kilogram. Grundfaktorerne er: 1 hkg = 100 kg, 1 ton = 1.000 kg = 10 hkg, og 1 lb = 0,45359 kg (1 kg = 2,2046 lbs). Amerikanske bushels vejer forskelligt pr. afgrøde — hvede og sojabønner 27,2 kg, majs 25,4 kg. Skal mængden kobles til areal, huskes 1 tønde land = 0,5516 ha.</p>
 
-      <h2>Sådan beregner du</h2>
-      <p>Alt omregnes først til kilo og derefter til den ønskede enhed. Standardvægten for en hkg korn er 100 kg i Danmark; for ældre referencer kan 60 kg forekomme.</p>
+      <h2>Formel og gennemregnet eksempel</h2>
+      <div class="formula">Mængde i kg = værdi × faktor for fra-enheden &nbsp;·&nbsp; Resultat = kg ÷ faktor for til-enheden</div>
+      <p>Gennemregnet eksempel: en mark på 20 ha vinterhvede giver 85 hkg/ha. Samlet avl: 20 × 85 = 1.700 hkg. I kilogram: 1.700 × 100 = 170.000 kg, altså <strong>170 tons</strong> — cirka fem vogntræk à 35 tons. I pund: 170.000 ÷ 0,45359 = 374.786 lbs, og i bushels hvede: 170.000 ÷ 27,2 = ca. 6.250 bu. Skal partiet i silo, kræver det ved en vægtfylde på 770 kg/m³ omkring 170.000 ÷ 770 = 221 m³ lagerplads.</p>
 
-      <h2>Eksempel</h2>
-      <p>100 hkg à 60 kg svarer til 6.000 kg, altså <strong>6 tons</strong>.</p>
+      <h2>Praktiske referenceværdier</h2>
+      <p>Offentlige normer og statistik, fx fra Landbrugsstyrelsen, Danmarks Statistik og SEGES, angiver typiske danske vinterhvedeudbytter omkring 75-85 hkg/ha og vårbyg noget lavere. Til volumenberegning regnes vægtfylden for hvede til 750-780 kg/m³ og byg 650-700 kg/m³. Husk også fugtgrundlaget: kornafregning sker ved basisvand på 14,5-15 % (raps 9 %), og ligger partiet over, trækkes der fradrag pr. procentpoint, så den afregnede mængde bliver mindre end den indvejede. Omregningen mellem enheder ændrer ikke på det — et ton er et ton — men det er værd at vide, hvilket fugtniveau et tal refererer til.</p>
 
-      <div class="callout callout--warning">
-        <div class="callout__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Tjek vægten pr. hkg
-        </div>
-        <p>I Danmark er én hkg lig 100 kg. Hvis du arbejder med en specifik reference (f.eks. ældre kornhandel eller udenlandske afgrøder), så juster feltet — typiske eksempler er 60 kg for soja, majs og hvede, og 50 kg for risafgrøder med skal.</p>
-      </div>
+      <div class="callout callout--warning"><div class="callout__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Bushels vejer forskelligt pr. afgrøde</div><p>Omregn aldrig bushels uden at kende afgrøden: hvede og soja vejer 27,2 kg pr. bushel, majs 25,4 kg og havre kun ca. 14,5 kg. En forkert bushelvægt kan flytte resultatet med over 40 %.</p></div>
+
+      <h2>Begrænsninger</h2>
+      <p>Beregneren omregner kun masse; den kender ikke vandindhold, urenheder eller kvalitet, og den omsætter ikke selv til volumen — dertil skal vægtfylden bruges. Pas på ældre danske kilder, hvor &raquo;en tønde korn&laquo; er et rumfangsmål på ca. 139 liter og ikke et vægtmål, og på udenlandske sække, der kan veje alt fra 50 til 60 kg afhængigt af vare og land.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvad er en hkg?</h3>
+      <p>En hkg (hektokilogram) er 100 kg. Det er standardenheden i dansk kornhandel og udbyttestatistik, hvor udbytter angives i hkg pr. hektar.</p>
+      <h3>Hvor mange hkg går der på et ton?</h3>
+      <p>10. Et ton er 1.000 kg, og en hkg er 100 kg, så 170 tons svarer til 1.700 hkg.</p>
+      <h3>Hvordan omregner jeg bushels til kg?</h3>
+      <p>Gang antallet af bushels med afgrødens bushelvægt: 27,2 kg for hvede og sojabønner, 25,4 kg for majs. 1.000 bushels hvede er altså cirka 27,2 tons.</p>
+      <h3>Hvorfor kan jeg justere vægten pr. hkg?</h3>
+      <p>Feltet er tænkt til udenlandske sækstandarder, fx den brasilianske saca à 60 kg, der bruges i kaffe- og sojanoteringer. I dansk sammenhæng skal der stå 100 kg.</p>
 
       <div class="related">
         <h2>Andre beregnere</h2>
@@ -188,6 +238,8 @@
           <a class="calc-card" href="/custo-de-producao.html"><h3>Produktionsomkostning</h3><p>Omkostning pr. hkg og break-even.</p></a>
         </div>
       </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;"><p>Uddannelsesindhold baseret på offentlig faglitteratur og offentlige normer, fx Landbrugsstyrelsen og SEGES. Erstatter ikke rådgivning fra planteavls- eller driftsøkonomikonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p></div>
 
     </article>
   </div>

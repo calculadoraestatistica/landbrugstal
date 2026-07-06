@@ -28,6 +28,46 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/css/style.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Kornfugtighedsberegner","url":"https://landbrugstal.dk/umidade-graos.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","inLanguage":"da-DK","offers":{"@type":"Offer","price":"0","priceCurrency":"DKK"},"description":"Fugtighedskorrektion af korn."}</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Hvad er basisvandprocenten i dansk kornhandel?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Typisk 14,5-15 % for korn og 9 % for raps. Ligger leverancen over basis, korrigeres vægten ned, og der trækkes normalt også et tørringsgebyr pr. procentpoint."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hvor meget vægt taber kornet pr. procentpoint nedtørring?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Som tommelfingerregel cirka 1,15-1,2 % af vægten pr. procentpoint. Fra 18 % til 14,5 % vand svarer det til et samlet svind på cirka 4,1 %."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Kan den korrigerede vægt blive større end startvægten?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ja, rent regnskabsmæssigt: sættes slutfugtigheden højere end startfugtigheden, viser formlen den teoretiske vægt ved opfugtning. I handel korrigeres der dog normalt kun nedad til basis."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hvor tørt skal korn være for at kunne lagres?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Til kortere lagring omkring basis på 14,5 %, til længere lagring typisk 14 % eller lavere kombineret med nedkøling. Raps skal helt ned omkring 8-9 % for at ligge sikkert."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -45,12 +85,38 @@
     </form>
     <div class="ad-slot" data-ad-slot=""></div>
     <article class="prose">
-      <h2>Sådan beregner du</h2>
-      <p>Tørstoffet er konstant. Derfor beregnes den korrigerede vægt ud fra forholdet mellem startfugtigheden og den ønskede slutfugtighed.</p>
-      <div class="formula">Slutvægt = startvægt × (100 - startfugtighed) ÷ (100 - slutfugtighed)</div>
-      <h2>Brug i Danmark</h2>
-      <p>Beregningen kan bruges til hvede, byg, raps, majs og andet korn. Den kommercielle fugtighedsstandard varierer efter afgrøde, lager og kontrakt.</p>
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Denne beregner korrigerer et kornpartis vægt fra én vandprocent til en anden: hvad partiet vejer efter nedtørring til basis, hvor meget vand der fjernes, og hvor stort svindet er i procent. Den bruges til at kontrollere afregninger — stemmer det fradrag, grovvareselskabet har trukket for vand, med fysikken? — til at planlægge tørring og lagerplads og til at sammenligne partier målt ved forskellige fugtniveauer på samme grundlag. Uden korrektionen sammenligner man æbler og pærer: 100 tons ved 18 % vand indeholder simpelthen mindre korn end 100 tons ved 14,5 %.</p>
+
+      <h2>Input, enheder og omregninger</h2>
+      <p>Du indtaster startvægten i valgfri enhed — kg, tons eller hkg, blot du bruger samme enhed hele vejen (1 ton = 1.000 kg = 10 hkg à 100 kg) — samt start- og slutvandprocenten. Resultatet vises i samme enhed som startvægten. Beregningen hviler på, at tørstoffet er konstant: det er kun vand, der kommer til eller forsvinder.</p>
+
+      <h2>Formel og gennemregnet eksempel</h2>
+      <div class="formula">Slutvægt = startvægt × (100 − startfugtighed) ÷ (100 − slutfugtighed)</div>
+      <p>Gennemregnet eksempel: 10.000 kg hvede måles til 18 % vand og skal korrigeres til basis 14,5 %. Slutvægt: 10.000 × (100 − 18) ÷ (100 − 14,5) = 10.000 × 82 ÷ 85,5 = <strong>9.591 kg</strong>. Der fjernes altså 409 kg vand, og svindet er 4,09 %. Fordelt på de 3,5 procentpoint svarer det til cirka 1,17 % af vægten pr. procentpoint. Ved en pris på 120 kr/hkg repræsenterer korrektionen 4,09 hkg × 120 = ca. 491 kr pr. 10 tons — derfor er vandprocenten et af de vigtigste tal på afregningen.</p>
+
+      <h2>Praktiske referenceværdier</h2>
+      <p>I dansk kornhandel er basisvandprocenten 14,5-15 % for korn og 9 % for raps, som det fremgår af branchens standardbetingelser og offentlige normer, fx omtalt hos SEGES. Leveres der over basis, trækkes vægtkorrektion og typisk også et tørringsgebyr pr. procentpoint. Til længere lagring anbefales normalt at komme ned omkring 14 % eller lavere, kombineret med nedkøling — jo tørrere og koldere, jo mere lagerfast. Husk også, at vægtfylden ændrer sig med vandindholdet; til volumenberegning regnes hvede normalt til 750-780 kg/m³ og byg til 650-700 kg/m³ ved basisfugt.</p>
+
+      <div class="callout callout--warning"><div class="callout__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Mål vandprocenten på et repræsentativt gennemsnit</div><p>Et enkelt stik i toppen af læsset kan afvige markant fra gennemsnittet. Udtag delprøver flere steder, bland dem, og mål på blandingen — ét procentpoints fejl flytter over 1 % af afregningsvægten.</p></div>
+
+      <h2>Begrænsninger</h2>
+      <p>Beregningen forudsætter, at tørstoffet er konstant, og at vandprocenten er ens i hele partiet — i praksis kan et læs være ujævnt, og fugtmålere har en usikkerhed på typisk ±0,5 procentpoint. Kommercielle afregninger kan derudover indeholde fradrag for urenheder, lav rumvægt og kvalitet, som ikke indgår her. Resultatet er den fysiske vægtkorrektion, ikke en fuldstændig afregningskontrol.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvad er basisvandprocenten i dansk kornhandel?</h3>
+      <p>Typisk 14,5-15 % for korn og 9 % for raps. Ligger leverancen over basis, korrigeres vægten ned, og der trækkes normalt også et tørringsgebyr pr. procentpoint.</p>
+      <h3>Hvor meget vægt taber kornet pr. procentpoint nedtørring?</h3>
+      <p>Som tommelfingerregel cirka 1,15-1,2 % af vægten pr. procentpoint. Fra 18 % til 14,5 % vand svarer det til et samlet svind på cirka 4,1 %.</p>
+      <h3>Kan den korrigerede vægt blive større end startvægten?</h3>
+      <p>Ja, rent regnskabsmæssigt: sættes slutfugtigheden højere end startfugtigheden, viser formlen den teoretiske vægt ved opfugtning. I handel korrigeres der dog normalt kun nedad til basis.</p>
+      <h3>Hvor tørt skal korn være for at kunne lagres?</h3>
+      <p>Til kortere lagring omkring basis på 14,5 %, til længere lagring typisk 14 % eller lavere kombineret med nedkøling. Raps skal helt ned omkring 8-9 % for at ligge sikkert.</p>
+
       <div class="related"><h2>Andre beregnere</h2><div class="calc-grid"><a class="calc-card" href="/custo-secagem.html"><h3>Tørringsomkostning</h3><p>Estimér fjernet vand og omkostning.</p></a><a class="calc-card" href="/custo-armazenagem.html"><h3>Opbevaringsomkostning</h3><p>Omkostning pr. hkg eller ton.</p></a><a class="calc-card" href="/conversao-de-sacas.html"><h3>Vægtomregner</h3><p>Hkg, kg og tons.</p></a></div></div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;"><p>Uddannelsesindhold baseret på offentlig faglitteratur og offentlige normer, fx Landbrugsstyrelsen og SEGES. Erstatter ikke rådgivning fra planteavls- eller driftsøkonomikonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p></div>
+
     </article>
   </div>
 </main>

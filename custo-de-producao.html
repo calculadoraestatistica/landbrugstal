@@ -52,6 +52,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Hvad er forskellen på variable og faste omkostninger?","acceptedAnswer":{"@type":"Answer","text":"Variable omkostninger (udsæd, gødning, planteværn, tørring) følger produktionens omfang, mens faste omkostninger (maskiner, bygninger, forsikring, fast løn) består næsten uanset, hvor meget der produceres."}},
+    {"@type":"Question","name":"Hvad er break-even-prisen?","acceptedAnswer":{"@type":"Answer","text":"Den salgspris pr. enhed, der netop dækker alle medregnede omkostninger. Sælges over break-even, giver aktiviteten overskud på de valgte forudsætninger; sælges under, dækkes omkostningerne ikke."}},
+    {"@type":"Question","name":"Skal eget arbejde og jordrente regnes med?","acceptedAnswer":{"@type":"Answer","text":"I en fuld omkostningskalkule, ja. Udelades ejeraflønning og forrentning af jord og kapital, undervurderes den reelle produktionsomkostning, og break-even-prisen bliver for optimistisk."}},
+    {"@type":"Question","name":"Hvorfor svinger omkostningen pr. hkg fra år til år?","acceptedAnswer":{"@type":"Answer","text":"Fordi udbyttet står i nævneren. Den samme omkostning pr. hektar giver en lav enhedsomkostning i et godt høstår og en høj enhedsomkostning i et dårligt."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -151,23 +163,39 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p>Denne beregner estimerer <strong>produktionsomkostning pr. enhed</strong> — pr. hkg, pr. kg eller pr. liter — og <strong>break-even</strong>, dvs. mindste salgspris.</p>
+      <h2>Hvad bruges den til i bedriftsøkonomien</h2>
+      <p>Produktionsomkostningen pr. enhed — pr. hkg korn, pr. kg kød eller pr. liter mælk — er et af de mest anvendte nøgletal i bedriftsøkonomien. Den gør det muligt at sammenligne sig selv med andre bedrifter, med tidligere år og med de noterede markedspriser: Ligger salgsprisen over enhedsomkostningen, tjener aktiviteten penge; ligger den under, tæres der på egenkapitalen. Beregneren bruges derfor til benchmarking mellem marker og driftsgrene, til at kende sin <strong>minimumspris</strong> før en handel og til at følge, om effektiviseringer faktisk flytter omkostningen pr. produceret enhed.</p>
 
-      <h2>Sådan beregner du</h2>
-      <p>Den samlede omkostning divideres med den producerede mængde. Omkostningen pr. enhed er også den salgspris, der præcis dækker alle omkostninger.</p>
+      <h2>Input og enheder</h2>
+      <p>Der indtastes den <strong>samlede omkostning</strong> i kroner for perioden eller marken (variable omkostninger plus den andel af de faste omkostninger, der medregnes) og den <strong>producerede mængde</strong> i valgfri enhed — hkg, ton, kg eller liter. Resultatet får samme enhed som mængden, fx kr/hkg. Angives en salgspris pr. enhed, beregnes desuden marginen. Sørg for, at omkostning og mængde dækker samme periode og samme areal.</p>
+
+      <h2>Formel og gennemregnet eksempel</h2>
       <div class="formula">Omkostning pr. enhed = samlet omkostning ÷ produceret mængde</div>
+      <p>Gennemregnet eksempel: en mark har kostet 240.000 kr i alt og har leveret 1.200 hkg. Enhedsomkostningen er 240.000 ÷ 1.200 = <strong>200 kr/hkg</strong> — det er samtidig break-even-prisen. Sælges til 250 kr/hkg, er marginen 250 − 200 = 50 kr/hkg, svarende til 20 % af salgsprisen og et samlet overskud på 50 × 1.200 = 60.000 kr. Havde udbyttet kun været 1.000 hkg med samme omkostninger, ville enhedsomkostningen stige til 240 kr/hkg — næsten hele marginen ville være væk.</p>
 
-      <h2>Eksempel</h2>
-      <p>En samlet omkostning på kr 240.000 for 1.200 hkg giver <strong>kr 200 pr. hkg</strong>. Ved salg til kr 250 er marginen 20 %.</p>
+      <h2>Praktiske referenceværdier</h2>
+      <p>Offentlige opgørelser, fx Danmarks Statistik og SEGES' kalkuler, viser typisk variable omkostninger i vinterhvede på omkring <strong>4.000-6.000 kr/ha</strong> (udsæd, gødning, planteværn), mens de samlede omkostninger inklusive maskiner, arbejde og øvrige kapacitetsomkostninger ofte lander på <strong>8.000-11.000 kr/ha</strong>. Ved udbytter på 75-85 hkg/ha svarer det til en fuld enhedsomkostning i størrelsesordenen 100-140 kr/hkg — men spændet mellem bedrifter er stort, og gødnings- og energipriser kan flytte tallene fra år til år. Brug de offentliggjorte kalkuler som pejlemærker, og opgør altid din egen omkostning ud fra bedriftens egne tal.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           Medregn de usynlige omkostninger
         </div>
-        <p>For et realistisk break-even bør du også medregne maskinafskrivning, jordforrentning og familiens arbejdskraft. Conab-metoden adskiller effektiv, operationel og samlet omkostning.</p>
+        <p>For et realistisk break-even bør du også medregne maskinafskrivning, jordforrentning og familiens arbejdskraft. En fuld kalkule skelner mellem variable omkostninger, kapacitetsomkostninger og ejeraflønning.</p>
       </div>
+
+      <h2>Begrænsninger</h2>
+      <p>Enhedsomkostningen afhænger af, hvilke omkostninger der medregnes, og hvordan de faste omkostninger fordeles mellem driftsgrene — to bedrifter kan opgøre "samme" tal vidt forskelligt. Biprodukter som halm bør krediteres kalkulen. Husk også, at en positiv margin pr. hkg ikke er det samme som bundlinjen: finansiering, ejendomsskatter og private udtræk ligger uden for denne beregning. Brug resultatet som styringsværktøj, ikke som facit.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvad er forskellen på variable og faste omkostninger?</h3>
+      <p>Variable omkostninger (udsæd, gødning, planteværn, tørring) følger produktionens omfang, mens faste omkostninger (maskiner, bygninger, forsikring, fast løn) består næsten uanset, hvor meget der produceres.</p>
+      <h3>Hvad er break-even-prisen?</h3>
+      <p>Den salgspris pr. enhed, der netop dækker alle medregnede omkostninger. Sælges over break-even, giver aktiviteten overskud på de valgte forudsætninger.</p>
+      <h3>Skal eget arbejde og jordrente regnes med?</h3>
+      <p>I en fuld omkostningskalkule, ja. Udelades ejeraflønning og forrentning af jord og kapital, undervurderes den reelle produktionsomkostning.</p>
+      <h3>Hvorfor svinger omkostningen pr. hkg fra år til år?</h3>
+      <p>Fordi udbyttet står i nævneren. Den samme omkostning pr. hektar giver en lav enhedsomkostning i et godt høstår og en høj i et dårligt.</p>
 
       <div class="related">
         <h2>Andre beregnere</h2>
@@ -176,6 +204,10 @@
           <a class="calc-card" href="/conversao-de-sacas.html"><h3>Vægtomregner</h3><p>Hkg, kg og tons.</p></a>
           <a class="calc-card" href="/ganho-de-peso.html"><h3>Daglig tilvækst (DTV)</h3><p>Gennemsnitlig daglig tilvækst og slagteprognose.</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlige opgørelser og faglitteratur. Erstatter ikke rådgivning fra en økonomikonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>

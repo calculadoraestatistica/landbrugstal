@@ -52,6 +52,46 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hvor mange kilo er en hkg?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I Danmark er 1 hkg = 100 kg, så 80 hkg/ha svarer til 8 t/ha. I udenlandske kilder kan en sæk have en anden vægt — juster vægtfeltet, hvis det er tilfældet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvad er et typisk hvedeudbytte i Danmark?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Offentlig statistik beskriver ofte gennemsnit omkring 70-90 hkg/ha for vinterhvede i almindelige år, men tallet varierer betydeligt mellem år, jordtyper og landsdele."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvorfor skal jeg korrigere for vandprocent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fordi vand vejer med i udbyttet. Et friskhøstet parti med højt vandindhold ser større ud end samme mængde tørt korn — udbytter sammenlignes derfor ved en standardvandprocent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvad med bushels og sacas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Udenlandske enheder har afgrødeafhængige vægte — fx vejer en saca soja 60 kg. Indtast den relevante vægt pr. enhed, så omregningen til kg/ha og t/ha bliver korrekt."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -161,22 +201,32 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p>Denne omregner konverterer <strong>udbytte i markbruget</strong> mellem hkg pr. hektar, kilo pr. hektar og tons pr. hektar.</p>
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Udbytte opgives i forskellige enheder afhængigt af sammenhængen: <strong>hkg pr. hektar</strong> i danske markblade og landsforsøg, kg/ha i faglitteratur og t/ha i handel og statistik. Denne omregner flytter et udbyttetal mellem de tre enheder, så forsøgsresultater, kontrakter og statistik kan sammenlignes direkte. Den håndterer også tilfælde, hvor en &quot;sæk&quot; i udenlandsk materiale ikke vejer 100 kg — fx i sydamerikansk handel, hvor en saca soja vejer 60 kg — så tallene ikke fejlfortolkes, når kilder blandes.</p>
 
-      <h2>Sådan beregner du</h2>
-      <p>Værdien omregnes først til kg/ha og derefter til den ønskede enhed. Omregning fra/til hkg bruger vægten pr. hkg for den pågældende afgrøde.</p>
+      <h2>Input, enheder og omregninger</h2>
+      <p>I Danmark er 1 hkg (hektokilogram) = <strong>100 kg</strong>, så 1 t/ha = 10 hkg/ha. Vægtfeltet pr. hkg bruges kun, når kilden regner med en anden sækvægt. Vær også opmærksom på vandprocenten: danske kornudbytter opgives normalt ved en standardvandprocent, og et friskhøstet udbytte med højere vandindhold kan ikke sammenlignes direkte uden korrektion.</p>
+      <p>Skal et vådt høstudbytte omregnes til standardvand, ganges med (100 − aktuel vandprocent) ÷ (100 − standardvandprocent): et parti på 9 t/ha høstet med 20 % vand svarer fx til ca. 8,4 t/ha ved 15 % vand.</p>
 
-      <h2>Eksempel</h2>
-      <p>60 hkg/ha à 60 kg svarer til 3.600 kg/ha, altså <strong>3,6 t/ha</strong>.</p>
+      <h2>Formel og gennemregnet eksempel</h2>
+      <div class="formula">kg/ha = hkg/ha × vægt pr. hkg &nbsp;·&nbsp; t/ha = kg/ha ÷ 1.000</div>
+      <p>Gennemregnet eksempel: en mark giver 82 hkg/ha vinterhvede. Med 100 kg pr. hkg er det 82 × 100 = 8.200 kg/ha = <strong>8,2 t/ha</strong>. Omvendt svarer en kontrakt på 7,5 t/ha til 75 hkg/ha. Arbejder du med en brasiliansk kilde, hvor en saca soja er 60 kg, svarer 60 sacas/ha til 60 × 60 = 3.600 kg/ha = 3,6 t/ha — altså kun 36 hkg/ha på dansk basis. Det er netop den fejl, vægtfeltet forhindrer, når udenlandske tal skal ind i danske regneark.</p>
 
-      <div class="callout callout--warning">
-        <div class="callout__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Vægten pr. hkg betyder noget
-        </div>
-        <p>I Danmark er standardvægten 100 kg pr. hkg. Hvis du arbejder med en specifik reference (f.eks. soja eller hvede i international handel, hvor en hkg ofte er 60 kg), så juster feltet — ellers bliver omregningen forkert.</p>
-      </div>
+      <h2>Praktiske referenceværdier</h2>
+      <p>Som beskrivende pejlemærker angiver offentlig statistik og normtal, fx fra Danmarks Statistik og SEGES, at danske gennemsnitsudbytter i almindelige år ofte ligger omkring 70-90 hkg/ha for vinterhvede, 50-70 hkg/ha for vårbyg og 35-45 hkg/ha for vinterraps — med betydelig variation mellem år, jordtyper og landsdele, hvor vandet sandjord og god lerjord kan ligge markant forskelligt. Brug spændene til at vurdere, om et omregnet tal er realistisk, ikke som mål for den enkelte mark.</p>
+
+      <h2>Begrænsninger</h2>
+      <p>Omregneren ændrer kun enheder — den vurderer ikke, om et udbytte er godt, og den korrigerer ikke automatisk for vandprocent eller kvalitet. Sammenlign kun tal på samme basis: samme vandprocent, samme arealbegreb (brutto- eller nettoareal) og samme afgrødedefinition. Udbytteforventninger til budget og markplan bør fastlægges sammen med en planteavlskonsulent ud fra bedriftens egne registreringer over flere år.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvor mange kilo er en hkg?</h3>
+      <p>I Danmark er 1 hkg = 100 kg, så 80 hkg/ha svarer til 8 t/ha. I udenlandske kilder kan en sæk have en anden vægt — juster vægtfeltet, hvis det er tilfældet.</p>
+      <h3>Hvad er et typisk hvedeudbytte i Danmark?</h3>
+      <p>Offentlig statistik beskriver ofte gennemsnit omkring 70-90 hkg/ha for vinterhvede i almindelige år, men tallet varierer betydeligt mellem år, jordtyper og landsdele.</p>
+      <h3>Hvorfor skal jeg korrigere for vandprocent?</h3>
+      <p>Fordi vand vejer med i udbyttet. Et friskhøstet parti med højt vandindhold ser større ud end samme mængde tørt korn — udbytter sammenlignes derfor ved en standardvandprocent.</p>
+      <h3>Hvad med bushels og sacas?</h3>
+      <p>Udenlandske enheder har afgrødeafhængige vægte — fx vejer en saca soja 60 kg. Indtast den relevante vægt pr. enhed, så omregningen til kg/ha og t/ha bliver korrekt.</p>
 
       <div class="related">
         <h2>Andre beregnere</h2>
@@ -185,6 +235,10 @@
           <a class="calc-card" href="/custo-de-producao.html"><h3>Produktionsomkostning</h3><p>Omkostning pr. hkg og break-even.</p></a>
           <a class="calc-card" href="/conversao-de-area.html"><h3>Arealomregner</h3><p>Hektar, tønde land og m².</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlig faglitteratur og normtal. Erstatter ikke rådgivning fra agronom eller planteavlskonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>

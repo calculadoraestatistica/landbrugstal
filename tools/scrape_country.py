@@ -91,6 +91,55 @@ def load_existing(path: Path) -> dict[str, dict[str, Any]]:
     return out
 
 
+HISTORY_MAX = 750  # entries kept per indicator (~3 years of weekdays)
+
+
+def append_history(items: list[dict], path: Path) -> dict:
+    """Append one daily snapshot per indicator to the history JSON.
+
+    Structure: {"<key>": [{"d": "YYYY-MM-DD", "v": <float>}, ...], ...}
+    - "d" is the quote's own date: for fresh values the scrape date, for stale
+      fallbacks the last_seen_date — so re-running the scraper on the same day
+      never duplicates entries (idempotent) and stale values are not re-logged
+      forward as fake fresh points.
+    - Caps each series at HISTORY_MAX entries (oldest dropped).
+    """
+    try:
+        history = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(history, dict):
+            history = {}
+    except (FileNotFoundError, ValueError):
+        history = {}
+
+    changed = False
+    for it in items:
+        key, value = it.get("key"), it.get("value")
+        date = (it.get("last_seen_date") or it.get("date")) if it.get("stale") \
+            else (it.get("date") or it.get("last_seen_date"))
+        if not key or not date or not isinstance(value, (int, float)) or value <= 0:
+            continue
+        series = history.setdefault(key, [])
+        existing = next((e for e in series if e.get("d") == date), None)
+        if existing is None:
+            series.append({"d": date, "v": value})
+            series.sort(key=lambda e: e.get("d", ""))
+            changed = True
+        elif existing.get("v") != value:
+            existing["v"] = value
+            changed = True
+        if len(series) > HISTORY_MAX:
+            del series[:len(series) - HISTORY_MAX]
+
+    if changed:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        tmp = path.with_suffix(path.suffix + ".tmp")
+        tmp.write_text(json.dumps(history, ensure_ascii=False, separators=(",", ":")),
+                       encoding="utf-8")
+        os.replace(tmp, path)
+        logging.info("wrote %s (%d indicators)", path.name, len(history))
+    return history
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="Scrape per-country noteringer.")
     ap.add_argument("--set", choices=["basico", "completo", "all"], default="all")
@@ -169,6 +218,13 @@ def main() -> int:
         write_json(basico_path, basico_items)
     if args.set in ("completo", "all"):
         write_json(completo_path, completo_items)
+
+    # Daily history snapshot (additive; failures never break the main output).
+    try:
+        history_path = ROOT / out_cfg.get("history_path", "data/noteringer-historik.json")
+        append_history(completo_items, history_path)
+    except Exception as exc:  # noqa: BLE001
+        logging.warning("history append failed: %s", exc)
 
     return 0
 

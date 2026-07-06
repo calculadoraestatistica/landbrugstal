@@ -13,6 +13,46 @@
 <meta name="theme-color" content="#16a34a">
 <meta property="og:type" content="website"><meta property="og:locale" content="da_DK"><meta property="og:site_name" content="Landbrugstal"><meta property="og:title" content="Beregner for høsttab"><meta property="og:description" content="Estimér tab i kg/ha, hkg/ha og kr/ha."><meta property="og:url" content="https://landbrugstal.dk/perda-colheita.html"><meta property="og:image" content="https://landbrugstal.dk/og-image.png"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png"><link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png"><link rel="apple-touch-icon" href="/favicon-192.png"><link rel="manifest" href="/site.webmanifest"><link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Hvor stort et høstspild er normalt?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Faglitteraturen regner typisk et samlet spild på 1-2 % af udbyttet for acceptabelt. Ved 80 hkg/ha svarer det til 80-160 kg/ha — mere end det bør udløse en kontrol af maskinen."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Kan jeg tælle kerner i stedet for at veje?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ja. For hvede med tusindkornsvægt på 45-50 g svarer cirka 20 kerner pr. m² til cirka 10 kg/ha. Tæl i en ramme flere steder og omregn på samme måde."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hvor skal prøverne tages?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Både foran mejetærskeren (dryssespild), under skærebordet og bag maskinen. Kun forskellen mellem bag og foran skyldes maskinen — og tag altid flere prøver, gerne uden for halmstrengen."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hvornår skal mejetærskeren justeres?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Når spildet bag maskinen overstiger cirka 2 % af udbyttet. Se først på kørehastighed, blæserluft og soldåbning — små justeringer flytter ofte flere hundrede kroner pr. hektar."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -26,7 +66,40 @@
 <p class="field-error" id="calc-error" role="alert"></p><div class="calculator__actions"><button class="btn btn--primary btn--lg" type="submit">Beregn tab</button><button class="btn btn--ghost" type="button" id="calc-example">Udfyld med eksempel</button></div><section class="result" id="calc-result" hidden aria-live="polite"></section>
 </form>
 <div class="ad-slot" data-ad-slot=""></div>
-<article class="prose"><h2>Sådan bruges den</h2><p>Saml de tabte korn op fra et kendt areal bag mejetærskeren. Beregneren omregner g/m² til kg/ha og derefter til hkg/ha.</p><div class="formula">kg/ha = (gram indsamlet ÷ m² i prøven) × 10</div><div class="callout callout--warning"><div class="callout__title">Tag prøver flere steder</div><p>Brug flere prøver i marken for at reducere skævheder fra topografi, halm, hastighed og maskinindstilling.</p></div><div class="related"><h2>Andre beregnere</h2><div class="calc-grid"><a class="calc-card" href="/produtividade.html"><h3>Udbytte</h3><p>Hkg/ha, kg/ha og t/ha.</p></a><a class="calc-card" href="/margem-bruta.html"><h3>Bruttomargin</h3><p>Omsætning og omkostning pr. hektar.</p></a><a class="calc-card" href="/custo-de-producao.html"><h3>Produktionsomkostning</h3><p>Break-even-pris.</p></a></div></div></article>
+<article class="prose">
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Denne beregner omsætter de kerner, du samler op bag mejetærskeren, til tab i kg/ha, hkg/ha og kroner — for prøvefladen, pr. hektar og for hele marken. Den bruges midt i høsten til at afgøre, om spildet ligger inden for det normale, eller om maskinen skal justeres, og efter høst til at sætte tal på, hvad spildet har kostet. Få gram pr. kvadratmeter lyder harmløst, men ganget op på 80 ha bliver det hurtigt til mange hkg og mange tusinde kroner — og netop derfor er en hurtig prøve med en ramme og en vægt en af de billigste kontroller i hele høsten.</p>
+
+      <h2>Input, enheder og omregninger</h2>
+      <p>Du indtaster den opsamlede vægt i gram, prøvefladens areal i m² (brug en ramme, fx 0,25 eller 1 m², flere steder), vægten pr. hkg (100 kg), prisen pr. hkg og eventuelt markens areal i hektar. Omregningen er enkel: g/m² × 10 = kg/ha, og 100 kg = 1 hkg, så 1 ton = 10 hkg. Står markens størrelse i gamle mål, gælder 1 tønde land = 0,5516 ha.</p>
+
+      <h2>Formel og gennemregnet eksempel</h2>
+      <div class="formula">Tab i kg/ha = (gram opsamlet ÷ m² i prøven) × 10</div>
+      <p>Gennemregnet eksempel: bag mejetærskeren samles 45 g kerner op på 2 m². Det giver 22,5 g/m², altså 225 kg/ha eller <strong>2,25 hkg/ha</strong>. Ved en kornpris på 120 kr/hkg er tabet 270 kr/ha, og på en mark på 80 ha bliver det 180 hkg og <strong>21.600 kr</strong>. Ved et udbytte på 80 hkg/ha svarer tabet til 2,8 % af avlen — over det niveau, der normalt betragtes som acceptabelt, og et klart signal om at stoppe og justere maskinen.</p>
+
+      <h2>Praktiske referenceværdier</h2>
+      <p>Offentlige normer og faglitteratur, fx fra SEGES, regner et samlet høstspild på cirka <strong>1-2 % af udbyttet</strong> for normalt; ved 80 hkg/ha svarer hvert procentpoint til 80 kg/ha. Vil du tælle i stedet for at veje, gælder for hvede med en tusindkornsvægt på 45-50 g, at cirka 20 kerner pr. m² svarer til cirka 10 kg/ha. Skeln mellem tre kilder: dryssespild før høst (tæl foran mejetærskeren), skærebordsspild og spild bag maskinen fra solde og rystere — kun forskellen mellem bag og foran kan maskinindstillingen gøre noget ved. Spildet stiger typisk med kørehastighed, tørt sprødt korn og for stor blæserluft.</p>
+
+      <div class="callout callout--warning"><div class="callout__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Tag prøver flere steder i marken</div><p>Spild fordeler sig ujævnt: mere i halmstrengen, mindre imellem, og forskelligt på forager og i lejesæd. Mindst 3-5 prøver fordelt over marken skal til, før gennemsnittet kan bruges til at dømme maskinindstillingen.</p></div>
+
+      <h2>Begrænsninger</h2>
+      <p>Én prøve ét sted siger meget lidt: spildet varierer med topografi, halmstrenge, lejesæd og maskinens belastning, så tag altid flere prøver og brug gennemsnittet. Prøver taget i halmstrengen overvurderer spildet, fordi kernerne koncentreres der. Beregneren fortæller heller ikke, hvor i maskinen tabet opstår — det kræver separate prøver foran skærebordet, under skærebordet og bag maskinen.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvor stort et høstspild er normalt?</h3>
+      <p>Faglitteraturen regner typisk et samlet spild på 1-2 % af udbyttet for acceptabelt. Ved 80 hkg/ha svarer det til 80-160 kg/ha — mere end det bør udløse en kontrol af maskinen.</p>
+      <h3>Kan jeg tælle kerner i stedet for at veje?</h3>
+      <p>Ja. For hvede med tusindkornsvægt på 45-50 g svarer cirka 20 kerner pr. m² til cirka 10 kg/ha. Tæl i en ramme flere steder og omregn på samme måde.</p>
+      <h3>Hvor skal prøverne tages?</h3>
+      <p>Både foran mejetærskeren (dryssespild), under skærebordet og bag maskinen. Kun forskellen mellem bag og foran skyldes maskinen — og tag altid flere prøver, gerne uden for halmstrengen.</p>
+      <h3>Hvornår skal mejetærskeren justeres?</h3>
+      <p>Når spildet bag maskinen overstiger cirka 2 % af udbyttet. Se først på kørehastighed, blæserluft og soldåbning — små justeringer flytter ofte flere hundrede kroner pr. hektar.</p>
+
+      <div class="related"><h2>Andre beregnere</h2><div class="calc-grid"><a class="calc-card" href="/produtividade.html"><h3>Udbytte</h3><p>Hkg/ha, kg/ha og t/ha.</p></a><a class="calc-card" href="/margem-bruta.html"><h3>Bruttomargin</h3><p>Omsætning og omkostning pr. hektar.</p></a><a class="calc-card" href="/custo-de-producao.html"><h3>Produktionsomkostning</h3><p>Break-even-pris.</p></a></div></div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;"><p>Uddannelsesindhold baseret på offentlig faglitteratur og offentlige normer, fx Landbrugsstyrelsen og SEGES. Erstatter ikke rådgivning fra planteavls- eller driftsøkonomikonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p></div>
+
+    </article>
 </div>
 </main>
 <footer class="site-footer"><div class="container"><div class="footer-bottom"><p>Beregnerne er kun vejledende og giver estimater.</p><p>© <span data-year>2026</span> Landbrugstal · Lavet i Danmark.</p></div></div></footer>

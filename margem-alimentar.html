@@ -52,6 +52,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Er foderdækningsbidrag det samme som overskud?","acceptedAnswer":{"@type":"Answer","text":"Nej. Foderdækningsbidraget er omsætning minus foder og de indtastede variable omkostninger. Der mangler stadig bygningsafskrivning, forrentning af bundet kapital, fast arbejdskraft, energi, skat og dødelighed, før man når nettoresultatet."}},
+    {"@type":"Question","name":"Hvorfor regnes foder pr. ton om til kr pr. kg?","acceptedAnswer":{"@type":"Answer","text":"Foderpriser oplyses ofte pr. ton, mens det daglige forbrug måles i kg. Beregneren dividerer prisen pr. ton med 1.000 for at få kr pr. kg og ganger med det daglige forbrug, så omkostningen passer til én dags fodring."}},
+    {"@type":"Question","name":"Hvor stor en andel udgør foderet af omkostningerne?","acceptedAnswer":{"@type":"Answer","text":"I intensiv husdyrproduktion udgør foder typisk 60-80 % af de samlede produktionsomkostninger. Derfor er den daglige fodermargin en hurtig indikator for, om den tungeste post i driften er dækket."}},
+    {"@type":"Question","name":"Hvad gør jeg ved en negativ margin?","acceptedAnswer":{"@type":"Answer","text":"En negativ fodermargin betyder, at omsætningen ikke engang dækker foder og variable omkostninger. Gennemgå foderblandingens pris og foderudnyttelse, salgsprisen og forbruget, og inddrag rådgiver, før holdet videreføres."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -201,20 +213,22 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p><strong>Foderdækningsbidraget</strong> er den vigtigste KPI i intensiv husdyrproduktion. Da foder typisk udgør <strong>60-80 %</strong> af produktionsomkostningen ved malkekvæg, fedekvæg, svin og slagtekyllinger, er den daglige fodermargin pr. dyr den hurtigste måde at vurdere, om driften betaler den tungeste post i kassen.</p>
+      <h2>Hvad bruges den til i praksis</h2>
+      <p><strong>Foderdækningsbidraget</strong> er en central nøgletal i intensiv husdyrproduktion. Da foder typisk udgør <strong>60-80 %</strong> af produktionsomkostningen ved malkekvæg, fedekvæg, svin og slagtekyllinger, er den daglige fodermargin pr. dyr en hurtig måde at vurdere, om driften betaler den tungeste post i kassen. I praksis bruges beregneren til at sammenligne forskellige foderblandinger, hold og produktionsfaser, og til at følge, hvordan marginen udvikler sig, når mælke- eller kødpriser og foderpriser svinger. Den bruges også som et dagligt pejlemærke for, om et hold fortsat bør fodres frem eller snarere sælges. Fordi tallet er let at genberegne, egner det sig til hyppig opfølgning frem for kun til årsregnskabet.</p>
 
-      <h2>Sådan beregner du</h2>
+      <h2>Input, enheder og omregninger</h2>
+      <p>Beregneren bruger dyretype, daglig produktion, salgspris, dagligt foderforbrug og foderpris samt valgfrie poster for mineraler, medicin og arbejdskraft. For malkekøer angives produktionen i liter mælk pr. dag og prisen i kr/L; for fede- og slagtedyr i kg daglig tilvækst og pris pr. kg levendevægt. Foderprisen indtastes pr. ton og omregnes internt til kr/kg ved at dividere med 1.000 (1 t = 1.000 kg). Ønsker du at regne på tørstofbasis, omregnes foderforbruget fra kg vare til kg tørstof via foderets tørstofprocent.</p>
+
+      <h2>Formel og gennemregnet eksempel</h2>
       <p>Beregningen er enkel: daglig omsætning minus foderomkostning minus øvrige variable omkostninger knyttet til den daglige drift.</p>
       <div class="formula">Foderdækningsbidrag = Daglig omsætning − Foderomkostning − Øvrige variable omkostninger</div>
-      <p>Foderomkostningen bruger prisen pr. ton (markedsstandard), divideret med 1.000 for at få kr/kg, og ganges med det daglige forbrug i kg.</p>
-
-      <h2>Eksempel</h2>
-      <p>En ko, der producerer 25 L/dag med mælkepris på 2,40 kr/L og spiser 20 kg foder à 2.000 kr/t: omsætning på 60,00 kr, foderomkostning på 40,00 kr, <strong>foderdækningsbidrag på 20,00 kr/ko/dag</strong>.</p>
+      <p>Gennemregnet eksempel med en malkeko: koen producerer 25 L mælk pr. dag til en pris på 2,40 kr/L, hvilket giver en daglig omsætning på 25 × 2,40 = 60,00 kr. Den spiser 20 kg foder til 2.000 kr/t; foderprisen pr. kg er 2.000 ÷ 1.000 = 2,00 kr, og foderomkostningen bliver 20 × 2,00 = 40,00 kr. Uden yderligere variable omkostninger er foderdækningsbidraget 60,00 − 40,00 = <strong>20,00 kr/ko/dag</strong>. Tilføjes fx 0,30 kr mineraler og 1,00 kr arbejdskraft, falder marginen til 18,70 kr/ko/dag.</p>
 
       <h2>Sådan tolker du</h2>
-      <p>Et positivt foderdækningsbidrag <strong>er ikke det samme som overskud</strong>. Der mangler stadig at blive trukket bygningsafskrivning, bundet kapital i dyr, fast arbejdskraft, energi, skatter og dødelighed. Fodermarginen bruges til at sammenligne foderblandinger, hold og faser — det er en <strong>relativ og taktisk</strong> indikator, som anvendes dagligt til at justere foderformuleringen og afgøre, hvornår der skal sælges.</p>
-      <p>Som praktisk reference: ved malkekvæg skal marginen dække alle faste omkostninger pr. ko/dag; ved fedekvæg skal den betale omkostningen til de magre dyr fordelt over fodringstiden; ved svin og slagtekyllinger er bunden, at integrationen ikke kasserer holdet.</p>
+      <p>Et positivt foderdækningsbidrag <strong>er ikke det samme som overskud</strong>. Der mangler stadig at blive trukket bygningsafskrivning, bundet kapital i dyr, fast arbejdskraft, energi, skatter og dødelighed. Fodermarginen er en <strong>relativ og taktisk</strong> indikator, som bruges dagligt til at sammenligne foderblandinger, hold og faser og til at afgøre, hvornår der skal sælges.</p>
+
+      <h2>Praktiske referenceværdier</h2>
+      <p>Offentlige normtal, fx fra SEGES, kan bruges til at kontrollere de input, du taster ind. På foderforbrugssiden regner man ofte med, at kvæg æder omkring 2-2,5 % af kropsvægten i tørstof pr. dag; en malkeko på 650 kg optager derfor typisk 13-16 kg tørstof dagligt. På indtægtssiden svinger mælke- og kødpriser fra måned til måned og bør altid hentes fra aktuelle noteringer. Fordi foder udgør 60-80 % af omkostningerne, flytter selv små ændringer i foderpris eller foderudnyttelse marginen mærkbart. Normtallene varierer mellem racer og bedrifter, så egne registreringer er altid mere retvisende.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -224,6 +238,19 @@
         <p>Denne beregner viser marginen <strong>kun på foder</strong> — ikke nettoresultatet. Den indeholder ikke bygningsafskrivning, forrentning af kapital, fast arbejdskraft, energi, skatter, forebyggende sundhed eller dødelighed. Brug resultatet til at sammenligne foderblandinger og justere driften, ikke som endeligt mål for rentabiliteten.</p>
       </div>
 
+      <h2>Begrænsninger</h2>
+      <p>Beregneren dækker kun de variable poster, du selv indtaster, og medregner ikke faste omkostninger som bygninger, kapital, energi, fast løn, skat, sundhedsforebyggelse eller dødelighed. Den bruger et fast dagligt niveau og fanger ikke udsving over laktationen eller vækstforløbet, ændret foderudnyttelse ved stigende vægt eller prisudsving hen over perioden. Resultatet er derfor en taktisk, relativ indikator til at sammenligne blandinger og hold — ikke et mål for bedriftens samlede rentabilitet. Væsentlige beslutninger bør afstemmes med en driftsøkonomisk rådgiver.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Er foderdækningsbidrag det samme som overskud?</h3>
+      <p>Nej. Foderdækningsbidraget er omsætning minus foder og de indtastede variable omkostninger. Der mangler stadig bygningsafskrivning, forrentning af bundet kapital, fast arbejdskraft, energi, skat og dødelighed, før man når nettoresultatet.</p>
+      <h3>Hvorfor regnes foder pr. ton om til kr pr. kg?</h3>
+      <p>Foderpriser oplyses ofte pr. ton, mens det daglige forbrug måles i kg. Beregneren dividerer prisen pr. ton med 1.000 for at få kr pr. kg og ganger med det daglige forbrug, så omkostningen passer til én dags fodring.</p>
+      <h3>Hvor stor en andel udgør foderet af omkostningerne?</h3>
+      <p>I intensiv husdyrproduktion udgør foder typisk 60-80 % af de samlede produktionsomkostninger. Derfor er den daglige fodermargin en hurtig indikator for, om den tungeste post i driften er dækket.</p>
+      <h3>Hvad gør jeg ved en negativ margin?</h3>
+      <p>En negativ fodermargin betyder, at omsætningen ikke engang dækker foder og variable omkostninger. Gennemgå foderblandingens pris og foderudnyttelse, salgsprisen og forbruget, og inddrag rådgiver, før holdet videreføres.</p>
+
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
@@ -231,6 +258,10 @@
           <a class="calc-card" href="/conversao-de-sacas.html"><h3>Vægtomregner</h3><p>Hkg, kg og tons.</p></a>
           <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Fra anbefaling til handelsgødning.</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlig faglitteratur. Erstatter ikke rådgivning fra agronom, kvægbrugskonsulent eller dyrlæge. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>

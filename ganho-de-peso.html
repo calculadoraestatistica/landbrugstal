@@ -52,6 +52,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Hvad er en god daglig tilvækst for kvæg?","acceptedAnswer":{"@type":"Answer","text":"Det afhænger af systemet. Normtal beskriver ofte spænd på 0,4-0,8 kg/dag på græs og 1,2-1,6 kg/dag ved intensiv staldfodring. Race, køn, alder og foderration flytter tallene betydeligt."}},
+    {"@type":"Question","name":"Hvorfor svinger vejeresultaterne fra dag til dag?","acceptedAnswer":{"@type":"Answer","text":"Vom- og tarmindhold kan udgøre flere procent af levendevægten og varierer med foder- og vandoptag. Derfor bør dyr vejes på samme tidspunkt og under sammenlignelige forhold."}},
+    {"@type":"Question","name":"Hvor ofte bør dyrene vejes?","acceptedAnswer":{"@type":"Answer","text":"Jo længere interval, desto mindre betyder den daglige variation. Mange bedrifter vejer med 30-90 dages mellemrum, så tilvæksten kan følges uden unødig håndtering af dyrene."}},
+    {"@type":"Question","name":"Kan beregneren bruges til andre dyr end kvæg?","acceptedAnswer":{"@type":"Answer","text":"Ja, formlen er generel: vægtforskel divideret med antal dage. Den gælder for svin, lam og fjerkræ — kun referenceværdierne for, hvad der er normalt, er artsafhængige."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -159,15 +171,19 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p><strong>Daglig tilvækst (DTV)</strong> måler, hvor meget dyret tager på pr. dag. Det er den vigtigste indikator for præstationen ved opfedning.</p>
+      <h2>Hvad bruges den til i praksis</h2>
+      <p><strong>Daglig tilvækst (DTV)</strong> måler, hvor meget dyret tager på pr. dag, og er den vigtigste indikator for præstationen ved opfedning. I praksis bruges beregneren, hver gang der er vejet: efter en græsningssæson for at se, om marken har leveret som forventet, i fedestalden for at kontrollere, om foderrationen virker, eller når slagtetidspunktet skal planlægges i forhold til noteringen. Ved at sammenligne DTV mellem hold, perioder og foderstrategier kan man hurtigt se, hvor tilvæksten halter — og prognosen for antal dage til slagtevægt gør det lettere at planlægge leverancer og staldkapacitet flere måneder frem.</p>
 
-      <h2>Sådan beregner du</h2>
+      <h2>Input, enheder og omregninger</h2>
+      <p>Der indtastes startvægt og slutvægt i kg levendevægt samt antallet af dage mellem de to vejninger. Resultatet er kg pr. dag; 0,9 kg/dag svarer til 900 g/dag, som tallet ofte angives i fagblade. Den valgfrie slagtevægt er også levendevægt — den må ikke forveksles med slagtekroppens vægt, som typisk kun udgør omkring halvdelen af levendevægten. Over en periode kan tilvæksten omregnes til samlet vægt: 100 dage à 0,9 kg/dag giver 90 kg, næsten et helt hkg (100 kg).</p>
+
+      <h2>Formel og gennemregnet eksempel</h2>
       <p>Tilvæksten (slutvægt minus startvægt) divideres med antal dage mellem vejningerne. Hvis slagtevægten angives, estimeres det også, hvor mange dage der mangler.</p>
-      <div class="formula">DTV = (slutvægt − startvægt) ÷ dage</div>
+      <div class="formula">DTV = (slutvægt − startvægt) ÷ dage<br>Dage til slagt = (slagtevægt − slutvægt) ÷ DTV</div>
+      <p>Gennemregnet eksempel: et dyr vejes til 300 kg og igen 90 dage senere til 380 kg. Substitution giver DTV = (380 − 300) ÷ 90 = 80 ÷ 90 = <strong>0,889 kg/dag</strong>. Med en ønsket slagtevægt på 480 kg mangler der 480 − 380 = 100 kg, og 100 ÷ 0,889 ≈ <strong>112 dage</strong>, hvis tilvæksten holder samme niveau. Falder DTV til 0,6 kg/dag på vintergræs, stiger prognosen til ca. 167 dage — derfor er det vigtigt at genberegne efter hver vejning.</p>
 
-      <h2>Eksempel</h2>
-      <p>Et dyr, der starter på 300 kg og når 380 kg på 90 dage, har en DTV på <strong>0,889 kg/dag</strong>; for at nå 480 kg mangler der ca. 112 dage.</p>
+      <h2>Praktiske referenceværdier</h2>
+      <p>Offentlige fagblade og normtal, fx fra SEGES, beskriver typisk spænd som disse: på græs uden tilskudsfoder ligger tilvæksten hos ungkvæg ofte på 0,4-0,8 kg/dag afhængigt af græskvalitet og sæson, mens intensiv slutfedning på stald med energirig ration ofte ligger på 1,2-1,6 kg/dag. Kviekalve og små racer ligger typisk i den lave ende, tyre af store kødracer i den høje. Efter en periode med lav tilvækst kan dyr udvise kompensatorisk vækst og midlertidigt ligge over normalspændet. Tallene varierer med race, køn, sundhed og region — brug dem som pejlemærker, ikke som mål, og sammenlign først og fremmest med bedriftens egen historik.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -177,6 +193,19 @@
         <p>For at få en pålidelig DTV bør dyrene altid vejes på samme tidspunkt og under sammenlignelige forhold (faste, hydrering). Levendevægten svinger gennem døgnet.</p>
       </div>
 
+      <h2>Begrænsninger</h2>
+      <p>Beregningen antager, at tilvæksten er lineær mellem vejningerne og fremover — i virkeligheden falder DTV typisk, når dyret nærmer sig slagtevægten, og varierer med sæson og foderskift. Vejefejl og forskelle i vom-fyldning kan flytte resultatet mærkbart, især ved korte intervaller. Prognosen for dage til slagt er derfor et overslag, ikke en leveringsdato. Fodringsstrategi og slagtetidspunkt bør fastlægges sammen med en kvægbrugskonsulent.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvad er en god daglig tilvækst for kvæg?</h3>
+      <p>Det afhænger af systemet. Normtal beskriver ofte spænd på 0,4-0,8 kg/dag på græs og 1,2-1,6 kg/dag ved intensiv staldfodring. Race, køn, alder og foderration flytter tallene betydeligt.</p>
+      <h3>Hvorfor svinger vejeresultaterne fra dag til dag?</h3>
+      <p>Vom- og tarmindhold kan udgøre flere procent af levendevægten og varierer med foder- og vandoptag. Derfor bør dyr vejes på samme tidspunkt og under sammenlignelige forhold.</p>
+      <h3>Hvor ofte bør dyrene vejes?</h3>
+      <p>Jo længere interval, desto mindre betyder den daglige variation. Mange bedrifter vejer med 30-90 dages mellemrum, så tilvæksten kan følges uden unødig håndtering af dyrene.</p>
+      <h3>Kan beregneren bruges til andre dyr end kvæg?</h3>
+      <p>Ja, formlen er generel: vægtforskel divideret med antal dage. Den gælder for svin, lam og fjerkræ — kun referenceværdierne for, hvad der er normalt, er artsafhængige.</p>
+
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
@@ -184,6 +213,10 @@
           <a class="calc-card" href="/consumo-do-rebanho.html"><h3>Foderindtag i besætning</h3><p>Tørstof og mineraler.</p></a>
           <a class="calc-card" href="/custo-de-producao.html"><h3>Produktionsomkostning</h3><p>Omkostning pr. kg og break-even.</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlig faglitteratur. Erstatter ikke rådgivning fra agronom, kvægbrugskonsulent eller dyrlæge. Senest revideret: 2026-07-05 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>

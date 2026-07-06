@@ -52,6 +52,46 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Hvor mange tønder land er en hektar?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "1 hektar svarer til 1,81 tønder land, fordi en tønde land er 5.516 m² og en hektar 10.000 m². Omvendt er 1 tønde land 0,5516 ha."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hvorfor er en tønde land netop 0,5516 ha?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Enheden blev fastlagt som 14.000 kvadratalen. Med en alen på 0,6277 m giver det 5.516 m², altså 0,5516 hektar."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Bruges tønde land stadig officielt?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nej. Markkort, støtteansøgninger og matrikler føres i hektar. Tønde land lever videre i daglig tale, ejendomsannoncer og ældre skøder, og derfor er omregningen stadig relevant."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hvor stor er en acre i forhold til en tønde land?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "En acre er 4.047 m² og en tønde land 5.516 m², så en acre udgør cirka 73 % af en tønde land. Der går 2,47 acres på en hektar."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -164,23 +204,34 @@
     <div class="ad-slot" data-ad-slot=""></div>
 
     <article class="prose">
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Denne omregner konverterer landbrugsareal mellem hektar, kvadratmeter, ar og den traditionelle danske enhed tønde land — samt brasilianske referencer som alqueire og tarefa, der kun er medtaget til læsning af udenlandske kilder. I praksis bruges den, når ældre skøder, forpagtningsaftaler og ejendomsannoncer angiver jorden i tønder land, mens støtteansøgning, markplaner og handel foregår i hektar. Den er også nyttig, når udenlandsk materiale angiver arealer i acres, og når udbytter eller omkostninger pr. areal skal gøres sammenlignelige på tværs af enheder.</p>
 
-      <h2>Hvad bruges den til</h2>
-      <p>Denne omregner konverterer mål for <strong>landbrugsareal</strong> mellem hektar, kvadratmeter, den traditionelle danske enhed tønde land og brasilianske referencer som alqueire og tarefa — med respekt for de regionale variationer.</p>
+      <h2>Input, enheder og omregninger</h2>
+      <p>Du indtaster en værdi og vælger enhed fra og til; alt omregnes via kvadratmeter. De centrale faktorer: 1 hektar = 10.000 m², 1 tønde land = 0,5516 ha = 5.516 m² (historisk defineret som 14.000 kvadratalen), 1 ar = 100 m², og 1 acre = 4.047 m² = 0,4047 ha. Kombineres arealet med mængder, gælder som altid 1 ton = 10 hkg à 100 kg, så 80 hkg/ha = 8 t/ha.</p>
 
-      <h2>Sådan beregner du</h2>
-      <p>Hver enhed omregnes først til kvadratmeter og derefter til måleenheden. En tønde land svarer til ca. 5.516 m² (14.000 kvadratalen). Alqueire har forskellige værdier afhængigt af den brasilianske delstat.</p>
+      <h2>Formel og gennemregnet eksempel</h2>
+      <div class="formula">Areal i m² = værdi × faktor for fra-enheden</div>
+      <div class="formula">Resultat = areal i m² ÷ faktor for til-enheden</div>
+      <p>Gennemregnet eksempel: en ejendom annonceres med 10 tønder land. Først til kvadratmeter: 10 × 5.516 = 55.160 m². Derefter til hektar: 55.160 ÷ 10.000 = <strong>5,516 ha</strong>. Omvendt: en mark på 25 ha er 250.000 ÷ 5.516 = <strong>45,3 tønder land</strong>. Som hurtig hovedregning gælder, at 1 ha = 1,81 tønder land, og at en tønde land er godt en halv hektar. Et amerikansk areal på 100 acres er 100 × 0,4047 = 40,5 ha, svarende til 73,4 tønder land.</p>
 
-      <h2>Eksempel</h2>
-      <p>1 alqueire paulista svarer til 24.200 m², altså <strong>2,42 hektar</strong>.</p>
+      <h2>Praktiske referenceværdier</h2>
+      <p>Tønde land defineredes historisk som det areal, der kunne tilsås med en tønde såsæd, og enheden lever videre i daglig tale og ejendomsannoncer, selv om al officiel registrering — markblokke i Landbrugsstyrelsens Internet Markkort, støtteansøgninger og matrikler — sker i hektar, typisk med to decimaler. Offentlige opgørelser, fx fra Landbrugsstyrelsen og Danmarks Statistik, viser at en gennemsnitlig dansk heltidsbedrift dyrker over 100 ha. Acre møder man i britiske og amerikanske kilder, ofte sammen med udbytter i bushel pr. acre. De brasilianske mål varierer regionalt: alqueire paulista er 2,42 ha, mineiro og goiano 4,84 ha og baiano 9,68 ha.</p>
 
-      <div class="callout callout--warning">
-        <div class="callout__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Alqueire skifter fra delstat til delstat
-        </div>
-        <p>Alqueire bruges ikke i Danmark og er kun medtaget som reference for brasilianske kilder: paulista har 2,42 ha; mineiro og goiano 4,84 ha; baiano 9,68 ha. Mål som tarefa varierer også regionalt — bekræft den lokale værdi i tvivlstilfælde.</p>
-      </div>
+      <div class="callout callout--warning"><div class="callout__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Tønde land forveksles let med tønder korn</div><p>En tønde land er et arealmål på 5.516 m², mens en tønde korn er et gammelt rumfangsmål på ca. 139 liter. I ældre papirer kan begge optræde — tjek altid sammenhængen, før du omregner.</p></div>
+
+      <h2>Begrænsninger</h2>
+      <p>Omregningen er rent geometrisk og siger intet om jordens bonitet, dyrkbarhed eller værdi. Vær opmærksom på forskellen mellem matrikulært areal og dyrkbart areal — veje, hegn, søer og bræmmer trækker fra i praksis. Ældre dokumenter kan runde tønder land groft af, og de udenlandske referenceenheder som alqueire og tarefa varierer fra region til region, så bekræft altid den lokale definition, før du bruger tallet i en handel.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvor mange tønder land er en hektar?</h3>
+      <p>1 hektar svarer til 1,81 tønder land, fordi en tønde land er 5.516 m² og en hektar 10.000 m². Omvendt er 1 tønde land 0,5516 ha.</p>
+      <h3>Hvorfor er en tønde land netop 0,5516 ha?</h3>
+      <p>Enheden blev fastlagt som 14.000 kvadratalen. Med en alen på 0,6277 m giver det 5.516 m², altså 0,5516 hektar.</p>
+      <h3>Bruges tønde land stadig officielt?</h3>
+      <p>Nej. Markkort, støtteansøgninger og matrikler føres i hektar. Tønde land lever videre i daglig tale, ejendomsannoncer og ældre skøder, og derfor er omregningen stadig relevant.</p>
+      <h3>Hvor stor er en acre i forhold til en tønde land?</h3>
+      <p>En acre er 4.047 m² og en tønde land 5.516 m², så en acre udgør cirka 73 % af en tønde land. Der går 2,47 acres på en hektar.</p>
 
       <div class="related">
         <h2>Andre beregnere</h2>
@@ -190,6 +241,8 @@
           <a class="calc-card" href="/custo-de-producao.html"><h3>Produktionsomkostning</h3><p>Omkostning pr. enhed og break-even.</p></a>
         </div>
       </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;"><p>Uddannelsesindhold baseret på offentlig faglitteratur og offentlige normer, fx Landbrugsstyrelsen og SEGES. Erstatter ikke rådgivning fra planteavls- eller driftsøkonomikonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p></div>
 
     </article>
   </div>

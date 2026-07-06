@@ -52,6 +52,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Hvor meget diesel bruger en pløjning pr. hektar?","acceptedAnswer":{"@type":"Answer","text":"Ifølge offentlige normtal, fx fra SEGES, ligger pløjning typisk på 15-20 liter pr. hektar. Jordtype, pløjedybde, ballast og traktorens indstilling kan flytte tallet betydeligt i begge retninger."}},
+    {"@type":"Question","name":"Er brændstof den største maskinomkostning?","acceptedAnswer":{"@type":"Answer","text":"Nej. Diesel udgør typisk 20-30 % af den samlede maskinomkostning; afskrivning, vedligehold, rente og arbejdsløn vejer tilsammen tungere. Brug beregneren for maskinomkostning pr. time for det fulde billede."}},
+    {"@type":"Question","name":"Hvordan finder jeg maskinens reelle forbrug?","acceptedAnswer":{"@type":"Answer","text":"Registrer tankninger og driftstimer over en periode, eller aflæs traktorens forbrugsmåler pr. opgave. Det reelle forbrug i marken afviger ofte fra katalogværdien."}},
+    {"@type":"Question","name":"Hvad gør jeg, hvis kapaciteten i ha/time er ukendt?","acceptedAnswer":{"@type":"Answer","text":"Estimer den som arbejdsbredde × hastighed × markudnyttelse. Eksempel: 3 m bredde × 8 km/t × 0,8 i udnyttelse giver cirka 1,9 ha pr. time."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -173,32 +185,33 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p>Denne beregner estimerer, hvor meget <strong>brændstof</strong> vejer i omkostningen ved en mekaniseret operation — jordbearbejdning, såning, sprøjtning eller høst. Med maskinens forbrug, literprisen og kapaciteten returnerer den liter pr. hektar, omkostning pr. time, omkostning pr. hektar og — hvis et areal angives — den samlede operationsomkostning.</p>
+      <h2>Hvad bruges den til i bedriftsøkonomien</h2>
+      <p>Brændstof er en af de mest synlige variable omkostninger ved markarbejde, og beregneren estimerer, hvor meget <strong>diesel</strong> vejer i en mekaniseret operation — jordbearbejdning, såning, sprøjtning eller høst. Med maskinens forbrug, literprisen og kapaciteten returnerer den liter pr. hektar, omkostning pr. time, omkostning pr. hektar og den samlede operationsomkostning for et areal. Resultatet bruges til at sammenligne operationer (fx pløjning mod reduceret jordbearbejdning), til at planlægge dieselindkøb før sæsonen og til at fodre markens samlede produktionsomkostning med et realistisk brændstoftal.</p>
 
-      <h2>Sådan beregner du</h2>
-      <p>Beregningen tager udgangspunkt i maskinens timeforbrug (L/t), brændstofprisen (kr/L) og kapaciteten (ha/t) — hvor mange hektar maskinen klarer på en times effektivt arbejde.</p>
+      <h2>Input og enheder</h2>
+      <p>Der indtastes maskinens timeforbrug i <strong>liter pr. time</strong> (L/t), dieselprisen i <strong>kr pr. liter</strong> og kapaciteten i <strong>hektar pr. time</strong> (ha/t) — hvor mange hektar maskinen klarer på en times effektivt arbejde. Angives et areal i hektar, beregnes også operationens samlede omkostning og literforbrug. Brug det faktisk målte forbrug og den reelle markkapacitet, ikke katalogværdier.</p>
+
+      <h2>Formel og gennemregnet eksempel</h2>
       <div class="formula">liter/ha = forbrug (L/t) ÷ kapacitet (ha/t)</div>
       <div class="formula">omkostning/time = forbrug (L/t) × pris (kr/L)</div>
       <div class="formula">omkostning/ha = omkostning/time ÷ kapacitet (ha/t)</div>
       <div class="formula">samlet omkostning = omkostning/ha × areal (ha)</div>
-
-      <h2>Eksempel</h2>
       <p>Traktor med forbrug på 15 L/t, diesel til 6,80 kr/L og kapacitet på 2 ha/t i en operation på 50 hektar:</p>
       <ul>
         <li>liter/ha = 15 ÷ 2 = <strong>7,5 L/ha</strong></li>
-        <li>omkostning/time = 15 × 6,80 = <strong>kr 102,00/t</strong></li>
-        <li>omkostning/ha = 102 ÷ 2 = <strong>kr 51,00/ha</strong></li>
-        <li>samlet omkostning = 51 × 50 = <strong>kr 2.550,00</strong> (375 L i alt)</li>
+        <li>omkostning/time = 15 × 6,80 = <strong>102,00 kr/t</strong></li>
+        <li>omkostning/ha = 102 ÷ 2 = <strong>51,00 kr/ha</strong></li>
+        <li>samlet omkostning = 51 × 50 = <strong>2.550 kr</strong> (375 L i alt)</li>
       </ul>
 
-      <h2>God praksis</h2>
+      <h2>Praktiske referenceværdier</h2>
+      <p>Offentlige normtal, fx fra SEGES' maskinkalkuler, angiver typisk disse spænd for dieselforbrug pr. hektar: <strong>pløjning 15-20 L/ha</strong>, grubning og tung harvning 8-14 L/ha, såbedsharvning 4-7 L/ha, såning 3-5 L/ha, marksprøjtning 1-2 L/ha og mejetærskning 12-18 L/ha. Tung jord, stor arbejdsdybde og våde forhold trækker mod den høje ende. En hel kornsæson med pløjebaseret dyrkning lander ofte på 60-90 L/ha i alt, mens reducerede systemer kan ligge markant lavere. Tallene varierer med jordtype, maskinstørrelse og kørestil — brug dem som pejlemærker, og mål dit eget forbrug pr. opgave.</p>
+
+      <h2>God praksis for lavere forbrug</h2>
       <ul>
-        <li><strong>Motorindstilling</strong>: en motor, der ikke er korrekt indstillet, et snavset luftfilter eller slidte dyser kan øge forbruget med 10-20 %. Hold serviceintervallerne.</li>
-        <li><strong>Korrekt ballast</strong>: for meget ballast øger forbruget uden ekstra trækkraft; for lidt giver hjulspin og spilder diesel. Tilpas efter redskabet.</li>
-        <li><strong>Arbejdsdybde</strong>: hver ekstra centimeter med harve eller grubber kræver markant mere effekt. Arbejd i den faglige anbefalede dybde, ikke maksimal.</li>
-        <li><strong>Gear og omdrejninger</strong>: brug høj gear og lave omdrejninger, når operationen tillader det ("højt gear, lav motor") — det reducerer forbruget uden at miste markhastighed.</li>
-        <li><strong>Dæktryk og hastighed</strong>: korrekt dæktryk og en hastighed, der passer til opgaven, undgår ekstra forbrug og kvalitetstab.</li>
+        <li><strong>Motor og service</strong>: en dårligt indstillet motor, et snavset luftfilter eller slidte dyser kan øge forbruget med 10-20 %. Hold serviceintervallerne.</li>
+        <li><strong>Ballast og dæktryk</strong>: for meget ballast øger forbruget uden ekstra trækkraft; for lidt giver hjulspin. Tilpas efter redskabet, og kør med korrekt dæktryk.</li>
+        <li><strong>Gear og arbejdsdybde</strong>: kør "højt gear, lave omdrejninger", når opgaven tillader det, og arbejd i den fagligt anbefalede dybde — ikke den maksimale.</li>
       </ul>
 
       <div class="callout callout--warning">
@@ -206,8 +219,21 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           Brændstof er ikke den samlede omkostning
         </div>
-        <p>Denne beregner estimerer kun brændstofandelen. Den fulde driftsomkostning indeholder også afskrivning, vedligehold, arbejdskraft, smøremidler og renter på den bundne kapital. Brug beregneren for produktionsomkostning for det samlede billede.</p>
+        <p>Denne beregner estimerer kun brændstofandelen. Den fulde driftsomkostning indeholder også afskrivning, vedligehold, arbejdskraft, smøremidler og renter på den bundne kapital.</p>
       </div>
+
+      <h2>Begrænsninger</h2>
+      <p>Beregningen forudsætter et konstant forbrug og en konstant kapacitet — i praksis svinger begge med jordfugtighed, markform, transporttid og føreren. Diesel udgør desuden kun en del af maskinomkostningen, og en lav brændstofomkostning pr. hektar er ikke i sig selv et bevis på, at operationen er rentabel. Se resultatet sammen med maskinomkostning pr. time og markens samlede kalkule, gerne sammen med en økonomikonsulent.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvor meget diesel bruger en pløjning pr. hektar?</h3>
+      <p>Ifølge offentlige normtal, fx fra SEGES, ligger pløjning typisk på 15-20 liter pr. hektar. Jordtype, pløjedybde, ballast og traktorens indstilling kan flytte tallet betydeligt.</p>
+      <h3>Er brændstof den største maskinomkostning?</h3>
+      <p>Nej. Diesel udgør typisk 20-30 % af den samlede maskinomkostning; afskrivning, vedligehold, rente og arbejdsløn vejer tilsammen tungere.</p>
+      <h3>Hvordan finder jeg maskinens reelle forbrug?</h3>
+      <p>Registrer tankninger og driftstimer over en periode, eller aflæs traktorens forbrugsmåler pr. opgave. Det reelle forbrug i marken afviger ofte fra katalogværdien.</p>
+      <h3>Hvad gør jeg, hvis kapaciteten i ha/time er ukendt?</h3>
+      <p>Estimer den som arbejdsbredde × hastighed × markudnyttelse. Eksempel: 3 m × 8 km/t × 0,8 giver cirka 1,9 ha pr. time.</p>
 
       <div class="related">
         <h2>Andre beregnere</h2>
@@ -216,6 +242,10 @@
           <a class="calc-card" href="/margem-bruta.html"><h3>Bruttomargin</h3><p>Omsætning minus variable omkostninger.</p></a>
           <a class="calc-card" href="/frete-agricola.html"><h3>Landbrugsfragt</h3><p>Transportomkostning pr. hkg.</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlige opgørelser og faglitteratur. Erstatter ikke rådgivning fra en økonomikonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>
@@ -308,9 +338,9 @@
   function compute() {
     clearError();
     var i = readForm();
-    if (!isFinite(i.consumo) || i.consumo <= 0) { showError('Indtast um consumo válido (L/h).'); return; }
-    if (!isFinite(i.preco) || i.preco <= 0) { showError('Indtast um preço válido (kr/L).'); return; }
-    if (!isFinite(i.rendimento) || i.rendimento <= 0) { showError('Indtast um rendimento operacional válido (ha/h).'); return; }
+    if (!isFinite(i.consumo) || i.consumo <= 0) { showError('Indtast et gyldigt forbrug (L/t).'); return; }
+    if (!isFinite(i.preco) || i.preco <= 0) { showError('Indtast en gyldig pris (kr/L).'); return; }
+    if (!isFinite(i.rendimento) || i.rendimento <= 0) { showError('Indtast en gyldig kapacitet (ha/t).'); return; }
 
     var litrosPorHa = i.consumo / i.rendimento;
     var omkostningPorHora = i.consumo * i.preco;

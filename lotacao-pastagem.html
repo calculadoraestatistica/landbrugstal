@@ -52,6 +52,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Hvad svarer 1 dyreenhed (DE) til?","acceptedAnswer":{"@type":"Answer","text":"I dansk praksis regnes 1 DE ofte som 500 kg levendevægt. En ko på 600 kg tæller derfor som 1,2 DE, mens en kalv på 250 kg kun er 0,5 DE. Standarden gør det muligt at sammenligne besætninger med blandede kategorier på én skala."}},
+    {"@type":"Question","name":"Hvad er en passende belægningsgrad?","acceptedAnswer":{"@type":"Answer","text":"Det afhænger helt af markens foderudbud. Offentlige normtal beskriver ofte spænd omkring 1-3 DE/ha på veletableret, gødsket græs i vækstsæsonen, men en tør sommer eller mager jord kan sænke tallet markant. Lokale forsøgstal er mere retvisende end en fast norm."}},
+    {"@type":"Question","name":"Er belægningsgrad det samme som græsudbud?","acceptedAnswer":{"@type":"Answer","text":"Nej. Belægningsgraden fortæller, hvor mange dyr der står på marken lige nu. Græsudbuddet — kg tørstof pr. hektar — fortæller, hvor meget foder marken faktisk producerer. En høj belægning på en mager mark fører hurtigt til overgræsning."}},
+    {"@type":"Question","name":"Skal belægningen ændres hen over sæsonen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Græsvæksten topper typisk sidst på foråret og aftager om sommeren og efteråret. Mange justerer derfor antallet af dyr eller supplerer med tilskudsfoder, så belægningen følger det aktuelle udbud."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -149,15 +161,19 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p><strong>Græsningsbelægningen</strong> angiver, hvor mange dyr en græsmark kan bære, standardiseret i <strong>dyreenheder (DE)</strong>. Det er den grundlæggende beregning i græsmarksforvaltning.</p>
+      <h2>Hvad bruges den til i praksis</h2>
+      <p><strong>Græsningsbelægningen</strong> angiver, hvor mange dyr en græsmark bærer, standardiseret i <strong>dyreenheder (DE)</strong>. Det er en af de grundlæggende beregninger i græsmarksforvaltning. I praksis bruges tallet, når besætningen skal fordeles på flere folde, når en ny mark tages i brug, eller når man vurderer, om græsset kan følge med efterspørgslen hen over sæsonen. En for høj belægning fører til overgræsning, trampeskader og faldende tilvækst; en for lav belægning betyder, at græs står og bliver gammelt og mister foderværdi. Beregneren giver et hurtigt overblik, inden dyrene sættes ud, og gør det muligt at sammenligne folde og år på tværs, fordi kalve, kvier og køer omregnes til den samme skala i stedet for blot at tælle hoveder.</p>
 
-      <h2>Sådan beregner du</h2>
-      <p>Levendevægten på hele besætningen lægges sammen, divideres med 500 kg (1 DE efter dansk standard) og divideres med arealet. På den måde kan forskellige kategorier — kalve, kvier og køer — sammenlignes på samme skala.</p>
+      <h2>Input, enheder og omregninger</h2>
+      <p>Beregneren bruger tre input: antal dyr, gennemsnitlig levendevægt i kg og arealet i hektar. Kernen i omregningen er dyreenheden: 1 DE svarer i dansk praksis til 500 kg levendevægt. Vægten kan indtastes i kg direkte; skal du omregne fra hkg, ganges med 100 (1 hkg = 100 kg). En ko på 600 kg tæller som 1,2 DE, en kalv på 250 kg som 0,5 DE. Arealet angives i hektar (1 ha = 10.000 m²). Resultatet, DE/ha, er belægningsgraden.</p>
+
+      <h2>Formel og gennemregnet eksempel</h2>
+      <p>Den samlede levendevægt omregnes til dyreenheder og fordeles på arealet:</p>
       <div class="formula">DE/ha = (antal dyr × gennemsnitsvægt ÷ 500) ÷ areal (ha)</div>
+      <p>Gennemregnet eksempel: 120 dyr med en gennemsnitsvægt på 400 kg giver en samlet levendevægt på 120 × 400 = 48.000 kg. Divideret med 500 kg pr. DE bliver det 48.000 ÷ 500 = 96 DE. Fordeles disse 96 DE på 60 ha, fås 96 ÷ 60 = <strong>1,60 DE/ha</strong>. Stiger gennemsnitsvægten til 500 kg, øges belægningen til 120 × 500 ÷ 500 ÷ 60 = 2,0 DE/ha ved samme dyreantal — et godt eksempel på, hvorfor man regner i vægt og ikke i antal hoveder.</p>
 
-      <h2>Eksempel</h2>
-      <p>120 dyr à 400 kg på 60 ha giver 48.000 kg → 96 DE → <strong>1,60 DE/ha</strong>.</p>
+      <h2>Praktiske referenceværdier</h2>
+      <p>Offentlige normtal, fx fra SEGES, beskriver typisk følgende: 1 DE = 500 kg levendevægt er den danske standard, som beregneren bygger på. Den bæredygtige belægningsgrad afhænger fuldstændigt af foderudbuddet og angives ofte i spænd omkring 1-3 DE/ha på veletableret, gødsket kløvergræs i vækstsæsonen — men magre marker og tørre somre kan sænke tallet betydeligt. Til tørstofoptaget regner man ofte med, at kvæg æder omkring 2-2,5 % af kropsvægten i tørstof pr. dag. Selve græsproduktionen svinger fra få tons op til over ti tons tørstof pr. hektar om året afhængigt af jord, gødskning og vand. Tallene varierer stærkt mellem regioner og år, så lokale forsøgs- og erfaringstal er altid mere retvisende end en fast norm.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -167,6 +183,19 @@
         <p>Denne beregner viser den aktuelle belægningsgrad. Det reelle græsudbud afhænger af foderproduktionen (kg tørstof pr. hektar), som varierer med græsart, gødskning og årstid.</p>
       </div>
 
+      <h2>Begrænsninger</h2>
+      <p>Beregneren viser den øjeblikkelige belægningsgrad ud fra dyreantal, vægt og areal — den kender ikke markens faktiske foderudbud, jordtype, gødskning eller årstidens vækst. Den tager heller ikke højde for foldskifte, tilskudsfodring eller forskelle i dyrenes foderbehov mellem fx malkekøer og goldkøer. To marker med samme DE/ha kan derfor være henholdsvis overgræsset og underudnyttet. Brug tallet som et udgangspunkt for planlægning og suppler med målinger af græshøjde eller tørstofudbud samt lokal rådgivning, før belægningen fastlægges.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvad svarer 1 dyreenhed (DE) til?</h3>
+      <p>I dansk praksis regnes 1 DE ofte som 500 kg levendevægt. En ko på 600 kg tæller derfor som 1,2 DE, mens en kalv på 250 kg kun er 0,5 DE. Standarden gør det muligt at sammenligne besætninger med blandede kategorier på én skala.</p>
+      <h3>Hvad er en passende belægningsgrad?</h3>
+      <p>Det afhænger helt af markens foderudbud. Offentlige normtal beskriver ofte spænd omkring 1-3 DE/ha på veletableret, gødsket græs i vækstsæsonen, men en tør sommer eller mager jord kan sænke tallet markant. Lokale forsøgstal er mere retvisende end en fast norm.</p>
+      <h3>Er belægningsgrad det samme som græsudbud?</h3>
+      <p>Nej. Belægningsgraden fortæller, hvor mange dyr der står på marken lige nu. Græsudbuddet — kg tørstof pr. hektar — fortæller, hvor meget foder marken faktisk producerer. En høj belægning på en mager mark fører hurtigt til overgræsning.</p>
+      <h3>Skal belægningen ændres hen over sæsonen?</h3>
+      <p>Ja. Græsvæksten topper typisk sidst på foråret og aftager om sommeren og efteråret. Mange justerer derfor antallet af dyr eller supplerer med tilskudsfoder, så belægningen følger det aktuelle udbud.</p>
+
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
@@ -174,6 +203,10 @@
           <a class="calc-card" href="/consumo-do-rebanho.html"><h3>Foderindtag i besætning</h3><p>Tørstof og mineraler.</p></a>
           <a class="calc-card" href="/cocho.html"><h3>Foderbord og drikkekar</h3><p>Dimensionering af foderbord.</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlig faglitteratur. Erstatter ikke rådgivning fra agronom, kvægbrugskonsulent eller dyrlæge. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>

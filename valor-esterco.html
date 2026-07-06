@@ -52,6 +52,46 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hvorfor udnyttes ikke alt kvælstof i gyllen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En del af kvælstoffet fordamper som ammoniak ved udbringning, en del bindes i jordens organiske pulje, og kun en fraktion frigives i vækstsæsonen. Derfor regnes med en udnyttelsesprocent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvilken udnyttelsesprocent skal jeg indtaste?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gødningsregnskabet bruger lovpligtige normtal fra Landbrugsstyrelsen, fx 75 % for svinegylle og 70 % for kvæggylle. Den agronomiske virkning i marken kan afvige afhængigt af teknik og vejr."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvordan fastsætter jeg prisen pr. kg næringsstof?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Udled den fra prisen på den mineralske gødning, du ellers ville købe: varens pris pr. ton divideret med antal kg af næringsstoffet pr. ton vare."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Skal husdyrgødning med i gødningsregnskabet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Husdyrgødningens kvælstof indgår med de lovpligtige udnyttelsesprocenter og trækkes fra bedriftens kvote, før behovet for handelsgødning gøres op."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -238,24 +278,32 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p>Denne beregner estimerer hvor meget <strong>N, P₂O₅ og K₂O</strong> en udbringning af husdyrgødning, gylle eller kompost leverer pr. hektar, og hvad den <strong>økonomiske værdi</strong> af den gødskning udgør sammenlignet med tilsvarende mineralsk gødning. Nyttig til at prissætte den husdyrgødning, der produceres på bedriften, sammenligne alternativer og retfærdiggøre transport og udbringning.</p>
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Denne beregner estimerer, hvor meget <strong>N, P₂O₅ og K₂O</strong> en udbringning af husdyrgødning, gylle eller kompost leverer pr. hektar, og hvad den <strong>økonomiske værdi</strong> af den gødskning udgør sammenlignet med tilsvarende mineralsk gødning. Den er nyttig til at prissætte den husdyrgødning, der produceres på bedriften, vurdere om det kan betale sig at transportere gylle til fjerntliggende marker, og sammenligne værdien af forskellige gødningstyper, før der suppleres med handelsgødning.</p>
 
-      <h2>Sådan virker det</h2>
-      <p>Ud fra den udbragte mængde og indholdet af gødningen beregner vi mængden af hvert næringsstof, der leveres. Udnyttelsesgraden reducerer denne mængde til det, der faktisk er tilgængeligt for afgrøden i sæsonen. Den økonomiske værdi er summen af de udnyttede næringsstoffer ganget med prisen på den tilsvarende mineralske gødning.</p>
+      <h2>Input, enheder og omregninger</h2>
+      <p>Mængden angives i tons pr. hektar (for gylle regnes 1 m³ ≈ 1 ton), indholdet i procent eller kg pr. ton fra en gylleanalyse eller tabelværdier, udnyttelsen i procent og priserne som kr pr. kg næringsstof i den mineralske gødning, der ellers skulle købes. Angives indholdet som kg/ton, svarer 4 kg N/ton til 0,4 %. Udnyttelsesgraden reducerer totalindholdet til det, afgrøden reelt kan regne med i sæsonen.</p>
+
+      <h2>Formel og gennemregnet eksempel</h2>
       <div class="formula">kg/ha N = mængde (t/ha) × 1000 × (%N ÷ 100) × (udnyttelse ÷ 100)</div>
       <div class="formula">Værdi (kr/ha) = kg N × pris N + kg P₂O₅ × pris P + kg K₂O × pris K</div>
+      <p>Gennemregnet eksempel: 30 t/ha kvæggylle med 0,4 % N (4 kg/ton) og 70 % udnyttelse giver 30 × 1000 × 0,004 × 0,70 = <strong>84 kg effektivt N pr. hektar</strong>. Koster mineralsk kvælstof fx 10 kr pr. kg, er kvælstofværdien alene 840 kr/ha; værdien af P₂O₅ og K₂O beregnes på samme måde og lægges til. Sammenholdes totalen med omkostningen til udbringning, ses det hurtigt, om en ekstra transportafstand kan betale sig.</p>
 
-      <h2>Om udnyttelsesgraden</h2>
-      <p><strong>N</strong> er det mest variable næringsstof: en del fordamper som ammoniak, en del immobiliseres af mikrobiotaen, og kun en fraktion mineraliseres i sæsonen. Under typiske markforhold varierer udnyttelsen af N fra <strong>30 % til 70 %</strong> afhængigt af håndtering, gødningstype, nedfældning og klima. <strong>P₂O₅</strong> har højere udnyttelse (omkring 80 %), fordi det tabes lidt, og <strong>K₂O</strong> når næsten 100 %, fordi det overvejende er på opløselig form.</p>
+      <h2>Praktiske referenceværdier</h2>
+      <p><strong>N</strong> er det mest variable næringsstof: en del fordamper som ammoniak, en del immobiliseres, og kun en fraktion mineraliseres i sæsonen. I det danske gødningsregnskab regnes med lovpligtige udnyttelsesprocenter jf. offentlige normtal fra Landbrugsstyrelsen — fx 75 % for svinegylle, 70 % for kvæggylle og 45 % for dybstrøelse — mens fosfor og kalium i praksis regnes næsten fuldt tilgængelige over sædskiftet. Typiske tabelindhold, fx fra SEGES' normtal for husdyrgødning, ligger i størrelsesordenen 3-5 kg N pr. ton kvæggylle, men variationen mellem besætninger, fodring og vandtilsætning er stor.</p>
 
-      <div class="callout callout--warning">
-        <div class="callout__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Indholdet varierer meget
-        </div>
-        <p>Standardværdierne pr. type husdyrgødning er gennemsnit fra litteraturen. Næringsstofindholdet varierer meget afhængigt af håndtering, dyrenes foder, tid og opbevaringsform samt fugt. For præcision, <strong>analysér en prøve</strong> af den husdyrgødning, du vil anvende.</p>
-      </div>
+      <h2>Begrænsninger</h2>
+      <p>Standardværdier er gennemsnit — indholdet i din egen gylle afhænger af foder, opbevaring, omrøring og vandtilsætning, så en <strong>gylleanalyse</strong> er den eneste sikre reference. Beregneren <strong>anbefaler ingen dosering</strong>: hvor meget husdyrgødning der må udbringes, styres af harmoniregler, kvælstofkvoter og gødningsregnskab efter gældende lovgivning, og også udbringningstidspunkt og -teknik er regulerede. Fastlæg planen sammen med en planteavlskonsulent.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvorfor udnyttes ikke alt kvælstof i gyllen?</h3>
+      <p>En del af kvælstoffet fordamper som ammoniak ved udbringning, en del bindes i jordens organiske pulje, og kun en fraktion frigives i vækstsæsonen. Derfor regnes med en udnyttelsesprocent.</p>
+      <h3>Hvilken udnyttelsesprocent skal jeg indtaste?</h3>
+      <p>Gødningsregnskabet bruger lovpligtige normtal fra Landbrugsstyrelsen, fx 75 % for svinegylle og 70 % for kvæggylle. Den agronomiske virkning i marken kan afvige afhængigt af teknik og vejr.</p>
+      <h3>Hvordan fastsætter jeg prisen pr. kg næringsstof?</h3>
+      <p>Udled den fra prisen på den mineralske gødning, du ellers ville købe: varens pris pr. ton divideret med antal kg af næringsstoffet pr. ton vare.</p>
+      <h3>Skal husdyrgødning med i gødningsregnskabet?</h3>
+      <p>Ja. Husdyrgødningens kvælstof indgår med de lovpligtige udnyttelsesprocenter og trækkes fra bedriftens kvote, før behovet for handelsgødning gøres op.</p>
 
       <div class="related">
         <h2>Andre beregnere</h2>
@@ -264,6 +312,10 @@
           <a class="calc-card" href="/calagem.html"><h3>Kalkning</h3><p>Kalkbehov.</p></a>
           <a class="calc-card" href="/populacao-de-plantas.html"><h3>Plantebestand</h3><p>Planter pr. hektar.</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlig faglitteratur og normtal. Erstatter ikke rådgivning fra agronom eller planteavlskonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>

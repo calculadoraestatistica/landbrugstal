@@ -52,6 +52,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Hvad koster en traktortime typisk?","acceptedAnswer":{"@type":"Answer","text":"Vejledende maskinstationstakster, som offentliggøres årligt af brancheorganisationer og gengives i fagpressen, ligger for en mellemstor traktor med fører ofte omkring 800-1.100 kr pr. time. Din egen omkostning afhænger især af det årlige timetal."}},
+    {"@type":"Question","name":"Hvornår kan maskinstation betale sig?","acceptedAnswer":{"@type":"Answer","text":"Ved lavt årligt timetal fordeles afskrivning og rente på få timer, og egen omkostning pr. time stiger. Ligger din beregnede timeomkostning væsentligt over maskinstationstaksten, kan udlicitering eller maskinfællesskab være billigere."}},
+    {"@type":"Question","name":"Hvorfor regnes rente af gennemsnitskapitalen?","acceptedAnswer":{"@type":"Answer","text":"Fordi den bundne kapital falder i takt med, at maskinen afskrives. Gennemsnittet af nypris og restværdi repræsenterer den kapital, der i snit er bundet over hele levetiden."}},
+    {"@type":"Question","name":"Hvor mange timer om året skal en maskine køre?","acceptedAnswer":{"@type":"Answer","text":"Der findes ingen fast grænse, men jo flere timer, desto lavere bliver de faste omkostninger pr. time. Sammenlign din timeomkostning ved det realistiske timetal med maskinstationstaksten for samme opgave."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -210,28 +222,44 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p>Denne beregner estimerer <strong>driftsomkostningen for en landbrugsmaskine</strong> i kr pr. driftstime og i kr pr. hektar. Den er nyttig til prissætning af entreprenørarbejde, vurdering af køb vs. leje, sammenligning af maskiner og opbygning af produktionsomkostningen i marken.</p>
+      <h2>Hvad bruges den til i bedriftsøkonomien</h2>
+      <p>Maskinomkostninger er sammen med jordleje og gødning blandt de tungeste poster i planteavlens økonomi, og beregneren estimerer <strong>driftsomkostningen for en landbrugsmaskine</strong> i kr pr. driftstime og kr pr. hektar. Den bruges til at prissætte arbejde for andre, til at vurdere eje kontra leje eller maskinstation, til at sammenligne to maskiner før et køb og til at opbygge markens produktionsomkostning med realistiske maskintal. Fordi afskrivning og rente fordeles på det årlige timetal, viser beregneren også tydeligt, hvor dyr en maskine bliver pr. time, når den kører for lidt.</p>
 
-      <h2>Sådan beregner du</h2>
-      <p>Den samlede omkostning er summen af seks komponenter: afskrivning, renter på den gennemsnitlige kapital, brændstof, vedligehold, operatør og smøremidler. De anvendte formler:</p>
+      <h2>Input og enheder</h2>
+      <p>Der indtastes anskaffelsespris og forventet restværdi i kroner, levetid i år, årligt timetal, dieselforbrug i L/time, dieselpris i kr/L, vedligehold som procent af nyprisen, operatørløn i kr/time og kapacitet i ha/time. Renten regnes af gennemsnitskapitalen. Resultatet leveres i kr pr. driftstime og — via kapaciteten — i kr pr. hektar, så det kan sammenlignes direkte med maskinstationstakster.</p>
+
+      <h2>Formel og gennemregnet eksempel</h2>
       <div class="formula">Afskrivning (kr/t) = (pris − restværdi) ÷ (levetid × timer/år)</div>
       <div class="formula">Renter (kr/t) = ((pris + restværdi) ÷ 2) × 6 % ÷ timer/år</div>
       <div class="formula">Brændstof (kr/t) = forbrug × dieselpris</div>
       <div class="formula">Vedligehold (kr/t) = (pris × % vedligehold) ÷ timer/år</div>
       <div class="formula">Smøremidler (kr/t) = brændstof × % smøremidler</div>
       <div class="formula">Omkostning kr/ha = omkostning kr/t ÷ kapacitet (ha/t)</div>
+      <p>Gennemregnet eksempel: traktor til 350.000 kr, restværdi 70.000 kr, levetid 10 år og 1.000 timer/år. Afskrivning: (350.000 − 70.000) ÷ 10.000 = 28 kr/t. Renter: 210.000 × 6 % ÷ 1.000 = 12,60 kr/t. Brændstof: 15 × 6,80 = 102 kr/t. Vedligehold: 350.000 × 8 % ÷ 1.000 = 28 kr/t. Operatør 25 kr/t og smøremidler ca. 15 kr/t. I alt cirka <strong>215 kr/t</strong>, og med en kapacitet på 2 ha/t cirka <strong>107 kr/ha</strong>.</p>
 
-      <h2>Eksempel</h2>
-      <p>Traktor til 350.000 kr, restværdi 70.000 kr, levetid 10 år, 1.000 t/år, 15 L/t, diesel til 6,80 kr/L, vedligehold 8 %, operatør 25 kr/t, kapacitet 2 ha/t: samlet omkostning omkring <strong>215 kr/t</strong> eller <strong>107 kr/ha</strong>.</p>
+      <h2>Praktiske referenceværdier</h2>
+      <p>Som sammenligningsgrundlag er de vejledende <strong>maskinstationstakster</strong>, der offentliggøres årligt og gengives i fagpressen samt i offentlige opgørelser fra fx SEGES, meget anvendelige: en mellemstor traktor med fører afregnes ofte omkring 800-1.100 kr pr. time, større trækkraft og specialmaskiner højere, og mejetærskning afregnes typisk pr. hektar. I maskinkalkuler regnes vedligehold ofte som 6-10 % af nyprisen fordelt over levetiden og renten med 4-6 % af gennemsnitskapitalen. Ligger din beregnede egenomkostning ved et realistisk timetal væsentligt over taksten, taler det for maskinstation eller maskinfællesskab; ligger den under, styrker det ejerskabet. Taksterne varierer med region og sæson.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Vigtige punkter
+          Reel kapacitet er lavere end teoretisk
         </div>
-        <p>Den <strong>reelle</strong> kapacitet er lavere end den teoretiske: vendinger på agerenden, stop, optankning og indstillinger reducerer let markkapaciteten med 15-30 %. Brug den faktisk målte kapacitet, ikke katalogværdien. Den regnskabsmæssige afskrivning afviger også fra <strong>markedsværdien</strong> — for maskiner med høj efterspørgsel er den reelle værdiforringelse mindre. Til mere konservative analyser bør levetiden og restværdien justeres efter dit lokale marked.</p>
+        <p>Vendinger på agerenden, stop, optankning og indstillinger reducerer let markkapaciteten med 15-30 %. Brug den faktisk målte kapacitet, ikke katalogværdien.</p>
       </div>
+
+      <h2>Begrænsninger</h2>
+      <p>Den lineære afskrivning afviger fra maskinens <strong>markedsværdi</strong> — efterspurgte modeller taber mindre værdi end kalkulen antager, og omvendt. Rentesatsen på 6 % er en forudsætning, ikke din faktiske finansieringsrente, og vedligeholdsprocenten dækker over store udsving mellem gode og dårlige år. Timeomkostningen er desuden ikke bundlinjen: den siger intet om, hvorvidt operationen i sig selv er rentabel. Justér levetid, restværdi og timetal efter dit lokale marked, gerne sammen med en økonomikonsulent.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvad koster en traktortime typisk?</h3>
+      <p>Vejledende maskinstationstakster ligger for en mellemstor traktor med fører ofte omkring 800-1.100 kr pr. time. Din egen omkostning afhænger især af det årlige timetal.</p>
+      <h3>Hvornår kan maskinstation betale sig?</h3>
+      <p>Ved lavt årligt timetal fordeles afskrivning og rente på få timer, og egen omkostning pr. time stiger. Ligger den væsentligt over maskinstationstaksten, kan udlicitering være billigere.</p>
+      <h3>Hvorfor regnes rente af gennemsnitskapitalen?</h3>
+      <p>Fordi den bundne kapital falder i takt med, at maskinen afskrives. Gennemsnittet af nypris og restværdi repræsenterer den kapital, der i snit er bundet over levetiden.</p>
+      <h3>Hvor mange timer om året skal en maskine køre?</h3>
+      <p>Der findes ingen fast grænse, men jo flere timer, desto lavere bliver de faste omkostninger pr. time. Sammenlign med maskinstationstaksten for samme opgave.</p>
 
       <div class="related">
         <h2>Andre beregnere</h2>
@@ -240,6 +268,10 @@
           <a class="calc-card" href="/conversao-de-area.html"><h3>Arealomregner</h3><p>Hektar, tønde land og m².</p></a>
           <a class="calc-card" href="/conversao-de-sacas.html"><h3>Vægtomregner</h3><p>Hkg, kg og tons.</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlige opgørelser og faglitteratur. Erstatter ikke rådgivning fra en økonomikonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>

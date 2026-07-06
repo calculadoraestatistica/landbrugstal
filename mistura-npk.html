@@ -52,6 +52,46 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hvorfor kan beregneren ikke altid ramme behovet præcist?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fordi hver gødning har et fast forhold mellem næringsstofferne. Mangler en kilde til fx kalium, forbliver behovet udækket, og overlappende varer kan omvendt give et overskud af kvælstof."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Skal jeg indtaste P og K som oxid eller som ren vare?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Beregneren regner i P₂O₅ og K₂O. Danske deklarationer angiver ren P og K, så omregn med P₂O₅ = P × 2,29 og K₂O = K × 1,21 først."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan alle gødninger blandes fysisk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nej. Forskelle i kornstørrelse og densitet giver afblanding i sprederen, og visse kombinationer klumper eller trækker fugt. Følg leverandørens blandetabeller, før varer blandes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvilket næringsstof bør dækkes først?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I praksis prioriteres ofte fosfor og kalium, som er dyre og mindre mobile i jorden, mens kvælstof justeres ad flere tildelinger. Den konkrete prioritering bør ske sammen med en konsulent."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -281,36 +321,49 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p>Denne beregner kombinerer <strong>op til tre gødninger</strong> (simple eller formulerede) for at forsøge at dække den faglige anbefaling af N, P₂O₅ og K₂O pr. hektar. Den er nyttig, når der ikke findes en færdig formel, der dækker alle næringsstoffer, og man derfor er nødt til at <strong>blande gødninger</strong> for at komme tæt på målet.</p>
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Denne beregner kombinerer <strong>op til tre gødninger</strong> (simple eller formulerede) for at forsøge at dække den faglige anbefaling af N, P₂O₅ og K₂O pr. hektar. Den er nyttig, når der ikke findes en færdig formel, der dækker alle næringsstoffer, og man derfor er nødt til at <strong>blande gødninger</strong> for at komme tæt på målet — eller når man vil se, hvor langt et lager af simple varer rækker, før der købes nyt.</p>
 
-      <h2>Sådan virker det</h2>
-      <p>Beregneren anvender en <strong>grådig heuristik</strong>: den starter med det næringsstof, der har færrest kilder blandt de oplyste gødninger (typisk P eller K), og vælger den gødning, der er rigest i det næringsstof, til at dække behovet. Dernæst justerer den næste næringsstof ved at trække det allerede leverede fra. N kommer typisk til sidst og fyldes op med urea eller en anden kvælstofgødning.</p>
+      <h2>Input, enheder og omregninger</h2>
+      <p>Behovet indtastes i kg/ha N, P₂O₅ og K₂O, og hver gødning med sit indhold i procent. Husk, at danske deklarationer som NS 27-4 eller NPK 21-3-10 angiver <strong>ren P og K</strong>: omregn med P₂O₅ = P × 2,29 og K₂O = K × 1,21, før procenterne indtastes. Simple varer indtastes med nul i de næringsstoffer, de ikke indeholder — fx urea som 45-0-0 eller kaliumklorid som 0-0-60.</p>
+
+      <h2>Formel og gennemregnet eksempel</h2>
+      <p>Beregneren anvender en <strong>grådig heuristik</strong>: den starter med det næringsstof, der har færrest kilder blandt de oplyste gødninger (typisk P eller K), og vælger den gødning, der er rigest på netop det næringsstof. Dernæst trækkes det allerede leverede fra, før næste næringsstof dækkes; N fyldes typisk op til sidst.</p>
       <div class="formula">dosering af gødning (kg/ha) = (resterende behov ÷ % næringsstof) × 100</div>
-
-      <h2>Eksempel</h2>
-      <p>Behov 80-60-40 med MAP (18-46-00), KCl (00-00-60) og urea (45-00-00):</p>
+      <p>Gennemregnet eksempel — behov 80-60-40 med MAP (18-46-00), KCl (00-00-60) og urea (45-00-00):</p>
       <ul>
-        <li>MAP dækker P: 60 ÷ 46 × 100 ≈ <strong>130 kg/ha</strong>, leverer ca. 23 kg N.</li>
+        <li>MAP dækker P: 60 ÷ 46 × 100 ≈ <strong>130 kg/ha</strong>, som samtidig leverer ca. 23 kg N.</li>
         <li>KCl dækker K: 40 ÷ 60 × 100 ≈ <strong>67 kg/ha</strong>.</li>
         <li>Urea fylder det resterende N op (80 − 23 = 57): 57 ÷ 45 × 100 ≈ <strong>127 kg/ha</strong>.</li>
       </ul>
 
-      <div class="callout callout--warning">
-        <div class="callout__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Begrænsninger
-        </div>
-        <p>Det er ikke altid muligt at ramme alle tre næringsstoffer præcist. Mangler en specifik kilde (f.eks. ingen gødning med K), bliver næringsstoffet udækket. Når gødningerne har overlappende sammensætning (f.eks. to med N), kan heuristikken give et overskud. <strong>Brugeren skal selv prioritere</strong>: typisk er det mest praktisk at prioritere P og K (dyre og mindre mobile i jorden) og finjustere N med en udspredning som overgødskning.</p>
-      </div>
+      <h2>Praktiske referenceværdier</h2>
+      <p>Typiske simple varer at blande med er urea (46 % N), svovlsur ammoniak, tripelsuperfosfat (ca. 46 % P₂O₅) og kaliumklorid (ca. 60 % K₂O), mens NS 27-4 og NPK-typer som 21-3-10 dækker bredere. Ikke alle varer kan blandes fysisk: forskelle i kornstørrelse og densitet giver afblanding i sprederen, og nogle kombinationer klumper eller optager fugt. Følg leverandørens blandetabeller, og se offentlige normtal, fx fra SEGES og Landbrugsstyrelsen, for den behovsfastsættelse, der ligger bag gødningsplanen.</p>
+
+      <h2>Begrænsninger</h2>
+      <p>Det er ikke altid muligt at ramme alle tre næringsstoffer præcist: mangler en kilde, bliver behovet udækket, og overlappende varer kan give overskud. Beregneren <strong>anbefaler ingen doser</strong> — behovet skal komme fra gødningsplanen, og kvælstofkvoter og gødningsregnskab er reguleret af lovgivningen. I praksis prioriteres P og K ofte ved såning, mens N finjusteres ad flere gange; den afvejning hører hjemme hos en planteavlskonsulent.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvorfor kan beregneren ikke altid ramme behovet præcist?</h3>
+      <p>Fordi hver gødning har et fast forhold mellem næringsstofferne. Mangler en kilde til fx kalium, forbliver behovet udækket, og overlappende varer kan omvendt give et overskud af kvælstof.</p>
+      <h3>Skal jeg indtaste P og K som oxid eller som ren vare?</h3>
+      <p>Beregneren regner i P₂O₅ og K₂O. Danske deklarationer angiver ren P og K, så omregn med P₂O₅ = P × 2,29 og K₂O = K × 1,21 først.</p>
+      <h3>Kan alle gødninger blandes fysisk?</h3>
+      <p>Nej. Forskelle i kornstørrelse og densitet giver afblanding i sprederen, og visse kombinationer klumper eller trækker fugt. Følg leverandørens blandetabeller, før varer blandes.</p>
+      <h3>Hvilket næringsstof bør dækkes først?</h3>
+      <p>I praksis prioriteres ofte fosfor og kalium, som er dyre og mindre mobile i jorden, mens kvælstof justeres ad flere tildelinger. Den konkrete prioritering bør ske sammen med en konsulent.</p>
 
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
-          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Quanto de gødning formulado anvende.</p></a>
-          <a class="calc-card" href="/calagem.html"><h3>Kalkning</h3><p>Behov de kalk.</p></a>
-          <a class="calc-card" href="/populacao-de-plantas.html"><h3>Plantebestand</h3><p>Plantas pr. hektar.</p></a>
+          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Mængde handelsgødning pr. hektar.</p></a>
+          <a class="calc-card" href="/calagem.html"><h3>Kalkning</h3><p>Kalkbehov.</p></a>
+          <a class="calc-card" href="/populacao-de-plantas.html"><h3>Plantebestand</h3><p>Planter pr. hektar.</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlig faglitteratur og normtal. Erstatter ikke rådgivning fra agronom eller planteavlskonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>
@@ -493,7 +546,7 @@
     var html = '<div class="result__banner">' +
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
       '<div><div class="result__headline">Mistura recomendada</div>' +
-      '<div class="result__sub">Dose de cada gødning og balanço NPK</div></div></div>';
+      '<div class="result__sub">Dosis pr. gødning og NPK-balance</div></div></div>';
     html += '<div class="result__body">';
 
     // Dose pr. gødning
@@ -512,7 +565,7 @@
     }
     html += '<div class="result__metrics">' + metrics + '</div>';
 
-    // Tabela balanço
+    // Tabela balance
     var rows = [
       { label: 'N',     entregue: r.entregue.n, alvo: r.alvo.n },
       { label: 'P₂O₅', entregue: r.entregue.p, alvo: r.alvo.p },

@@ -52,6 +52,46 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Hvor mange hkg går der på et ton korn?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Et ton er 1.000 kg, og en hkg er 100 kg, så der går 10 hkg på et ton uanset afgrøde."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hvilken vægtfylde skal jeg bruge for hvede?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Offentlige normer angiver typisk 750-780 kg/m³ for renset hvede. Brug den lave ende, når du dimensionerer lager, og den høje ende, hvis du vil vide, hvad der maksimalt kan ligge i siloen."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hvorfor trækkes en udnyttelsesgrad fra volumenet?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Fordi siloen aldrig fyldes helt: kornets keglevinkel i toppen, ventilationskanaler og friplads ved fyldning reducerer det brugbare volumen. I praksis regnes ofte med 85-95 % af det geometriske volumen."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Kan jeg bruge beregneren til raps?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ja. Sæt vægtfylden til ca. 620-680 kg/m³ og husk, at raps skal ned omkring basisvandprocenten på 9 %, før den er lagerfast."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -209,38 +249,35 @@
     <div class="ad-slot" data-ad-slot=""></div>
 
     <article class="prose">
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Denne beregner estimerer, hvor mange tons og hkg korn der kan ligge i en silo eller et fladlager, ud fra konstruktionens mål, en udnyttelsesgrad og kornets vægtfylde. Den bruges typisk før høst, når den forventede avl skal afstemmes med den lagerplads, bedriften faktisk råder over, ved planlægning af nybyggeri eller udvidelse af planlager, og når et tilbud om lejet lagerplads skal vurderes mod egne kvadratmeter. Den er også nyttig ved sædskifteændringer: den samme silo rummer markant færre tons havre end hvede, fordi vægtfylden er lavere, og det overser man let, hvis man kun tænker i kubikmeter.</p>
 
-      <h2>Hvad bruges den til</h2>
-      <p>Denne beregner estimerer <strong>opbevaringskapaciteten</strong> for silo'er og fladlagre. Den bruges til at planlægge den forventede høstmængde i forhold til den tilgængelige kapacitet, dimensionere nye projekter og vurdere kontrakter om lejet lagerplads.</p>
+      <h2>Input, enheder og omregninger</h2>
+      <p>Du vælger konstruktionstype (cylindrisk silo, rektangulært silo eller fladlager), indtaster målene i meter, en udnyttelsesgrad i procent og kornets vægtfylde i kg/m³. Resultatet vises i kubikmeter, tons og hkg — husk at 1 ton = 10 hkg à 100 kg. Skal kapaciteten holdes op mod et areal, regnes 1 tønde land = 0,5516 ha. Amerikanske silodatablade angiver ofte kapacitet i bushels; 1 bushel hvede vejer ca. 27,2 kg.</p>
 
-      <h2>Sådan beregnes det</h2>
-      <p>Først beregnes konstruktionens geometriske volumen, dernæst trækkes en udnyttelsesgrad fra (hjørnetab, raseringsvinkel, plads til ventilation), og til sidst omregnes der med kornets volumenvægt.</p>
-      <div class="formula">Cylindrisk silo: V = π × (d/2)² × h</div>
+      <h2>Formel og gennemregnet eksempel</h2>
+      <div class="formula">Cylindrisk silo: V = π × (diameter ÷ 2)² × højde</div>
       <div class="formula">Rektangulær / fladlager: V = længde × bredde × højde</div>
-      <div class="formula">Tons = V × udnyttelsesgrad × volumenvægt ÷ 1.000</div>
+      <div class="formula">Tons = V × udnyttelsesgrad × vægtfylde ÷ 1.000 &nbsp;·&nbsp; hkg = tons × 10</div>
+      <p>Gennemregnet eksempel: en cylindrisk silo med 8 m diameter og 12 m brugbar højde skal lagre hvede med vægtfylde 770 kg/m³ og 90 % udnyttelse. Geometrisk volumen: 3,1416 × 4² × 12 = 603 m³. Brugbart volumen: 603 × 0,90 = 543 m³. Kapacitet: 543 × 770 ÷ 1.000 = <strong>418 tons hvede</strong>, svarende til 4.180 hkg. Fyldes samme silo med byg ved 675 kg/m³, falder kapaciteten til 543 × 675 ÷ 1.000 = 366 tons — over 50 tons mindre i nøjagtig samme bygning.</p>
 
-      <h2>Typiske volumenvægte</h2>
-      <p>Typiske volumenvægte (vægt pr. kubikmeter løst korn) til dimensionering:</p>
-      <ul>
-        <li><strong>Sojabønner</strong>: 720 kg/m³</li>
-        <li><strong>Majs</strong>: 720 kg/m³</li>
-        <li><strong>Hvede</strong>: 770 kg/m³</li>
-        <li><strong>Ris med skal</strong>: 580 kg/m³</li>
-        <li><strong>Afskallet ris</strong>: 800 kg/m³</li>
-        <li><strong>Kaffebær</strong>: 470 kg/m³</li>
-        <li><strong>Forarbejdet kaffe</strong>: 580 kg/m³</li>
-      </ul>
+      <h2>Praktiske referenceværdier</h2>
+      <p>Offentlige normer og faglitteratur, fx fra Landbrugsstyrelsen og SEGES, angiver typisk disse vægtfylder for løst, renset korn: hvede 750-780 kg/m³, byg 650-700 kg/m³, rug 700-730 kg/m³, havre 500-550 kg/m³, raps 620-680 kg/m³ og majs 700-750 kg/m³. Udnyttelsesgraden ligger i praksis omkring 85-95 %, fordi toppens keglevinkel, ventilationskanaler og friplads ved fyldning æder en del af det geometriske volumen. Husk desuden, at kornet skal være lagerfast omkring basisvandprocenten — 14,5-15 % for korn og 9 % for raps — inden det lægges ind; fugtigt korn vejer mere pr. m³ og kan ikke ligge sikkert uden beluftning eller tørring.</p>
 
-      <h2>Eksempel</h2>
-      <p>Cylindrisk silo med 8 m diameter og 12 m brugbar højde, der lagrer hvede med 90 % udnyttelse: brugbart volumen ≈ <strong>543 m³</strong>, omtrent <strong>391 t</strong> eller <strong>6.512 hkg</strong> à 60 kg.</p>
+      <div class="callout callout--warning"><div class="callout__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Brug en konservativ vægtfylde ved dimensionering</div><p>Vægtfylden falder med højt vandindhold og mange urenheder. Regn med intervallets nedre grænse, når du dimensionerer nyt lager — så undervurderer du ikke pladsbehovet i et vådt høstår.</p></div>
 
-      <div class="callout callout--warning">
-        <div class="callout__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Volumenvægten varierer med fugt og urenheder
-        </div>
-        <p>Volumenvægten ændrer sig med vandindhold, urenheder og kompakteringsgrad ved fyldning. Til projektering og dimensionering bør der bruges konservative værdier (tæt på intervallets nedre grænse) for ikke at undervurdere den nødvendige plads.</p>
-      </div>
+      <h2>Begrænsninger</h2>
+      <p>Beregneren arbejder med idealiseret geometri: keglebund, toppens rasering og indbygninger indgår kun indirekte via udnyttelsesgraden. Vægtfylden varierer med sort, vandindhold, urenheder og komprimeringsgrad, så det reelle tal kan afvige nogle procent. Den vurderer hverken ventilationsbehov, gulvets bæreevne eller siloens statik — det hører til i den egentlige projektering sammen med en bygningskonsulent. Brug resultatet som et planlægningsoverslag, ikke som dokumentation.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvor mange hkg går der på et ton korn?</h3>
+      <p>Et ton er 1.000 kg, og en hkg er 100 kg, så der går 10 hkg på et ton uanset afgrøde.</p>
+      <h3>Hvilken vægtfylde skal jeg bruge for hvede?</h3>
+      <p>Offentlige normer angiver typisk 750-780 kg/m³ for renset hvede. Brug den lave ende, når du dimensionerer lager, og den høje ende, hvis du vil vide, hvad der maksimalt kan ligge i siloen.</p>
+      <h3>Hvorfor trækkes en udnyttelsesgrad fra volumenet?</h3>
+      <p>Fordi siloen aldrig fyldes helt: kornets keglevinkel i toppen, ventilationskanaler og friplads ved fyldning reducerer det brugbare volumen. I praksis regnes ofte med 85-95 % af det geometriske volumen.</p>
+      <h3>Kan jeg bruge beregneren til raps?</h3>
+      <p>Ja. Sæt vægtfylden til ca. 620-680 kg/m³ og husk, at raps skal ned omkring basisvandprocenten på 9 %, før den er lagerfast.</p>
 
       <div class="related">
         <h2>Andre beregnere</h2>
@@ -250,6 +287,8 @@
           <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Gødning ud fra anbefaling.</p></a>
         </div>
       </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;"><p>Uddannelsesindhold baseret på offentlig faglitteratur og offentlige normer, fx Landbrugsstyrelsen og SEGES. Erstatter ikke rådgivning fra planteavls- eller driftsøkonomikonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p></div>
 
     </article>
   </div>

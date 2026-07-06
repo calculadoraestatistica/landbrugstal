@@ -10,15 +10,15 @@
   <link rel="dns-prefetch" href="https://www.euronext.com">
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
-<title>Comparador de Gødnings | Landbrugstal</title>
-<meta name="description" content="Compare gødnings pelo omkostning pr. kg de næringsstof (N, P₂O₅ og K₂O). Descubra qual gødning é mais barato pr. unidade ativa.">
+<title>Gødningssammenligner | Landbrugstal</title>
+<meta name="description" content="Sammenlign gødninger på omkostningen pr. kg næringsstof (N, P₂O₅ og K₂O). Find ud af, hvilken gødning der er billigst pr. aktiv enhed.">
 <link rel="canonical" href="https://landbrugstal.dk/comparador-fertilizantes.html">
 <meta name="theme-color" content="#16a34a">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="da_DK">
 <meta property="og:site_name" content="Landbrugstal">
-<meta property="og:title" content="Comparador de Gødnings">
-<meta property="og:description" content="Compare gødnings pelo omkostning pr. kg de N, P₂O₅ og K₂O.">
+<meta property="og:title" content="Gødningssammenligner">
+<meta property="og:description" content="Sammenlign gødninger på omkostningen pr. kg N, P₂O₅ og K₂O.">
 <meta property="og:url" content="https://landbrugstal.dk/comparador-fertilizantes.html">
 <meta property="og:image" content="https://landbrugstal.dk/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,13 +33,13 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Comparador de Gødnings",
+  "name": "Gødningssammenligner",
   "url": "https://landbrugstal.dk/comparador-fertilizantes.html",
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Web",
   "inLanguage": "da-DK",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
-  "description": "Compare gødnings pelo omkostning pr. kg de næringsstof (N, P2O5 og K2O)."
+  "description": "Sammenlign gødninger på omkostningen pr. kg næringsstof (N, P2O5 og K2O)."
 }
 </script>
 <script type="application/ld+json">
@@ -50,6 +50,46 @@
     {"@type":"ListItem","position":1,"name":"Forside","item":"https://landbrugstal.dk/"},
     {"@type":"ListItem","position":2,"name":"Gødningssammenligner","item":"https://landbrugstal.dk/comparador-fertilizantes.html"}
   ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Hvorfor kan jeg ikke bare sammenligne pris pr. ton?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Fordi indholdet er forskelligt. Et ton urea indeholder 460 kg N, mens et ton NS 27-4 kun indeholder 270 kg N. Først når prisen deles med indholdet, sammenligner du det, marken faktisk skal bruge."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hvad betyder P₂O₅ og K₂O på deklarationen?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Det er oxidformerne, som fosfor og kalium traditionelt deklareres i. Rent fosfor findes som P = P₂O₅ × 0,436, og rent kalium som K = K₂O × 0,83."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hvordan omregner jeg en sækpris til tonpris?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Gang prisen for en 50 kg-sæk med 20 eller prisen for en 60 kg-sæk med 16,67. En 50 kg-sæk til 200 kr svarer altså til 4.000 kr/t."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Tæller svovl og andre næringsstoffer med i sammenligningen?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ikke automatisk. En NS-gødning med 4 % svovl leverer en værdi, som ren N-pris ikke fanger. Har begge produkter samme følgestoffer, er sammenligningen fair; ellers bør svovlværdien lægges oveni vurderingen."
+   }
+  }
+ ]
 }
 </script>
 </head>
@@ -94,7 +134,7 @@
           <li>Gødningssammenligner</li>
         </ol>
       </nav>
-      <h1>Comparador de Gødnings</h1>
+      <h1>Gødningssammenligner</h1>
       <p class="lead">Find ud af hvilken gødning der er billigst pr. kg næringsstof (N, P₂O₅ og K₂O) — ikke kun målt på sækprisen.</p>
     </div>
   </div>
@@ -104,15 +144,15 @@
     <form class="calculator" id="calc-form" novalidate>
       <h2 class="calculator__title">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-        Comparar gødnings
+        Sammenlign gødninger
       </h2>
-      <p class="calculator__hint">Indtast preço og teor de cada gødning. O segundo é valgfri.</p>
+      <p class="calculator__hint">Indtast pris og indhold for hver gødning. Den anden er valgfri.</p>
 
       <fieldset class="field-group">
         <legend>Gødning A</legend>
         <div class="field-row">
           <div class="field">
-            <label for="precoA">Preço</label>
+            <label for="precoA">Pris</label>
             <div class="input-affix">
               <input class="input" type="text" inputmode="decimal" id="precoA" placeholder="Ex.: 4,50" autocomplete="off">
               <span class="input-affix__unit">kr</span>
@@ -160,7 +200,7 @@
         <legend>Gødning B (valgfri)</legend>
         <div class="field-row">
           <div class="field">
-            <label for="precoB">Preço</label>
+            <label for="precoB">Pris</label>
             <div class="input-affix">
               <input class="input" type="text" inputmode="decimal" id="precoB" placeholder="Ex.: 3,80" autocomplete="off">
               <span class="input-affix__unit">kr</span>
@@ -207,7 +247,7 @@
       <p class="field-error" id="calc-error" role="alert"></p>
 
       <div class="calculator__actions">
-        <button class="btn btn--primary btn--lg" type="submit">Comparar gødnings</button>
+        <button class="btn btn--primary btn--lg" type="submit">Sammenlign gødninger</button>
         <button class="btn btn--ghost" type="button" id="calc-example">Udfyld med eksempel</button>
       </div>
 
@@ -217,24 +257,33 @@
     <div class="ad-slot" data-ad-slot=""></div>
 
     <article class="prose">
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Denne beregner sammenligner to gødninger på <strong>prisen pr. kg rent næringsstof</strong> (N, P₂O₅ og K₂O) i stedet for prisen pr. ton eller pr. sæk. To produkter med forskellig koncentration kan ikke sammenlignes meningsfuldt på tonprisen alene: en billig vare med lavt indhold ender ofte med at være den dyreste, når man regner ned på det kvælstof, den fosfor eller det kalium, som marken faktisk skal have. Beregneren bruges typisk ved indkøb før sæsonen, ved valg mellem fast og flydende gødning og når en NPK-blanding skal holdes op mod en kombination af enkeltgødninger.</p>
 
-      <h2>Hvad bruges den til</h2>
-      <p>Denne beregner sammenligner gødninger på <strong>omkostning pr. kg næringsstof</strong> (N, P₂O₅ og K₂O) — ikke på sækprisen alene. Det er den rigtige måde at vurdere, hvilken gødning der reelt er billigst.</p>
+      <h2>Input, enheder og omregninger</h2>
+      <p>For hver gødning indtaster du prisen — pr. kg, pr. sæk à 50 eller 60 kg eller pr. ton — samt indholdet i % N, % P₂O₅ og % K₂O fra varedeklarationen. Alt omregnes først til kr pr. kg vare: 1 ton = 1.000 kg (= 10 hkg à 100 kg), så 3.000 kr/t = 3,00 kr/kg, og en 50 kg-sæk til 200 kr = 4,00 kr/kg. Bemærk, at fosfor og kalium normalt deklareres som oxiderne P₂O₅ og K₂O — brug samme grundlag i begge kolonner.</p>
 
-      <h2>Sådan beregner du</h2>
-      <p>Først omregnes prisen til kr/kg gødning. Derefter divideres med den decimale andel af hvert næringsstof for at finde ud af, hvad et rent kg N, P₂O₅ eller K₂O koster.</p>
-      <div class="formula">kr/kg næringsstof = (kr/kg gødning) ÷ (% næringsstof ÷ 100)</div>
+      <h2>Formel og gennemregnet eksempel</h2>
+      <div class="formula">kr pr. kg næringsstof = (kr pr. kg gødning) ÷ (% næringsstof ÷ 100)</div>
+      <p>Gennemregnet eksempel med to kvælstofgødninger: NS 27-4 (kalkammonsalpeter med svovl) koster 3.000 kr/t, altså 3,00 kr/kg vare. Prisen pr. kg N bliver 3,00 ÷ 0,27 = <strong>11,11 kr/kg N</strong>. Urea med 46 % N koster 4.140 kr/t, altså 4,14 kr/kg vare, og prisen pr. kg N bliver 4,14 ÷ 0,46 = <strong>9,00 kr/kg N</strong>. Selv om urea er over 1.100 kr dyrere pr. ton, er den her ca. 19 % billigere pr. kg kvælstof — og det er den sammenligning, der afgør, hvad marken reelt koster at gøde.</p>
 
-      <h2>Eksempel</h2>
-      <p>En gødning 04-14-08 til <strong>kr 4,50/kg</strong> giver: N til kr 112,50/kg (4,50 ÷ 0,04), P₂O₅ til kr 32,14/kg (4,50 ÷ 0,14) og K₂O til kr 56,25/kg (4,50 ÷ 0,08).</p>
+      <h2>Praktiske referenceværdier</h2>
+      <p>Pris pr. kg næringsstof er det sammenligningsgrundlag, der bruges i offentlige normer og budgetkalkuler, fx hos SEGES og i Farmtal-lignende opgørelser. Typiske deklarationer at regne med: urea 46 % N, kalkammonsalpeter/NS-typer omkring 27 % N, flydende N32 med 32 % N, DAP med 18 % N og 46 % P₂O₅, TSP med ca. 45 % P₂O₅ og kaliumchlorid med 60 % K₂O. Skal du bruge indholdet som rent grundstof, gælder P = P₂O₅ × 0,436 og K = K₂O × 0,83. Husk at sammenligne på leveret pris inklusive fragt og rabatter, og at svovl, magnesium og mikronæringsstoffer kan have en selvstændig værdi.</p>
 
-      <div class="callout callout--warning">
-        <div class="callout__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Sammenlign pr. næringsstof, ikke pr. sæk
-        </div>
-        <p>Sammenlign gødninger på omkostningen pr. næringsstof — ikke på sækprisen. En billig gødning med lavt indhold kan ende dyrere pr. kg N, P₂O₅ eller K₂O end en mere koncentreret gødning.</p>
-      </div>
+      <div class="callout callout--warning"><div class="callout__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Sammenlign altid på samme oxidgrundlag</div><p>Blander du deklarationer i P₂O₅/K₂O sammen med tal i rent P og K, bliver sammenligningen skæv med 15-60 %. Tjek varedeklarationen, og regn alle produkter om til samme grundlag, før du konkluderer.</p></div>
+
+      <h2>Begrænsninger</h2>
+      <p>Prisen pr. kg næringsstof siger ikke alt. Beregneren indregner ikke udbringningsomkostninger (én tur med NPK mod flere ture med enkeltgødninger), spredeegenskaber, ammoniakfordampning fra urea på ubeskyttet overflade eller kravene i gødningsregnskabet. Den værdisætter heller ikke sekundære næringsstoffer som svovl. Brug resultatet som økonomisk grundsammenligning, og lad gødningsplanen og konsulenten afgøre det endelige valg.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvorfor kan jeg ikke bare sammenligne pris pr. ton?</h3>
+      <p>Fordi indholdet er forskelligt. Et ton urea indeholder 460 kg N, mens et ton NS 27-4 kun indeholder 270 kg N. Først når prisen deles med indholdet, sammenligner du det, marken faktisk skal bruge.</p>
+      <h3>Hvad betyder P₂O₅ og K₂O på deklarationen?</h3>
+      <p>Det er oxidformerne, som fosfor og kalium traditionelt deklareres i. Rent fosfor findes som P = P₂O₅ × 0,436, og rent kalium som K = K₂O × 0,83.</p>
+      <h3>Hvordan omregner jeg en sækpris til tonpris?</h3>
+      <p>Gang prisen for en 50 kg-sæk med 20 eller prisen for en 60 kg-sæk med 16,67. En 50 kg-sæk til 200 kr svarer altså til 4.000 kr/t.</p>
+      <h3>Tæller svovl og andre næringsstoffer med i sammenligningen?</h3>
+      <p>Ikke automatisk. En NS-gødning med 4 % svovl leverer en værdi, som ren N-pris ikke fanger. Har begge produkter samme følgestoffer, er sammenligningen fair; ellers bør svovlværdien lægges oveni vurderingen.</p>
 
       <div class="related">
         <h2>Andre beregnere</h2>
@@ -244,6 +293,8 @@
           <a class="calc-card" href="/calagem.html"><h3>Kalkning</h3><p>Kalkbehov.</p></a>
         </div>
       </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;"><p>Uddannelsesindhold baseret på offentlig faglitteratur og offentlige normer, fx Landbrugsstyrelsen og SEGES. Erstatter ikke rådgivning fra planteavls- eller driftsøkonomikonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p></div>
 
     </article>
   </div>
@@ -410,10 +461,10 @@
     if (!b) return 'Omkostning pr. næringsstof — Gødning A';
     var aUA = a.omkostningUA, bUA = b.omkostningUA;
     if (aUA == null && bUA == null) return 'Comparação entre gødnings';
-    if (aUA == null) return 'Gødning B é mais barato pr. unidade ativa';
-    if (bUA == null) return 'Gødning A é mais barato pr. unidade ativa';
-    if (aUA < bUA) return 'Gødning A é mais barato pr. unidade ativa';
-    if (bUA < aUA) return 'Gødning B é mais barato pr. unidade ativa';
+    if (aUA == null) return 'Gødning B er billigst pr. aktiv enhed';
+    if (bUA == null) return 'Gødning A er billigst pr. aktiv enhed';
+    if (aUA < bUA) return 'Gødning A er billigst pr. aktiv enhed';
+    if (bUA < aUA) return 'Gødning B er billigst pr. aktiv enhed';
     return 'Begge har samme pris pr. aktiv næringsstof-enhed';
   }
   function rowMetrics(label, valA, valB) {
@@ -428,7 +479,7 @@
   function render(a, b) {
     result.className = 'result result--neutral';
     var headline = pickHeadline(a, b);
-    var sub = b ? 'Comparação pr. kg de næringsstof (kr/kg N, P₂O₅ og K₂O)' : 'Omkostning pr. kg de cada næringsstof (kr/kg)';
+    var sub = b ? 'Sammenligning pr. kg næringsstof (kr/kg N, P₂O₅ og K₂O)' : 'Omkostning pr. kg næringsstof (kr/kg)';
     var html = '<div class="result__banner">' +
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>' +
       '<div><div class="result__headline">' + headline + '</div>' +
@@ -438,17 +489,17 @@
 
     if (b) {
       html += '<div class="result__metrics">';
-      html += rowMetrics('Preço pr. kg de gødning', a.precoKg, b.precoKg);
+      html += rowMetrics('Pris pr. kg gødning', a.precoKg, b.precoKg);
       html += rowMetrics('Omkostning af kg de N', a.omkostningN, b.omkostningN);
       html += rowMetrics('Omkostning af kg de P₂O₅', a.omkostningP, b.omkostningP);
       html += rowMetrics('Omkostning af kg de K₂O', a.omkostningK, b.omkostningK);
       html += rowMetrics('Omkostning pr. unidade ativa (N+P+K)', a.omkostningUA, b.omkostningUA);
       html += '</div>';
-      html += '<div class="result__interpretation"><p>Unidade ativa é a soma af teores de N + P₂O₅ + K₂O. Quanto mindst o omkostning pr. unidade ativa, mais barato o næringsstof concentrado i saco.</p></div>';
+      html += '<div class="result__interpretation"><p>Aktiv enhed er summen af indholdet af N + P₂O₅ + K₂O. Jo lavere omkostningen pr. aktiv enhed er, desto billigere er det koncentrerede næringsstof i sækken.</p></div>';
     } else {
       html += '<div class="result__main">' + fmtDKK(a.omkostningUA) + ' <small>pr. kg aktivt næringsstof (N+P+K)</small></div>';
       html += '<div class="result__metrics">' +
-        '<div class="metric"><div class="metric__label">Preço pr. kg de gødning</div><div class="metric__value">' + fmtDKK(a.precoKg) + '</div></div>' +
+        '<div class="metric"><div class="metric__label">Pris pr. kg gødning</div><div class="metric__value">' + fmtDKK(a.precoKg) + '</div></div>' +
         '<div class="metric"><div class="metric__label">Omkostning af kg de N</div><div class="metric__value">' + fmtDKK(a.omkostningN) + '</div></div>' +
         '<div class="metric"><div class="metric__label">Omkostning af kg de P₂O₅</div><div class="metric__value">' + fmtDKK(a.omkostningP) + '</div></div>' +
         '<div class="metric"><div class="metric__label">Omkostning af kg de K₂O</div><div class="metric__value">' + fmtDKK(a.omkostningK) + '</div></div>' +

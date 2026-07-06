@@ -52,6 +52,46 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Er P og K i danske deklarationer det samme som P₂O₅ og K₂O?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nej. Danske varer deklareres i ren P og K. Omregn med P₂O₅ = P × 2,29 og K₂O = K × 1,21, før du indtaster procenterne i beregneren."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvad betyder tallene i NS 27-4?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "27 % kvælstof og 4 % svovl. NPK-varer angiver tilsvarende procent N, P og K i varen — 100 kg NPK 21-3-10 indeholder fx 21 kg N, 3 kg P og 10 kg K."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan beregneren fortælle, hvor meget gødning min mark skal have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nej. Den omregner kun en given anbefaling til kg vare. Behovet fastlægges i gødningsplanen efter offentlige normtal, jordprøver og kvælstofkvoten — sammen med en planteavlskonsulent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvorfor dækker én NPK-vare sjældent hele behovet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fordi forholdet mellem N, P og K i varen er fast, mens markens behov varierer. I praksis vælges varen efter ét næringsstof, og resten suppleres med simple gødninger."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -174,23 +214,32 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p>Denne beregner omregner den <strong>faglige gødskningsanbefaling</strong> (kg/ha N, P₂O₅ og K₂O) til mængden af <strong>formuleret handelsgødning</strong>, der skal anvendes.</p>
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Gødningsplanen angiver behovet i <strong>kg næringsstof pr. hektar</strong> — fx 20 kg N, 70 kg P₂O₅ og 40 kg K₂O — men i marken spredes en konkret handelsvare med en bestemt deklaration. Denne beregner omregner anbefalingen til <strong>kg handelsgødning pr. hektar</strong>, så du kan indstille gødningssprederen, planlægge indkøb og sammenligne, hvor langt forskellige varer rækker. Den viser samtidig, hvor meget af varen der skal til for at dække hvert enkelt næringsstof, så du hurtigt ser, hvilket næringsstof der bliver over- eller underdoseret med en given formel.</p>
 
-      <h2>Sådan beregner du</h2>
-      <p>De tre tal i formlen (f.eks. 04-14-08) er procenter. For hvert næringsstof divideres anbefalingen med procenten og ganges med 100.</p>
-      <div class="formula">kg/ha gødning = (anbefaling af næringsstof ÷ % i formlen) × 100</div>
+      <h2>Input, enheder og omregninger</h2>
+      <p>Anbefalingen indtastes i kg/ha for N, P₂O₅ og K₂O, og gødningens indhold i procent. Bemærk, at danske varedeklarationer som <strong>NS 27-4</strong> eller NPK 21-3-10 angiver <strong>ren P og K</strong>, ikke oxidformerne: skal deklarationen bruges her, omregnes med P₂O₅ = P × 2,29 og K₂O = K × 1,21. En NPK 21-3-10 svarer altså til ca. 21-6,9-12 på oxidbasis. Kontrollér altid, hvilken basis din gødningsplan bruger, før tallene sammenlignes.</p>
 
-      <h2>Eksempel</h2>
-      <p>For 70 kg/ha P₂O₅ med gødningen 04-14-08 (14 % P): 70 ÷ 14 × 100 = <strong>500 kg/ha</strong>.</p>
+      <h2>Formel og gennemregnet eksempel</h2>
+      <p>For hvert næringsstof divideres anbefalingen med indholdet i varen og ganges med 100:</p>
+      <div class="formula">kg/ha gødning = (anbefaling i kg/ha ÷ % i varen) × 100</div>
+      <p>Gennemregnet eksempel: anbefalingen er 20 kg N, 70 kg P₂O₅ og 40 kg K₂O pr. hektar, og varen er en 04-14-08 (oxidbasis). For N: 20 ÷ 4 × 100 = 500 kg/ha. For P₂O₅: 70 ÷ 14 × 100 = 500 kg/ha. For K₂O: 40 ÷ 8 × 100 = <strong>500 kg/ha</strong>. Her rammer alle tre præcis samme mængde — det er undtagelsen. Giver de tre beregninger forskellige mængder, vælges varen typisk efter ét næringsstof, og resten suppleres med simple gødninger som urea eller kaliumklorid.</p>
 
-      <div class="callout callout--warning">
-        <div class="callout__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          De tre rammer næsten aldrig præcist
-        </div>
-        <p>En enkelt formel dækker sjældent N, P og K i de helt rigtige mængder. Det normale er at vælge formuleringen efter det mest krævende næringsstof og supplere de øvrige med simple kilder (urea, superfosfat, kaliumklorid). Følg altid anbefalingen fra jordbundsanalysen.</p>
-      </div>
+      <h2>Praktiske referenceværdier</h2>
+      <p>På det danske marked er nogle af de mest udbredte varer NS 27-4 (27 % N med svovl), NPK-typer som 21-3-10 og 14-3-15, urea med 46 % N, tripelsuperfosfat med ca. 20 % P (svarende til ca. 46 % P₂O₅) og kaliumklorid med ca. 50 % K (ca. 60 % K₂O). Selve behovet fastlægges i gødningsplanen ud fra afgrøde, forfrugt og jordbundstype efter offentlige normtal, fx fra SEGES og Landbrugsstyrelsen, som hvert år udgiver kvælstofnormer pr. afgrøde og jordtype. Brug tallene her som opslag til omregning — ikke som mål for, hvad marken skal have.</p>
+
+      <h2>Begrænsninger</h2>
+      <p>Beregneren omregner kun mellem næringsstof og handelsvare — den <strong>anbefaler ingen doser</strong>. Hvor meget kvælstof en mark må og bør få, afgøres af gødningskvoter og gødningsregnskab efter gældende lovgivning og bør fastlægges sammen med en planteavlskonsulent. Fosfor- og kaliumbehov bør bygge på aktuelle jordprøver. Én formuleret vare rammer sjældent alle tre behov præcist, og beregningen tager ikke højde for udbringningsteknik, delte tildelinger eller husdyrgødningens bidrag.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Er P og K i danske deklarationer det samme som P₂O₅ og K₂O?</h3>
+      <p>Nej. Danske varer deklareres i ren P og K. Omregn med P₂O₅ = P × 2,29 og K₂O = K × 1,21, før du indtaster procenterne i beregneren.</p>
+      <h3>Hvad betyder tallene i NS 27-4?</h3>
+      <p>27 % kvælstof og 4 % svovl. NPK-varer angiver tilsvarende procent N, P og K i varen — 100 kg NPK 21-3-10 indeholder fx 21 kg N, 3 kg P og 10 kg K.</p>
+      <h3>Kan beregneren fortælle, hvor meget gødning min mark skal have?</h3>
+      <p>Nej. Den omregner kun en given anbefaling til kg vare. Behovet fastlægges i gødningsplanen efter offentlige normtal, jordprøver og kvælstofkvoten — sammen med en planteavlskonsulent.</p>
+      <h3>Hvorfor dækker én NPK-vare sjældent hele behovet?</h3>
+      <p>Fordi forholdet mellem N, P og K i varen er fast, mens markens behov varierer. I praksis vælges varen efter ét næringsstof, og resten suppleres med simple gødninger.</p>
 
       <div class="related">
         <h2>Andre beregnere</h2>
@@ -199,6 +248,10 @@
           <a class="calc-card" href="/populacao-de-plantas.html"><h3>Plantebestand</h3><p>Planter pr. hektar.</p></a>
           <a class="calc-card" href="/quantidade-de-sementes.html"><h3>Frømængde</h3><p>Frø i kg/ha.</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlig faglitteratur og normtal. Erstatter ikke rådgivning fra agronom eller planteavlskonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>

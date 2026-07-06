@@ -52,6 +52,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Hvorfor kræver kontrolleret fodring mere plads pr. dyr?","acceptedAnswer":{"@type":"Answer","text":"Fordi hele flokken æder på samme tid, når foderet tildeles. Er der ikke en ædeplads til hvert dyr, bliver de lavest rangerende skubbet væk og taber tilvækst."}},
+    {"@type":"Question","name":"Skal begge sider af foderbordet regnes med?","acceptedAnswer":{"@type":"Answer","text":"Ja. Et fritstående foderbord med adgang fra to sider giver dobbelt så mange ædepladser pr. meter. Beregnerens resultat kan derfor halveres, hvis dyrene kan stå på begge sider."}},
+    {"@type":"Question","name":"Hvor meget drikkekant er der brug for?","acceptedAnswer":{"@type":"Answer","text":"Normtal beskriver ofte spænd omkring 5-10 cm karkant pr. dyr, når karret deles af hele flokken. Vigtigst er, at vandtilførslen kan følge med i varmeperioder."}},
+    {"@type":"Question","name":"Gælder tallene også kalve og ungdyr?","acceptedAnswer":{"@type":"Answer","text":"Spændene i normtallene dækker primært voksne dyr. Kalve og ungdyr klarer sig med kortere ædeplads, men princippet er det samme: ved samtidig fodring skal alle kunne æde på én gang."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -145,14 +157,19 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p>Denne beregner dimensionerer <strong>længden af foderbord og drikkekar</strong> ud fra antallet af dyr og pasningsformen i stald eller på græs.</p>
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Denne beregner dimensionerer <strong>længden af foderbord og drikkekar</strong> ud fra antallet af dyr og pasningsformen. Foderbordets længde er en af de detaljer, der oftest bliver undervurderet, når en stald eller en foderplads skal indrettes. Beregneren bruges typisk, når bedriften udvider besætningen, bygger en ny foderplads eller skifter fodringsstrategi — for eksempel fra ad libitum-fodring til kontrolleret fodring i vinterhalvåret. Den er også praktisk ved planlægning af drikkekar, hvor for få meter kant kan begrænse vandoptagelsen på varme sommerdage. Ved at indtaste antallet af dyr og pasningsformen får du et hurtigt overslag over, hvor mange meter foderbord og drikkekar besætningen har brug for, inden materialerne bestilles, og inden dyrene flyttes ind.</p>
 
-      <h2>Sådan beregner du</h2>
-      <p>Pladsen pr. dyr afhænger af pasningsformen: ved kontrolleret fodring er det 50 til 70 cm pr. dyr (alle æder samtidigt); ved foder ad libitum 20 til 40 cm; ved mineralsalt få centimeter.</p>
+      <h2>Input, enheder og omregninger</h2>
+      <p>Beregneren arbejder med to input: antal dyr (stk.) og pasningsform. Pladsbehovet angives i centimeter pr. dyr, og resultatet omregnes til meter ved at dividere med 100. Husk, at et foderbord, hvor dyrene kan æde fra begge sider, leverer dobbelt så mange ædepladser pr. løbende meter som et bord langs en væg. Selve foderbehovet opgøres derimod i kg tørstof eller foderenheder (FE) pr. dyr pr. dag — det beregnes særskilt i <a href="/consumo-do-rebanho.html">beregneren for foderindtag</a>.</p>
 
-      <h2>Eksempel</h2>
-      <p>150 dyr ved kontrolleret fodring (60 cm hver) har brug for <strong>90 m foderbord</strong>.</p>
+      <h2>Formel og gennemregnet eksempel</h2>
+      <p>Formlen er enkel: det samlede pladsbehov er antallet af dyr ganget med normtallet for plads pr. dyr, omregnet fra centimeter til meter.</p>
+      <div class="formula">Foderbordets længde (m) = (antal dyr × plads pr. dyr i cm) ÷ 100</div>
+      <p>Gennemregnet eksempel: en besætning på 150 dyr fodres kontrolleret, hvor alle dyr skal kunne æde samtidigt, og der regnes med 60 cm pr. dyr. Substitution i formlen giver 150 × 60 = 9.000 cm, og 9.000 ÷ 100 = <strong>90 m foderbord</strong>. Kan dyrene æde fra begge sider af et fritstående bord, halveres den nødvendige længde til 45 m. Ved fodring ad libitum med 30 cm pr. dyr ville samme besætning kunne nøjes med 150 × 30 ÷ 100 = 45 m ved ensidig adgang.</p>
+
+      <h2>Praktiske referenceværdier</h2>
+      <p>Offentlige fagblade og normtal, fx fra SEGES, beskriver typisk følgende spænd: ved kontrolleret fodring, hvor alle dyr æder samtidigt, regnes der ofte med 50-70 cm pr. dyr — mindst til kalve og ungdyr, op mod 70-75 cm til store, tunge køer. Ved fodring ad libitum, hvor der altid er foder på bordet, angives ofte 20-40 cm pr. dyr, fordi dyrene skiftes til at æde. Til mineralsalt og tilskudsfoder er få centimeter pr. dyr normalt tilstrækkeligt. For drikkekar nævnes ofte spænd i størrelsesordenen 5-10 cm karkant pr. dyr, når hele flokken deler karret. Normtallene varierer mellem racer, staldtyper og regioner, så lokale anbefalinger bør altid konsulteres, inden byggeriet går i gang.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -162,6 +179,19 @@
         <p>Et for kort foderbord øger konkurrencen og går ud over de svageste dyr. Ved kontrolleret fodring skal du sikre, at alle kan æde samtidigt.</p>
       </div>
 
+      <h2>Begrænsninger</h2>
+      <p>Beregneren bruger faste normtal pr. pasningsform og kender ikke dyrenes størrelse, race eller rangorden i flokken. Den tager ikke højde for hornede dyr, som typisk kræver ekstra plads, for foderbordets højde og udformning eller for flaskehalse omkring vand i varmeperioder. Resultatet er et dimensioneringsoverslag til planlægning — den endelige indretning bør afstemmes med gældende regler for staldindretning og med en bygnings- eller kvægbrugskonsulent, før der bygges.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvorfor kræver kontrolleret fodring mere plads pr. dyr?</h3>
+      <p>Fordi hele flokken æder på samme tid, når foderet tildeles. Er der ikke en ædeplads til hvert dyr, bliver de lavest rangerende skubbet væk og taber tilvækst.</p>
+      <h3>Skal begge sider af foderbordet regnes med?</h3>
+      <p>Ja. Et fritstående foderbord med adgang fra to sider giver dobbelt så mange ædepladser pr. meter. Beregnerens resultat kan derfor halveres, hvis dyrene kan stå på begge sider.</p>
+      <h3>Hvor meget drikkekant er der brug for?</h3>
+      <p>Normtal beskriver ofte spænd omkring 5-10 cm karkant pr. dyr, når karret deles af hele flokken. Vigtigst er, at vandtilførslen kan følge med i varmeperioder.</p>
+      <h3>Gælder tallene også kalve og ungdyr?</h3>
+      <p>Spændene i normtallene dækker primært voksne dyr. Kalve og ungdyr klarer sig med kortere ædeplads, men princippet er det samme: ved samtidig fodring skal alle kunne æde på én gang.</p>
+
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
@@ -169,6 +199,10 @@
           <a class="calc-card" href="/lotacao-pastagem.html"><h3>Græsningsbelægning</h3><p>Belægningsgrad i DE/ha.</p></a>
           <a class="calc-card" href="/silagem.html"><h3>Ensilage og silo</h3><p>Silokapacitet.</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlig faglitteratur. Erstatter ikke rådgivning fra agronom, kvægbrugskonsulent eller dyrlæge. Senest revideret: 2026-07-05 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>

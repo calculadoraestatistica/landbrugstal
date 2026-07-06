@@ -52,6 +52,46 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hvad er basemætning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Andelen af jordens kationbytningskapacitet, der er optaget af basiske kationer som calcium, magnesium og kalium. Lav basemætning følges typisk af lav pH og større kalkbehov."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvor ofte bør jeg tage jordprøver?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almindelig praksis i Danmark er hvert fjerde til femte år, og altid før en større kalkning, så beslutningen bygger på aktuelle tal for reaktionstal og næringsstoffer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan man kalke for meget?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. For høj pH kan udløse mangel på mikronæringsstoffer som mangan og bor, især på visse jordtyper. Derfor kalkes der mod et mål, ikke bare mest muligt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvad er PRNT eller neutraliserende evne?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Et udtryk for, hvor stor en del af kalkvaren der reelt neutraliserer syre, bestemt af kemisk sammensætning og finhed. Jo lavere værdi, desto flere tons vare pr. hektar."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -162,23 +202,32 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p><strong>Kalkning</strong> retter op på jordens surhedsgrad og hæver basemætningen. Denne beregner estimerer kalkbehovet ved basemætningsmetoden (V %).</p>
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Sur jord nedsætter tilgængeligheden af flere næringsstoffer og hæmmer rodvækst og kvælstoffiksering. Denne beregner estimerer <strong>kalkbehovet i tons pr. hektar</strong> efter basemætningsmetoden: den finder, hvor meget kalk der skal til for at løfte jordens basemætning fra det nuværende niveau (V1) til et ønsket mål (V2). Den bruges til at planlægge og budgettere kalkning, sammenligne kalkprodukter med forskellig neutraliserende evne og forstå, hvorfor to marker med samme pH kan have vidt forskelligt kalkbehov, når deres kationbytningskapacitet (CEC) er forskellig.</p>
 
-      <h2>Sådan beregner du</h2>
-      <p>Doseringen afhænger af forskellen mellem den nuværende basemætning (V1) og den ønskede (V2), af jordens CEC og af kalkens PRNT — alle hentet fra jordanalysen og emballagen.</p>
-      <div class="formula">NC (t/ha) = (V2 − V1) × CEC ÷ PRNT</div>
+      <h2>Input, enheder og omregninger</h2>
+      <p>V1 (nuværende basemætning i %) og CEC (cmolc/dm³) aflæses direkte af jordanalysen; V2 er målet for afgrøden. Kalkens kvalitet indtastes som PRNT — et samlet udtryk for neutraliserende evne og finhed i procent. På danske varedeklarationer angives i stedet ofte en <strong>neutraliserende evne</strong> i procent CaO- eller CaCO₃-ækvivalenter; princippet er det samme: jo lavere værdi, desto mere vare skal der til pr. hektar.</p>
 
-      <h2>Eksempel</h2>
-      <p>For at hæve basemætningen fra 40 % til 60 % med CEC på 8 cmolc/dm³ og kalk med PRNT 90 %: (60 − 40) × 8 ÷ 90 = <strong>1,78 t/ha</strong>.</p>
+      <h2>Formel og gennemregnet eksempel</h2>
+      <div class="formula">Kalkbehov (t/ha) = (V2 − V1) × CEC ÷ PRNT</div>
+      <p>Gennemregnet eksempel: jordanalysen viser en basemætning på 40 % og en CEC på 8 cmolc/dm³, målet er 60 %, og kalken har PRNT 90 %. Substitution giver (60 − 40) × 8 ÷ 90 = 160 ÷ 90 = <strong>1,78 t/ha</strong>. Med en kalk på kun 75 % PRNT stiger behovet til 160 ÷ 75 = 2,13 t/ha — samme mark, samme mål, men næsten 20 % mere vare. Derfor bør kalk altid sammenlignes på pris pr. ton <em>neutraliserende evne</em>, ikke pr. ton vare.</p>
 
-      <div class="callout callout--warning">
-        <div class="callout__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Jordanalysen er afgørende
-        </div>
-        <p>Kalkning kræver en aktuel jordanalyse. Den ønskede basemætning (V2) varierer efter afgrøde og region — følg de faglige anbefalinger.</p>
-      </div>
+      <h2>Praktiske referenceværdier</h2>
+      <p>I dansk praksis styres kalkning oftest efter <strong>reaktionstallet (Rt)</strong> fra jordprøver frem for basemætning. Offentlige normtal, fx fra SEGES, beskriver vejledende mål omkring Rt 6,0-6,5 på lerjord og noget lavere på sandjord, og vedligeholdelseskalkning ligger typisk på få tons pr. hektar med flere års mellemrum. Kalktypen betyder også noget: magnesiumkalk vælges ofte, hvor magnesiumtallet samtidig er lavt. Jordprøver udtages almindeligvis hvert fjerde til femte år, så både reaktionstal og fosfor- og kaliumtal kan følges over tid og kalkningen målrettes de marker, der faktisk trænger.</p>
+      <p>Tidspunktet betyder også noget i praksis: kalk spredes ofte efter høst og indarbejdes ved den efterfølgende jordbearbejdning, så den får kontakt med hele pløjelaget. Ved store behov deles mængden gerne over et par sæsoner, og virkningen kontrolleres med nye jordprøver, før der kalkes igen.</p>
+
+      <h2>Begrænsninger</h2>
+      <p>Basemætningsmetoden er én af flere metoder, og resultatet er kun så godt som jordanalysen bag. Beregneren <strong>anbefaler ingen dosering</strong>: målet for basemætning eller reaktionstal afhænger af afgrøde, sædskifte og jordtype og bør fastlægges sammen med en planteavlskonsulent. Overkalkning kan låse mikronæringsstoffer som mangan og bor. Kalkens virkning indtræder desuden gradvist over måneder og afhænger af indarbejdning, fugt og finhed.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvad er basemætning?</h3>
+      <p>Andelen af jordens kationbytningskapacitet, der er optaget af basiske kationer som calcium, magnesium og kalium. Lav basemætning følges typisk af lav pH og større kalkbehov.</p>
+      <h3>Hvor ofte bør jeg tage jordprøver?</h3>
+      <p>Almindelig praksis i Danmark er hvert fjerde til femte år, og altid før en større kalkning, så beslutningen bygger på aktuelle tal for reaktionstal og næringsstoffer.</p>
+      <h3>Kan man kalke for meget?</h3>
+      <p>Ja. For høj pH kan udløse mangel på mikronæringsstoffer som mangan og bor, især på visse jordtyper. Derfor kalkes der mod et mål, ikke bare mest muligt.</p>
+      <h3>Hvad er PRNT eller neutraliserende evne?</h3>
+      <p>Et udtryk for, hvor stor en del af kalkvaren der reelt neutraliserer syre, bestemt af kemisk sammensætning og finhed. Jo lavere værdi, desto flere tons vare pr. hektar.</p>
 
       <div class="related">
         <h2>Andre beregnere</h2>
@@ -187,6 +236,10 @@
           <a class="calc-card" href="/populacao-de-plantas.html"><h3>Plantebestand</h3><p>Planter pr. hektar.</p></a>
           <a class="calc-card" href="/conversao-de-area.html"><h3>Arealomregner</h3><p>Hektar, tønde land og m².</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlig faglitteratur og normtal. Erstatter ikke rådgivning fra agronom eller planteavlskonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>

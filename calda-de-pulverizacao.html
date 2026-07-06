@@ -52,6 +52,46 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hvor meget vand skal jeg bruge pr. hektar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Det afhænger af middel, dyser og afgrøde. Faglitteraturen beskriver typisk 100-200 L/ha ved marksprøjtning, og midlets etikette kan stille specifikke krav til vandmængden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Må jeg selv vælge dosis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nej. Doseringen på midlets etikette er en del af godkendelsen og er juridisk bindende. Denne side beregner kun fordelingen pr. tank ud fra den dosis, etiketten angiver."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvordan undgår jeg restvæske?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Beregn den sidste fyldning ud fra det resterende areal i stedet for at fylde tanken helt. Restvæske skal i øvrigt fortyndes og håndteres efter gældende regler."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvad skal en sprøjtejournal indeholde?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Som minimum mark, afgrøde, anvendt middel, dosis og dato for behandlingen. Kravene er fastsat i lovgivningen og kontrolleres af myndighederne."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -167,31 +207,44 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p>Denne beregner hjælper med at klargøre <strong>sprøjteblandingen</strong>: det samlede volumen af blandingen og hvor meget produkt der skal i hver tank på sprøjten.</p>
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Før en sprøjteopgave skal to tal på plads: hvor meget <strong>sprøjtevæske</strong> der i alt skal bruges, og hvor meget <strong>middel der skal i hver tankfyldning</strong>. Denne beregner finder begge dele ud fra vandmængden pr. hektar, arealet, tankstørrelsen og den dosis, der fremgår af midlets etikette. Den hjælper med at planlægge antallet af fyldninger, undgå at stå med restvæske til sidst og sikre, at koncentrationen i tanken er den samme i første og sidste fyldning.</p>
 
-      <h2>Sådan beregner du</h2>
-      <p>Volumenet af sprøjteblanding er udbringningsmængden ganget med arealet. Dosen pr. tank afhænger af, hvor mange hektar hver tank dækker.</p>
-      <div class="formula">Volumen af sprøjteblanding = udbringningsmængde (L/ha) × areal (ha)</div>
+      <h2>Input, enheder og omregninger</h2>
+      <p>Vandmængden angives i liter pr. hektar (L/ha), arealet i hektar, tanken i liter og dosis i liter eller kilo pr. hektar, præcis som den står på midlets etikette. Dækker en tank fx 2.000 L ÷ 100 L/ha = 20 ha, er produktmængden pr. tank dosis × 20. Ved delte marker eller skæve arealer beregnes den sidste, delvise fyldning for sig, så der ikke blandes mere væske end nødvendigt.</p>
 
-      <h2>Eksempel</h2>
-      <p>50 ha ved 100 L/ha kræver 5.000 L sprøjteblanding. Med en tank på 2.000 L (dækker 20 ha) og en dosis på 0,5 L/ha bliver det <strong>10 L produkt pr. tank</strong>.</p>
+      <h2>Formel og gennemregnet eksempel</h2>
+      <div class="formula">Samlet væske (L) = vandmængde (L/ha) × areal (ha)<br>Areal pr. tank (ha) = tankstørrelse ÷ vandmængde<br>Middel pr. tank = dosis pr. ha × areal pr. tank</div>
+      <p>Gennemregnet eksempel: 50 ha skal sprøjtes med 100 L/ha. Samlet væske: 50 × 100 = 5.000 L. Med en tank på 2.000 L dækker hver fyldning 2.000 ÷ 100 = 20 ha, altså to hele fyldninger og en restfyldning på 1.000 L til de sidste 10 ha. Er dosis 0,5 L/ha, skal der 0,5 × 20 = <strong>10 L middel</strong> i hver hel tank og 5 L i restfyldningen.</p>
 
-      <div class="callout callout--warning">
-        <div class="callout__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Sikkerhed først
-        </div>
-        <p>Brug altid personlige værnemidler, følg etiketten og reglerne for udbringning af plantebeskyttelsesmidler. Denne beregner er et planlægningsværktøj og erstatter ikke en agronomisk anvisning.</p>
-      </div>
+      <h2>Praktiske referenceværdier</h2>
+      <p>I dansk markbrug ligger vandmængden ved almindelig marksprøjtning typisk i størrelsesordenen 100-200 L/ha ifølge offentlig faglitteratur, fx fra SEGES — lavest hvor moderne dyser giver god dækning, højere hvor midlet kræver grundig dækning i en tæt afgrøde. Udbringning af plantebeskyttelsesmidler kræver i Danmark sprøjtecertifikat eller -bevis, en synet sprøjte og løbende registrering i en sprøjtejournal, og der gælder afstandskrav til vandmiljø og naboarealer efter midlets etikette.</p>
+      <p>Husk også kapaciteten i praksis: med 100 L/ha og en bom på 24 m kører en tank på 2.000 L omkring 8,3 km, før den skal fyldes igen — et tal, der hurtigt afgør, hvor fyldepladsen bør ligge, og hvor mange fyldninger en arbejdsdag kan rumme.</p>
+
+      <h2>Begrænsninger</h2>
+      <p>Beregneren regner kun volumen og fordeling pr. tank — den <strong>anbefaler hverken midler eller doser</strong>. Dosis, maksimalt antal behandlinger og afstandskrav er fastsat i midlets godkendelse og er juridisk bindende; er du i tvivl, så spørg en planteavlskonsulent. Beregningen tager ikke højde for teknisk restvolumen i sprøjten, overlap i kiler eller behovet for skyllevand, og restvæske skal håndteres efter gældende regler.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvor meget vand skal jeg bruge pr. hektar?</h3>
+      <p>Det afhænger af middel, dyser og afgrøde. Faglitteraturen beskriver typisk 100-200 L/ha ved marksprøjtning, og midlets etikette kan stille specifikke krav til vandmængden.</p>
+      <h3>Må jeg selv vælge dosis?</h3>
+      <p>Nej. Doseringen på midlets etikette er en del af godkendelsen og er juridisk bindende. Denne side beregner kun fordelingen pr. tank ud fra den dosis, etiketten angiver.</p>
+      <h3>Hvordan undgår jeg restvæske?</h3>
+      <p>Beregn den sidste fyldning ud fra det resterende areal i stedet for at fylde tanken helt. Restvæske skal i øvrigt fortyndes og håndteres efter gældende regler.</p>
+      <h3>Hvad skal en sprøjtejournal indeholde?</h3>
+      <p>Som minimum mark, afgrøde, anvendt middel, dosis og dato for behandlingen. Kravene er fastsat i lovgivningen og kontrolleres af myndighederne.</p>
 
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
-          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Da anbefaling ao gødning.</p></a>
-          <a class="calc-card" href="/populacao-de-plantas.html"><h3>Plantebestand</h3><p>Plantas pr. hektar.</p></a>
-          <a class="calc-card" href="/conversao-de-area.html"><h3>Arealomregner</h3><p>Hektar, alqueire og mais.</p></a>
+          <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Fra anbefaling til handelsgødning.</p></a>
+          <a class="calc-card" href="/populacao-de-plantas.html"><h3>Plantebestand</h3><p>Planter pr. hektar.</p></a>
+          <a class="calc-card" href="/conversao-de-area.html"><h3>Arealomregner</h3><p>Hektar, tønde land og m².</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlig faglitteratur og normtal. Erstatter ikke rådgivning fra agronom eller planteavlskonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>

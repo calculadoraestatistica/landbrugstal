@@ -52,6 +52,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Hvorfor sammenligne på kg tørstof i stedet for pris pr. ton?","acceptedAnswer":{"@type":"Answer","text":"Fordi grovfoder indeholder vidt forskellige mængder vand. Ensilage er ofte to tredjedele vand, mens hø er næsten kun tørstof. Pris pr. ton brutto skjuler forskellen; omkostningen pr. kg tørstof viser, hvad dyret reelt får for pengene."}},
+    {"@type":"Question","name":"Hvilket tørstofindhold skal jeg bruge?","acceptedAnswer":{"@type":"Answer","text":"Majsensilage ligger typisk på 30-35 % tørstof, forvejret græsensilage omkring 30-45 % og hø omkring 85-90 %. En foderanalyse på dit eget parti er dog altid mere præcis end et normtal, fordi tørstof svinger med afgrøde og vejr."}},
+    {"@type":"Question","name":"Hvorfor skal jeg trække tab fra?","acceptedAnswer":{"@type":"Answer","text":"Der går altid noget tørstof tabt til fermentering, randzoner og foderrester. Et tab på omkring 10 % er almindeligt for ensilage. Trækker man ikke tabet fra, undervurderer man den reelle omkostning pr. kg tørstof, dyret æder."}},
+    {"@type":"Question","name":"Er billig ensilage altid billigst?","acceptedAnswer":{"@type":"Answer","text":"Nej. En billig ensilage med lavt tørstof kan ende dyrere pr. kg tørstof end et tilsyneladende dyrt hø. Det er netop derfor, sammenligningen skal ske på tørstofbasis og ikke på prisen pr. ton frisk vare."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -178,15 +190,19 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p>Denne beregner sammenligner grovfodertyper ud fra det, de <strong>reelt leverer til dyret</strong>: kiloet tørstof (TS). Pris pr. ton råvægt vildleder — ensilage er omtrent to tredjedele vand, hø er næsten kun TS. Det, der betyder noget i fodringen, er omkostningen pr. kg effektivt TS.</p>
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Denne beregner sammenligner grovfodertyper ud fra det, de <strong>reelt leverer til dyret</strong>: kiloet tørstof (TS). Pris pr. ton råvægt vildleder — ensilage er omtrent to tredjedele vand, hø er næsten kun TS. Det, der betyder noget i fodringen, er omkostningen pr. kg effektivt TS. I praksis bruges beregneren, når man skal vælge mellem tilbud på forskelligt grovfoder, og når foderplanen skal lægges på det billigste tørstof, der samtidig opfylder dyrenes behov. To læs, der ligner hinanden på vejesedlen, kan koste vidt forskelligt pr. kg tørstof, når vandindhold og tab regnes med.</p>
 
-      <h2>Sådan beregner du</h2>
+      <h2>Input, enheder og omregninger</h2>
+      <p>Beregneren bruger grovfodertype, pris pr. ton brutto (kr/t, inklusive vand), tørstofprocent, et tab i procent og en valgfri leveringsomkostning pr. ton. Kernen er omregningen fra frisk vare til tørstof: 1 ton brutto med fx 32 % TS indeholder 1.000 × 0,32 = 320 kg tørstof. Tabet trækkes fra som en procentdel, og resultatet, kr pr. kg tørstof, er den reelle enhedsomkostning. Tørstofprocenten udfyldes automatisk efter typen, men bør tilrettes efter en foderanalyse.</p>
+
+      <h2>Formel og gennemregnet eksempel</h2>
       <p>Først omregnes råvægten til kg TS via tørstofprocenten. Derefter trækkes tab fra fermentering og opbevaring fra. Den samlede omkostning (pris + levering) divideres med det effektive leverede TS.</p>
       <div class="formula">kg TS pr. t = 1.000 × (% TS ÷ 100)<br>kg effektivt TS = kg TS × (1 − tab ÷ 100)<br>kr/kg TS = (pris + leveringsomkostning) ÷ kg effektivt TS</div>
+      <p>Gennemregnet eksempel: majsensilage til 280 kr/t med 32 % TS og 10 % tab. Der er 1.000 × 0,32 = 320 kg TS pr. ton, og efter tab 320 × (1 − 0,10) = 288 kg effektivt TS. Omkostningen bliver 280 ÷ 288 = <strong>0,97 kr pr. kg TS</strong>. Et hø til 1.500 kr/t med 88 % TS giver til sammenligning cirka 1,79 kr/kg TS — altså dyrere pr. tørstof trods højere tørstofindhold.</p>
 
-      <h2>Eksempel</h2>
-      <p>Majsensilage til 280 kr/t, 32 % TS, 10 % tab: 320 kg TS pr. t → 288 kg effektivt TS → <strong>0,97 kr pr. kg TS</strong>.</p>
+      <h2>Praktiske referenceværdier</h2>
+      <p>Offentlige normtal, fx fra SEGES, kan bruges til at kontrollere tørstofprocenten, når du ikke har en analyse: majsensilage ligger typisk på 30-35 % TS, forvejret græsensilage omkring 30-45 %, hø omkring 85-90 % og halm over 85 %. Et konserveringstab omkring 10 % er almindeligt for ensilage i plansilo, mens velpakket hø taber mindre. Til at vurdere behovet regner man ofte med, at kvæg æder omkring 2-2,5 % af kropsvægten i tørstof pr. dag. Tallene varierer mellem partier, så en foderanalyse er altid mere retvisende end et normtal.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -196,6 +212,19 @@
         <p>Grovfoder, der ligner hinanden, kan have vidt forskellige priser pr. kg TS. Det er det, der betyder noget for foderværdien — billig ensilage med lavt TS kan ende dyrere end et tilsyneladende dyrt hø.</p>
       </div>
 
+      <h2>Begrænsninger</h2>
+      <p>Beregneren sammenligner udelukkende på pris pr. kg tørstof og siger intet om foderets kvalitet — energiindhold, protein, fordøjelighed eller struktur. Et billigt tørstof kan være næringsfattigt og kræve mere tilskudsfoder, så den samlede foderomkostning alligevel stiger. Beregneren bruger desuden et antaget tab og en vejledende tørstofprocent, der begge kan afvige uden en analyse. Brug resultatet til at rangordne tilbud på tørstofbasis, men afvej det mod foderets næringsværdi, og inddrag en foderrådgiver ved større indkøb.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvorfor sammenligne på kg tørstof i stedet for pris pr. ton?</h3>
+      <p>Fordi grovfoder indeholder vidt forskellige mængder vand. Ensilage er ofte to tredjedele vand, mens hø er næsten kun tørstof. Pris pr. ton brutto skjuler forskellen; omkostningen pr. kg tørstof viser, hvad dyret reelt får for pengene.</p>
+      <h3>Hvilket tørstofindhold skal jeg bruge?</h3>
+      <p>Majsensilage ligger typisk på 30-35 % tørstof, forvejret græsensilage omkring 30-45 % og hø omkring 85-90 %. En foderanalyse på dit eget parti er dog altid mere præcis end et normtal, fordi tørstof svinger med afgrøde og vejr.</p>
+      <h3>Hvorfor skal jeg trække tab fra?</h3>
+      <p>Der går altid noget tørstof tabt til fermentering, randzoner og foderrester. Et tab på omkring 10 % er almindeligt for ensilage. Trækker man ikke tabet fra, undervurderer man den reelle omkostning pr. kg tørstof, dyret æder.</p>
+      <h3>Er billig ensilage altid billigst?</h3>
+      <p>Nej. En billig ensilage med lavt tørstof kan ende dyrere pr. kg tørstof end et tilsyneladende dyrt hø. Det er netop derfor, sammenligningen skal ske på tørstofbasis og ikke på prisen pr. ton frisk vare.</p>
+
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
@@ -203,6 +232,10 @@
           <a class="calc-card" href="/lotacao-pastagem.html"><h3>Græsningsbelægning</h3><p>Belægningsgrad i DE/ha.</p></a>
           <a class="calc-card" href="/cocho.html"><h3>Foderbord og drikkekar</h3><p>Dimensionering af foderbord.</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlig faglitteratur. Erstatter ikke rådgivning fra agronom, kvægbrugskonsulent eller dyrlæge. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>

@@ -52,6 +52,46 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Er hkg/ha, dt/ha og q/ha det samme?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ja. Alle tre betyder 100 kg pr. hektar: hkg (hektokilogram) i Danmark og Norden, dt (Doppelzentner) i Tyskland og q (quintal) i Frankrig og Italien. 1 t/ha = 10 hkg/ha = 10 dt/ha = 10 q/ha."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hvor meget er 1 bu/acre hvede i kg/ha?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Cirka 67,3 kg/ha, fordi 27,2155 kg pr. bushel divideret med 0,40469 ha pr. acre giver 67,25. For majs er faktoren cirka 62,8 kg/ha pr. bu/acre."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hvorfor skal jeg vælge afgrøde, når jeg omregner bushels?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Fordi en bushel er et rumfangsmål med en standardvægt, der afhænger af afgrøden: 27,2 kg for hvede og soja, 25,4 kg for majs. Uden korrekt afgrøde bliver omregningen systematisk forkert."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Kan jeg sammenligne amerikanske og danske udbytter direkte?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Næsten. Omregn først enhederne, og tjek derefter fugtgrundlaget: danske tal refererer typisk til basisvand 14,5-15 %, mens USDA fx opgør majs ved 15,5 %."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -232,35 +272,33 @@
     <div class="ad-slot" data-ad-slot=""></div>
 
     <article class="prose">
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Denne omregner oversætter areal og udbytte mellem danske, europæiske og amerikanske standarder. Den bruges, når USDA-rapporter og Chicago-noteringer i bushel pr. acre skal sammenlignes med danske udbytter i hkg/ha, når tyske forsøgsresultater i dt/ha eller franske i q/ha skal læses, og når FAO- og Eurostat-data skal ind i egne kalkuler. Hver region har sine egne enheder, og fejlkilderne er mange: bushels vejer forskelligt pr. afgrøde, og 100 kg/ha optræder under tre forskellige navne i Europa. Omregneren samler det hele ét sted, så tallene bliver direkte sammenlignelige.</p>
 
-      <h2>Hvad bruges den til</h2>
-      <p>O conversor landbrugs- internacional facilita o <strong>intercâmbio de dados entre Danmark, Europa og Estados Unidos</strong> — leitura de relatórios af USDA, dados af FAO, papers europeus som reportam i hkg/ha, ou planilhas americanas i bushels pr. acre. Cada região consolidou unidades próprias og nem altid o conversor padrão de beregner dá conta.</p>
+      <h2>Input, enheder og omregninger</h2>
+      <p>Arealdelen omregner mellem hektar, acre (4.047 m²), m² og lokale enheder som feddan, dunum og alqueire; den danske tønde land (0,5516 ha) findes i den <a href="/conversao-de-area.html">danske arealomregner</a>. Udbyttedelen arbejder med kg/ha, t/ha og de europæiske hkg/ha, dt/ha og q/ha — alle tre lig 100 kg/ha — samt bu/acre og lb/acre. Husk 1 t = 10 hkg, og at bushelvægten afhænger af afgrøden: hvede og soja 27,2 kg, majs 25,4 kg.</p>
 
-      <h2>Internationale standarder</h2>
-      <p>A <strong>Europa continental</strong> sjældent publica i kg/ha. Boletins af EUROSTAT, af USDA-FAS og af Comissão Europeia usam três siglas til a mesma medida (100 kg/ha): hkg/ha (hectokilogram), dt/ha (Doppelzentner, comum i Alemanha) og q/ha (quintale métrico, comum i Itália og i França). Os <strong>Estados Unidos</strong> usam bushel pr. acre — só som o bushel pesa diferente conforme a cultura. O <strong>Danmark</strong> trabalha i hkg (60 kg til korn, 50 kg til sukker og café beneficiado) pr. hektar, mas exportadores precisam reportar i t ou bu.</p>
+      <h2>Formel og gennemregnet eksempel</h2>
+      <div class="formula">kg/ha = (bu/acre × kg pr. bushel) ÷ 0,40469</div>
+      <p>Gennemregnet eksempel: en amerikansk hvedemark yder 60 bu/acre. Massen pr. acre er 60 × 27,2155 = 1.632,9 kg, og divideret med 0,40469 ha pr. acre giver det 4.035 kg/ha, altså <strong>40,3 hkg/ha</strong> eller cirka 4,0 t/ha. Omvendt: et dansk udbytte på 80 hkg/ha er 8.000 kg/ha; ganget med 0,40469 fås 3.237,5 kg pr. acre, og divideret med 27,2155 giver det <strong>119 bu/acre</strong>. Som tommelfingerregel svarer 1 bu/acre hvede til cirka 0,67 hkg/ha.</p>
 
-      <h2>Equivalências comuns</h2>
-      <ul>
-        <li><strong>1 ha</strong> = 2,47 acres = 10.000 m²</li>
-        <li><strong>1 acre</strong> = 0,4047 ha = 4.047 m²</li>
-        <li><strong>1 alqueire paulista (BR)</strong> = 2,42 ha = 5,98 acres</li>
-        <li><strong>100 kg/ha</strong> = 1 hkg/ha = 1 dt/ha = 1 q/ha (Europa: três nomes, mesma medida)</li>
-        <li><strong>1 t/ha</strong> = 10 hkg/ha = 10 dt/ha = 10 q/ha</li>
-        <li><strong>1 sc 60 kg/ha</strong> (soja, Danmark) ≈ 0,89 bu/acre</li>
-        <li><strong>60 hkg/ha de soja</strong> ≈ 53,6 bu/acre ≈ 3,6 t/ha</li>
-        <li><strong>1 bu/acre de milho</strong> ≈ 62,77 kg/ha</li>
-      </ul>
+      <h2>Praktiske referenceværdier</h2>
+      <p>Europæiske kilder — Eurostat, tyske landsforsøg (dt/ha) og franske opgørelser (q/ha) — bruger alle 100 kg/ha som grundenhed, så tallene kan sammenlignes direkte med danske hkg/ha. Danske vinterhvedeudbytter på 75-85 hkg/ha, som de fremgår af offentlige normer og statistik, fx fra Landbrugsstyrelsen og SEGES, svarer til cirka 110-125 bu/acre. Vær opmærksom på fugtgrundlaget: dansk korn afregnes ved basisvand 14,5-15 % (raps 9 %), mens USDA fx opgør majs ved 15,5 % — forskellen flytter et par procent. Ved volumenopgørelser bruges vægtfylden, fx hvede 750-780 kg/m³ og byg 650-700 kg/m³.</p>
 
-      <h2>Eksempel</h2>
-      <p>Sojabønner a 60 hkg/ha (60 kg) i Danmark equivale a 3.600 kg/ha = 36 hkg/ha = 53,57 bu/acre nos EUA. Um relatório francês falando i 80 q/ha de trigo corresponde a 8 t/ha = 133 hkg/ha.</p>
+      <div class="callout callout--warning"><div class="callout__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Bushels har forskellig vægt pr. afgrøde</div><p>Konverter aldrig bu/acre uden at vælge afgrøde: hvede og sojabønner vejer 60 lb (27,22 kg) pr. bushel, majs og sorghum 56 lb (25,40 kg) og sukkermajs 50 lb (22,68 kg). At antage én fast bushelvægt er den mest almindelige fejl i internationale regneark.</p></div>
 
-      <div class="callout callout--warning">
-        <div class="callout__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Bushels têm peso diferente pr. cultura
-        </div>
-        <p>Não converta bu sem saber qual. Sojabønner og trigo pesam 60 lb/bu (27,22 kg); milho og sorgo pesam 56 lb/bu (25,40 kg); milho doce pesa 50 lb/bu (22,68 kg). Aveia, cevada, arroz og outras culturas têm pesos próprios. Vælg a cultura i conversor acima — converter bushels assumindo um peso padrão é o erro mais comum i planilhas internacionais.</p>
-      </div>
+      <h2>Begrænsninger</h2>
+      <p>Omregneren håndterer kun enhederne — den korrigerer ikke for forskellig fugtbasis mellem lande, for kvalitetskrav eller for at bushels er et rumfangsmål med standardiseret vægt. Lokale enheder som alqueire, feddan og dunum varierer regionalt. Ved kontrakter og officielle indberetninger bør du altid bruge kontraktens egne omregningsfaktorer.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Er hkg/ha, dt/ha og q/ha det samme?</h3>
+      <p>Ja. Alle tre betyder 100 kg pr. hektar: hkg (hektokilogram) i Danmark og Norden, dt (Doppelzentner) i Tyskland og q (quintal) i Frankrig og Italien. 1 t/ha = 10 hkg/ha = 10 dt/ha = 10 q/ha.</p>
+      <h3>Hvor meget er 1 bu/acre hvede i kg/ha?</h3>
+      <p>Cirka 67,3 kg/ha, fordi 27,2155 kg pr. bushel divideret med 0,40469 ha pr. acre giver 67,25. For majs er faktoren cirka 62,8 kg/ha pr. bu/acre.</p>
+      <h3>Hvorfor skal jeg vælge afgrøde, når jeg omregner bushels?</h3>
+      <p>Fordi en bushel er et rumfangsmål med en standardvægt, der afhænger af afgrøden: 27,2 kg for hvede og soja, 25,4 kg for majs. Uden korrekt afgrøde bliver omregningen systematisk forkert.</p>
+      <h3>Kan jeg sammenligne amerikanske og danske udbytter direkte?</h3>
+      <p>Næsten. Omregn først enhederne, og tjek derefter fugtgrundlaget: danske tal refererer typisk til basisvand 14,5-15 %, mens USDA fx opgør majs ved 15,5 %.</p>
 
       <div class="related">
         <h2>Andre beregnere</h2>
@@ -270,6 +308,8 @@
           <a class="calc-card" href="/produtividade.html"><h3>Udbytteomregner</h3><p>Hkg/ha, kg/ha og t/ha.</p></a>
         </div>
       </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;"><p>Uddannelsesindhold baseret på offentlig faglitteratur og offentlige normer, fx Landbrugsstyrelsen og SEGES. Erstatter ikke rådgivning fra planteavls- eller driftsøkonomikonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p></div>
 
     </article>
   </div>

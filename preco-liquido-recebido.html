@@ -52,6 +52,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Hvad er forskellen på bruttopris og nettopris?","acceptedAnswer":{"@type":"Answer","text":"Bruttoprisen er den pris, køberen noterer. Nettoprisen er det beløb, der reelt udbetales, når fragt, opbevaring, kommission, tørring, teknisk svind og eventuelle afgifter er trukket fra."}},
+    {"@type":"Question","name":"Hvor store er fradragene typisk?","acceptedAnswer":{"@type":"Answer","text":"Ofte 5-12 % af bruttoprisen afhængigt af transportafstand, vandprocent og handelsvilkår. Fragt og tørring er som regel de største poster, mens kommission typisk ligger omkring 1 %."}},
+    {"@type":"Question","name":"Hvorfor beregnes procentfradrag af bruttoprisen?","acceptedAnswer":{"@type":"Answer","text":"Fordi handelsvilkår normalt formuleres som procent af den noterede pris. Regnes procenterne af nettoprisen i stedet, undervurderes fradraget, og nettoprisen bliver for optimistisk."}},
+    {"@type":"Question","name":"Hvad er teknisk svind?","acceptedAnswer":{"@type":"Answer","text":"Et standardfradrag, typisk 0,5-1 %, for det vægttab, der opstår under transport, rensning og håndtering af varen, før den endelige afregningsvægt fastsættes."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -247,34 +259,40 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p>Når køberen (foderstof, mølle, eksportør) afgiver et tilbud, er den noterede pris den <strong>bruttopris</strong>. Det, der reelt går ind på producentens konto, er <strong>nettoprisen</strong> efter fradrag for fragt, lager, kommission, tørring, teknisk svind og skatter. Denne beregner gør det muligt at sammenligne tilbuddet med referenceprisen (<a href="/cotacoes.html">Euronext</a>) og afgøre, om handlen kan betale sig.</p>
+      <h2>Hvad bruges den til i bedriftsøkonomien</h2>
+      <p>Når en køber — foderstof, mølle eller eksportør — afgiver et tilbud, er den noterede pris en <strong>bruttopris</strong>. Det beløb, der reelt går ind på kontoen, er <strong>nettoprisen</strong> efter fradrag for fragt, opbevaring, kommission, tørring, teknisk svind og eventuelle afgifter. Beregneren bruges til at gøre tilbud fra forskellige købere sammenlignelige, til at holde tilbuddet op mod referencepriserne (<a href="/cotacoes.html">Euronext</a>) og til at se, hvilke fradragslinjer der æder mest af afregningen. To tilbud med samme notering kan give vidt forskellig nettoafregning, når afstand og handelsvilkår er forskellige.</p>
 
-      <h2>Typiske fradrag</h2>
-      <ul>
-        <li><strong>Fragt</strong> — landtransport fra gårdens lager til destinationen (havn, fabrik, mølle). Opgivet pr. hkg, pr. ton eller som kr pr. km × last.</li>
-        <li><strong>Opbevaring</strong> — fast gebyr pr. periode eller procent af brutto, opkrævet af lager/foderstof.</li>
-        <li><strong>Kommission</strong> — mægler eller handler, typisk 1 % af brutto.</li>
-        <li><strong>Tørring</strong> — fradrag for fugtighed over standarden (~14 % for hvede/byg). Kan være et fast kr-beløb eller % af brutto.</li>
-        <li><strong>Teknisk svind</strong> — tab under transport/rensning, typisk 0,5-1 %.</li>
-        <li><strong>Skatter og afgifter</strong> — afhænger af handlen og af landmandens skattestatus.</li>
-      </ul>
+      <h2>Input og enheder</h2>
+      <p>Bruttoprisen indtastes i kr pr. hkg eller kr pr. ton. Fradragene angives hver for sig: <strong>fragt</strong> i kr/hkg, kr/ton eller som kr pr. km gange lastens størrelse, <strong>opbevaring</strong> som procent af brutto eller fast beløb, <strong>kommission</strong> (typisk ca. 1 % af brutto), <strong>tørring</strong> som procent eller fast beløb, <strong>teknisk svind</strong> i procent og <strong>skatter/afgifter</strong> i procent af brutto. Alle poster omregnes automatisk til samme enhed som bruttoprisen, før de trækkes fra.</p>
 
-      <h2>Sådan beregner du</h2>
-      <p>Hver omkostning omregnes til den samme enhed som bruttoprisen (hkg eller ton). Procentsatser regnes af <strong>brutto</strong> — ikke af netto. Derefter lægges det hele sammen og trækkes fra:</p>
+      <h2>Formel og gennemregnet eksempel</h2>
+      <p>Hver omkostning omregnes til bruttoprisens enhed, og procentsatser regnes af <strong>brutto</strong> — ikke af netto. Derefter lægges fradragene sammen og trækkes fra:</p>
       <div class="formula">netto = brutto − (fragt + lager + kommission + tørring + svind + skatter)</div>
+      <p>Gennemregnet eksempel: hvede noteret til 130 kr/hkg med fragt 8 kr/hkg, opbevaring 1 % (1,30 kr), kommission 1 % (1,30 kr), tørring 0,80 kr/hkg og svind 0,5 % (0,65 kr). Fradrag i alt: 8,00 + 1,30 + 1,30 + 0,80 + 0,65 = <strong>12,05 kr/hkg</strong>, svarende til 9,3 % af brutto. Nettoprisen bliver 130 − 12,05 ≈ <strong>118 kr/hkg</strong>. Kan fragten forhandles ned til 5 kr/hkg, stiger nettoprisen direkte med 3 kr/hkg.</p>
 
-      <h2>Eksempel</h2>
-      <p>Hvede til 130 kr/hkg, fragt 8 kr/hkg, lager 1 %, kommission 1 %, tørring 0,80 kr/hkg, svind 0,5 %:</p>
-      <p>Fradrag i alt: 8,00 + 1,30 + 1,30 + 0,80 + 0,65 = <strong>12,05 kr/hkg</strong>. Netto ≈ <strong>118 kr/hkg</strong>.</p>
+      <h2>Praktiske referenceværdier</h2>
+      <p>Offentlige opgørelser og branchetal, fx fra Danmarks Statistik og SEGES, peger på, at de samlede fradrag ved kornhandel ofte udgør <strong>5-12 % af bruttoprisen</strong>. Fragten er typisk den største post — ofte i størrelsesordenen 20-80 kr pr. ton afhængigt af afstand, svarende til 2-8 kr pr. hkg. Kommission ligger normalt omkring 1 % af brutto, teknisk svind på 0,5-1 %, og tørringsfradraget afhænger af vandprocenten over basis (typisk 14-15 % for korn) og kan i våde høstår blive en betydelig post. Satserne varierer med region, handelspartner og sæson — bekræft altid hver fradragslinje hos køberen, før handlen lukkes.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           Hvert lager/handler har sin egen tabel
         </div>
-        <p>De opkrævede satser og beløb varierer efter region, handelspartner og sæson. Bekræft hver fradragslinje med køberen, <strong>før handlen lukkes</strong> — en forskel på 0,5 % i kommission eller 1 kr/hkg i fragt ændrer det endelige resultat mærkbart.</p>
+        <p>De opkrævede satser varierer efter region, handelspartner og sæson. En forskel på 0,5 % i kommission eller 1 kr/hkg i fragt ændrer det endelige resultat mærkbart.</p>
       </div>
+
+      <h2>Begrænsninger</h2>
+      <p>Beregneren viser nettoprisen for én konkret handel — den siger ikke noget om, hvorvidt prisen er god i forhold til produktionsomkostningen, og den er ikke handels- eller prisrådgivning. Kvalitetsfradrag for lavt rumvægt, spirede kerner eller urenheder fastsættes først ved modtagekontrollen og kan afvige fra det indtastede. Skattevirkningen afhænger af bedriftens konkrete forhold. Brug resultatet som sammenligningsgrundlag, og vend større afsætningsbeslutninger med en økonomikonsulent.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvad er forskellen på bruttopris og nettopris?</h3>
+      <p>Bruttoprisen er den pris, køberen noterer. Nettoprisen er det beløb, der reelt udbetales, når fragt, opbevaring, kommission, tørring, svind og afgifter er trukket fra.</p>
+      <h3>Hvor store er fradragene typisk?</h3>
+      <p>Ofte 5-12 % af bruttoprisen afhængigt af transportafstand, vandprocent og handelsvilkår. Fragt og tørring er som regel de største poster.</p>
+      <h3>Hvorfor beregnes procentfradrag af bruttoprisen?</h3>
+      <p>Fordi handelsvilkår normalt formuleres som procent af den noterede pris. Regnes procenterne af netto i stedet, undervurderes fradraget.</p>
+      <h3>Hvad er teknisk svind?</h3>
+      <p>Et standardfradrag, typisk 0,5-1 %, for det vægttab, der opstår under transport, rensning og håndtering, før den endelige afregningsvægt fastsættes.</p>
 
       <div class="related">
         <h2>Andre beregnere</h2>
@@ -284,6 +302,10 @@
           <a class="calc-card" href="/futuros.html">
 <h3>Futures</h3><p>Børs og CBOT.</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlige opgørelser og faglitteratur. Erstatter ikke rådgivning fra en økonomikonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>

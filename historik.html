@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="da-DK">
+<head>
+<meta charset="UTF-8">
+<meta name="google-adsense-account" content="ca-pub-7516029395999799">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <link rel="dns-prefetch" href="https://farmtalonline.dlbr.dk">
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
+<title>Historik over noteringer — Hvede, Raps, Mælk, Grise | Landbrugstal</title>
+<meta name="description" content="Historik over danske landbrugsnoteringer: se udviklingen over 7 og 30 dage for hvede, byg, raps, mælkepris, grisenotering og kreaturnotering med minigrafer.">
+<link rel="canonical" href="https://landbrugstal.dk/historik.html">
+<meta name="theme-color" content="#16a34a">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="da_DK">
+<meta property="og:site_name" content="Landbrugstal">
+<meta property="og:title" content="Historik over noteringer — Hvede, Raps, Mælk, Grise">
+<meta property="og:description" content="Udviklingen over 7 og 30 dage for danske landbrugsnoteringer, med minigrafer.">
+<meta property="og:url" content="https://landbrugstal.dk/historik.html">
+<meta property="og:image" content="https://landbrugstal.dk/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/favicon-192.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Historik over noteringer","description":"Daglig historik over danske landbrugsnoteringer: hvede, byg, raps, mælkepris, grisenotering og kreaturnotering med udvikling over 7 og 30 dage.","url":"https://landbrugstal.dk/historik.html","inLanguage":"da-DK","isPartOf":{"@type":"WebSite","name":"Landbrugstal","url":"https://landbrugstal.dk/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Forside","item":"https://landbrugstal.dk/"},{"@type":"ListItem","position":2,"name":"Priser","item":"https://landbrugstal.dk/cotacoes.html"},{"@type":"ListItem","position":3,"name":"Historik","item":"https://landbrugstal.dk/historik.html"}]}</script>
+<style>
+.hist-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:.9rem;margin:1.2rem 0 1.6rem}
+.hist-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:.9rem 1rem;display:flex;flex-direction:column;gap:.35rem}
+.hist-card__name{font-weight:600;font-size:.92rem;color:#0f172a}
+.hist-card__unit{font-size:.76rem;color:#64748b;margin-left:.3rem}
+.hist-card__value{font-size:1.28rem;font-weight:700;color:#0f172a}
+.hist-card__deltas{display:flex;gap:.9rem;font-size:.8rem;color:#475569;flex-wrap:wrap}
+.hist-delta strong{display:block;font-size:.7rem;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:.03em}
+.hist-delta--up{color:#15803d}
+.hist-delta--down{color:#b91c1c}
+.hist-card__spark{margin-top:.25rem}
+.hist-card__spark svg{width:100%;height:40px;display:block}
+.hist-card__building{font-size:.78rem;color:#92700c;background:#fef9c3;border-radius:8px;padding:.35rem .55rem}
+.hist-card__date{font-size:.72rem;color:#94a3b8}
+.hist-empty{background:#fef9c3;border:1px solid #fde68a;border-radius:12px;padding:1rem 1.2rem;color:#713f12;margin:1.2rem 0}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Spring til indhold</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/" aria-label="Landbrugstal — forsiden">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#16a34a"/>
+        <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+        <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+        <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+      </svg>
+      <span class="brand__name">Landbrugs <span>tal</span></span>
+      <span class="brand__tagline">Daglige noteringer og landbrugsberegnere</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Åbn menu" aria-expanded="false" aria-controls="menu">
+      <svg class="nav-toggle__open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="nav-toggle__close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <nav class="main-nav" id="menu" aria-label="Hovedmenu">
+      <ul>
+        <li><a href="/">Forside</a></li>
+        <li><a href="/cotacoes.html">Priser</a></li>
+        <li><a href="/futuros.html">Futures</a></li>
+        <li><a href="/sobre.html">Om</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main id="conteudo">
+
+  <div class="page-head">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Sti">
+        <ol>
+          <li><a href="/">Forside</a></li>
+          <li><a href="/cotacoes.html">Priser</a></li>
+          <li>Historik</li>
+        </ol>
+      </nav>
+      <h1>Historik over noteringer</h1>
+      <p class="lead">Den daglige udvikling i danske landbrugsnoteringer — hvede, byg, raps, mælk, grise og kreaturer — med ændring over 7 og 30 dage og en minigraf pr. produkt.</p>
+    </div>
+  </div>
+
+  <div class="container narrow">
+
+    <div id="hist-root">
+      <div class="hist-empty" id="hist-loading">Indlæser historik…</div>
+    </div>
+
+    <article class="prose">
+      <h2>Hvorfor følge noteringerne over tid</h2>
+      <p>En enkelt notering siger ikke ret meget. Det er <strong>historikken</strong>, der viser, om dagens pris er høj eller lav i forhold til de seneste uger — og netop den sammenligning hjælper, når du skal beslutte, om kornet skal <a href="/vender-ou-armazenar.html">sælges nu eller lægges på lager</a>, eller om en kontrakt skal lukkes. Denne side gemmer et dagligt øjebliksbillede af noteringerne fra siden <a href="/cotacoes.html">Daglige priser</a> og opsummerer ændringen over de seneste 7 og 30 dage for hvert produkt.</p>
+
+      <h2>Sådan læser du udviklingen</h2>
+      <p><strong>7-dages ændringen</strong> fanger de korte bevægelser: høstmeldinger, vejr, valutakurser og udbud på slagterierne kan flytte prisen fra uge til uge. <strong>30-dages ændringen</strong> filtrerer en del af støjen fra og viser månedens retning. Husk også <strong>sæsonen</strong>: kornpriserne presses typisk omkring høst, mælkeprisen reguleres i trin af mejerierne, og grisenoteringen følger efterspørgslen på det europæiske marked. En stigning på 3 % midt i høsten fortæller en anden historie end samme stigning om foråret.</p>
+
+      <h2>Notering er ikke din afregningspris</h2>
+      <p>Tallene her er <strong>vejledende noteringer</strong> — for eksempel Danish Crowns ugenotering eller Farmtals spotpriser. Din faktiske <strong>afregningspris</strong> afhænger af kvalitet, efterbetaling, tillæg og fradrag, transport og din aftale med aftageren. Brug historikken til at forstå markedets retning — og din aftager, rådgiver eller mægler til at få dagens reelle pris.</p>
+
+      <div class="disclaimer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <div><strong>Vigtig oplysning.</strong> Historikken er udelukkende til orientering og undervisningsbrug. Data kommer fra tredjepartskilder (SEGES Farmtal, Arla, Danish Crown, Nationalbanken), kan være forsinkede eller have huller (weekender og helligdage) og udgør ikke en anbefaling om køb eller salg. Kontroller altid værdierne hos den officielle kilde, før du træffer beslutninger.</div>
+      </div>
+    </article>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+          <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#16a34a"/>
+            <path d="M32 52 V30" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+            <path d="M32 38 C 24 38, 17 32, 17 21 C 27 22, 32 29, 32 38 Z" fill="#fff"/>
+            <path d="M32 32 C 40 32, 47 26, 47 15 C 37 16, 32 23, 32 32 Z" fill="#fff"/>
+          </svg>
+          <span class="brand__name">Landbrugstal</span>
+        </a>
+        <p>Landbrugsberegnere og daglige markedspriser, opdateret hver dag.</p>
+      </div>
+      <div>
+        <h3>Beregnere</h3>
+        <ul>
+          <li><a href="/lotacao-pastagem.html">Græsningsbelægning</a></li>
+          <li><a href="/conversao-de-sacas.html">Vægtomregner</a></li>
+          <li><a href="/adubacao-npk.html">NPK-gødning</a></li>
+          <li><a href="/conversao-de-area.html">Arealomregner</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Marked</h3>
+        <ul>
+          <li><a href="/cotacoes.html">Daglige priser</a></li>
+          <li><a href="/historik.html">Historik</a></li>
+          <li><a href="/futuros.html">Futures</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Site</h3>
+        <ul>
+          <li><a href="/sobre.html">Om</a></li>
+          <li><a href="/contato.html">Kontakt</a></li>
+          <li><a href="/privacidade.html">Privatlivspolitik</a></li>
+          <li><a href="/termos.html">Vilkår</a></li>
+          <li><a href="/apoiar.html">Støt projektet</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Beregnerne er kun vejledende og giver estimater. Priserne kommer fra tredjepartskilder (SEGES Farmtal, Arla, Danish Crown og CBOT/Chicago via TradingView og direkte links).</p>
+      <p>© <span data-year>2026</span> Landbrugstal · Lavet i Danmark.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/config.js"></script>
+<script src="/js/app.js"></script>
+<script>
+(function () {
+  "use strict";
+  var root = document.getElementById("hist-root");
+  var DAY = 86400000;
+
+  function parseDate(s) { return Date.parse(s + "T00:00:00Z"); }
+
+  function fmtVal(v, unit) {
+    var frac = v < 100 ? 2 : 2;
+    var txt = v.toLocaleString("da-DK", { minimumFractionDigits: 2, maximumFractionDigits: frac });
+    return txt + (unit ? '<span class="hist-card__unit">' + unit + "</span>" : "");
+  }
+
+  function fmtDateDK(iso) {
+    var p = iso.split("-");
+    return p[2] + "." + p[1] + "." + p[0];
+  }
+
+  function delta(series, days) {
+    var last = series[series.length - 1];
+    var lastT = parseDate(last.d);
+    var base = null;
+    for (var i = series.length - 2; i >= 0; i--) {
+      if ((lastT - parseDate(series[i].d)) / DAY >= days) { base = series[i]; break; }
+    }
+    if (!base || !base.v) return null;
+    var abs = last.v - base.v;
+    return { abs: abs, pct: (abs / base.v) * 100 };
+  }
+
+  function deltaHTML(label, d) {
+    if (!d) return '<span class="hist-delta"><strong>' + label + "</strong>—</span>";
+    var cls = d.abs > 0 ? "hist-delta--up" : (d.abs < 0 ? "hist-delta--down" : "");
+    var sign = d.abs > 0 ? "+" : "";
+    var absTxt = sign + d.abs.toLocaleString("da-DK", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    var pctTxt = sign + d.pct.toLocaleString("da-DK", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + " %";
+    return '<span class="hist-delta ' + cls + '"><strong>' + label + "</strong>" + absTxt + " (" + pctTxt + ")</span>";
+  }
+
+  function sparkline(series) {
+    var pts = series.slice(-30);
+    var w = 130, h = 36, pad = 2;
+    if (pts.length < 2) {
+      return '<svg viewBox="0 0 130 36" preserveAspectRatio="none" aria-hidden="true"><circle cx="65" cy="18" r="2.5" fill="#16a34a"/></svg>';
+    }
+    var vals = pts.map(function (p) { return p.v; });
+    var min = Math.min.apply(null, vals), max = Math.max.apply(null, vals);
+    var span = (max - min) || 1;
+    var coords = pts.map(function (p, i) {
+      var x = pad + (i / (pts.length - 1)) * (w - 2 * pad);
+      var y = h - pad - ((p.v - min) / span) * (h - 2 * pad);
+      return x.toFixed(1) + "," + y.toFixed(1);
+    });
+    var up = pts[pts.length - 1].v >= pts[0].v;
+    var color = up ? "#16a34a" : "#dc2626";
+    return '<svg viewBox="0 0 130 36" preserveAspectRatio="none" aria-hidden="true">' +
+      '<polyline points="' + coords.join(" ") + '" fill="none" stroke="' + color + '" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>';
+  }
+
+  function escapeHTML(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+
+  function prettify(key) {
+    return key.replace(/_/g, "/").replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+  }
+
+  function render(history, meta) {
+    var keys = [];
+    (meta.order || []).forEach(function (k) { if (history[k]) keys.push(k); });
+    Object.keys(history).sort().forEach(function (k) { if (keys.indexOf(k) === -1) keys.push(k); });
+
+    if (!keys.length) {
+      root.innerHTML = '<div class="hist-empty"><strong>Historik under opbygning</strong> — den daglige registrering er lige startet. Kom tilbage om nogle dage for at se de første grafer.</div>';
+      return;
+    }
+
+    var anyShort = false;
+    var html = '<div class="hist-grid">';
+    keys.forEach(function (k) {
+      var series = history[k].slice().sort(function (a, b) { return a.d < b.d ? -1 : 1; });
+      var info = meta.byKey[k] || {};
+      var name = info.name || prettify(k);
+      var unit = info.unit || "";
+      var last = series[series.length - 1];
+      var d7 = null, d30 = null, building = series.length < 7;
+      if (building) { anyShort = true; } else { d7 = delta(series, 7); d30 = delta(series, 30); }
+      html += '<div class="hist-card">' +
+        '<div class="hist-card__name">' + escapeHTML(name) + '</div>' +
+        '<div class="hist-card__value">' + fmtVal(last.v, escapeHTML(unit)) + "</div>" +
+        '<div class="hist-card__date">Seneste data: ' + fmtDateDK(last.d) + "</div>" +
+        (building
+          ? '<div class="hist-card__building">Historik under opbygning — kom tilbage om nogle dage.</div>'
+          : '<div class="hist-card__deltas">' + deltaHTML("Δ 7 dage", d7) + deltaHTML("Δ 30 dage", d30) + "</div>") +
+        '<div class="hist-card__spark">' + sparkline(series) + "</div>" +
+        "</div>";
+    });
+    html += "</div>";
+    if (anyShort) {
+      html = '<div class="hist-empty">Den automatiske daglige registrering er startet for nylig: nogle noteringer har stadig få datapunkter. Ændringerne over 7 og 30 dage vises, efterhånden som historikken vokser.</div>' + html;
+    }
+    root.innerHTML = html;
+  }
+
+  function loadMeta() {
+    return fetch("/data/noteringer-dk-completas.json")
+      .then(function (r) { return r.ok ? r.json() : { items: [] }; })
+      .catch(function () { return { items: [] }; })
+      .then(function (data) {
+        var byKey = {}, order = [];
+        (data.items || []).forEach(function (it) {
+          if (it.key) { byKey[it.key] = it; order.push(it.key); }
+        });
+        return { byKey: byKey, order: order };
+      });
+  }
+
+  Promise.all([
+    fetch("/data/noteringer-historik.json").then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }),
+    loadMeta()
+  ]).then(function (res) {
+    var history = res[0], meta = res[1];
+    if (!history || typeof history !== "object") {
+      root.innerHTML = '<div class="hist-empty"><strong>Historik under opbygning</strong> — den daglige registrering er lige startet. Kom tilbage om nogle dage for at se de første grafer.</div>';
+      return;
+    }
+    render(history, meta);
+  });
+})();
+</script>
+</body>
+</html>

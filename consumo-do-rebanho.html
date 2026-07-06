@@ -52,6 +52,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Hvad er forskellen på kg foder og kg tørstof?","acceptedAnswer":{"@type":"Answer","text":"Kg foder (frisk vare) inkluderer vandet i foderet, mens kg tørstof kun tæller det, der er tilbage, når vandet er trukket fra. Majsensilage med 30 % tørstof leverer kun 300 g tørstof pr. kg frisk vare."}},
+    {"@type":"Question","name":"Hvorfor æder malkekøer mere end slagtekvæg?","acceptedAnswer":{"@type":"Answer","text":"Mælkeproduktion kræver meget energi, og lakterende køer har derfor et markant højere tørstofoptag i procent af kropsvægten end dyr, der kun skal vedligeholde eller vokse."}},
+    {"@type":"Question","name":"Hvad er en foderenhed (FE)?","acceptedAnswer":{"@type":"Answer","text":"En foderenhed er et energimål, der historisk er brugt i dansk fodervurdering til at sammenligne foderemner. Denne beregner arbejder i kg tørstof; omregning til energienheder kræver en foderanalyse."}},
+    {"@type":"Question","name":"Kan resultatet bruges direkte som indkøbsliste?","acceptedAnswer":{"@type":"Answer","text":"Det er et planlægningsoverslag. Læg en sikkerhedsmargin til for spild og variation i besætningen, og omregn tørstoffet til frisk vare ud fra tørstofprocenten i det aktuelle grovfoder."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -159,14 +171,19 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p>Denne beregner estimerer, hvor meget besætningen indtager af <strong>tørstof</strong> (grovfoder og kraftfoder) og <strong>mineralsalt</strong>, så du kan planlægge indkøb af foder.</p>
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Denne beregner estimerer, hvor meget besætningen indtager af <strong>tørstof</strong> (grovfoder og kraftfoder) og <strong>mineralsalt</strong>, så du kan planlægge foderindkøb og lagerbeholdning. I praksis bruges den, når vinterfodringen skal planlægges: rækker ensilagestakken til hele staldperioden, eller skal der købes grovfoder til? Den er også nyttig, når en besætning udvides, og foderbudgettet skal regnes igennem, eller når man vil sammenligne siloens indhold med besætningens faktiske dagsbehov. Ved at kombinere antal dyr, gennemsnitsvægt og produktionstype får du et hurtigt overslag over dagligt indtag og det samlede behov for en valgfri periode — et godt udgangspunkt for dialogen med foderleverandøren eller konsulenten.</p>
 
-      <h2>Sådan beregner du</h2>
-      <p>Tørstofindtaget beregnes som en procentdel af den levende vægt — ca. 2,3% for slagtekvæg og 3,1% for malkekvæg i laktation.</p>
+      <h2>Input, enheder og omregninger</h2>
+      <p>Beregneren bruger antal dyr (stk.), gennemsnitsvægt (kg), produktionstype og eventuelt antal lagerdage. Resultatet angives i kg tørstof — altså foderets vægt uden vand. For at omregne til frisk vare divideres med tørstofprocenten: 1 kg tørstof svarer til ca. 3,3 kg majsensilage ved 30 % tørstof. Store mængder omregnes let: 1.000 kg = 1 ton, og 100 kg = 1 hkg. Energiindholdet opgøres i dansk fodervurdering ofte i foderenheder (FE) — det kræver en foderanalyse og beregnes ikke her.</p>
 
-      <h2>Eksempel</h2>
-      <p>80 stk. slagtekvæg à 400 kg indtager ca. 9,2 kg tørstof hver → <strong>736 kg tørstof pr. dag</strong>.</p>
+      <h2>Formel og gennemregnet eksempel</h2>
+      <p>Tørstofindtaget beregnes som en procentdel af den levende vægt — i denne beregner ca. 2,3 % for slagtekvæg og 3,1 % for malkekvæg i laktation.</p>
+      <div class="formula">TS-indtag pr. dyr (kg/dag) = kropsvægt (kg) × (TS-optag i % ÷ 100)<br>Besætningens indtag = TS-indtag pr. dyr × antal dyr<br>Lagerbehov = dagligt indtag × antal dage</div>
+      <p>Gennemregnet eksempel: 80 stk. slagtekvæg à 400 kg med et optag på 2,3 % af kropsvægten. Pr. dyr: 400 × 0,023 = 9,2 kg tørstof pr. dag. For besætningen: 9,2 × 80 = <strong>736 kg tørstof pr. dag</strong>. Skal der lager til 30 dage, bliver behovet 736 × 30 = 22.080 kg ≈ 22 t tørstof — svarende til omkring 74 t frisk majsensilage ved 30 % tørstof.</p>
+
+      <h2>Praktiske referenceværdier</h2>
+      <p>Offentlige fagblade og normtal, fx fra SEGES, beskriver typisk følgende spænd for tørstofoptag i procent af kropsvægten: voksent kvæg til vedligehold og moderat tilvækst ligger ofte på 2-2,5 %, mens højtydende malkekøer i laktation kan ligge væsentligt højere, ofte i intervallet 3-4 %. Ungdyr i god vækst ligger typisk i den øvre ende af spændet for deres vægt, fordi optaget pr. kg kropsvægt falder med alderen. For mineralblandinger til kvæg nævnes ofte størrelsesordener på nogle titals gram op til omkring 100 g pr. dyr pr. dag afhængigt af kategori og ration. Optaget påvirkes desuden af foderets fordøjelighed, varme og vandforsyning, og normtallene varierer mellem racer og regioner.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -176,6 +193,19 @@
         <p>Grønt græs og ensilage indeholder meget vand. For at omregne tørstof til frisk foder skal du dividere med tørstofindholdet i grovfoderet (majsensilage har f.eks. ~30% tørstof).</p>
       </div>
 
+      <h2>Begrænsninger</h2>
+      <p>Beregneren bruger faste procentsatser pr. produktionstype og tager ikke højde for laktationsstadie, drægtighed, tilvækstmål, foderets kvalitet eller vejrforhold — faktorer, der alle flytter det reelle optag. Den skelner heller ikke mellem grovfoder og kraftfoder i rationen og indregner ikke spild ved foderbordet. Brug resultatet som et planlægningsoverslag, og lad den endelige foderplan blive fastlagt sammen med en kvægbrugskonsulent ud fra foderanalyser og besætningens faktiske ydelse.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvad er forskellen på kg foder og kg tørstof?</h3>
+      <p>Kg foder (frisk vare) inkluderer vandet i foderet, mens kg tørstof kun tæller det, der er tilbage, når vandet er trukket fra. Majsensilage med 30 % tørstof leverer kun 300 g tørstof pr. kg frisk vare.</p>
+      <h3>Hvorfor æder malkekøer mere end slagtekvæg?</h3>
+      <p>Mælkeproduktion kræver meget energi, og lakterende køer har derfor et markant højere tørstofoptag i procent af kropsvægten end dyr, der kun skal vedligeholde eller vokse.</p>
+      <h3>Hvad er en foderenhed (FE)?</h3>
+      <p>En foderenhed er et energimål, der historisk er brugt i dansk fodervurdering til at sammenligne foderemner. Denne beregner arbejder i kg tørstof; omregning til energienheder kræver en foderanalyse.</p>
+      <h3>Kan resultatet bruges direkte som indkøbsliste?</h3>
+      <p>Det er et planlægningsoverslag. Læg en sikkerhedsmargin til for spild og variation i besætningen, og omregn tørstoffet til frisk vare ud fra tørstofprocenten i det aktuelle grovfoder.</p>
+
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
@@ -183,6 +213,10 @@
           <a class="calc-card" href="/lotacao-pastagem.html"><h3>Græsningsbelægning</h3><p>Belægningsgrad i DE/ha.</p></a>
           <a class="calc-card" href="/cocho.html"><h3>Foderbord og drikkekar</h3><p>Dimensionering af foderbord.</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlig faglitteratur. Erstatter ikke rådgivning fra agronom, kvægbrugskonsulent eller dyrlæge. Senest revideret: 2026-07-05 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>

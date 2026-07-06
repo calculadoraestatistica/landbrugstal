@@ -50,6 +50,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Hvad koster forpagtning af landbrugsjord typisk i Danmark?","acceptedAnswer":{"@type":"Answer","text":"Ifølge offentlige opgørelser, fx Danmarks Statistik, ligger forpagtningsafgiften for almindelig landbrugsjord ofte i størrelsesordenen 3.000-5.500 kr pr. hektar pr. år. God lerjord i områder med stor konkurrence kan ligge over 6.000 kr/ha, mens let sandjord typisk ligger lavere."}},
+    {"@type":"Question","name":"Hvilken kontrakttype er bedst — hkg, fast beløb eller procent?","acceptedAnswer":{"@type":"Answer","text":"Ingen af dem er bedst i sig selv; de fordeler pris- og udbytterisikoen forskelligt. Et fast beløb samler markedsrisikoen hos forpagteren, mens hkg-aftaler og procent af omsætningen deler den med ejeren — men også deler gevinsten ved prisstigninger."}},
+    {"@type":"Question","name":"Hvordan beregnes break-even-udbyttet?","acceptedAnswer":{"@type":"Answer","text":"Produktionsomkostninger plus forpagtning divideres med den forventede salgspris. Resultatet er det udbytte, der netop dækker alle medregnede omkostninger — falder høsten under det niveau, giver marken underskud."}},
+    {"@type":"Question","name":"Skal EU-støtten regnes med i kalkulen?","acceptedAnswer":{"@type":"Answer","text":"Grundbetaling og andre tilskud kan indtastes under andre indtægter og flytter ofte resultatet mærkbart. Afklar i kontrakten, hvem der råder over betalingsrettighederne, og hvordan støtten fordeles mellem ejer og forpagter."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -229,34 +241,48 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p>Denne beregner hjælper landmanden med at vurdere, om <strong>forpagtning af jord</strong> koster penge, går i nul eller giver overskud i slutningen af sæsonen. Den sammenligner de tre mest anvendte typer af forpagtning — hkg pr. hektar (afgrødeforpagtning), fast beløb i kroner og procent af omsætning — og viser, hvor meget nettoresultat der er tilbage efter betaling af jordleje og produktionsomkostninger.</p>
+      <h2>Hvad bruges den til i bedriftsøkonomien</h2>
+      <p>Forpagtning er i mange planteavlsregnskaber en af de største enkeltomkostninger, og beregneren bruges til at vurdere, om et forpagtet areal bidrager positivt til bedriftens samlede økonomi. Den sammenligner de tre mest anvendte aftaletyper — et fast antal <strong>hkg pr. hektar</strong>, et <strong>fast beløb i kroner</strong> og en <strong>procentdel af bruttoomsætningen</strong> — og viser nettomarginen pr. hektar, når både jordleje og produktionsomkostninger er betalt. Resultatet kan bruges som forhandlingsgrundlag før en ny kontrakt, til at rangordne marker efter lønsomhed og til at teste, hvor følsom aftalen er over for udsving i udbytte og pris.</p>
 
-      <h2>Typer af kontrakt</h2>
-      <p><strong>Hkg pr. hektar:</strong> forpagteren afleverer et fast antal hkg (eller den tilsvarende værdi i kroner efter hkg-prisen på leveringstidspunktet) til ejeren. Det er den mest almindelige type ved sojabønner og majs.</p>
-      <p><strong>Fast beløb kr/ha:</strong> leje i kontanter, fastsat i kontrakten. Beskytter ejeren mod prisfald, men samler markedsrisikoen hos forpagteren.</p>
-      <p><strong>% af brutto-omsætning:</strong> ejeren modtager en procentdel af brutto-indtægten. Deler prisrisikoen bedre, men deler også prisstigninger.</p>
+      <h2>Input og enheder</h2>
+      <p>Forpagtningen angives efter aftaletype: hkg pr. hektar sammen med en pris i kr/hkg, et fast beløb i kr/ha eller en procentsats af bruttoomsætningen. Derudover indtastes det forventede udbytte (hkg/ha), salgsprisen i kr/hkg og de samlede produktionsomkostninger i kr/ha. Feltet "andre indtægter" kan bruges til halmsalg, tilskud eller lignende poster. Alle beløb bør gælde samme høstår, så indtægter og omkostninger er direkte sammenlignelige.</p>
 
-      <h2>Sådan beregner du</h2>
+      <h2>Formel og gennemregnet eksempel</h2>
       <div class="formula">Indtægt/ha = udbytte × pris</div>
-      <div class="formula">Nettomargin/ha = indtægt - omkostning - forpagtning + andre indtægter</div>
+      <div class="formula">Nettomargin/ha = indtægt − omkostning − forpagtning + andre indtægter</div>
       <div class="formula">Break-even udbytte = (omkostning + forpagtning) ÷ pris</div>
-
-      <h2>Eksempel</h2>
-      <p>Sojabønner, forpagtning på 15 hkg/ha, pris kr 130/hkg, forventet udbytte 60 hkg/ha og omkostning på kr 4.500/ha:</p>
+      <p>Vinterhvede med en aftale på 15 hkg/ha, pris 130 kr/hkg, forventet udbytte 80 hkg/ha og produktionsomkostninger på 6.500 kr/ha:</p>
       <ul>
-        <li>Forpagtning: 15 × 130 = <strong>kr 1.950/ha</strong></li>
-        <li>Brutto-indtægt: 60 × 130 = <strong>kr 7.800/ha</strong></li>
-        <li>Nettomargin: 7.800 − 4.500 − 1.950 = <strong>kr 1.350/ha</strong></li>
+        <li>Forpagtning: 15 × 130 = <strong>1.950 kr/ha</strong></li>
+        <li>Bruttoindtægt: 80 × 130 = <strong>10.400 kr/ha</strong></li>
+        <li>Nettomargin: 10.400 − 6.500 − 1.950 = <strong>1.950 kr/ha</strong></li>
+        <li>Break-even-udbytte: (6.500 + 1.950) ÷ 130 = <strong>65 hkg/ha</strong></li>
       </ul>
+      <p>Falder høsten under 65 hkg/ha, giver marken underskud med de valgte forudsætninger.</p>
+
+      <h2>Praktiske referenceværdier</h2>
+      <p>Ifølge offentlige opgørelser, fx Danmarks Statistik og SEGES' økonomital, ligger forpagtningsafgiften for almindelig landbrugsjord ofte i intervallet <strong>3.000-5.500 kr pr. hektar pr. år</strong>. God, velarronderet lerjord i områder med stor konkurrence om jorden kan handles over 6.000 kr/ha, mens let sandjord uden vanding typisk ligger i den nedre ende. Jordleje udgør dermed ofte 15-25 % af de samlede omkostninger i en kornmark. Som tommelfingerregel bør forpagtningen kunne rummes i forskellen mellem markens dækningsbidrag og bedriftens øvrige kapacitetsomkostninger. Satserne varierer betydeligt med region, jordtype, dræningstilstand og kontraktlængde — brug intervallerne som pejlemærker, og indhent lokale referencer, før du forhandler.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           Estimat før sæsonen
         </div>
-        <p>Dette er et estimat før sæsonen. Klimarisiko, pris og omkostninger kan ændre resultatet betydeligt. Arbejd med scenarier (pessimistisk, basis, optimistisk) før du underskriver kontrakten, og overvej hkg-prisen på leveringstidspunktet, ikke i dag.</p>
+        <p>Dette er et estimat før sæsonen. Klimarisiko, pris og omkostninger kan ændre resultatet betydeligt. Arbejd med scenarier (pessimistisk, basis, optimistisk) før du underskriver kontrakten, og regn med prisen på leveringstidspunktet, ikke i dag.</p>
       </div>
+
+      <h2>Begrænsninger</h2>
+      <p>Beregningen er et skøn før sæsonen: udbytte og pris kendes først ved levering, og resultatet er derfor et scenarie, ikke en facitliste. Nettomarginen pr. hektar er heller ikke bedriftens bundlinje — kapacitetsomkostninger som maskiner, arbejdskraft og finansiering skal stadig dækkes, før der er et egentligt overskud. Kontraktvilkår om længde, vedligehold, efterafgrødekrav og betalingsrettigheder kan flytte værdien af en aftale lige så meget som selve hektarprisen.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvad koster forpagtning af landbrugsjord typisk i Danmark?</h3>
+      <p>Ifølge offentlige opgørelser, fx Danmarks Statistik, ligger forpagtningsafgiften ofte i størrelsesordenen 3.000-5.500 kr pr. hektar pr. år. God lerjord i konkurrenceudsatte områder kan ligge over 6.000 kr/ha, mens let sandjord ligger lavere.</p>
+      <h3>Hvilken kontrakttype er bedst — hkg, fast beløb eller procent?</h3>
+      <p>Ingen af dem er bedst i sig selv; de fordeler pris- og udbytterisikoen forskelligt. Et fast beløb samler markedsrisikoen hos forpagteren, mens hkg-aftaler og procent af omsætningen deler den med ejeren — men også deler gevinsten ved prisstigninger.</p>
+      <h3>Hvordan beregnes break-even-udbyttet?</h3>
+      <p>Produktionsomkostninger plus forpagtning divideres med den forventede salgspris. Resultatet er det udbytte, der netop dækker alle medregnede omkostninger.</p>
+      <h3>Skal EU-støtten regnes med i kalkulen?</h3>
+      <p>Grundbetaling og andre tilskud kan indtastes under andre indtægter og flytter ofte resultatet mærkbart. Afklar i kontrakten, hvem der råder over betalingsrettighederne.</p>
 
       <div class="related">
         <h2>Andre beregnere</h2>
@@ -265,6 +291,10 @@
           <a class="calc-card" href="/custo-de-producao.html"><h3>Produktionsomkostning</h3><p>Omkostning pr. enhed.</p></a>
           <a class="calc-card" href="/produtividade.html"><h3>Udbytte</h3><p>Omregning og estimering.</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlige opgørelser og faglitteratur. Erstatter ikke rådgivning fra en økonomikonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>

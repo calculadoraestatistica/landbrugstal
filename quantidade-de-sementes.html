@@ -52,6 +52,46 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hvad er TKV (tusindkornsvægt)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vægten af 1.000 kerner i gram. Den står på sækken eller analysebeviset og bruges til at omregne et antal frø pr. hektar til kilo udsæd."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvad er forskellen på spireevne og markspiring?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spireevnen måles i laboratoriet under ideelle forhold; markspiringen er den andel, der reelt bliver til planter i marken, og den ligger lavere — især ved sen såning og dårligt såbed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvorfor ændrer udsædsmængden sig fra parti til parti?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fordi TKV varierer. Samme plantetal kræver flere kilo af et parti med store kerner (høj TKV) end af et parti med små kerner — brug altid tallet fra det aktuelle parti."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvordan omregner jeg planter pr. m² til planter pr. hektar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gang med 10.000. Et mål på 300 planter/m² svarer til 3.000.000 planter pr. hektar, som er det tal, beregneren korrigerer for spiring og omregner til kilo."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -167,23 +207,32 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p>Denne beregner estimerer, hvor mange <strong>kilo udsæd pr. hektar</strong> du skal købe og så for at nå den ønskede plantebestand.</p>
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Denne beregner estimerer, hvor mange <strong>kilo udsæd pr. hektar</strong> der skal til for at nå et ønsket plantetal, når der tages højde for tusindkornsvægt (TKV) og spireevne. Den bruges ved indkøb af udsæd, ved indstilling af såmaskinen og til at forstå, hvorfor to partier af samme sort kan kræve vidt forskellige kilomængder: et parti med høj TKV indeholder simpelthen færre kerner pr. kilo. Beregningen gælder korn, raps og andre afgrøder, hvor udsæd doseres i kg/ha.</p>
 
-      <h2>Sådan beregnes det</h2>
-      <p>Den ønskede plantebestand korrigeres med den kulturelle værdi (spireevne × renhed) og omregnes til kilo via tusindkornsvægten (TKV).</p>
+      <h2>Input, enheder og omregninger</h2>
+      <p>Plantetallet angives pr. hektar (planter/m² × 10.000). TKV aflæses i gram på sækken eller analysebeviset. Spireevne og renhed angives i procent og ganges sammen til den kulturelle værdi; i dansk praksis regnes ofte direkte med den forventede <strong>markspiring</strong>, som ligger lavere end laboratoriespireevnen. En eventuel sikkerhedsmargin lægges oveni til spild og fremspiringstab.</p>
+
+      <h2>Formel og gennemregnet eksempel</h2>
       <div class="formula">kg/ha = (korrigerede frø/ha × TKV i gram) ÷ 1.000.000</div>
+      <p>Gennemregnet eksempel med danske korntal: målet er 300 planter/m² vinterhvede, TKV er 48 g, og markspiringen sættes til 85 %. Frøbehovet er 300 ÷ 0,85 ≈ 353 frø/m², dvs. 3.530.000 frø/ha. Udsædsmængden bliver 3.530.000 × 48 ÷ 1.000.000 ≈ <strong>169 kg/ha</strong>. Det er samme regnestykke som den kendte tommelfingerformel: plantetal × TKV ÷ markspiringsprocent = 300 × 48 ÷ 85 ≈ 169 kg/ha. Havde partiet i stedet TKV 42 g, faldt behovet til ca. 148 kg/ha — derfor skal TKV altid tages fra det aktuelle parti.</p>
 
-      <h2>Eksempel</h2>
-      <p>Ved 300.000 planter/ha, TKV på 200 g og kulturel værdi på 93 %, med 5 % margin, giver det ca. <strong>68 kg/ha</strong> udsæd.</p>
+      <h2>Praktiske referenceværdier</h2>
+      <p>Offentlige normtal og sortsmateriale, fx fra SEGES, beskriver typiske spænd: TKV for vinterhvede ligger ofte omkring 40-55 g, vårbyg 45-55 g og vinterraps kun 4-6 g, og plantetalsmål på fx 150-250 planter/m² i vinterhvede (afhængigt af såtidspunkt) og 250-325 planter/m² i vårbyg. Markspiringen sættes i praksis ofte lavere ved sen såning, koldt såbed eller grov jord. Tallene er beskrivende pejlemærker fra faglitteraturen — det konkrete valg hører til sortsvalget og markplanen.</p>
+      <p>Til overslag kan kernetallet også regnes den anden vej: 169 kg/ha med TKV 48 g svarer til ca. 352 kerner/m² — praktisk, når en faktisk udsædsmængde skal oversættes tilbage til et forventet plantetal. Renheden i certificeret udsæd er normalt tæt på 100 % og ændrer sjældent resultatet mærkbart.</p>
 
-      <div class="callout callout--warning">
-        <div class="callout__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          TKV varierer
-        </div>
-        <p>TKV varierer mellem partier og mellem sorter. Brug værdien fra pakningen på det parti, du faktisk skal så — ikke en generisk værdi.</p>
-      </div>
+      <h2>Begrænsninger</h2>
+      <p>Beregneren <strong>anbefaler ingen udsædsmængde</strong> — den omregner kun dine egne forudsætninger. Den største usikkerhed er markspiringen, som ikke kan aflæses af analysebeviset, men afhænger af såbed, sådybde, såtidspunkt og vejr. TKV varierer fra parti til parti og mellem sorter og skal tages fra den faktiske sæk. Plantetalsmål og sortsvalg bør fastlægges sammen med en planteavlskonsulent.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvad er TKV (tusindkornsvægt)?</h3>
+      <p>Vægten af 1.000 kerner i gram. Den står på sækken eller analysebeviset og bruges til at omregne et antal frø pr. hektar til kilo udsæd.</p>
+      <h3>Hvad er forskellen på spireevne og markspiring?</h3>
+      <p>Spireevnen måles i laboratoriet under ideelle forhold; markspiringen er den andel, der reelt bliver til planter i marken, og den ligger lavere — især ved sen såning og dårligt såbed.</p>
+      <h3>Hvorfor ændrer udsædsmængden sig fra parti til parti?</h3>
+      <p>Fordi TKV varierer. Samme plantetal kræver flere kilo af et parti med store kerner (høj TKV) end af et parti med små kerner — brug altid tallet fra det aktuelle parti.</p>
+      <h3>Hvordan omregner jeg planter pr. m² til planter pr. hektar?</h3>
+      <p>Gang med 10.000. Et mål på 300 planter/m² svarer til 3.000.000 planter pr. hektar, som er det tal, beregneren korrigerer for spiring og omregner til kilo.</p>
 
       <div class="related">
         <h2>Andre beregnere</h2>
@@ -192,6 +241,10 @@
           <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Fra anbefaling til handelsgødning.</p></a>
           <a class="calc-card" href="/produtividade.html"><h3>Udbytte</h3><p>Hkg/ha, kg/ha og t/ha.</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlig faglitteratur og normtal. Erstatter ikke rådgivning fra agronom eller planteavlskonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>

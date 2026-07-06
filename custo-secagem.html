@@ -8,6 +8,46 @@
 <link rel="canonical" href="https://landbrugstal.dk/custo-secagem.html"><meta name="theme-color" content="#16a34a">
 <meta property="og:type" content="website"><meta property="og:locale" content="da_DK"><meta property="og:site_name" content="Landbrugstal"><meta property="og:title" content="Tørringsomkostningsberegner"><meta property="og:description" content="Estimér fjernet vand og tørringsomkostning."><meta property="og:url" content="https://landbrugstal.dk/custo-secagem.html"><meta property="og:image" content="https://landbrugstal.dk/og-image.png"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png"><link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png"><link rel="apple-touch-icon" href="/favicon-192.png"><link rel="manifest" href="/site.webmanifest"><link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Hvorfor vejer kornet mindre efter tørring?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Fordi vandet fjernes, mens tørstoffet er konstant. Tørres fra 18 % til 14,5 % vand, forsvinder cirka 4,1 % af vægten som vanddamp."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hvad er basisvandprocenten for korn og raps?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "I dansk handel afregnes korn typisk ved 14,5-15 % vand og raps ved 9 %. Leveres der over basis, trækkes vægtsvind og tørringsgebyr pr. procentpoint."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hvor stort er svindet pr. procentpoint nedtørring?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Som tommelfingerregel cirka 1,15-1,2 % af vægten pr. procentpoint. Fra 18 % til 14,5 % giver det de cirka 4,1 %, som eksemplet viser."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Hvad er forskellen på kr/t indvejet og kr/t fjernet vand?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "To gængse afregningsmodeller: den første ganger satsen på hele den indvejede mængde, den anden kun på det fjernede vand. Ved store nedtørringer bliver vand-modellen ofte dyrest — regn begge igennem."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -17,7 +57,40 @@
 <fieldset class="field-group"><legend>Mængde og fugtighed</legend><div class="field-row"><div class="field"><label for="pesoEntrada">Mængde ind</label><input class="input" id="pesoEntrada" type="text" inputmode="decimal" placeholder="Eks.: 100"></div><div class="field"><label for="unidade">Enhed</label><select class="input" id="unidade"><option value="t">tons</option><option value="hkgs">hkg</option></select></div></div><div class="field-row"><div class="field"><label for="umidadeInicial">Indgangsfugtighed</label><div class="input-affix"><input class="input" id="umidadeInicial" type="text" inputmode="decimal" placeholder="18"><span class="input-affix__unit">%</span></div></div><div class="field"><label for="umidadeFinal">Slutfugtighed</label><div class="input-affix"><input class="input" id="umidadeFinal" type="text" inputmode="decimal" placeholder="13"><span class="input-affix__unit">%</span></div></div></div></fieldset>
 <fieldset class="field-group"><legend>Omkostning</legend><div class="field-row"><div class="field"><label for="omkostningUnitario">Enhedsomkostning</label><div class="input-affix"><input class="input" id="omkostningUnitario" type="text" inputmode="decimal" placeholder="Eks.: 45"><span class="input-affix__unit">kr</span></div></div><div class="field"><label for="modoOmkostning">Omkostningsgrundlag</label><select class="input" id="modoOmkostning"><option value="tonelada_entrada">kr/t ind</option><option value="tonelada_agua">kr/t fjernet vand</option></select></div></div><div class="field"><label for="pesoHkg">Vægt pr. hkg</label><div class="input-affix"><input class="input" id="pesoHkg" type="text" inputmode="decimal" placeholder="60"><span class="input-affix__unit">kg</span></div></div></fieldset>
 <p class="field-error" id="calc-error" role="alert"></p><div class="calculator__actions"><button class="btn btn--primary btn--lg" type="submit">Beregn tørring</button><button class="btn btn--ghost" type="button" id="calc-example">Udfyld med eksempel</button></div><section class="result" id="calc-result" hidden aria-live="polite"></section></form>
-<div class="ad-slot" data-ad-slot=""></div><article class="prose"><h2>Hvad bruges den til</h2><p>Beregneren hjælper med at sammenligne afregningsfradrag, egen tørring og lønarbejde. Vægtberegningen er baseret på bevarelse af tørstof.</p><div class="related"><h2>Andre beregnere</h2><div class="calc-grid"><a class="calc-card" href="/umidade-graos.html"><h3>Kornfugtighed</h3><p>Peso corrigido og quebra.</p></a><a class="calc-card" href="/custo-armazenagem.html"><h3>Opbevaringsomkostning</h3><p>Omkostning pr. mês.</p></a><a class="calc-card" href="/vender-ou-armazenar.html"><h3>Sælge eller opbevare</h3><p>Compare cenários.</p></a></div></div></article></div></main>
+<div class="ad-slot" data-ad-slot=""></div><article class="prose">
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Denne beregner estimerer slutvægten, det fjernede vand og tørringsomkostningen, når et kornparti tørres ned fra høstens vandprocent til basis. Den bruges til at sammenligne eget tørreri med grovvareselskabets tørringsgebyr, til at forstå fradragene på afregningen, når kornet leveres for vådt, og til at beslutte, om det kan betale sig at høste tidligt ved højere vandprocent mod en større tørringsregning. Fordi vægten falder, når vandet fjernes, er det vigtigt at regne omkostningen om til den færdige, tørre vare — det er den, der sælges.</p>
+
+      <h2>Input, enheder og omregninger</h2>
+      <p>Du indtaster mængden ind i tørreriet i tons eller hkg — 1 ton = 10 hkg à 100 kg — indgangs- og slutvandprocenten samt enhedsomkostningen. Omkostningen kan angives pr. ton indvejet vare eller pr. ton fjernet vand; begge modeller bruges i praksis. Vægten pr. hkg kan justeres til udenlandske sækstandarder. Beregningen bygger på, at tørstoffet er konstant, mens vandet forsvinder.</p>
+
+      <h2>Formel og gennemregnet eksempel</h2>
+      <div class="formula">Slutvægt = indvejet vægt × (100 − vand ind) ÷ (100 − vand slut)</div>
+      <p>Gennemregnet eksempel: 100 tons hvede høstes ved 18 % vand og tørres ned til basis 14,5 %. Slutvægt: 100 × 82 ÷ 85,5 = <strong>95,91 tons</strong>, altså 4,09 tons fjernet vand — et svind på 4,09 %. Koster tørringen 45 kr pr. ton indvejet, bliver regningen 100 × 45 = 4.500 kr. Omregnet til den færdige vare er det 4.500 ÷ 95,91 = <strong>46,92 kr/t</strong>, cirka 4,69 kr/hkg. Afregnes der i stedet pr. ton fjernet vand, fx 900 kr/t vand, bliver det 4,09 × 900 = 3.681 kr.</p>
+
+      <h2>Praktiske referenceværdier</h2>
+      <p>Basisvandprocenten i dansk kornhandel er 14,5-15 % for korn og 9 % for raps, som det fremgår af branchens standardbetingelser og offentlige normer, fx omtalt hos SEGES. Leveres der over basis, trækkes der både vægtsvind og et tørringsgebyr pr. procentpoint på afregningen. Som tommelfingerregel koster hvert procentpoint nedtørring cirka 1,15-1,2 % af vægten i svind. Skal kornet lagres længe, tørres ofte ned under 14 %, fordi lagerfastheden stiger, jo tørrere og køligere kornet er. Energiforbruget pr. ton stiger mærkbart, jo vådere partiet er, og efterløb med kold luft er med til at sikre holdbarheden.</p>
+
+      <div class="callout callout--warning"><div class="callout__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Regn altid omkostningen om til færdig vare</div><p>45 kr pr. ton indvejet lyder billigere end 47 kr pr. ton færdigtørret — men det er samme regning. Da slutvægten er mindre end indvejningen, skal alle sammenligninger ske pr. ton tør vare ved samme vandprocent.</p></div>
+
+      <h2>Begrænsninger</h2>
+      <p>Beregneren regner alene på bevarelse af tørstof og en enkelt omkostningssats. Energi, arbejdsløn, intern transport, modtagegebyr og rensesvind fra urenheder indgår kun, hvis de er indregnet i satsen. Den tager heller ikke højde for kvalitetsændringer ved for hård eller for varm tørring, fx faldtal og spireevne. Brug resultatet som sammenligningsgrundlag mellem tørringsløsninger, ikke som en fuldstændig efterkalkulation.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvorfor vejer kornet mindre efter tørring?</h3>
+      <p>Fordi vandet fjernes, mens tørstoffet er konstant. Tørres fra 18 % til 14,5 % vand, forsvinder cirka 4,1 % af vægten som vanddamp.</p>
+      <h3>Hvad er basisvandprocenten for korn og raps?</h3>
+      <p>I dansk handel afregnes korn typisk ved 14,5-15 % vand og raps ved 9 %. Leveres der over basis, trækkes vægtsvind og tørringsgebyr pr. procentpoint.</p>
+      <h3>Hvor stort er svindet pr. procentpoint nedtørring?</h3>
+      <p>Som tommelfingerregel cirka 1,15-1,2 % af vægten pr. procentpoint. Fra 18 % til 14,5 % giver det de cirka 4,1 %, som eksemplet viser.</p>
+      <h3>Hvad er forskellen på kr/t indvejet og kr/t fjernet vand?</h3>
+      <p>To gængse afregningsmodeller: den første ganger satsen på hele den indvejede mængde, den anden kun på det fjernede vand. Ved store nedtørringer bliver vand-modellen ofte dyrest — regn begge igennem.</p>
+
+      <div class="related"><h2>Andre beregnere</h2><div class="calc-grid"><a class="calc-card" href="/umidade-graos.html"><h3>Kornfugtighed</h3><p>Peso corrigido og quebra.</p></a><a class="calc-card" href="/custo-armazenagem.html"><h3>Opbevaringsomkostning</h3><p>Omkostning pr. mês.</p></a><a class="calc-card" href="/vender-ou-armazenar.html"><h3>Sælge eller opbevare</h3><p>Compare cenários.</p></a></div></div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;"><p>Uddannelsesindhold baseret på offentlig faglitteratur og offentlige normer, fx Landbrugsstyrelsen og SEGES. Erstatter ikke rådgivning fra planteavls- eller driftsøkonomikonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p></div>
+
+    </article></div></main>
 <footer class="site-footer"><div class="container"><div class="footer-bottom"><p>Beregnerne er kun vejledende og giver estimater.</p><p>© <span data-year>2026</span> Landbrugstal · Lavet i Danmark.</p></div></div></footer>
 <script src="/js/config.js"></script><script src="/js/agro.js"></script><script src="/js/app.js"></script>
 <script>

@@ -52,6 +52,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Hvilken densitet skal jeg regne med?","acceptedAnswer":{"@type":"Answer","text":"Densiteten for ensilage ligger typisk mellem 500 og 700 kg/m³ afhængigt af komprimering, tørstofindhold og afgrøde. Godt komprimeret majsensilage bruges ofte med omkring 600 kg/m³. Har du en vejeseddel fra indlægning, er den mere præcis end et normtal."}},
+    {"@type":"Question","name":"Hvordan regner jeg en silo med skrå vægge?","acceptedAnswer":{"@type":"Answer","text":"Ved en plansilo eller markstak med skrå sider bruger du gennemsnittet af bredden i top og bund. Beregneren tager både topbredde og bundbredde og regner med middelbredden, så volumen ikke overvurderes."}},
+    {"@type":"Question","name":"Er den beregnede vægt frisk vægt eller tørstof?","acceptedAnswer":{"@type":"Answer","text":"Vægten er frisk vægt (brutto), altså inklusive vand. Vil du kende mængden af tørstof, ganges den friske vægt med ensilagens tørstofprocent — typisk omkring 30-35 % for majsensilage."}},
+    {"@type":"Question","name":"Skal jeg regne med tab under opbevaring?","acceptedAnswer":{"@type":"Answer","text":"Ja, i praksis. Der sker altid et vist tørstoftab fra fermentering, randzoner og foderrester. Beregneren viser den indlagte mængde; den mængde, dyrene reelt kan æde, er lidt lavere."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -167,15 +179,19 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p>Denne beregner estimerer <strong>siloens kapacitet</strong> — volumen og den ensilagemængde, den rummer — ud fra målene.</p>
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Denne beregner estimerer <strong>siloens kapacitet</strong> — volumen og den ensilagemængde, den rummer — ud fra målene. I praksis bruges den, når en plansilo eller markstak skal dimensioneres, så den passer til besætningens foderbehov over vinteren, og når man vil vide, om årets afgrøde kan være i den eksisterende silo. Den er også nyttig ved indkøb eller salg af ensilage, hvor mængden skal opgøres i tons, og ved planlægning af, hvor stor en snitflade der er nødvendig for at holde et forsvarligt fremdrift ved foderbordet. Ved at kende volumen og vægt på forhånd kan man vurdere, hvor mange dyr og hvor mange dage siloen rækker til, inden foderplanen lægges — og undgå både overfyldte og halvtomme siloer.</p>
 
-      <h2>Sådan beregner du</h2>
-      <p>Volumen er produktet af målene (brug den gennemsnitlige bredde for trapezformede silo'er). Vægten er volumen ganget med ensilagens densitet.</p>
-      <div class="formula">Vægt = volumen × ensilagens densitet</div>
+      <h2>Input, enheder og omregninger</h2>
+      <p>Beregneren bruger siloens længde, bredde og højde i meter samt ensilagens densitet i kg/m³. Volumen fås i kubikmeter (m³). Densiteten kobler volumen til vægt: godt komprimeret majsensilage bruges ofte med omkring 600 kg/m³. Vægten beregnes i kg og kan omregnes til tons ved at dividere med 1.000 (1 t = 1.000 kg) eller til hkg ved at dividere med 100. Vil du kende tørstofmængden, ganges den friske vægt med tørstofprocenten — fx 32 % for majsensilage.</p>
 
-      <h2>Eksempel</h2>
-      <p>En silo på 20 m × 5,5 m (gennemsnit) × 2 m har 220 m³ → ved 600 kg/m³ rummer den <strong>132 tons</strong> ensilage.</p>
+      <h2>Formel og gennemregnet eksempel</h2>
+      <p>Volumen er produktet af målene; ved skrå vægge bruges middelbredden af top og bund. Vægten er volumen ganget med densiteten.</p>
+      <div class="formula">Volumen = længde × middelbredde × højde<br>Vægt = volumen × ensilagens densitet</div>
+      <p>Gennemregnet eksempel: en plansilo er 20 m lang, 6 m bred i toppen og 5 m i bunden, og 2 m høj. Middelbredden er (6 + 5) ÷ 2 = 5,5 m, og volumen bliver 20 × 5,5 × 2 = 220 m³. Ved en densitet på 600 kg/m³ er vægten 220 × 600 = 132.000 kg, altså <strong>132 tons</strong> ensilage. Var komprimeringen dårligere, fx 500 kg/m³, ville samme silo kun rumme 220 × 500 = 110.000 kg = 110 tons — 22 tons mindre foder på præcis den samme plads.</p>
+
+      <h2>Praktiske referenceværdier</h2>
+      <p>Offentlige normtal, fx fra SEGES, beskriver typisk følgende: densiteten for ensilage ligger mellem 500 og 700 kg/m³, hvor godt komprimeret majsensilage ofte sættes til omkring 600 kg/m³, mens løsere græsensilage kan ligge lavere. Tørstofindholdet i majsensilage er typisk 30-35 %, i forvejret græsensilage omkring 30-45 %. Til at vurdere, hvor længe siloen rækker, kan man bruge, at kvæg æder omkring 2-2,5 % af kropsvægten i tørstof pr. dag. Et fremdrift ved snitfladen på mindst 1,5-2 meter om ugen anbefales ofte for at undgå varmedannelse og efterfermentering. Tallene varierer med afgrøde, snitlængde, tørstof og komprimering, så egne vejesedler er altid mere præcise end normtal.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -185,6 +201,19 @@
         <p>Densiteten varierer fra 500 til 700 kg/m³ afhængigt af komprimeringen. God komprimering reducerer tab, forbedrer fermenteringen og øger mængden af ensilage, der kan opbevares på samme plads.</p>
       </div>
 
+      <h2>Begrænsninger</h2>
+      <p>Beregneren regner med en jævn, geometrisk form og en ensartet densitet i hele siloen. I virkeligheden er komprimeringen ofte lavere i top og randzoner end i midten, og en markstak har uregelmæssige sider. Beregneren tager ikke højde for tørstoftab under fermentering og opbevaring eller for kasserede randlag og foderrester, så den mængde, dyrene reelt kan æde, er lidt lavere end den indlagte. Densiteten er desuden det mest usikre input. Brug resultatet som et planlægningsoverslag, og støt dig til vejesedler fra indlægning, hvor de findes.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvilken densitet skal jeg regne med?</h3>
+      <p>Densiteten for ensilage ligger typisk mellem 500 og 700 kg/m³ afhængigt af komprimering, tørstofindhold og afgrøde. Godt komprimeret majsensilage bruges ofte med omkring 600 kg/m³. Har du en vejeseddel fra indlægning, er den mere præcis end et normtal.</p>
+      <h3>Hvordan regner jeg en silo med skrå vægge?</h3>
+      <p>Ved en plansilo eller markstak med skrå sider bruger du gennemsnittet af bredden i top og bund. Beregneren tager både topbredde og bundbredde og regner med middelbredden, så volumen ikke overvurderes.</p>
+      <h3>Er den beregnede vægt frisk vægt eller tørstof?</h3>
+      <p>Vægten er frisk vægt (brutto), altså inklusive vand. Vil du kende mængden af tørstof, ganges den friske vægt med ensilagens tørstofprocent — typisk omkring 30-35 % for majsensilage.</p>
+      <h3>Skal jeg regne med tab under opbevaring?</h3>
+      <p>Ja, i praksis. Der sker altid et vist tørstoftab fra fermentering, randzoner og foderrester. Beregneren viser den indlagte mængde; den mængde, dyrene reelt kan æde, er lidt lavere.</p>
+
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
@@ -192,6 +221,10 @@
           <a class="calc-card" href="/lotacao-pastagem.html"><h3>Græsningsbelægning</h3><p>Belægningsgrad i DE/ha.</p></a>
           <a class="calc-card" href="/cocho.html"><h3>Foderbord og drikkekar</h3><p>Dimensionering af foderbord.</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlig faglitteratur. Erstatter ikke rådgivning fra agronom, kvægbrugskonsulent eller dyrlæge. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>

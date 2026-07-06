@@ -52,6 +52,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Hvor præcis er den beregnede kælvningsdato?","acceptedAnswer":{"@type":"Answer","text":"Datoen er et gennemsnitsestimat. Den faktiske fødsel falder normalt inden for et vindue på op til et par uger omkring datoen, afhængigt af art, race og det enkelte dyr."}},
+    {"@type":"Question","name":"Hvorfor angives forskellige drægtighedslængder for kvæg?","acceptedAnswer":{"@type":"Answer","text":"Offentlige normtal beskriver ofte spænd på cirka 280-290 dage for kvæg med et gennemsnit omkring 283-285 dage. Race og kalvens køn kan flytte gennemsnittet med flere dage."}},
+    {"@type":"Question","name":"Hvad bruges datoen til i planlægningen?","acceptedAnswer":{"@type":"Answer","text":"Den forventede kælvningsdato bruges til at planlægge goldperiode, fodringsskift, kælvningsbokse og opsyn — og i sæsonkælvende besætninger til at samle kælvningerne i et kort vindue."}},
+    {"@type":"Question","name":"Gælder beregningen både ved inseminering og foldtyr?","acceptedAnswer":{"@type":"Answer","text":"Ved inseminering kendes bedækningsdatoen præcist. Går tyren med i folden, kendes kun perioden, og den forventede kælvning bliver et tilsvarende interval frem for en enkelt dato."}}
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -144,14 +156,19 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p>Denne beregner estimerer den <strong>forventede kælvningsdato</strong> ved at lægge den gennemsnitlige drægtighedsperiode til datoen for bedækning eller inseminering.</p>
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Denne beregner estimerer den <strong>forventede fødselsdato</strong> ved at lægge artens gennemsnitlige drægtighedslængde til datoen for bedækning eller inseminering. I praksis bruges datoen til at planlægge hele perioden omkring kælvning, læmning, foling eller faring: hvornår koen skal goldes, hvornår fodringen skal lægges om, hvornår kælvningsboksen skal stå klar, og hvornår opsynet skal intensiveres. I sæsonkælvende besætninger bruges beregningen ofte omvendt — man vælger det ønskede kælvningsvindue og regner tilbage til bedækningsperioden. Ved handel med drægtige dyr er den forventede fødselsdato desuden en central oplysning, fordi den afgør, hvor tæt på fødslen dyret bør flyttes, og hvordan det skal opstaldes hos køberen.</p>
 
-      <h2>Sådan beregnes det</h2>
-      <p>Hver art har sin egen typiske drægtighedsperiode: kvæg ca. 285 dage, bøfler 310, heste 340, får og geder 150, og svin 114.</p>
+      <h2>Input, enheder og omregninger</h2>
+      <p>Beregneren bruger to input: dyrets art og datoen for bedækning eller inseminering. Drægtighedslængden regnes i hele dage, og resultatet er en kalenderdato. Ved inseminering kendes startdatoen præcist; går tyren eller vædderen løst med i flokken, kendes kun en periode, og den forventede fødsel bliver et tilsvarende datointerval frem for en enkelt dag. En klassisk huskeregel for søer er "tre måneder, tre uger og tre dage", hvilket netop svarer til cirka 114 dage. Alle normtal i beregneren er angivet i dage, ikke i uger eller måneder.</p>
 
-      <h2>Eksempel</h2>
-      <p>En ko, der bedækkes den 15. marts med en drægtighed på 285 dage, vil typisk kælve omkring den 25. december samme år.</p>
+      <h2>Formel og gennemregnet eksempel</h2>
+      <p>Formlen er en simpel datoaddition:</p>
+      <div class="formula">Forventet fødselsdato = bedæknings-/insemineringsdato + artens gennemsnitlige drægtighed (dage)</div>
+      <p>Gennemregnet eksempel med kvæg: en ko insemineres den 15. marts, og der regnes med 285 dage. Der er 16 dage tilbage af marts; herefter lægges april (30), maj (31), juni (30), juli (31), august (31), september (30), oktober (31) og november (30) til — i alt 260 dage frem til den 30. november. De resterende 25 dage fører til den <strong>25. december</strong> som forventet kælvningsdato. Tilsvarende for en so bedækket den 1. februar: 114 dage frem giver en forventet faring omkring den <strong>26. maj</strong>. Datoen er midtpunktet i et vindue, ikke en garanti.</p>
+
+      <h2>Praktiske referenceværdier</h2>
+      <p>Offentlige normtal, fx fra SEGES, beskriver typisk følgende gennemsnitlige drægtighedslængder: kvæg omkring 283-285 dage med et spænd på cirka 280-290 dage afhængigt af race og kalvens køn; bøfler omkring 310 dage; heste omkring 340 dage med et bredt spænd på 330-345 dage; får omkring 150 dage (typisk 145-155); geder ligeledes omkring 150 dage; og søer omkring 114-115 dage. Hos kvæg ligger tunge kødracer ofte nogle dage over malkeracerne, og tvillingedrægtigheder er som regel lidt kortere end drægtigheder med ét foster. Førstegangskælvere kan også afvige lidt fra ældre køer. Normtallene er gennemsnit over mange dyr — det enkelte dyr kan uden problemer ligge en uge til hver side.</p>
 
       <div class="callout callout--warning">
         <div class="callout__title">
@@ -161,6 +178,19 @@
         <p>Drægtighedens længde varierer mellem racer og individer. Brug datoen som planlægningsreference og hold øje med dyret tæt på fødselstidspunktet.</p>
       </div>
 
+      <h2>Begrænsninger</h2>
+      <p>Beregneren bruger et fast gennemsnit pr. art og kender ikke race, alder, foderniveau, antal fostre eller det enkelte dyrs historik — alle faktorer, der kan flytte fødslen flere dage. Den korrigerer heller ikke for usikkerhed om selve bedækningsdatoen, som er den største fejlkilde ved løsdrift med foldtyr. Resultatet er et gennemsnitsestimat til planlægning, ikke en præcis forudsigelse. Tæt på terminen bør du følge dyrets adfærd og kropstegn og inddrage dyrlæge eller rådgiver ved tvivl.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvor præcis er den beregnede kælvningsdato?</h3>
+      <p>Datoen er et gennemsnitsestimat. Den faktiske fødsel falder normalt inden for et vindue på op til et par uger omkring datoen, afhængigt af art, race og det enkelte dyr.</p>
+      <h3>Hvorfor angives forskellige drægtighedslængder for kvæg?</h3>
+      <p>Offentlige normtal beskriver ofte spænd på cirka 280-290 dage for kvæg med et gennemsnit omkring 283-285 dage. Race og kalvens køn kan flytte gennemsnittet med flere dage.</p>
+      <h3>Hvad bruges datoen til i planlægningen?</h3>
+      <p>Den forventede kælvningsdato bruges til at planlægge goldperiode, fodringsskift, kælvningsbokse og opsyn — og i sæsonkælvende besætninger til at samle kælvningerne i et kort vindue.</p>
+      <h3>Gælder beregningen både ved inseminering og foldtyr?</h3>
+      <p>Ved inseminering kendes bedækningsdatoen præcist. Går tyren med i folden, kendes kun perioden, og den forventede kælvning bliver et tilsvarende interval frem for en enkelt dato.</p>
+
       <div class="related">
         <h2>Andre beregnere</h2>
         <div class="calc-grid">
@@ -168,6 +198,10 @@
           <a class="calc-card" href="/ganho-de-peso.html"><h3>Daglig tilvækst (DTV)</h3><p>Gennemsnitlig daglig tilvækst og slagteprognose.</p></a>
           <a class="calc-card" href="/cocho.html"><h3>Foderbord og drikkekar</h3><p>Dimensionering af foderbord.</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlig faglitteratur. Erstatter ikke rådgivning fra agronom, kvægbrugskonsulent eller dyrlæge. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>

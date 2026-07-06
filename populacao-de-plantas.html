@@ -52,6 +52,46 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hvordan omregner jeg planter pr. hektar til planter pr. m²?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divider med 10.000. 100.000 planter/ha svarer til 10 planter/m², og 2.500.000 planter/ha svarer til 250 planter/m² — den skala, der bruges for korn."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvorfor skal der sås flere frø end det ønskede plantetal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fordi markspiringen er under 100 %: en del frø spirer ikke eller går tabt i såbedet. Udsædsmængden korrigeres derfor med den forventede markspiring."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvilket plantetal beskrives typisk for vinterhvede?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Offentlige normtal, fx fra SEGES, nævner ofte 150-250 planter/m² afhængigt af såtidspunkt — færrest ved tidlig såning. Det konkrete mål afhænger af sort og forhold."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvordan kontrollerer jeg plantetallet i marken?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tæl planter på en kendt rækkelængde flere steder i marken, og omregn: planter pr. meter ÷ rækkeafstand i meter = planter pr. m². Gentag målingen for et pålideligt gennemsnit."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -151,23 +191,33 @@
 
     <article class="prose">
 
-      <h2>Hvad bruges den til</h2>
-      <p>Denne beregner sammenkobler <strong>plantningsafstanden</strong> med <strong>plantebestanden</strong> pr. hektar og antallet af frø, der skal sås pr. meter.</p>
+      <h2>Hvad bruges den til i praksis</h2>
+      <p>Denne beregner kobler <strong>rækkeafstand</strong> og <strong>planteafstand</strong> sammen med plantebestanden pr. hektar og pr. kvadratmeter samt antallet af frø pr. meter række. Den bruges, når såmaskinen skal indstilles til et ønsket plantetal, når fremspiringen skal kontrolleres ved at tælle planter i marken, og når et plantetal fra en sortsanbefaling skal oversættes til en konkret afstand i rækken. Samme regnestykke gælder for rækkeafgrøder som majs og roer og for korn sået på almindelig rækkeafstand.</p>
 
-      <h2>Sådan beregner du</h2>
-      <p>Plantebestanden pr. hektar er 10.000 m² divideret med det areal, hver plante optager. Frø pr. meter beregnes ud fra den ønskede plantebestand og rækkeafstanden.</p>
-      <div class="formula">Planter/ha = 10.000 ÷ (rækkeafstand × afstand mellem planter)</div>
+      <h2>Input, enheder og omregninger</h2>
+      <p>Afstande angives i meter (12,5 cm rækkeafstand indtastes som 0,125). Plantebestanden angives pr. hektar; divider med 10.000 for at få planter pr. m², som er den enhed, danske normtal bruger for korn. Frø pr. meter række beregnes ud fra det ønskede plantetal og rækkeafstanden — og skal senere korrigeres for markspiring, når den endelige udsædsmængde fastsættes.</p>
+      <p>For korn sået på 12,5 cm rækkeafstand bruges frø pr. meter sjældent direkte i praksis — her omregnes i stedet mellem planter pr. m² og udsædsmængde i kg/ha via tusindkornsvægten.</p>
 
-      <h2>Eksempel</h2>
-      <p>Rækker med 0,5 m og planter med 0,2 m giver <strong>100.000 planter/ha</strong>. For 70.000 planter/ha med 0,5 m rækkeafstand skal der sås 3,5 frø pr. meter.</p>
+      <h2>Formel og gennemregnet eksempel</h2>
+      <div class="formula">Planter/ha = 10.000 ÷ (rækkeafstand × planteafstand)<br>Frø pr. meter = ønsket bestand × rækkeafstand ÷ 10.000</div>
+      <p>Gennemregnet eksempel: rækker på 0,5 m og en plante for hver 0,2 m giver 10.000 ÷ (0,5 × 0,2) = <strong>100.000 planter/ha</strong>, svarende til 10 planter/m². Omvendt: ønskes 70.000 planter/ha på 0,5 m rækkeafstand, skal der stå 70.000 × 0,5 ÷ 10.000 = 3,5 planter pr. meter række — altså ca. 29 cm mellem planterne. Skal der tages højde for 90 % markspiring, sås 3,5 ÷ 0,90 ≈ 3,9 frø pr. meter.</p>
 
-      <div class="callout callout--warning">
-        <div class="callout__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          Juster for spireevne
-        </div>
-        <p>Sårate her angiver planter, ikke rå frø. For at fastsætte hvor mange kilo frø der skal købes, skal der justeres for spireevne og renhed i partiet.</p>
-      </div>
+      <h2>Praktiske referenceværdier</h2>
+      <p>Offentlige normtal, fx fra SEGES, beskriver plantetal pr. m² som det centrale mål i dansk planteavl: for <strong>vinterhvede</strong> nævnes ofte 150-250 planter/m² afhængigt af såtidspunkt (lavest ved tidlig såning), for <strong>vårbyg</strong> 250-325 planter/m², for vinterraps typisk 30-50 planter/m² og for majs omkring 9-11 planter/m² på 75 cm rækkeafstand. Tallene varierer med sort, jordtype og såtidspunkt og er beskrivende pejlemærker fra faglitteraturen — det konkrete mål for din mark hører hjemme i sortsvalget og markplanen.</p>
+      <p>Ved kontrol i marken tælles planterne typisk på én meter række flere steder: på 12,5 cm rækkeafstand svarer én plante pr. meter række til 8 planter/m², så 28 planter pr. meter giver 224 planter/m². Jo flere tællinger, desto mere pålideligt bliver gennemsnittet, især hvor fremspiringen er ujævn.</p>
+
+      <h2>Begrænsninger</h2>
+      <p>Beregneren regner ren geometri — den <strong>anbefaler ikke et plantetal</strong>. Det faktiske plantetal i marken afviger fra det såede på grund af markspiring, såbedskvalitet, sådybde, skadedyr og udvintring, så tæl planter efter fremspiring, før der konkluderes. Plantetalsmål og udsædsmængde bør fastlægges ud fra sortsmateriale og rådgivning fra en planteavlskonsulent.</p>
+
+      <h2>Ofte stillede spørgsmål</h2>
+      <h3>Hvordan omregner jeg planter pr. hektar til planter pr. m²?</h3>
+      <p>Divider med 10.000. 100.000 planter/ha svarer til 10 planter/m², og 2.500.000 planter/ha svarer til 250 planter/m² — den skala, der bruges for korn.</p>
+      <h3>Hvorfor skal der sås flere frø end det ønskede plantetal?</h3>
+      <p>Fordi markspiringen er under 100 %: en del frø spirer ikke eller går tabt i såbedet. Udsædsmængden korrigeres derfor med den forventede markspiring.</p>
+      <h3>Hvilket plantetal beskrives typisk for vinterhvede?</h3>
+      <p>Offentlige normtal, fx fra SEGES, nævner ofte 150-250 planter/m² afhængigt af såtidspunkt — færrest ved tidlig såning. Det konkrete mål afhænger af sort og forhold.</p>
+      <h3>Hvordan kontrollerer jeg plantetallet i marken?</h3>
+      <p>Tæl planter på en kendt rækkelængde flere steder i marken, og omregn: planter pr. meter ÷ rækkeafstand i meter = planter pr. m². Gentag målingen for et pålideligt gennemsnit.</p>
 
       <div class="related">
         <h2>Andre beregnere</h2>
@@ -176,6 +226,10 @@
           <a class="calc-card" href="/adubacao-npk.html"><h3>NPK-gødning</h3><p>Fra anbefaling til handelsgødning.</p></a>
           <a class="calc-card" href="/produtividade.html"><h3>Udbytteomregner</h3><p>Hkg/ha, kg/ha og t/ha.</p></a>
         </div>
+      </div>
+
+      <div class="editorial-note" style="border-top:1px solid rgba(0,0,0,.12);margin-top:2.5rem;padding-top:1rem;font-size:.85rem;color:#6b7280;">
+        <p>Uddannelsesindhold baseret på offentlig faglitteratur og normtal. Erstatter ikke rådgivning fra agronom eller planteavlskonsulent. Senest revideret: 2026-07-06 · <a href="fontes.html">Kilder</a></p>
       </div>
 
     </article>
