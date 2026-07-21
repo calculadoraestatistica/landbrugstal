@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21T12:43:03Z",
+  "updated_at": "2026-07-21T15:16:52Z",
   "country": "DK",
   "source": "Arla DK; Danish Crown; Nationalbanken; SEGES Farmtal Online",
   "source_url": "https://dk",
@@ -118,8 +118,8 @@
       "key": "usd_dkk",
       "icon": "usd_dkk",
       "name": "USD/DKK",
-      "value": 6.5426,
-      "value_display": "6,54 DKK (per 1 USD)",
+      "value": 6.5472,
+      "value_display": "6,55 DKK (per 1 USD)",
       "unit": "DKK",
       "date": "2026-07-21",
       "source_url": "https://www.nationalbanken.dk/",
