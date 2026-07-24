@@ -70,12 +70,20 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/noteringer-dk.json data/noteringer-dk-completas.json
+          git add data/noteringer-dk.json data/noteringer-dk-completas.json data/noteringer-historik.json
           # Debug dumps stay out of the repo — they live in workflow artifacts only.
           rm -f data/_debug_*.txt
           if git diff --cached --quiet; then
             echo "No data changes — nothing to commit."
           else
             git commit -m "chore(data): refresh DK noteringer ($(date -u +'%Y-%m-%dT%H:%MZ'))"
-            git push origin HEAD:main
+            # Retry: covers transient GitHub 500s and races with other pushes
+            n=0
+            until git push origin HEAD:main; do
+              n=$((n+1))
+              if [ "$n" -ge 3 ]; then echo "push failed after 3 attempts"; exit 1; fi
+              echo "push failed (attempt $n/3) — rebase and retry in 20s"
+              sleep 20
+              git pull --rebase origin main || true
+            done
           fi
