@@ -1,2 +1,3 @@
 tools/__pycache__/
 tools/scrapers/__pycache__/
+data/_debug_*.txt
