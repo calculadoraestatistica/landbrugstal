@@ -50,27 +50,33 @@ klass  = "ArlaMilk"
 
 # Fallback labels used when a live scrape fails so the UI still has a row to
 # render a "Se kilde →" link.
+# Korn: Farmtal Online fjernede de offentlige ugenoteringer i juni 2026 —
+# scraperen læser nu DST Statistikbanken LPRIS10 (måneds-salgspriser, samme
+# underliggende kilde som Farmtal brugte).
 [fallback.hvede]
 icon = "hvede"
-name = "Brødhvede"
+name = "Hvede"
 unit = "DKK/hkg"
-source_url  = "https://farmtalonline.dlbr.dk/"
-source_name = "SEGES Farmtal Online"
+source_url  = "https://www.statistikbanken.dk/LPRIS10"
+source_name = "Danmarks Statistik (LPRIS10)"
 
 [fallback.byg]
 icon = "byg"
-name = "Foderbyg"
+name = "Byg"
 unit = "DKK/hkg"
-source_url  = "https://farmtalonline.dlbr.dk/"
-source_name = "SEGES Farmtal Online"
+source_url  = "https://www.statistikbanken.dk/LPRIS10"
+source_name = "Danmarks Statistik (LPRIS10)"
 
 [fallback.raps]
 icon = "raps"
 name = "Raps"
 unit = "DKK/hkg"
-source_url  = "https://farmtalonline.dlbr.dk/"
-source_name = "SEGES Farmtal Online"
+source_url  = "https://www.statistikbanken.dk/LPRIS10"
+source_name = "Danmarks Statistik (LPRIS10)"
 
+# majs (Foderhvede-proxy) har ingen offentlig kilde længere: Farmtals
+# ugenotering er nedlagt og LPRIS10 har hverken majs eller foderhvede.
+# Indikatoren viser sidst kendte værdi (stale) via runnerens fallback.
 [fallback.majs]
 icon = "majs"
 name = "Foderhvede (Farmtal)"
@@ -87,7 +93,7 @@ source_name = "Arla DK"
 
 [fallback.grisenotering]
 icon = "gris"
-name = "Grisenotering (basis 73-98 kg)"
+name = "Grisenotering (basis)"
 unit = "DKK/kg"
 source_url  = "https://ejer.danishcrown.com/da-dk/andelsejere/gris/notering/aktuel-grisenotering/"
 source_name = "Danish Crown"

@@ -1,155 +1,128 @@
-"""SEGES Farmtal Online — hvede / byg / raps / majs spot.
+"""Korn/raps salgspriser — Danmarks Statistik LPRIS10 (Farmtal successor).
 
-Farmtal is a JSP app with a clickable navigation tree. The simplest robust
-path is the public "Korn og foder" page which shows weekly notering for
-the major grain qualities. We don't navigate — we go straight to the
-"Notering for korn" public report URL.
+History: this scraper originally read the weekly "Noteringer for korn" page
+on SEGES Farmtal Online (farmtalonline.dlbr.dk). In June 2026 that page was
+removed: the old NavigationsMenu.aspx URL now returns an empty document, the
+public navigation tree only exposes monthly DST/L&F statistics that are
+frozen ("Statistikken ajourføres pt. ikke", last data 2025-10), and all
+Prognosepriser grids were moved behind an AgroID login. The weekly grain
+noteringer are therefore no longer publicly available on Farmtal.
 
-If that view changes shape, the scrape returns empty and the indicator falls
-back to "Se kilde →" in the UI (handled by js/noteringer-dk.js).
+Farmtal's own grain series cited "Kilde: DST", so we now read the same
+underlying public source directly: Danmarks Statistik, Statistikbanken table
+LPRIS10 "Salgspriser på udvalgte landbrugsprodukter" (monthly, kr. pr.
+100 kg = DKK/hkg, ab gård). It is a clean JSON API — no browser needed.
 
-DEBUGGING: when no values are matched (e.g. SEGES changed the page layout),
-the scraper saves the rendered body text to data/_debug_farmtal_<date>.txt
-so the next failure is diagnosable from the workflow artifacts without
-needing to reproduce the network conditions locally.
+Coverage vs. the old Farmtal page:
+- hvede: DST "Hvede"  (was Brødhvede weekly notering)
+- byg:   DST "Byg"    (was Foderbyg)
+- raps:  DST "Raps"   (was Industriraps)
+- majs:  NO source — the old page's Foderhvede proxy has no DST equivalent,
+  so the indicator falls back to its last known value (stale=True) in the
+  runner. Documented, not invented.
+
+DEBUGGING: when fewer than the expected targets parse, the raw API payload
+is dumped to data/_debug_farmtal_<date>.txt (uploaded as CI artifact).
 """
 from __future__ import annotations
+
+import json
 import logging
-import os
-import re
 from pathlib import Path
 from typing import Any
-from .base import PlaywrightScraper, today_iso, format_dk_number, parse_dk_number
+
+from .base import ApiScraper, today_iso, format_dk_number
 
 log = logging.getLogger("scrapers")
 
 
-# Targets: tuple per grain.
-#   labels: ordered list of label variants to try (first match wins).
-#           SEGES sometimes renames "Brødhvede" -> "Hvede, brød" etc.
-#   key:    output dict key (frontend / data file convention).
-#   unit:   display unit on cards.
+# Targets: DST LPRIS10 product codes per output key. Keys/units are the
+# frontend contract and must not change. "majs" has no product in LPRIS10
+# (see module docstring) and is intentionally absent.
 GRAIN_TARGETS = [
-    {
-        "labels": ["Brødhvede", "Brød-hvede", "Brod-hvede", "Hvede, brød", "Hvede brod"],
-        "key": "hvede",
-        "unit": "DKK/hkg",
-    },
-    {
-        "labels": ["Foderbyg", "Foder-byg", "Byg, foder", "Foderbyg, vinter"],
-        "key": "byg",
-        "unit": "DKK/hkg",
-    },
-    {
-        "labels": ["Industriraps", "Raps, industri", "Raps industri", "Vinterraps"],
-        "key": "raps",
-        "unit": "DKK/hkg",
-    },
-    {
-        "labels": ["Foderhvede", "Foder-hvede", "Hvede, foder"],
-        "key": "majs",  # majs not on Farmtal — use foderhvede as proxy
-        "unit": "DKK/hkg",
-    },
+    {"code": "1000", "label": "Hvede", "key": "hvede", "unit": "DKK/hkg"},
+    {"code": "1010", "label": "Byg", "key": "byg", "unit": "DKK/hkg"},
+    {"code": "1025", "label": "Raps", "key": "raps", "unit": "DKK/hkg"},
 ]
 
+_API_URL = (
+    "https://api.statbank.dk/v1/data/LPRIS10/JSONSTAT"
+    "?PRODUKT={codes}&ENHED=320&Tid=%2A"  # ENHED 320 = løbende priser
+)
 
-class FarmtalKorn(PlaywrightScraper):
+
+class FarmtalKorn(ApiScraper):
     name = "farmtal_korn"
-    source_url = "https://farmtalonline.dlbr.dk/Navigation/NavigationsMenu.aspx?Bedriftstype=K&Hovedgruppe=A&Element=NoteringerForKorn"
-    source_name = "SEGES Farmtal Online"
-    timeout_ms = 60_000  # JSP app can be slow on cold start
+    source_url = "https://www.statistikbanken.dk/LPRIS10"
+    source_name = "Danmarks Statistik (LPRIS10)"
 
-    def extract(self, page) -> dict[str, dict[str, Any]]:
-        try:
-            page.wait_for_load_state("networkidle", timeout=40_000)
-        except Exception:
-            pass
+    def scrape(self) -> dict[str, dict[str, Any]]:
+        codes = "%2C".join(t["code"] for t in GRAIN_TARGETS)
+        raw = self.http_get(_API_URL.format(codes=codes),
+                            headers={"Accept": "application/json"})
+        if raw is None:
+            return {}
 
-        # Try to dismiss any cookie banner that might cover content.
-        for sel in [
-            "text=Accepter alle",
-            "text=Acceptér alle",
-            "text=Tillad alle",
-            "text=Accept all",
-            "button:has-text('OK')",
-            "button:has-text('Accepter')",
-            "[id*='cookie'] button",
-        ]:
-            try:
-                btn = page.locator(sel).first
-                if btn.is_visible(timeout=600):
-                    btn.click(timeout=1500)
-                    page.wait_for_timeout(400)
-            except Exception:
-                pass
-
-        # Try to wait for the data table to appear before extracting.
-        # The JSP renders a <table> with notering data; if it's missing the
-        # page never finished loading the actual report frame.
-        try:
-            page.wait_for_selector("table, [class*='notering'], [id*='Notering']", timeout=8_000)
-        except Exception:
-            pass
-
-        body = page.locator("body").inner_text()
         out: dict[str, dict[str, Any]] = {}
+        try:
+            ds = json.loads(raw)["dataset"]
+            dim = ds["dimension"]
+            product_index = dim["PRODUKT"]["category"]["index"]  # code -> pos
+            periods = list(dim["Tid"]["category"]["index"].keys())  # "2026M05"
+            values = ds["value"]  # product-major: len == n_products * n_periods
+            n = len(periods)
 
-        for target in GRAIN_TARGETS:
-            value = None
-            matched_label = None
-            for label in target["labels"]:
-                # "<label> ... 165,40" (any small gap, up to 200 chars now)
-                m = re.search(
-                    rf"{re.escape(label)}[\s\S]{{0,200}}?(\d{{2,3}}[.,]\d{{1,2}})",
-                    body, re.IGNORECASE,
-                )
-                if not m:
+            for target in GRAIN_TARGETS:
+                pos = product_index.get(target["code"])
+                if pos is None:
                     continue
-                v = parse_dk_number(m.group(1))
-                if v is None or v < 50 or v > 800:  # sanity range for DKK/hkg grain
+                series = values[pos * n:(pos + 1) * n]
+                # Latest month with a published (non-null, plausible) value.
+                value = None
+                period = None
+                for per, v in zip(reversed(periods), reversed(series)):
+                    if isinstance(v, (int, float)) and 50 <= v <= 800:
+                        value, period = float(v), per
+                        break
+                if value is None:
                     continue
-                value = v
-                matched_label = label
-                break
+                # "2026M05" -> ISO date of that month (stable across reruns).
+                date = f"{period[:4]}-{period[5:7]}-01" if "M" in period else today_iso()
+                out[target["key"]] = {
+                    "key": target["key"],
+                    "icon": target["key"],
+                    "name": target["label"],
+                    "value": value,
+                    "value_display": format_dk_number(value, target["unit"]),
+                    "unit": target["unit"],
+                    "date": date,
+                    "source_url": self.source_url,
+                    "source_name": self.source_name,
+                    "stale": False,
+                }
+        except (KeyError, ValueError, TypeError) as exc:
+            log.warning("[%s] unexpected LPRIS10 payload: %s: %s",
+                        self.name, type(exc).__name__, exc)
 
-            if value is None:
-                continue
-
-            out[target["key"]] = {
-                "key": target["key"],
-                "icon": target["key"],
-                "name": matched_label,
-                "value": value,
-                "value_display": format_dk_number(value, target["unit"]),
-                "unit": target["unit"],
-                "date": today_iso(),
-                "source_url": self.source_url,
-                "source_name": self.source_name,
-                "stale": False,
-            }
-
-        # If we got nothing (or fewer than half the targets), dump the rendered
-        # body text so the next debugging session does not have to reproduce
-        # the JSP locally. Goes to data/_debug_farmtal_<date>.txt — uploaded
-        # as part of the regular commit if the workflow opts to keep it.
-        if len(out) < len(GRAIN_TARGETS) / 2:
+        # Debug dump when the payload did not yield what we expected.
+        if len(out) < len(GRAIN_TARGETS):
             try:
                 debug_dir = Path(__file__).resolve().parents[2] / "data"
                 debug_dir.mkdir(parents=True, exist_ok=True)
                 debug_path = debug_dir / f"_debug_farmtal_{today_iso()}.txt"
                 debug_path.write_text(
-                    f"=== farmtal_seges debug dump {today_iso()} ===\n"
+                    f"=== farmtal_seges (DST LPRIS10) debug dump {today_iso()} ===\n"
                     f"matched: {sorted(out.keys())}\n"
                     f"missing: {[t['key'] for t in GRAIN_TARGETS if t['key'] not in out]}\n"
-                    f"--- body.inner_text() (first 8000 chars) ---\n"
-                    + body[:8000],
+                    f"--- raw API response (first 8000 chars) ---\n"
+                    + (raw or "")[:8000],
                     encoding="utf-8",
                 )
                 log.warning(
-                    "[%s] only matched %d/%d targets — dumped body to %s",
+                    "[%s] only matched %d/%d targets — dumped payload to %s",
                     self.name, len(out), len(GRAIN_TARGETS), debug_path.name,
                 )
             except Exception as e:  # noqa: BLE001
-                log.warning("[%s] failed to dump debug body: %s", self.name, e)
+                log.warning("[%s] failed to dump debug payload: %s", self.name, e)
 
         return out

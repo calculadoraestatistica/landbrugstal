@@ -1,0 +1,4 @@
+=== farmtal_seges debug dump 2026-08-01 ===
+matched: []
+missing: ['hvede', 'byg', 'raps', 'majs']
+--- body.inner_text() (first 8000 chars) ---
