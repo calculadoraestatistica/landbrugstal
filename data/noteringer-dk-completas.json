@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-14T08:24:27Z",
+  "updated_at": "2026-08-14T11:06:19Z",
   "country": "DK",
   "source": "Arla DK; Danish Crown; Danmarks Statistik (LPRIS10); Nationalbanken; SEGES Farmtal Online",
   "source_url": "https://dk",
@@ -87,14 +87,14 @@
       "key": "kreaturnotering",
       "icon": "kreatur",
       "name": "Kreaturnotering (Ungtyr R, 280 kg)",
-      "value": 41.84,
-      "value_display": "41,84 DKK/kg",
+      "value": 41.09,
+      "value_display": "41,09 DKK/kg",
       "unit": "DKK/kg",
-      "date": "2026-08-10",
+      "date": "2026-08-14",
       "source_url": "https://ejer.danishcrown.com/da-dk/andelsejere/kreatur/notering/aktuel-kreaturnotering/",
       "source_name": "Danish Crown",
       "stale": false,
-      "last_seen_date": "2026-08-10"
+      "last_seen_date": "2026-08-14"
     },
     {
       "key": "eur_dkk",
