@@ -2152,3 +2152,16 @@ table.data tbody tr:last-child td { border-bottom: 0; }
   padding: 1rem 1.2rem;
 }
 #hist-root .hist-empty strong { color: var(--c-ink); }
+
+
+/* === Polimento mobile: quadro de cotacoes mais legivel em telas estreitas ===
+   Nomes de produto podem quebrar linha, celulas com respiro menor e valor
+   em tamanho confortavel; nada muda em telas maiores. */
+@media (max-width: 540px) {
+  .cot-table tbody td { padding: .7rem .6rem; }
+  .cot-cell-prod { gap: .5rem; }
+  .cot-cell-prod strong { font-size: .76rem; letter-spacing: .04em; white-space: normal; }
+  .cot-unit { font-size: .72rem; }
+  .cot-icon { width: 28px; height: 28px; }
+  .cot-footer { font-size: .72rem; }
+}
