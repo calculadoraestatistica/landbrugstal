@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-17T19:36:18Z",
+  "updated_at": "2026-08-18T07:06:10Z",
   "country": "DK",
   "source": "Arla DK; Danish Crown; Danmarks Statistik (LPRIS10); Nationalbanken; SEGES Farmtal Online",
   "source_url": "https://dk",
@@ -8,40 +8,40 @@
       "key": "hvede",
       "icon": "hvede",
       "name": "Hvede",
-      "value": 137.0,
-      "value_display": "137,00 DKK/hkg",
+      "value": 138.0,
+      "value_display": "138,00 DKK/hkg",
       "unit": "DKK/hkg",
-      "date": "2026-05-01",
+      "date": "2026-06-01",
       "source_url": "https://www.statistikbanken.dk/LPRIS10",
       "source_name": "Danmarks Statistik (LPRIS10)",
       "stale": false,
-      "last_seen_date": "2026-05-01"
+      "last_seen_date": "2026-06-01"
     },
     {
       "key": "byg",
       "icon": "byg",
       "name": "Byg",
-      "value": 138.0,
-      "value_display": "138,00 DKK/hkg",
+      "value": 137.0,
+      "value_display": "137,00 DKK/hkg",
       "unit": "DKK/hkg",
-      "date": "2026-05-01",
+      "date": "2026-06-01",
       "source_url": "https://www.statistikbanken.dk/LPRIS10",
       "source_name": "Danmarks Statistik (LPRIS10)",
       "stale": false,
-      "last_seen_date": "2026-05-01"
+      "last_seen_date": "2026-06-01"
     },
     {
       "key": "raps",
       "icon": "raps",
       "name": "Raps",
-      "value": 361.0,
-      "value_display": "361,00 DKK/hkg",
+      "value": 339.0,
+      "value_display": "339,00 DKK/hkg",
       "unit": "DKK/hkg",
-      "date": "2026-05-01",
+      "date": "2026-06-01",
       "source_url": "https://www.statistikbanken.dk/LPRIS10",
       "source_name": "Danmarks Statistik (LPRIS10)",
       "stale": false,
-      "last_seen_date": "2026-05-01"
+      "last_seen_date": "2026-06-01"
     },
     {
       "icon": "majs",
@@ -51,7 +51,7 @@
       "source_name": "SEGES Farmtal Online",
       "key": "majs",
       "stale": true,
-      "date": "2026-08-17",
+      "date": "2026-08-18",
       "value": 178.4,
       "value_display": "178,40 DKK/hkg",
       "last_seen_date": "2026-06-05",
@@ -64,11 +64,11 @@
       "value": 321.2,
       "value_display": "321,20 øre/kg",
       "unit": "øre/kg",
-      "date": "2026-08-17",
+      "date": "2026-08-18",
       "source_url": "https://catalog.arla.com/ARLA/milk-price/arla-dk/",
       "source_name": "Arla DK",
       "stale": false,
-      "last_seen_date": "2026-08-17"
+      "last_seen_date": "2026-08-18"
     },
     {
       "key": "grisenotering",
@@ -77,11 +77,11 @@
       "value": 6.9,
       "value_display": "6,90 DKK/kg",
       "unit": "DKK/kg",
-      "date": "2026-08-17",
+      "date": "2026-08-18",
       "source_url": "https://ejer.danishcrown.com/da-dk/andelsejere/gris/notering/aktuel-grisenotering/",
       "source_name": "Danish Crown",
       "stale": false,
-      "last_seen_date": "2026-08-17"
+      "last_seen_date": "2026-08-18"
     },
     {
       "key": "kreaturnotering",
@@ -103,11 +103,11 @@
       "value": 7.4758000000000004,
       "value_display": "7,48 DKK (per 1 EUR)",
       "unit": "DKK",
-      "date": "2026-08-17",
+      "date": "2026-08-18",
       "source_url": "https://www.nationalbanken.dk/",
       "source_name": "Nationalbanken",
       "stale": false,
-      "last_seen_date": "2026-08-17"
+      "last_seen_date": "2026-08-18"
     },
     {
       "key": "usd_dkk",
@@ -116,11 +116,11 @@
       "value": 6.4485,
       "value_display": "6,45 DKK (per 1 USD)",
       "unit": "DKK",
-      "date": "2026-08-17",
+      "date": "2026-08-18",
       "source_url": "https://www.nationalbanken.dk/",
       "source_name": "Nationalbanken",
       "stale": false,
-      "last_seen_date": "2026-08-17"
+      "last_seen_date": "2026-08-18"
     }
   ]
 }
