@@ -77,13 +77,27 @@ jobs:
             echo "No data changes — nothing to commit."
           else
             git commit -m "chore(data): refresh DK noteringer ($(date -u +'%Y-%m-%dT%H:%MZ'))"
-            # Retry: covers transient GitHub 500s and races with other pushes
+            # Retry robusto: em falha de push (500 do GitHub ou corrida com
+            # outro job) realinhamos com origin/main e RE-EXECUTAMOS o produtor
+            # sobre o estado remoto. Rebase nao serve: conflita nos arquivos
+            # gerados e deixa o repo em detached HEAD (falha de 2026-08-17).
             n=0
             until git push origin HEAD:main; do
               n=$((n+1))
-              if [ "$n" -ge 3 ]; then echo "push failed after 3 attempts"; exit 1; fi
-              echo "push failed (attempt $n/3) — rebase and retry in 20s"
-              sleep 20
-              git pull --rebase origin main || true
+              if [ "$n" -ge 3 ]; then echo "push falhou apos 3 tentativas"; exit 1; fi
+              echo "push falhou (tentativa $n/3) - realinhando com origin/main"
+              sleep 15
+              git rebase --abort 2>/dev/null || true
+              git merge --abort 2>/dev/null || true
+              git checkout -B main 2>/dev/null || true
+              git fetch origin main
+              git reset --hard origin/main
+              python tools/scrape_country.py --set all
+              git add data/noteringer-dk.json data/noteringer-dk-completas.json data/noteringer-historik.json
+              if git diff --cached --quiet; then
+                echo "Nada a enviar apos realinhar - remoto ja atualizado."
+                exit 0
+              fi
+              git commit -m "chore(data): refresh DK noteringer ($(date -u +'%Y-%m-%dT%H:%MZ'))"
             done
           fi
