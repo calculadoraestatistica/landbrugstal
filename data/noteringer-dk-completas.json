@@ -1,50 +1,47 @@
 {
-  "updated_at": "2026-08-20T15:06:21Z",
+  "updated_at": "2026-08-20T15:45:16Z",
   "country": "DK",
   "source": "Arla DK; Danish Crown; Danmarks Statistik (LPRIS10); Nationalbanken; SEGES Farmtal Online",
   "source_url": "https://dk",
   "items": [
     {
+      "key": "hvede",
       "icon": "hvede",
       "name": "Hvede",
-      "unit": "DKK/hkg",
-      "source_url": "https://www.statistikbanken.dk/LPRIS10",
-      "source_name": "Danmarks Statistik (LPRIS10)",
-      "key": "hvede",
-      "stale": true,
-      "date": "2026-08-20",
       "value": 138.0,
       "value_display": "138,00 DKK/hkg",
-      "last_seen_date": "2026-06-01",
-      "last_seen_source": "Danmarks Statistik (LPRIS10)"
+      "unit": "DKK/hkg",
+      "date": "2026-06-01",
+      "source_url": "https://www.statistikbanken.dk/LPRIS10",
+      "source_name": "Danmarks Statistik (LPRIS10)",
+      "stale": false,
+      "last_seen_date": "2026-06-01"
     },
     {
+      "key": "byg",
       "icon": "byg",
       "name": "Byg",
-      "unit": "DKK/hkg",
-      "source_url": "https://www.statistikbanken.dk/LPRIS10",
-      "source_name": "Danmarks Statistik (LPRIS10)",
-      "key": "byg",
-      "stale": true,
-      "date": "2026-08-20",
       "value": 137.0,
       "value_display": "137,00 DKK/hkg",
-      "last_seen_date": "2026-06-01",
-      "last_seen_source": "Danmarks Statistik (LPRIS10)"
-    },
-    {
-      "icon": "raps",
-      "name": "Raps",
       "unit": "DKK/hkg",
+      "date": "2026-06-01",
       "source_url": "https://www.statistikbanken.dk/LPRIS10",
       "source_name": "Danmarks Statistik (LPRIS10)",
+      "stale": false,
+      "last_seen_date": "2026-06-01"
+    },
+    {
       "key": "raps",
-      "stale": true,
-      "date": "2026-08-20",
+      "icon": "raps",
+      "name": "Raps",
       "value": 339.0,
       "value_display": "339,00 DKK/hkg",
-      "last_seen_date": "2026-06-01",
-      "last_seen_source": "Danmarks Statistik (LPRIS10)"
+      "unit": "DKK/hkg",
+      "date": "2026-06-01",
+      "source_url": "https://www.statistikbanken.dk/LPRIS10",
+      "source_name": "Danmarks Statistik (LPRIS10)",
+      "stale": false,
+      "last_seen_date": "2026-06-01"
     },
     {
       "icon": "majs",
