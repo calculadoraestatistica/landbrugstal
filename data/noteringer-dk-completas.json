@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-25T19:40:27Z",
+  "updated_at": "2026-08-26T07:06:28Z",
   "country": "DK",
   "source": "Arla DK; Danish Crown; Danmarks Statistik (LPRIS10); Nationalbanken; SEGES Farmtal Online",
   "source_url": "https://dk",
@@ -51,7 +51,7 @@
       "source_name": "SEGES Farmtal Online",
       "key": "majs",
       "stale": true,
-      "date": "2026-08-25",
+      "date": "2026-08-26",
       "value": 178.4,
       "value_display": "178,40 DKK/hkg",
       "last_seen_date": "2026-06-05",
@@ -64,11 +64,11 @@
       "value": 321.2,
       "value_display": "321,20 øre/kg",
       "unit": "øre/kg",
-      "date": "2026-08-25",
+      "date": "2026-08-26",
       "source_url": "https://catalog.arla.com/ARLA/milk-price/arla-dk/",
       "source_name": "Arla DK",
       "stale": false,
-      "last_seen_date": "2026-08-25"
+      "last_seen_date": "2026-08-26"
     },
     {
       "key": "grisenotering",
@@ -77,11 +77,11 @@
       "value": 6.9,
       "value_display": "6,90 DKK/kg",
       "unit": "DKK/kg",
-      "date": "2026-08-25",
+      "date": "2026-08-26",
       "source_url": "https://ejer.danishcrown.com/da-dk/andelsejere/gris/notering/aktuel-grisenotering/",
       "source_name": "Danish Crown",
       "stale": false,
-      "last_seen_date": "2026-08-25"
+      "last_seen_date": "2026-08-26"
     },
     {
       "key": "kreaturnotering",
@@ -103,11 +103,11 @@
       "value": 7.4753,
       "value_display": "7,48 DKK (per 1 EUR)",
       "unit": "DKK",
-      "date": "2026-08-25",
+      "date": "2026-08-26",
       "source_url": "https://www.nationalbanken.dk/",
       "source_name": "Nationalbanken",
       "stale": false,
-      "last_seen_date": "2026-08-25"
+      "last_seen_date": "2026-08-26"
     },
     {
       "key": "usd_dkk",
@@ -116,11 +116,11 @@
       "value": 6.41,
       "value_display": "6,41 DKK (per 1 USD)",
       "unit": "DKK",
-      "date": "2026-08-25",
+      "date": "2026-08-26",
       "source_url": "https://www.nationalbanken.dk/",
       "source_name": "Nationalbanken",
       "stale": false,
-      "last_seen_date": "2026-08-25"
+      "last_seen_date": "2026-08-26"
     }
   ]
 }
