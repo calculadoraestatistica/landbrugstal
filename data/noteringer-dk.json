@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-31T07:06:17Z",
+  "updated_at": "2026-08-31T11:06:05Z",
   "country": "DK",
   "source": "Arla DK; Danish Crown; Danmarks Statistik (LPRIS10); Nationalbanken; SEGES Farmtal Online",
   "source_url": "https://dk",
@@ -34,8 +34,8 @@
       "key": "maelkepris",
       "icon": "maelk",
       "name": "Mælkepris (Arla DK, konventionel)",
-      "value": 321.2,
-      "value_display": "321,20 øre/kg",
+      "value": 328.7,
+      "value_display": "328,70 øre/kg",
       "unit": "øre/kg",
       "date": "2026-08-31",
       "source_url": "https://catalog.arla.com/ARLA/milk-price/arla-dk/",
