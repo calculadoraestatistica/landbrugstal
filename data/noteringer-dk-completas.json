@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T07:06:10Z",
+  "updated_at": "2026-09-25T11:06:05Z",
   "country": "DK",
   "source": "Arla DK; Danish Crown; Danmarks Statistik (LPRIS10); Nationalbanken; SEGES Farmtal Online",
   "source_url": "https://dk",
@@ -90,11 +90,11 @@
       "value": 39.64,
       "value_display": "39,64 DKK/kg",
       "unit": "DKK/kg",
-      "date": "2026-09-21",
+      "date": "2026-09-25",
       "source_url": "https://ejer.danishcrown.com/da-dk/andelsejere/kreatur/notering/aktuel-kreaturnotering/",
       "source_name": "Danish Crown",
       "stale": false,
-      "last_seen_date": "2026-09-21"
+      "last_seen_date": "2026-09-25"
     },
     {
       "key": "eur_dkk",
