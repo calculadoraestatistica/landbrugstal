@@ -2172,8 +2172,10 @@ table.data tbody tr:last-child td { border-bottom: 0; }
 .media-figure video,.media-figure img{display:block;width:100%;height:auto;border-radius:10px;
   border:1px solid rgba(0,0,0,.09);background:rgba(0,0,0,.02);}
 .media-figure figcaption{margin-top:.65rem;font-size:.9rem;line-height:1.6;opacity:.75;}
-.media-hero{margin:.5rem 0 1.5rem;}
-.media-hero img{display:block;width:100%;height:220px;object-fit:cover;object-position:center 62%;
+/* margin-block, nunca o atalho `margin`: o atalho zera as laterais e mata o
+   margin-inline:auto do .container, jogando a faixa para a esquerda. */
+.media-hero{margin-block:.5rem 1.5rem;}
+.media-hero img{display:block;width:100%;height:220px;object-fit:cover;object-position:center center;
   border-radius:12px;}
 @media (max-width:640px){.media-hero img{height:150px;}}
 @media (max-width:640px){.media-figure{margin:1.5rem 0;}}
@@ -2215,3 +2217,43 @@ input,select,textarea{transition:border-color 140ms var(--ease-out),box-shadow 1
     transition-duration:.01ms!important;scroll-behavior:auto!important;}
   button:active,.btn:active,.button:active{transform:none;}
 }
+
+
+/* Gráfico das cotações */
+.cot-chart{border:1px solid rgba(0,0,0,.1);border-radius:12px;padding:1rem 1.1rem 1.15rem;margin:1.25rem 0;}
+.cot-chart__top{display:flex;flex-wrap:wrap;gap:.75rem 1rem;align-items:flex-start;justify-content:space-between;}
+.cot-chart__head{min-width:0;}
+.cot-chart__titulo{display:flex;flex-wrap:wrap;gap:.4rem;align-items:baseline;font-size:1.02rem;}
+.cot-chart__un{font-size:.8rem;opacity:.65;}
+.cot-chart__num{display:flex;flex-wrap:wrap;gap:.6rem;align-items:baseline;margin-top:.2rem;}
+.cot-chart__valor{font-size:1.5rem;font-weight:700;font-variant-numeric:tabular-nums;}
+.cot-chart__var{font-size:.9rem;font-weight:600;font-variant-numeric:tabular-nums;}
+.cot-chart__var--sobe{color:#15803d;}
+.cot-chart__var--desce{color:#b91c1c;}
+.cot-chart__var--estavel{opacity:.6;}
+.cot-chart__periodo{font-weight:400;opacity:.6;margin-left:.35rem;}
+.cot-chart__btns{display:flex;gap:.35rem;flex-shrink:0;}
+.cot-chart__btns button{font:inherit;font-size:.85rem;padding:.35rem .8rem;border-radius:999px;
+  border:1px solid rgba(0,0,0,.18);background:transparent;color:inherit;cursor:pointer;}
+.cot-chart__btns button.is-ativo{background:currentColor;border-color:currentColor;}
+.cot-chart__btns button.is-ativo::first-letter{color:inherit;}
+.cot-chart__btns button[aria-pressed="true"]{color:#fff;background:var(--c-accent-leaf,#31572c);
+  border-color:var(--c-accent-leaf,#31572c);}
+.cot-chart__body{margin-top:.6rem;}
+.cot-chart__svg{width:100%;height:auto;display:block;overflow:visible;}
+.cot-chart__area{fill:var(--c-accent-leaf,#31572c);opacity:.11;}
+.cot-chart__linha{fill:none;stroke:var(--c-accent-leaf,#31572c);stroke-width:2.5;
+  stroke-linejoin:round;stroke-linecap:round;}
+.cot-chart__fim{fill:var(--c-accent-leaf,#31572c);}
+.cot-chart__ponto{fill:none;stroke:currentColor;stroke-width:1.6;opacity:.55;}
+.cot-chart__marca{font-size:11px;fill:currentColor;opacity:.72;font-variant-numeric:tabular-nums;}
+.cot-chart__eixo{font-size:11px;fill:currentColor;opacity:.55;}
+.cot-chart__vazio{margin:1.4rem 0;text-align:center;opacity:.6;font-size:.9rem;}
+.cot-chart__dica{margin:.7rem 0 0;font-size:.82rem;opacity:.6;}
+/* A linha da tabela vira alvo de clique para trocar o produto do gráfico. */
+.cot-table tbody tr[data-slug]{cursor:pointer;}
+.cot-table tbody tr[data-slug]:hover,.cot-table tbody tr[data-slug]:focus-visible{
+  background:rgba(0,0,0,.04);outline:none;}
+.cot-table tbody tr[data-slug][aria-selected="true"]{background:rgba(0,0,0,.06);
+  box-shadow:inset 3px 0 0 var(--c-accent-leaf,#31572c);}
+@media (max-width:640px){.cot-chart__top{flex-direction:column;}}

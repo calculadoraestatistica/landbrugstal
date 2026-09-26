@@ -115,6 +115,51 @@
       + '</div>';
   }
 
+  /* ── Gráfico ligado à tabela ────────────────────────────────────────────
+     Cada linha vira alvo de clique e de teclado; o gráfico lê o mesmo
+     histórico diário que o robô salva, então acompanha a atualização
+     sozinho (era um mp4, que congelava no dia do render). */
+  function ligarGrafico(container, data) {
+    var alvo = document.querySelector('[data-cot-chart]');
+    if (!alvo || !window.CotChart) return;
+    if (!alvo.getAttribute('data-montado')) {
+      window.CotChart.montar(alvo, {
+        historico: '/data/noteringer-historik.json', locale: 'da-DK', textos: {semana:'7 dage',mes:'30 dage',periodo:'Periode for grafen',carregando:'Henter historikken…',escolha:'Tryk på en notering i tabellen for at se dens udvikling.',semDados:'Der er endnu ikke historik nok for denne notering.',em7:'på 7 dage',em30:'på 30 dage',dica:'Tryk på en linje i tabellen for at skifte notering i grafen.',ariaGrafico:'serie over {n} dage'}
+      });
+      alvo.setAttribute('data-montado', '1');
+    }
+    var itens = data.items || [];
+    var linhas = container.querySelectorAll('.cot-table tbody tr');
+    var primeiro = null;
+    Array.prototype.forEach.call(linhas, function (tr, i) {
+      var it = itens[i];
+      if (!it) return;
+      var chave = it.key || '';
+      if (!chave) return;
+      tr.setAttribute('data-slug', chave);
+      tr.setAttribute('tabindex', '0');
+      tr.setAttribute('role', 'button');
+      var nome = it.name || it.label || chave;
+      tr.setAttribute('aria-label', nome);
+      if (!primeiro) primeiro = { chave: chave, nome: nome, un: it.unit || '' };
+      function abrir() {
+        Array.prototype.forEach.call(linhas, function (o) { o.removeAttribute('aria-selected'); });
+        tr.setAttribute('aria-selected', 'true');
+        window.CotChart.mostrar(chave, nome, it.unit || '');
+      }
+      tr.addEventListener('click', abrir);
+      tr.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); abrir(); }
+      });
+    });
+    // Abre já no primeiro produto: gráfico vazio na carga não ajuda ninguém.
+    if (primeiro) {
+      var tr0 = container.querySelector('.cot-table tbody tr[data-slug]');
+      if (tr0) tr0.setAttribute('aria-selected', 'true');
+      window.CotChart.mostrar(primeiro.chave, primeiro.nome, primeiro.un);
+    }
+  }
+
   function render(container) {
     container.innerHTML = '<div class="cot-card cot-card--loading">Indlæser noteringer…</div>';
     var variant = container.getAttribute('data-cotacoes-noteringer-dk') || '';
@@ -125,6 +170,7 @@
       .then(function (data) {
         if (!data || !data.items || !data.items.length) throw new Error('no items');
         container.innerHTML = buildTable(data);
+      ligarGrafico(container, data);
       })
       .catch(function () { showPlaceholder(container); });
   }
