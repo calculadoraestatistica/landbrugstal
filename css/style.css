@@ -2257,3 +2257,16 @@ input,select,textarea{transition:border-color 140ms var(--ease-out),box-shadow 1
 .cot-table tbody tr[data-slug][aria-selected="true"]{background:rgba(0,0,0,.06);
   box-shadow:inset 3px 0 0 var(--c-accent-leaf,#31572c);}
 @media (max-width:640px){.cot-chart__top{flex-direction:column;}}
+
+
+/* Caixa de afiliado (Annonce) */
+.aff{border:1px solid rgba(0,0,0,.12);border-radius:10px;padding:1rem 1.1rem;margin:2.25rem 0;}
+.aff__mark{display:inline-block;font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;
+  font-weight:700;opacity:.5;margin-bottom:.45rem;}
+.aff__t{font-size:1rem;font-weight:700;margin:0 0 .3rem;}
+.aff__p{margin:0 0 .8rem;font-size:.93rem;opacity:.85;}
+.aff__a{display:inline-block;font-weight:600;font-size:.95rem;text-decoration:none;
+  border-bottom:2px solid currentColor;padding-bottom:1px;}
+.aff__a:hover,.aff__a:focus-visible{opacity:.75;}
+.aff__d{margin:.85rem 0 0;font-size:.78rem;opacity:.58;border-top:1px solid rgba(0,0,0,.1);padding-top:.55rem;}
+@media (max-width:640px){.aff{padding:.85rem .95rem;}}
