@@ -166,7 +166,7 @@
               <input class="input" type="text" inputmode="decimal" id="perdas" placeholder="Ex.: 10" autocomplete="off">
               <span class="input-affix__unit">%</span>
             </div>
-            <p class="help">Valgfri — standard 10 %. Inkluderer tab fra siloflader, bund og rester ved foderbordet.</p>
+            <p class="help">Valgfri: standard 10 %. Inkluderer tab fra siloflader, bund og rester ved foderbordet.</p>
           </div>
         </div>
         <div class="field-row">
@@ -176,7 +176,7 @@
               <input class="input" type="text" inputmode="decimal" id="fornec" placeholder="Ex.: 20" autocomplete="off">
               <span class="input-affix__unit">kr/t</span>
             </div>
-            <p class="help">Valgfri — transport, traktorarbejde og arbejdskraft pr. ton.</p>
+            <p class="help">Valgfri: transport, traktorarbejde og arbejdskraft pr. ton.</p>
           </div>
         </div>
       </fieldset>
@@ -196,7 +196,7 @@
     <article class="prose">
 
       <h2>Hvad bruges den til i praksis</h2>
-      <p>Denne beregner sammenligner grovfodertyper ud fra det, de <strong>reelt leverer til dyret</strong>: kiloet tørstof (TS). Pris pr. ton råvægt vildleder — ensilage er omtrent to tredjedele vand, hø er næsten kun TS. Det, der betyder noget i fodringen, er omkostningen pr. kg effektivt TS. I praksis bruges beregneren, når man skal vælge mellem tilbud på forskelligt grovfoder, og når foderplanen skal lægges på det billigste tørstof, der samtidig opfylder dyrenes behov. To læs, der ligner hinanden på vejesedlen, kan koste vidt forskelligt pr. kg tørstof, når vandindhold og tab regnes med.</p>
+      <p>Denne beregner sammenligner grovfodertyper ud fra det, de <strong>reelt leverer til dyret</strong>: kiloet tørstof (TS). Pris pr. ton råvægt vildleder: ensilage er omtrent to tredjedele vand, hø er næsten kun TS. Det, der betyder noget i fodringen, er omkostningen pr. kg effektivt TS. I praksis bruges beregneren, når man skal vælge mellem tilbud på forskelligt grovfoder, og når foderplanen skal lægges på det billigste tørstof, der samtidig opfylder dyrenes behov. To læs, der ligner hinanden på vejesedlen, kan koste vidt forskelligt pr. kg tørstof, når vandindhold og tab regnes med.</p>
 
       <h2>Input, enheder og omregninger</h2>
       <p>Beregneren bruger grovfodertype, pris pr. ton brutto (kr/t, inklusive vand), tørstofprocent, et tab i procent og en valgfri leveringsomkostning pr. ton. Kernen er omregningen fra frisk vare til tørstof: 1 ton brutto med fx 32 % TS indeholder 1.000 × 0,32 = 320 kg tørstof. Tabet trækkes fra som en procentdel, og resultatet, kr pr. kg tørstof, er den reelle enhedsomkostning. Tørstofprocenten udfyldes automatisk efter typen, men bør tilrettes efter en foderanalyse.</p>
@@ -204,7 +204,7 @@
       <h2>Formel og gennemregnet eksempel</h2>
       <p>Først omregnes råvægten til kg TS via tørstofprocenten. Derefter trækkes tab fra fermentering og opbevaring fra. Den samlede omkostning (pris + levering) divideres med det effektive leverede TS.</p>
       <div class="formula">kg TS pr. t = 1.000 × (% TS ÷ 100)<br>kg effektivt TS = kg TS × (1 − tab ÷ 100)<br>kr/kg TS = (pris + leveringsomkostning) ÷ kg effektivt TS</div>
-      <p>Gennemregnet eksempel: majsensilage til 280 kr/t med 32 % TS og 10 % tab. Der er 1.000 × 0,32 = 320 kg TS pr. ton, og efter tab 320 × (1 − 0,10) = 288 kg effektivt TS. Omkostningen bliver 280 ÷ 288 = <strong>0,97 kr pr. kg TS</strong>. Et hø til 1.500 kr/t med 88 % TS giver til sammenligning cirka 1,79 kr/kg TS — altså dyrere pr. tørstof trods højere tørstofindhold.</p>
+      <p>Gennemregnet eksempel: majsensilage til 280 kr/t med 32 % TS og 10 % tab. Der er 1.000 × 0,32 = 320 kg TS pr. ton, og efter tab 320 × (1 − 0,10) = 288 kg effektivt TS. Omkostningen bliver 280 ÷ 288 = <strong>0,97 kr pr. kg TS</strong>. Et hø til 1.500 kr/t med 88 % TS giver til sammenligning cirka 1,79 kr/kg TS, altså dyrere pr. tørstof trods højere tørstofindhold.</p>
 
       <h2>Praktiske referenceværdier</h2>
       <p>Offentlige normtal, fx fra SEGES, kan bruges til at kontrollere tørstofprocenten, når du ikke har en analyse: majsensilage ligger typisk på 30-35 % TS, forvejret græsensilage omkring 30-45 %, hø omkring 85-90 % og halm over 85 %. Et konserveringstab omkring 10 % er almindeligt for ensilage i plansilo, mens velpakket hø taber mindre. Til at vurdere behovet regner man ofte med, at kvæg æder omkring 2-2,5 % af kropsvægten i tørstof pr. dag. Tallene varierer mellem partier, så en foderanalyse er altid mere retvisende end et normtal.</p>
@@ -214,11 +214,11 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           Det vigtige er kg TS
         </div>
-        <p>Grovfoder, der ligner hinanden, kan have vidt forskellige priser pr. kg TS. Det er det, der betyder noget for foderværdien — billig ensilage med lavt TS kan ende dyrere end et tilsyneladende dyrt hø.</p>
+        <p>Grovfoder, der ligner hinanden, kan have vidt forskellige priser pr. kg TS. Det er det, der betyder noget for foderværdien: billig ensilage med lavt TS kan ende dyrere end et tilsyneladende dyrt hø.</p>
       </div>
 
       <h2>Begrænsninger</h2>
-      <p>Beregneren sammenligner udelukkende på pris pr. kg tørstof og siger intet om foderets kvalitet — energiindhold, protein, fordøjelighed eller struktur. Et billigt tørstof kan være næringsfattigt og kræve mere tilskudsfoder, så den samlede foderomkostning alligevel stiger. Beregneren bruger desuden et antaget tab og en vejledende tørstofprocent, der begge kan afvige uden en analyse. Brug resultatet til at rangordne tilbud på tørstofbasis, men afvej det mod foderets næringsværdi, og inddrag en foderrådgiver ved større indkøb.</p>
+      <p>Beregneren sammenligner udelukkende på pris pr. kg tørstof og siger intet om foderets kvalitet: energiindhold, protein, fordøjelighed eller struktur. Et billigt tørstof kan være næringsfattigt og kræve mere tilskudsfoder, så den samlede foderomkostning alligevel stiger. Beregneren bruger desuden et antaget tab og en vejledende tørstofprocent, der begge kan afvige uden en analyse. Brug resultatet til at rangordne tilbud på tørstofbasis, men afvej det mod foderets næringsværdi, og inddrag en foderrådgiver ved større indkøb.</p>
 
       <h2>Ofte stillede spørgsmål</h2>
       <h3>Hvorfor sammenligne på kg tørstof i stedet for pris pr. ton?</h3>
@@ -404,7 +404,7 @@
       '<div class="metric__value">kr ' + Fmt.num(r.omkostningBruto, 2) + '</div></div>' +
       '</div>';
     html += '<div class="result__interpretation"><p>' +
-      'Sammenlign denne værdi med andre tilgængelige grovfodertyper. Kg tørstof er det, der reelt ender i dyrets foderration — pris pr. ton brutto skjuler store forskelle mellem ensilager (våde de água) og høs (quase tudo MS).' +
+      'Sammenlign denne værdi med andre tilgængelige grovfodertyper. Kg tørstof er det, der reelt ender i dyrets foderration: pris pr. ton brutto skjuler store forskelle mellem ensilager (våde de água) og høs (quase tudo MS).' +
       '</p></div>';
     html += '</div>';
     result.innerHTML = html;

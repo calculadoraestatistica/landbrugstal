@@ -327,15 +327,15 @@
     <article class="prose">
 
       <h2>Hvad bruges den til i praksis</h2>
-      <p>Denne beregner kombinerer <strong>op til tre gødninger</strong> (simple eller formulerede) for at forsøge at dække den faglige anbefaling af N, P₂O₅ og K₂O pr. hektar. Den er nyttig, når der ikke findes en færdig formel, der dækker alle næringsstoffer, og man derfor er nødt til at <strong>blande gødninger</strong> for at komme tæt på målet — eller når man vil se, hvor langt et lager af simple varer rækker, før der købes nyt.</p>
+      <p>Denne beregner kombinerer <strong>op til tre gødninger</strong> (simple eller formulerede) for at forsøge at dække den faglige anbefaling af N, P₂O₅ og K₂O pr. hektar. Den er nyttig, når der ikke findes en færdig formel, der dækker alle næringsstoffer, og man derfor er nødt til at <strong>blande gødninger</strong> for at komme tæt på målet, eller når man vil se, hvor langt et lager af simple varer rækker, før der købes nyt.</p>
 
       <h2>Input, enheder og omregninger</h2>
-      <p>Behovet indtastes i kg/ha N, P₂O₅ og K₂O, og hver gødning med sit indhold i procent. Husk, at danske deklarationer som NS 27-4 eller NPK 21-3-10 angiver <strong>ren P og K</strong>: omregn med P₂O₅ = P × 2,29 og K₂O = K × 1,21, før procenterne indtastes. Simple varer indtastes med nul i de næringsstoffer, de ikke indeholder — fx urea som 45-0-0 eller kaliumklorid som 0-0-60.</p>
+      <p>Behovet indtastes i kg/ha N, P₂O₅ og K₂O, og hver gødning med sit indhold i procent. Husk, at danske deklarationer som NS 27-4 eller NPK 21-3-10 angiver <strong>ren P og K</strong>: omregn med P₂O₅ = P × 2,29 og K₂O = K × 1,21, før procenterne indtastes. Simple varer indtastes med nul i de næringsstoffer, de ikke indeholder: fx urea som 45-0-0 eller kaliumklorid som 0-0-60.</p>
 
       <h2>Formel og gennemregnet eksempel</h2>
       <p>Beregneren anvender en <strong>grådig heuristik</strong>: den starter med det næringsstof, der har færrest kilder blandt de oplyste gødninger (typisk P eller K), og vælger den gødning, der er rigest på netop det næringsstof. Dernæst trækkes det allerede leverede fra, før næste næringsstof dækkes; N fyldes typisk op til sidst.</p>
       <div class="formula">dosering af gødning (kg/ha) = (resterende behov ÷ % næringsstof) × 100</div>
-      <p>Gennemregnet eksempel — behov 80-60-40 med MAP (18-46-00), KCl (00-00-60) og urea (45-00-00):</p>
+      <p>Gennemregnet eksempel: behov 80-60-40 med MAP (18-46-00), KCl (00-00-60) og urea (45-00-00):</p>
       <ul>
         <li>MAP dækker P: 60 ÷ 46 × 100 ≈ <strong>130 kg/ha</strong>, som samtidig leverer ca. 23 kg N.</li>
         <li>KCl dækker K: 40 ÷ 60 × 100 ≈ <strong>67 kg/ha</strong>.</li>
@@ -346,7 +346,7 @@
       <p>Typiske simple varer at blande med er urea (46 % N), svovlsur ammoniak, tripelsuperfosfat (ca. 46 % P₂O₅) og kaliumklorid (ca. 60 % K₂O), mens NS 27-4 og NPK-typer som 21-3-10 dækker bredere. Ikke alle varer kan blandes fysisk: forskelle i kornstørrelse og densitet giver afblanding i sprederen, og nogle kombinationer klumper eller optager fugt. Følg leverandørens blandetabeller, og se offentlige normtal, fx fra SEGES og Landbrugsstyrelsen, for den behovsfastsættelse, der ligger bag gødningsplanen.</p>
 
       <h2>Begrænsninger</h2>
-      <p>Det er ikke altid muligt at ramme alle tre næringsstoffer præcist: mangler en kilde, bliver behovet udækket, og overlappende varer kan give overskud. Beregneren <strong>anbefaler ingen doser</strong> — behovet skal komme fra gødningsplanen, og kvælstofkvoter og gødningsregnskab er reguleret af lovgivningen. I praksis prioriteres P og K ofte ved såning, mens N finjusteres ad flere gange; den afvejning hører hjemme hos en planteavlskonsulent.</p>
+      <p>Det er ikke altid muligt at ramme alle tre næringsstoffer præcist: mangler en kilde, bliver behovet udækket, og overlappende varer kan give overskud. Beregneren <strong>anbefaler ingen doser</strong>: behovet skal komme fra gødningsplanen, og kvælstofkvoter og gødningsregnskab er reguleret af lovgivningen. I praksis prioriteres P og K ofte ved såning, mens N finjusteres ad flere gange; den afvejning hører hjemme hos en planteavlskonsulent.</p>
 
       <h2>Ofte stillede spørgsmål</h2>
       <h3>Hvorfor kan beregneren ikke altid ramme behovet præcist?</h3>
@@ -593,7 +593,7 @@
     tabela += '</tbody></table></div>';
     html += tabela;
 
-    html += '<div class="result__interpretation"><p>Verde indica næringsstof atendido. Laranja indica sobra (entregou mais som a behov). Vermelho indica falta — complete med um gødning simples ou ajuste a mistura. Nem altid dá pra atender os três næringsstofs exatamente; priorize P og K og ajuste o N i cobertura.</p></div>';
+    html += '<div class="result__interpretation"><p>Verde indica næringsstof atendido. Laranja indica sobra (entregou mais som a behov). Vermelho indica falta: complete med um gødning simples ou ajuste a mistura. Nem altid dá pra atender os três næringsstofs exatamente; priorize P og K og ajuste o N i cobertura.</p></div>';
 
     html += '</div>';
     result.innerHTML = html;
