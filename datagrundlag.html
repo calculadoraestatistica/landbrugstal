@@ -10,9 +10,9 @@
   <link rel="dns-prefetch" href="https://www.euronext.com">
 <!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
-<title>Metodologi — sådan er beregnerne og priserne bygget | Landbrugstal</title>
-<meta name="description" content="Sådan er Landbrugstals beregnere bygget: klassiske agronomiske formler fra offentlig faglitteratur, offentlige markedskilder (SEGES Farmtal, Arla, Danish Crown, Nationalbanken), validering og årlig revision.">
-<link rel="canonical" href="https://landbrugstal.dk/metodologia.html">
+<title>Datagrundlag</title>
+<meta name="description" content="Hvor hvert tal kommer fra, hvornår det sidst blev opdateret og hvad der sker, når en kilde ikke svarer. Siden er genereret ud fra de samme filer, som bereg">
+<link rel="canonical" href="https://landbrugstal.dk/datagrundlag.html">
 <link rel="alternate" hreflang="da-DK" href="https://landbrugstal.dk/metodologia.html">
 <link rel="alternate" hreflang="pt-BR" href="https://agrododia.com.br/metodologia.html">
 <link rel="alternate" hreflang="x-default" href="https://landbrugstal.dk/metodologia.html">
@@ -35,8 +35,6 @@
 <script src="/js/cookie-consent.js" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Forside","item":"https://landbrugstal.dk/"},{"@type":"ListItem","position":2,"name":"Metodologi","item":"https://landbrugstal.dk/metodologia.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Metodologi — sådan er beregnerne og priserne på Landbrugstal bygget","description":"Hvordan Landbrugstals beregnere er bygget, hvor noteringerne kommer fra, hvordan de valideres, og hvad sitet ikke gør.","inLanguage":"da-DK","author":{"@type":"Organization","name":"Landbrugstal","url":"https://landbrugstal.dk/"},"publisher":{"@type":"Organization","name":"Landbrugstal","url":"https://landbrugstal.dk/","logo":{"@type":"ImageObject","url":"https://landbrugstal.dk/favicon-512.png","width":512,"height":512}},"datePublished":"2026-07-05","dateModified":"2026-07-05","mainEntityOfPage":"https://landbrugstal.dk/metodologia.html"}</script>
-<!-- manutencao -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Metodologi","url":"https://landbrugstal.dk/metodologia.html","datePublished":"2026-07-06","dateModified":"2026-09-26","inLanguage":"da-DK","isPartOf":{"@type":"WebSite","name":"Landbrugstal","url":"https://landbrugstal.dk/"},"author":{"@type":"Organization","name":"Landbrugstal","url":"https://landbrugstal.dk/"},"publisher":{"@type":"Organization","name":"Landbrugstal","url":"https://landbrugstal.dk/"}}</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Spring til indhold</a>
@@ -74,56 +72,41 @@
 
   <div class="page-head">
     <div class="container">
-      <nav class="breadcrumb" aria-label="Sti">
-        <ol>
-          <li><a href="/">Forside</a></li>
-          <li>Metodologi</li>
-        </ol>
+      <nav class="breadcrumb" aria-label="Brødkrumme">
+        <ol><li><a href="/">Forside</a></li><li>Datagrundlag</li></ol>
       </nav>
-      <h1>Metodologi</h1>
-      <p class="lead">Sådan er beregnerne bygget, hvor tallene kommer fra, og hvordan vi holder dem ved lige.</p>
+      <h1>Datagrundlag</h1>
+      <p class="lead">Hvor hvert tal kommer fra, hvornår det sidst blev opdateret og hvad der sker, når en kilde ikke svarer. Siden er genereret ud fra de samme filer, som beregnerne læser.</p>
     </div>
   </div>
 
   <div class="container narrow">
     <article class="prose">
 
-      <h2>Sådan er beregnerne bygget</h2>
-      <p>Alle beregnere på Landbrugstal bygger på <strong>klassiske agronomiske og driftsøkonomiske formler</strong>, som er alment kendte og beskrevet i offentligt tilgængelig faglitteratur: lærebøger i planteavl og husdyrhold, dyrkningsvejledninger, normtal og publikationer fra bl.a. SEGES/Landbrugsinfo, Aarhus Universitet (DCA) og Landbrug &amp; Fødevarer. Vi opfinder ikke egne modeller. En beregner som <a href="/lotacao-pastagem.html">græsningsbelægning</a> anvender den gængse omregning til dyreenheder pr. hektar; <a href="/umidade-graos.html">kornfugtighed</a> bruger standardformlen for vægtkorrektion ved ændret vandindhold; <a href="/margem-bruta.html">bruttomargin</a> er simpel driftsøkonomi: omsætning minus variable omkostninger. Hvor der findes flere anerkendte metoder, vælger vi den mest udbredte og skriver forudsætningerne direkte på beregnersiden.</p>
-      <p>Beregningerne kører <strong>fuldt ud i din browser</strong>. Intet af det, du indtaster (arealer, besætningsstørrelser, priser, omkostninger) sendes til en server eller gemmes af os. Det gør værktøjerne hurtige og betyder samtidig, at dine driftsdata forbliver dine.</p>
+      <p class="proc__selo"><strong>9 noteringer fra 5 kilder. Senest opdateret 25. september 2026.</strong></p>
 
-      <h2>Hvor priserne og noteringerne kommer fra</h2>
-      <p>Alle markedstal på sitet stammer fra <strong>offentlige markedskilder</strong>, som enhver selv kan slå op:</p>
-      <ul>
-        <li><strong>Kornpriser</strong> (hvede, byg, raps, majs): <a href="https://farmtalonline.dlbr.dk/" rel="noopener nofollow" target="_blank">SEGES Farmtal Online</a>.</li>
-        <li><strong>Mælkepris</strong>: <a href="https://catalog.arla.com/ARLA/milk-price/arla-dk/" rel="noopener nofollow" target="_blank">Arlas offentliggjorte a conto-pris</a>.</li>
-        <li><strong>Grise- og kreaturnotering</strong>: <a href="https://ejer.danishcrown.com/" rel="noopener nofollow" target="_blank">Danish Crown</a> og <a href="https://danskesvineproducenter.dk/noteringer/" rel="noopener nofollow" target="_blank">Danske Svineproducenter</a>.</li>
-        <li><strong>Valutakurser</strong> (EUR/DKK, USD/DKK): markedskurser i tråd med <a href="https://www.nationalbanken.dk/" rel="noopener nofollow" target="_blank">Nationalbankens</a> offentliggjorte kurser, vist via TradingView.</li>
-        <li><strong>Futures</strong>: CBOT/Chicago og Euronext som internationale referencepriser, vist via TradingView.</li>
-      </ul>
-      <p>Vi ændrer ikke i tallene. Vi viser dem, som kilderne offentliggør dem, og angiver altid kilden ved siden af tallet. Hver kilde opdaterer i sin egen takt, og der kan derfor være forsinkelse i forhold til den officielle offentliggørelse. En samlet oversigt findes på siden <a href="/fontes.html">Kilder</a>.</p>
+      <h2>Noteringerne, kilde for kilde</h2>
+      <div class="table-wrap"><table class="data proc">
+        <thead><tr><th scope="col">Notering</th><th scope="col">Seneste værdi</th>
+        <th scope="col">Observationsdato</th><th scope="col">Kilde</th>
+        <th scope="col">Status</th></tr></thead>
+        <tbody><tr><th scope="row">Hvede</th><td>137,00 DKK/hkg</td><td>1. juli 2026</td><td><a href="https://www.statistikbanken.dk/LPRIS10" target="_blank" rel="noopener">Danmarks Statistik (LPRIS10)</a></td><td><span class="proc__ok">aktuel</span> <span class="proc__n">4 obs.</span></td></tr><tr><th scope="row">Byg</th><td>137,00 DKK/hkg</td><td>1. juli 2026</td><td><a href="https://www.statistikbanken.dk/LPRIS10" target="_blank" rel="noopener">Danmarks Statistik (LPRIS10)</a></td><td><span class="proc__ok">aktuel</span> <span class="proc__n">4 obs.</span></td></tr><tr><th scope="row">Raps</th><td>410,00 DKK/hkg</td><td>1. juli 2026</td><td><a href="https://www.statistikbanken.dk/LPRIS10" target="_blank" rel="noopener">Danmarks Statistik (LPRIS10)</a></td><td><span class="proc__ok">aktuel</span> <span class="proc__n">4 obs.</span></td></tr><tr><th scope="row">Foderhvede (Farmtal)</th><td>178,40 DKK/hkg</td><td>25. september 2026</td><td><a href="https://farmtalonline.dlbr.dk/" target="_blank" rel="noopener">SEGES Farmtal Online</a></td><td><span class="proc__velha">ikke opdateret</span> <span class="proc__n">1 obs.</span></td></tr><tr><th scope="row">Mælkepris (Arla DK, konventionel)</th><td>328,70 øre/kg</td><td>25. september 2026</td><td><a href="https://catalog.arla.com/ARLA/milk-price/arla-dk/" target="_blank" rel="noopener">Arla DK</a></td><td><span class="proc__ok">aktuel</span> <span class="proc__n">47 obs.</span></td></tr><tr><th scope="row">Grisenotering (basis 77-101,9 kg)</th><td>6,90 DKK/kg</td><td>25. september 2026</td><td><a href="https://ejer.danishcrown.com/da-dk/andelsejere/gris/notering/aktuel-grisenotering/" target="_blank" rel="noopener">Danish Crown</a></td><td><span class="proc__ok">aktuel</span> <span class="proc__n">42 obs.</span></td></tr><tr><th scope="row">Kreaturnotering (Ungtyr R, 280 kg)</th><td>39,64 DKK/kg</td><td>25. september 2026</td><td><a href="https://ejer.danishcrown.com/da-dk/andelsejere/kreatur/notering/aktuel-kreaturnotering/" target="_blank" rel="noopener">Danish Crown</a></td><td><span class="proc__ok">aktuel</span> <span class="proc__n">18 obs.</span></td></tr><tr><th scope="row">EUR/DKK</th><td>7,48 DKK (per 1 EUR)</td><td>25. september 2026</td><td><a href="https://www.nationalbanken.dk/" target="_blank" rel="noopener">Nationalbanken</a></td><td><span class="proc__ok">aktuel</span> <span class="proc__n">47 obs.</span></td></tr><tr><th scope="row">USD/DKK</th><td>6,56 DKK (per 1 USD)</td><td>25. september 2026</td><td><a href="https://www.nationalbanken.dk/" target="_blank" rel="noopener">Nationalbanken</a></td><td><span class="proc__ok">aktuel</span> <span class="proc__n">47 obs.</span></td></tr></tbody></table></div>
 
-      <h2>Validering</h2>
-      <p>Inden en beregner udgives, testes den mod <strong>referenceværdier</strong>: regneeksempler fra faglitteraturen, offentliggjorte normtal og manuelle kontrolberegninger i regneark. Vi kontrollerer også grænsetilfælde (nul-værdier, meget store tal og urealistiske kombinationer) så beregneren enten regner korrekt eller siger tydeligt fra. Finder vi (eller en læser) en fejl efter udgivelsen, retter vi den hurtigst muligt og noterer rettelsen på siden, hvis den har haft betydning for resultaterne. Fejlmeldinger er meget velkomne på <a href="mailto:beregnerestatistica@gmail.com">beregnerestatistica@gmail.com</a>.</p>
+      <h2>Hvor ofte tallene opdateres</h2>
+      <p>Robotten henter noteringerne på hverdage og skriver dem i sitets datafiler. Siden 11. juni 2026 er det blevet til <strong>548 automatiske opdateringer</strong>, oven i 26 ændringer lavet i hånden. Hver opdatering ligger som en separat ændring i sitets versionshistorik.</p>
 
-      <h2>Hvad sitet ikke gør</h2>
-      <p>Lige så vigtigt som det, vi gør, er det, vi bevidst <strong>ikke</strong> gør:</p>
-      <ul>
-        <li><strong>Ingen dosisrådgivning.</strong> Beregnerne for gødning, kalk og sprøjteblanding regner på de tal, du selv indtaster. De erstatter ikke markanalyser, gødningsplaner eller etiketten på produktet, og slet ikke din planteavlskonsulent.</li>
-        <li><strong>Ingen handelsrådgivning.</strong> Vi viser noteringer og futures til orientering. Vi anbefaler aldrig at købe, sælge eller vente. Den beslutning kræver kendskab til din bedrift og bør tages med din rådgiver eller dit grovvareselskab.</li>
-        <li><strong>Ingen investeringsrådgivning.</strong> Intet på sitet er en opfordring til at handle futures, valuta eller andre finansielle instrumenter.</li>
-      </ul>
-      <p>Alle resultater er <strong>vejledende estimater</strong> til planlægning og overslag. Faktiske forhold (jordtype, besætning, kontraktvilkår, kvalitetsfradrag) kan flytte resultatet betydeligt.</p>
+      <h2>Når en kilde ikke svarer</h2>
+      <p>Kilderne er andres hjemmesider, og de går ned. Når en hentning fejler, overskriver robotten ikke de gode tal med tomme felter: den beholder den sidste kendte værdi og markerer noteringen som ikke opdateret, så du kan se det i tabellen ovenfor i stedet for at gætte. Er tallene mere end tre døgn gamle, sender systemet en advarsel til den, der vedligeholder sitet.</p>
 
-      <h2>Årlig revision</h2>
-      <p>Formler, standardværdier og kildelinks gennemgås som minimum <strong>én gang årligt</strong>. Ved gennemgangen kontrollerer vi, at normtal og satser stadig svarer til de nyeste offentliggjorte tal, at eksterne links stadig virker og peger på den rigtige kilde, og at beregnernes forudsætninger stadig er tidssvarende. Ændrer en kilde metode, for eksempel hvis en notering skifter basis eller enhed, opdaterer vi både beregning og forklarende tekst. Væsentlige ændringer beskrives på de berørte sider.</p>
+      <h2>Hvad tallene ikke er</h2>
+      <p>Noteringer er vejledende gennemsnit, ikke et tilbud. Den pris du selv får afhænger af mængde, kvalitet, afstand og aftale. Brug tallene til at regne på størrelsesordener, ikke til at afslutte en handel.</p>
 
-      <p>Læs også vores <a href="/politica-editorial.html">redaktionelle politik</a>, som beskriver, hvem der står bag sitet, og hvordan indholdet bliver til.</p>
+      <h2>Se også</h2>
+      <ul><li><a href="/metodologia.html">Metodologi</a> &mdash; Hvordan beregnerne er bygget.</li><li><a href="/fontes.html">Kilder</a> &mdash; De faglige normtal bag formlerne.</li><li><a href="/aendringer.html">Ændringslog</a> &mdash; Hvad der er ændret på sitet.</li></ul>
 
     </article>
   </div>
 
-  <div class="container narrow"><p class="revisao">Udgivet den 6. juli 2026 og senest gennemgået den 26. september 2026. Hvad der er ændret på sitet står i <a href="/aendringer.html">ændringsloggen</a>.</p></div>
 </main>
 
 <footer class="site-footer">
