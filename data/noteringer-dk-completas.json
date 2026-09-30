@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-30T13:37:07Z",
+  "updated_at": "2026-09-30T15:11:27Z",
   "country": "DK",
   "source": "Arla DK; Danish Crown; Danmarks Statistik (LPRIS10); Nationalbanken; SEGES Farmtal Online",
   "source_url": "https://dk",
@@ -100,7 +100,7 @@
       "key": "eur_dkk",
       "icon": "eur_dkk",
       "name": "EUR/DKK",
-      "value": 7.4754,
+      "value": 7.475499999999999,
       "value_display": "7,48 DKK (per 1 EUR)",
       "unit": "DKK",
       "date": "2026-09-30",
