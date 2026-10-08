@@ -205,8 +205,29 @@ def main() -> int:
     }
 
     def write_json(path: Path, items: list[dict]):
+        """Skriver kun, naar noget faktisk har aendret sig.
+
+        updated_at aendrer sig ved hver koersel. Saalaenge den blev skrevet
+        hver gang, var filen altid forskellig, workflowets "commit kun ved
+        aendring" udloeste aldrig, og robotten committede hver halve time. Maalt
+        i historikken: 96 % af commits aendrede ingen vaerdi. Oven i stoejen
+        hobede koerslerne sig op i concurrency-gruppen, og GitHub annullerede de
+        ventende, hvilket var kilden til "All jobs were cancelled"-mailsene.
+
+        At sammenligne uden tidsstemplet loeser begge dele. updated_at betyder
+        nu "hvornaar tallene aendrede sig", som er det, laeseren forstaar.
+        """
         path.parent.mkdir(parents=True, exist_ok=True)
         payload = {**payload_meta, "items": items}
+        if path.exists():
+            try:
+                nuvaerende = json.loads(path.read_text(encoding="utf-8"))
+                if ({k: v for k, v in nuvaerende.items() if k != "updated_at"}
+                        == {k: v for k, v in payload.items() if k != "updated_at"}):
+                    print(f"  {path.name}: ingen aendring, skriver ikke")
+                    return
+            except (ValueError, OSError):
+                pass  # ulaeselig fil: skriv igen
         tmp = path.with_suffix(path.suffix + ".tmp")
         tmp.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
         os.replace(tmp, path)
