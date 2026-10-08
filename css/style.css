@@ -2257,41 +2257,27 @@ input,select,textarea{transition:border-color 140ms var(--ease-out),box-shadow 1
 .cot-table tbody tr[data-slug][aria-selected="true"]{background:rgba(0,0,0,.06);
   box-shadow:inset 3px 0 0 var(--c-accent-leaf,#31572c);}
 @media (max-width:640px){.cot-chart__top{flex-direction:column;}}
-
-
+/* afiliado:css:inicio */
 /* Caixa de afiliado (Annonce) */
 .aff{border:1px solid rgba(0,0,0,.12);border-radius:10px;padding:1rem 1.1rem;margin:2.25rem 0;}
-.aff__mark{display:inline-block;font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;
-  font-weight:700;opacity:.5;margin-bottom:.45rem;}
+/* A marcação legal da caixa. Estava em .66rem (uns 10,6 px) com opacity .5,
+   que dá 3,4:1 e era o texto mais apagado da caixa: mais apagado que o próprio
+   anúncio que ele encabeça. A orientação exige "en skrifttype, størrelse og
+   farve, som gør reklamemarkeringen tydelig". */
+.aff__mark{display:inline-block;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;
+  font-weight:700;opacity:1;margin-bottom:.5rem;}
 .aff__t{font-size:1rem;font-weight:700;margin:0 0 .3rem;}
 .aff__p{margin:0 0 .8rem;font-size:.93rem;opacity:.85;}
 .aff__a{display:inline-block;font-weight:600;font-size:.95rem;text-decoration:none;
   border-bottom:2px solid currentColor;padding-bottom:1px;}
 .aff__a:hover,.aff__a:focus-visible{opacity:.75;}
-.aff__d{margin:.85rem 0 0;font-size:.78rem;opacity:.58;border-top:1px solid rgba(0,0,0,.1);padding-top:.55rem;}
+.aff__why{margin:.8rem 0 0;font-size:.9rem;opacity:.9;}
+/* A marcação "Annoncelink" fica logo ACIMA do link, porque a orientação do
+   Forbrugerombudsmanden é literal: "Et reklamelink vil være markeret
+   tilstrækkeligt, hvis der oven over eller i direkte forlængelse af linket
+   tydeligt skrives 'Reklamelink' eller 'Annoncelink'", e a mesma página lista
+   "markere det til sidst i teksten" entre as marcações insuficientes. Antes
+   estava no rodapé da caixa, em .78rem e opacity .58. */
+.aff__d{margin:.7rem 0 .85rem;font-size:.95rem;font-weight:500;opacity:1;border-bottom:1px solid rgba(0,0,0,.12);padding-bottom:.6rem;}
 @media (max-width:640px){.aff{padding:.85rem .95rem;}}
-
-/* Linha de revisão no fim das páginas de conteúdo. Discreta: é sinal de
-   manutenção, não é o que a pessoa veio ler. */
-.revisao {
-  margin-block: 2rem 0;
-  padding-top: 1rem;
-  border-top: 1px solid var(--c-line, #d8dbe2);
-  font-size: .85rem;
-  color: var(--c-muted, #5a6170);
-}
-
-/* Página de procedência dos dados. */
-.proc__selo { background: var(--c-success-bg, #f2faf6); border-left: 3px solid var(--c-success, #047857);
-  padding: .75rem 1rem; font-size: .95rem; }
-table.proc td, table.proc th { font-size: .92rem; }
-.proc__ok { color: var(--c-success, #047857); font-weight: 600; }
-.proc__velha { color: var(--c-warning, #b45309); font-weight: 600; }
-.proc__n { color: var(--c-muted, #5a6170); font-size: .82rem; white-space: nowrap; }
-
-/* Histórico de alterações: lista densa, sem marcador redondo. */
-.hist { margin-block: 2rem; }
-.hist h2 { margin-bottom: .75rem; }
-.hist__lista { list-style: none; padding: 0; margin: 0; display: grid; gap: .75rem; }
-.hist__lista li { padding-left: 1rem; border-left: 2px solid var(--c-line, #d8dbe2); font-size: .96rem; }
-.hist__lista strong { color: var(--c-ink, #16181d); }
+/* afiliado:css:fim */
