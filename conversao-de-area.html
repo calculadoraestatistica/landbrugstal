@@ -43,7 +43,7 @@
   "operatingSystem": "Web",
   "inLanguage": "da-DK",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "DKK"},
-  "description": "Omregning mellem hektar, m², tønde land og brasilianske referencer."
+  "description": "Omregning mellem hektar, kvadratmeter, ar og tønde land, der er 5.516 m²."
 }
 </script>
 <script type="application/ld+json">
@@ -142,7 +142,7 @@
         </ol>
       </nav>
       <h1>Omregning af landbrugsareal</h1>
-      <p class="lead">Omregn mellem hektar, m², tønde land (DK) og brasilianske referencer (alqueire og tarefa), med de rigtige værdier for hver region.</p>
+      <p class="lead">Omregn mellem hektar, kvadratmeter, ar og tønde land, der er 5.516 m². Brasilianske enheder er også med, til læsning af udenlandske kilder.</p>
     </div>
   </div>
 
@@ -326,7 +326,7 @@
   function clearError() { errBox.textContent = ''; errBox.classList.remove('is-visible'); }
   $('calc-example').addEventListener('click', function () {
     $('valor').value = '1';
-    $('de').value = 'alqueire_paulista';
+    $('de').value = 'tonde_land';
     $('para').value = 'hektar';
     compute();
   });
@@ -352,7 +352,14 @@
     html += '<div class="result__body">';
     html += '<div class="result__main">' + (Fmt.num(r.resultado, 4)) + '</div>';
       html += '<div class="result__metrics">' + '<div class="metric"><div class="metric__label">I hektar</div>' + '<div class="metric__value">' + (Fmt.num(r.emHektars, 4) + ' ha') + '</div>'  + '</div>' + '<div class="metric"><div class="metric__label">I kvadratmeter</div>' + '<div class="metric__value">' + (Fmt.int(r.emM2) + ' m²') + '</div>'  + '</div>' + '</div>';
-    html += '<div class="result__interpretation"><p>' + ('Alqueire bruges ikke i Danmark, kun medtaget som reference for brasilianske kilder. Paulista har 2,42 ha, mineiro og goiano 4,84 ha, og baiano 9,68 ha. Bekræft det lokale mål i tvivlstilfælde.') + '</p></div>';
+    /* A nota seguia o alqueire em TODA conversão, inclusive em tønde land
+       para hektar, que é a conta que o público daqui faz. Agora ela segue as
+       unidades que o leitor escolheu. */
+    var BR = /^(alqueire|tarefa)/;
+    var nota = (BR.test($('de').value) || BR.test($('para').value))
+      ? 'Alqueire og tarefa bruges ikke i Danmark og er kun med som reference for brasilianske kilder. Paulista har 2,42 ha, mineiro og goiano 4,84 ha, og baiano 9,68 ha. Bekræft det lokale mål i tvivlstilfælde.'
+      : 'En tønde land er 5.516 m², altså 0,5516 hektar. Ældre dokumenter kan runde tal i tønder land groft af, så kontroller målet mod matriklen, når arealet skal bruges til en afregning.';
+    html += '<div class="result__interpretation"><p>' + nota + '</p></div>';
     html += '</div>';
     result.innerHTML = html;
     result.hidden = false;
