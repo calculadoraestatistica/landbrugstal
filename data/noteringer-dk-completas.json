@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T07:06:12Z",
+  "updated_at": "2026-10-29T14:09:31Z",
   "country": "DK",
   "source": "Arla DK; Danish Crown; Danmarks Statistik (LPRIS10); Nationalbanken; SEGES Farmtal Online",
   "source_url": "https://dk",
@@ -73,7 +73,7 @@
     {
       "key": "grisenotering",
       "icon": "gris",
-      "name": "Grisenotering (basis 77-101,9 kg)",
+      "name": "Grisenotering (basis 74-98,9 kg)",
       "value": 7.5,
       "value_display": "7,50 DKK/kg",
       "unit": "DKK/kg",
