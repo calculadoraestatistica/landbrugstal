@@ -62,8 +62,8 @@
     wrap.setAttribute('aria-label', 'Cookieindstillinger');
     wrap.innerHTML = [
       '<div class="cookie-banner__inner">',
-      '  <p class="cookie-banner__text">Vi bruger cookies til annoncer (Google AdSense) og til at forbedre sitet. Læs mere i vores ',
-      '  <a href="/privacidade.html">privatlivspolitik</a>.</p>',
+      '  <p class="cookie-banner__text">Siderne med prisvidgets henter indhold fra TradingView, som kan sætte cookies. Dit valg gemmes lokalt i browseren. Mere står i ',
+      '  <a href="/privacidade.html">privatlivspolitikken</a>.</p>',
       '  <div class="cookie-banner__actions">',
       '    <button type="button" class="cc-btn cc-btn--ghost" data-cookie="deny">Afvis</button>',
       '    <button type="button" class="cc-btn cc-btn--primary" data-cookie="grant">Accepter</button>',
