@@ -1491,22 +1491,6 @@ table.data tbody tr:last-child td { border-bottom: 0; }
 .faq .faq__answer p:first-child { margin-top: .2rem; }
 
 /* ============== Ads ============== */
-.ad-slot {
-  margin-block: var(--sp-6);
-  text-align: center;
-}
-.ad-slot:empty { display: none; }
-.ad-slot:not(:empty)::before {
-  content: 'Publicidade';
-  display: block;
-  font-family: var(--font-mono);
-  font-size: .66rem;
-  text-transform: uppercase;
-  letter-spacing: var(--ls-label);
-  color: var(--c-muted);
-  margin-bottom: .35rem;
-  font-weight: 600;
-}
 
 /* ============== Related ============== */
 .related { margin-top: var(--sp-9); }
@@ -1862,13 +1846,7 @@ table.data tbody tr:last-child td { border-bottom: 0; }
   .site-header,
   .site-footer,
   .nav-toggle,
-  .ad-slot,
-  .skip-link,
-  .calculator__actions,
-  .cta-row,
-  .ticker-band,
-  .disclaimer-bar { display: none !important; }
-  body { background: #fff; color: #000; font-size: 11pt; }
+    body { background: #fff; color: #000; font-size: 11pt; }
   .container { max-width: 100%; padding: 0; }
   .calculator,
   .result,

@@ -32,26 +32,6 @@
   var y = document.querySelectorAll('[data-year]');
   for (var i = 0; i < y.length; i++) y[i].textContent = new Date().getFullYear();
 
-  /* --- Anúncios (AdSense) ------------------------------------------------ */
-  /* A biblioteca do AdSense é carregada diretamente no <head> de cada página.
-     Este bloco apenas cria as unidades de anúncio manuais nos espaços
-     .ad-slot quando um ID do AdSense estiver definido em config.js. */
-  var cfg = window.SITE_CONFIG || {};
-  if (cfg.adsenseClient) {
-    var slots = document.querySelectorAll('.ad-slot');
-    for (var s = 0; s < slots.length; s++) {
-      var ins = document.createElement('ins');
-      ins.className = 'adsbygoogle';
-      ins.style.display = 'block';
-      ins.setAttribute('data-ad-client', cfg.adsenseClient);
-      ins.setAttribute('data-ad-format', 'auto');
-      ins.setAttribute('data-full-width-responsive', 'true');
-      var unit = slots[s].getAttribute('data-ad-slot');
-      if (unit) ins.setAttribute('data-ad-slot', unit);
-      slots[s].appendChild(ins);
-      try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
-    }
-  }
 
   /* --- Busca de calculadoras (páginas de área) -------------------------- */
   var search = document.getElementById('calc-search');

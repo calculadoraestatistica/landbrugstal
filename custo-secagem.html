@@ -2,7 +2,6 @@
 <html lang="da-DK">
 <head>
 <meta charset="UTF-8"><meta name="google-adsense-account" content="ca-pub-7516029395999799"><meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7516029395999799" crossorigin="anonymous"></script>
 <title>Tørring af korn: pris pr. tons og pr. hkg | Landbrugstal</title>
 <meta name="description" content="Beregn hvad tørringen koster pr. tons, pr. hkg og for hele partiet ud fra vandprocent ind og ud. Vægttabet ved tørring regnes med i prisen.">
 <link rel="canonical" href="https://landbrugstal.dk/custo-secagem.html">
@@ -63,15 +62,6 @@
 <fieldset class="field-group"><legend>Mængde og fugtighed</legend><div class="field-row"><div class="field"><label for="pesoEntrada">Mængde ind</label><input class="input" id="pesoEntrada" type="text" inputmode="decimal" placeholder="Eks.: 100"></div><div class="field"><label for="unidade">Enhed</label><select class="input" id="unidade"><option value="t">tons</option><option value="hkgs">hkg</option></select></div></div><div class="field-row"><div class="field"><label for="umidadeInicial">Indgangsfugtighed</label><div class="input-affix"><input class="input" id="umidadeInicial" type="text" inputmode="decimal" placeholder="18"><span class="input-affix__unit">%</span></div></div><div class="field"><label for="umidadeFinal">Slutfugtighed</label><div class="input-affix"><input class="input" id="umidadeFinal" type="text" inputmode="decimal" placeholder="13"><span class="input-affix__unit">%</span></div></div></div></fieldset>
 <fieldset class="field-group"><legend>Omkostning</legend><div class="field-row"><div class="field"><label for="omkostningUnitario">Enhedsomkostning</label><div class="input-affix"><input class="input" id="omkostningUnitario" type="text" inputmode="decimal" placeholder="Eks.: 45"><span class="input-affix__unit">kr</span></div></div><div class="field"><label for="modoOmkostning">Omkostningsgrundlag</label><select class="input" id="modoOmkostning"><option value="tonelada_entrada">kr/t ind</option><option value="tonelada_agua">kr/t fjernet vand</option></select></div></div><div class="field"><label for="pesoHkg">Vægt pr. hkg</label><div class="input-affix"><input class="input" id="pesoHkg" type="text" inputmode="decimal" placeholder="60"><span class="input-affix__unit">kg</span></div></div></fieldset>
 <p class="field-error" id="calc-error" role="alert"></p><div class="calculator__actions"><button class="btn btn--primary btn--lg" type="submit">Beregn tørring</button><button class="btn btn--ghost" type="button" id="calc-example">Udfyld med eksempel</button></div><section class="result" id="calc-result" hidden aria-live="polite"></section></form>
-<div class="ad-slot" data-ad-slot=""></div><article class="prose">
-      <h2>Hvad bruges den til i praksis</h2>
-      <p>Denne beregner estimerer slutvægten, det fjernede vand og tørringsomkostningen, når et kornparti tørres ned fra høstens vandprocent til basis. Den bruges til at sammenligne eget tørreri med grovvareselskabets tørringsgebyr, til at forstå fradragene på afregningen, når kornet leveres for vådt, og til at beslutte, om det kan betale sig at høste tidligt ved højere vandprocent mod en større tørringsregning. Fordi vægten falder, når vandet fjernes, er det vigtigt at regne omkostningen om til den færdige, tørre vare. Det er den, der sælges.</p>
-
-      <h2>Input, enheder og omregninger</h2>
-      <p>Du indtaster mængden ind i tørreriet i tons eller hkg, 1 ton = 10 hkg à 100 kg, indgangs- og slutvandprocenten samt enhedsomkostningen. Omkostningen kan angives pr. ton indvejet vare eller pr. ton fjernet vand; begge modeller bruges i praksis. Vægten pr. hkg kan justeres til udenlandske sækstandarder. Beregningen bygger på, at tørstoffet er konstant, mens vandet forsvinder.</p>
-
-      <h2>Formel og gennemregnet eksempel</h2>
-      <div class="formula">Slutvægt = indvejet vægt × (100 − vand ind) ÷ (100 − vand slut)</div>
       <p>Gennemregnet eksempel: 100 tons hvede høstes ved 18 % vand og tørres ned til basis 14,5 %. Slutvægt: 100 × 82 ÷ 85,5 = <strong>95,91 tons</strong>, altså 4,09 tons fjernet vand: et svind på 4,09 %. Koster tørringen 45 kr pr. ton indvejet, bliver regningen 100 × 45 = 4.500 kr. Omregnet til den færdige vare er det 4.500 ÷ 95,91 = <strong>46,92 kr/t</strong>, cirka 4,69 kr/hkg. Afregnes der i stedet pr. ton fjernet vand, fx 900 kr/t vand, bliver det 4,09 × 900 = 3.681 kr.</p>
 
       <h2>Praktiske referenceværdier</h2>
