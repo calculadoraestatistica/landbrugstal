@@ -2259,3 +2259,23 @@ input,select,textarea{transition:border-color 140ms var(--ease-out),box-shadow 1
 .aff__d{margin:.7rem 0 .85rem;font-size:.95rem;font-weight:500;opacity:1;border-bottom:1px solid rgba(0,0,0,.12);padding-bottom:.6rem;}
 @media (max-width:640px){.aff{padding:.85rem .95rem;}}
 /* afiliado:css:fim */
+
+/* tv-gate:inicio */
+/* Porta de consentimento do widget da TradingView. O widget vem de terceiro e
+   define cookie, entao ele so carrega depois do clique. */
+.tv-gate{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:.75rem;padding:1.5rem 1.1rem;text-align:center;border:1px dashed rgba(0,0,0,.18);
+  border-radius:10px;background:rgba(0,0,0,.015);min-height:160px;}
+.tv-gate__tekst{margin:0;max-width:46ch;font-size:.92rem;line-height:1.5;opacity:.85;}
+.tv-gate__knap{cursor:pointer;font:inherit;font-weight:600;font-size:.92rem;
+  border-radius:8px;padding:.6rem 1.1rem;border:1px solid currentColor;
+  background:transparent;transition:transform 160ms cubic-bezier(.23,1,.32,1);}
+.tv-gate__knap:active{transform:scale(.97);}
+@media (prefers-reduced-motion:reduce){.tv-gate__knap{transition:none;}}
+/* O agrododia desenha um esqueleto animado com o texto "Carregando
+   cotações…" enquanto o widget nao chegou. Com a porta na frente, nada esta
+   carregando, e o texto seria mentira. Entao o esqueleto fica quieto
+   enquanto a porta estiver visivel. */
+.tv-skeleton:has(.tv-gate:not([hidden])){background:transparent;animation:none;}
+.tv-skeleton:has(.tv-gate:not([hidden]))::before{content:none;}
+/* tv-gate:fim */
