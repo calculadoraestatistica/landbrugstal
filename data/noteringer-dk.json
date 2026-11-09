@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T00:07:16Z",
+  "updated_at": "2026-11-09T07:06:02Z",
   "country": "DK",
   "source": "Arla DK; Danish Crown; Danmarks Statistik (LPRIS10); Nationalbanken; SEGES Farmtal Online",
   "source_url": "https://dk",
@@ -37,11 +37,11 @@
       "value": 340.1,
       "value_display": "340,10 øre/kg",
       "unit": "øre/kg",
-      "date": "2026-11-06",
+      "date": "2026-11-09",
       "source_url": "https://catalog.arla.com/ARLA/milk-price/arla-dk/",
       "source_name": "Arla DK",
       "stale": false,
-      "last_seen_date": "2026-11-06"
+      "last_seen_date": "2026-11-09"
     },
     {
       "key": "grisenotering",
@@ -50,11 +50,11 @@
       "value": 7.5,
       "value_display": "7,50 DKK/kg",
       "unit": "DKK/kg",
-      "date": "2026-11-06",
+      "date": "2026-11-09",
       "source_url": "https://ejer.danishcrown.com/da-dk/andelsejere/gris/notering/aktuel-grisenotering/",
       "source_name": "Danish Crown",
       "stale": false,
-      "last_seen_date": "2026-11-06"
+      "last_seen_date": "2026-11-09"
     }
   ]
 }
