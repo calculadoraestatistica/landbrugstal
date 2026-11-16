@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-14T00:17:47Z",
+  "updated_at": "2026-11-16T07:06:02Z",
   "country": "DK",
   "source": "Arla DK; Danish Crown; Danmarks Statistik (LPRIS10); Nationalbanken; SEGES Farmtal Online",
   "source_url": "https://dk",
@@ -51,25 +51,24 @@
       "source_name": "SEGES Farmtal Online",
       "key": "majs",
       "stale": true,
-      "date": "2026-11-14",
+      "date": "2026-11-16",
       "value": 178.4,
       "value_display": "178,40 DKK/hkg",
       "last_seen_date": "2026-06-05",
       "last_seen_source": "SEGES Farmtal Online"
     },
     {
+      "key": "maelkepris",
       "icon": "maelk",
       "name": "Mælkepris (Arla DK, konventionel)",
-      "unit": "øre/kg",
-      "source_url": "https://catalog.arla.com/ARLA/milk-price/arla-dk/",
-      "source_name": "Arla DK",
-      "key": "maelkepris",
-      "stale": true,
-      "date": "2026-11-14",
       "value": 340.1,
       "value_display": "340,10 øre/kg",
-      "last_seen_date": "2026-11-13",
-      "last_seen_source": "Arla DK"
+      "unit": "øre/kg",
+      "date": "2026-11-16",
+      "source_url": "https://catalog.arla.com/ARLA/milk-price/arla-dk/",
+      "source_name": "Arla DK",
+      "stale": false,
+      "last_seen_date": "2026-11-16"
     },
     {
       "key": "grisenotering",
@@ -78,11 +77,11 @@
       "value": 7.5,
       "value_display": "7,50 DKK/kg",
       "unit": "DKK/kg",
-      "date": "2026-11-14",
+      "date": "2026-11-16",
       "source_url": "https://ejer.danishcrown.com/da-dk/andelsejere/gris/notering/aktuel-grisenotering/",
       "source_name": "Danish Crown",
       "stale": false,
-      "last_seen_date": "2026-11-14"
+      "last_seen_date": "2026-11-16"
     },
     {
       "key": "kreaturnotering",
@@ -91,11 +90,11 @@
       "value": 40.04,
       "value_display": "40,04 DKK/kg",
       "unit": "DKK/kg",
-      "date": "2026-11-14",
+      "date": "2026-11-16",
       "source_url": "https://ejer.danishcrown.com/da-dk/andelsejere/kreatur/notering/aktuel-kreaturnotering/",
       "source_name": "Danish Crown",
       "stale": false,
-      "last_seen_date": "2026-11-14"
+      "last_seen_date": "2026-11-16"
     },
     {
       "key": "eur_dkk",
@@ -104,11 +103,11 @@
       "value": 7.475599999999999,
       "value_display": "7,48 DKK (per 1 EUR)",
       "unit": "DKK",
-      "date": "2026-11-14",
+      "date": "2026-11-16",
       "source_url": "https://www.nationalbanken.dk/",
       "source_name": "Nationalbanken",
       "stale": false,
-      "last_seen_date": "2026-11-14"
+      "last_seen_date": "2026-11-16"
     },
     {
       "key": "usd_dkk",
@@ -117,11 +116,11 @@
       "value": 6.763999999999999,
       "value_display": "6,76 DKK (per 1 USD)",
       "unit": "DKK",
-      "date": "2026-11-14",
+      "date": "2026-11-16",
       "source_url": "https://www.nationalbanken.dk/",
       "source_name": "Nationalbanken",
       "stale": false,
-      "last_seen_date": "2026-11-14"
+      "last_seen_date": "2026-11-16"
     }
   ]
 }
