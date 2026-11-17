@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T02:26:23Z",
+  "updated_at": "2026-11-17T07:06:14Z",
   "country": "DK",
   "source": "Arla DK; Danish Crown; Danmarks Statistik (LPRIS10); Nationalbanken; SEGES Farmtal Online",
   "source_url": "https://dk",
@@ -8,40 +8,40 @@
       "key": "hvede",
       "icon": "hvede",
       "name": "Hvede",
-      "value": 145.0,
-      "value_display": "145,00 DKK/hkg",
+      "value": 142.0,
+      "value_display": "142,00 DKK/hkg",
       "unit": "DKK/hkg",
-      "date": "2026-08-01",
+      "date": "2026-09-01",
       "source_url": "https://www.statistikbanken.dk/LPRIS10",
       "source_name": "Danmarks Statistik (LPRIS10)",
       "stale": false,
-      "last_seen_date": "2026-08-01"
+      "last_seen_date": "2026-09-01"
     },
     {
       "key": "byg",
       "icon": "byg",
       "name": "Byg",
-      "value": 140.0,
-      "value_display": "140,00 DKK/hkg",
+      "value": 141.0,
+      "value_display": "141,00 DKK/hkg",
       "unit": "DKK/hkg",
-      "date": "2026-08-01",
+      "date": "2026-09-01",
       "source_url": "https://www.statistikbanken.dk/LPRIS10",
       "source_name": "Danmarks Statistik (LPRIS10)",
       "stale": false,
-      "last_seen_date": "2026-08-01"
+      "last_seen_date": "2026-09-01"
     },
     {
       "key": "raps",
       "icon": "raps",
       "name": "Raps",
-      "value": 370.0,
-      "value_display": "370,00 DKK/hkg",
+      "value": 371.0,
+      "value_display": "371,00 DKK/hkg",
       "unit": "DKK/hkg",
-      "date": "2026-08-01",
+      "date": "2026-09-01",
       "source_url": "https://www.statistikbanken.dk/LPRIS10",
       "source_name": "Danmarks Statistik (LPRIS10)",
       "stale": false,
-      "last_seen_date": "2026-08-01"
+      "last_seen_date": "2026-09-01"
     },
     {
       "icon": "majs",
