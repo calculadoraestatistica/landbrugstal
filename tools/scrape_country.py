@@ -61,16 +61,27 @@ def build_fallback(key: str, cfg: dict, last_known: dict[str, Any] | None = None
     base.setdefault("source_url", "")
     base.setdefault("source_name", "")
     base["stale"] = True
-    base["date"] = datetime.now(timezone.utc).date().isoformat()
 
     if last_known and last_known.get("value") is not None:
         base["value"] = last_known["value"]
         base["value_display"] = last_known.get("value_display") or base.get("value_display") or "—"
         base["last_seen_date"] = last_known.get("last_seen_date") or last_known.get("date") or ""
         base["last_seen_source"] = last_known.get("source_name") or base.get("source_name")
+        # "date" skal være tallets egen dato, ikke dagens.
+        #
+        # Før stod her dagens dato, også når værdien var måneder gammel:
+        # Foderhvede stod med værdi fra 5. juni og "date" 21. november.
+        # Frontenden skjulte det, fordi den viser last_seen_date for stale
+        # rækker, men JSON-filen er også et offentligt API, og den løj for
+        # enhver anden læser. Nu bærer feltet den dato, tallet faktisk har.
+        base["date"] = base["last_seen_date"] or datetime.now(timezone.utc).date().isoformat()
     else:
         base.setdefault("value", None)
         base.setdefault("value_display", "—")
+        # Uden en kendt værdi er der ingen dato at bære: dagens dato siger
+        # kun, hvornår forsøget blev gjort, og rækken viser alligevel
+        # "live ej tilgængelig" i stedet for et tal.
+        base["date"] = datetime.now(timezone.utc).date().isoformat()
 
     return base
 

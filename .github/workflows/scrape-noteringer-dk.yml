@@ -48,6 +48,14 @@ jobs:
         run: |
           python tools/scrape_country.py --set ${{ github.event.inputs.which_set || 'all' }} --verbose
 
+      # Skriver data/kommentar-dk.json ud fra den serie, scraperen lige har
+      # opdateret. Egen udregning paa egne tal, ikke hentet nogen steder fra.
+      # Fejler den, skal selve noteringerne stadig ud: continue-on-error.
+      - name: Generate commentary
+        continue-on-error: true
+        run: |
+          python tools/kommentar.py
+
       - name: Show resulting data
         run: |
           ls -la data/
@@ -70,7 +78,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/noteringer-dk.json data/noteringer-dk-completas.json data/noteringer-historik.json
+          git add data/noteringer-dk.json data/noteringer-dk-completas.json data/noteringer-historik.json data/kommentar-dk.json
           # Debug dumps stay out of the repo — they live in workflow artifacts only.
           rm -f data/_debug_*.txt
           if git diff --cached --quiet; then
@@ -93,7 +101,7 @@ jobs:
               git fetch origin main
               git reset --hard origin/main
               python tools/scrape_country.py --set all
-              git add data/noteringer-dk.json data/noteringer-dk-completas.json data/noteringer-historik.json
+              git add data/noteringer-dk.json data/noteringer-dk-completas.json data/noteringer-historik.json data/kommentar-dk.json
               if git diff --cached --quiet; then
                 echo "Nada a enviar apos realinhar - remoto ja atualizado."
                 exit 0

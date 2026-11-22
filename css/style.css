@@ -2279,3 +2279,17 @@ input,select,textarea{transition:border-color 140ms var(--ease-out),box-shadow 1
 .tv-skeleton:has(.tv-gate:not([hidden])){background:transparent;animation:none;}
 .tv-skeleton:has(.tv-gate:not([hidden]))::before{content:none;}
 /* tv-gate:fim */
+
+/* kommentar:inicio */
+/* Kommentaren under noteringerne. Teksten er regnet ud af sitets egen serie
+   (tools/kommentar.py), ikke hentet nogen steder fra, saa den faar samme
+   laesebredde som den oevrige prosa og ikke et kort-udseende, der ville faa
+   den til at ligne et indlejret widget fra en anden. */
+.kom{margin:1.6rem 0 0;padding:1.25rem 1.3rem;border:1px solid rgba(0,0,0,.1);
+  border-radius:10px;background:rgba(0,0,0,.015);}
+.kom__titel{margin:0 0 .6rem;font-size:1.08rem;line-height:1.3;}
+.kom__lead{margin:0 0 .85rem;font-weight:600;max-width:62ch;}
+.kom__liste{margin:0;padding-left:1.15rem;display:flex;flex-direction:column;gap:.5rem;}
+.kom__punkt{max-width:62ch;line-height:1.5;}
+.kom__kilde{margin:1rem 0 0;font-size:.86rem;line-height:1.5;opacity:.75;max-width:70ch;}
+/* kommentar:fim */
