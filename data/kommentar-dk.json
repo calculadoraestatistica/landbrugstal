@@ -1,8 +1,8 @@
 {
-  "genereret": "2026-11-23T07:05:59Z",
+  "genereret": "2026-11-23T15:06:37Z",
   "data_til_og_med": "2026-11-23",
   "kilde": "Beregnet af landbrugstal.dk ud fra sitets egen tidsserie. Tallene stammer fra Danmarks Statistik, Arla, Danish Crown og Nationalbanken; sammenstillingen og udregningen er sitets egen.",
-  "tvaers": "Den seneste måned er USD/DKK steget 1,84 procent, mens mælkeprisen er faldet 1,08 procent.",
+  "tvaers": "Den seneste måned er USD/DKK steget 2,32 procent, mens mælkeprisen er faldet 1,08 procent.",
   "serier": [
     {
       "key": "maelkepris",
@@ -64,15 +64,15 @@
       "key": "usd_dkk",
       "navn": "USD/DKK",
       "enhed": "DKK",
-      "vaerdi": 6.8013,
+      "vaerdi": 6.832999999999999,
       "serie_start": "2026-06-19",
       "serie_punkter": 90,
-      "sidst_aendret": "2026-11-20",
-      "dage_uaendret": 3,
-      "aendring_30d_pct": 1.84,
-      "hoejeste_i_serien": false,
+      "sidst_aendret": "2026-11-23",
+      "dage_uaendret": 0,
+      "aendring_30d_pct": 2.32,
+      "hoejeste_i_serien": true,
       "laveste_i_serien": false,
-      "tekst": "USD/DKK er 6,8 DKK. Over den seneste måned er den steget 1,84 procent."
+      "tekst": "USD/DKK gik op den 23. november, fra 6,8 til 6,83 DKK. Over den seneste måned er den steget 2,32 procent. Det er det højeste niveau, siden serien her begyndte 19. juni."
     }
   ]
 }
