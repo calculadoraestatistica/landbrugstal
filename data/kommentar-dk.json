@@ -1,8 +1,8 @@
 {
-  "genereret": "2026-11-27T02:08:24Z",
+  "genereret": "2026-11-27T11:05:58Z",
   "data_til_og_med": "2026-11-27",
   "kilde": "Beregnet af landbrugstal.dk ud fra sitets egen tidsserie. Tallene stammer fra Danmarks Statistik, Arla, Danish Crown og Nationalbanken; sammenstillingen og udregningen er sitets egen.",
-  "tvaers": "Den seneste måned er USD/DKK steget 1,43 procent, mens mælkeprisen er faldet 1,08 procent.",
+  "tvaers": "Den seneste måned er kreaturnoteringen steget 1,63 procent, mens mælkeprisen er faldet 1,08 procent.",
   "serier": [
     {
       "key": "maelkepris",
@@ -36,15 +36,15 @@
       "key": "kreaturnotering",
       "navn": "Kreaturnoteringen",
       "enhed": "DKK/kg",
-      "vaerdi": 40.04,
+      "vaerdi": 40.49,
       "serie_start": "2026-06-09",
-      "serie_punkter": 37,
-      "sidst_aendret": "2026-10-30",
-      "dage_uaendret": 24,
-      "aendring_30d_pct": 0.5,
+      "serie_punkter": 38,
+      "sidst_aendret": "2026-11-27",
+      "dage_uaendret": 0,
+      "aendring_30d_pct": 1.63,
       "hoejeste_i_serien": false,
       "laveste_i_serien": false,
-      "tekst": "Kreaturnoteringen har stået uændret på 40,04 DKK/kg siden 30. oktober, altså 24 dage. Det var en stigning på 0,5 procent, og det er hele bevægelsen den seneste måned."
+      "tekst": "Kreaturnoteringen gik op den 27. november, fra 40,04 til 40,49 DKK/kg. Over den seneste måned er den steget 1,63 procent."
     },
     {
       "key": "eur_dkk",
