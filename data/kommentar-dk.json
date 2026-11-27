@@ -1,5 +1,5 @@
 {
-  "genereret": "2026-11-27T11:05:58Z",
+  "genereret": "2026-11-27T15:06:07Z",
   "data_til_og_med": "2026-11-27",
   "kilde": "Beregnet af landbrugstal.dk ud fra sitets egen tidsserie. Tallene stammer fra Danmarks Statistik, Arla, Danish Crown og Nationalbanken; sammenstillingen og udregningen er sitets egen.",
   "tvaers": "Den seneste måned er kreaturnoteringen steget 1,63 procent, mens mælkeprisen er faldet 1,08 procent.",
@@ -64,15 +64,15 @@
       "key": "usd_dkk",
       "navn": "USD/DKK",
       "enhed": "DKK",
-      "vaerdi": 6.8097,
+      "vaerdi": 6.8209,
       "serie_start": "2026-06-19",
       "serie_punkter": 94,
-      "sidst_aendret": "2026-11-26",
-      "dage_uaendret": 1,
-      "aendring_30d_pct": 1.43,
+      "sidst_aendret": "2026-11-27",
+      "dage_uaendret": 0,
+      "aendring_30d_pct": 1.6,
       "hoejeste_i_serien": false,
       "laveste_i_serien": false,
-      "tekst": "USD/DKK gik ned den 26. november, fra 6,84 til 6,81 DKK. Over den seneste måned er den steget 1,43 procent."
+      "tekst": "USD/DKK gik op den 27. november, fra 6,81 til 6,82 DKK. Over den seneste måned er den steget 1,6 procent."
     }
   ]
 }
