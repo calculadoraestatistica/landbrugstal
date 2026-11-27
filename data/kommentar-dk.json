@@ -1,8 +1,8 @@
 {
-  "genereret": "2026-11-26T15:06:19Z",
-  "data_til_og_med": "2026-11-26",
+  "genereret": "2026-11-27T02:08:24Z",
+  "data_til_og_med": "2026-11-27",
   "kilde": "Beregnet af landbrugstal.dk ud fra sitets egen tidsserie. Tallene stammer fra Danmarks Statistik, Arla, Danish Crown og Nationalbanken; sammenstillingen og udregningen er sitets egen.",
-  "tvaers": "Den seneste måned er USD/DKK steget 1,59 procent, mens mælkeprisen er faldet 1,08 procent.",
+  "tvaers": "Den seneste måned er USD/DKK steget 1,43 procent, mens mælkeprisen er faldet 1,08 procent.",
   "serier": [
     {
       "key": "maelkepris",
@@ -10,13 +10,13 @@
       "enhed": "øre/kg",
       "vaerdi": 340.1,
       "serie_start": "2026-06-19",
-      "serie_punkter": 92,
+      "serie_punkter": 93,
       "sidst_aendret": "2026-10-30",
-      "dage_uaendret": 27,
+      "dage_uaendret": 28,
       "aendring_30d_pct": -1.08,
       "hoejeste_i_serien": false,
       "laveste_i_serien": false,
-      "tekst": "Mælkeprisen har stået uændret på 340,1 øre/kg siden 30. oktober, altså 27 dage. Det var et fald på 1,08 procent, og det er hele bevægelsen den seneste måned."
+      "tekst": "Mælkeprisen har stået uændret på 340,1 øre/kg siden 30. oktober, altså 28 dage. Det var et fald på 1,08 procent, og det er hele bevægelsen den seneste måned."
     },
     {
       "key": "grisenotering",
@@ -24,13 +24,13 @@
       "enhed": "DKK/kg",
       "vaerdi": 7.5,
       "serie_start": "2026-06-18",
-      "serie_punkter": 88,
+      "serie_punkter": 89,
       "sidst_aendret": "2026-10-08",
-      "dage_uaendret": 49,
+      "dage_uaendret": 50,
       "aendring_30d_pct": 0.0,
       "hoejeste_i_serien": false,
       "laveste_i_serien": false,
-      "tekst": "Grisenoteringen har stået uændret på 7,5 DKK/kg siden 8. oktober, altså 49 dage."
+      "tekst": "Grisenoteringen har stået uændret på 7,5 DKK/kg siden 8. oktober, altså 50 dage."
     },
     {
       "key": "kreaturnotering",
@@ -52,9 +52,9 @@
       "enhed": "DKK",
       "vaerdi": 7.4737,
       "serie_start": "2026-06-19",
-      "serie_punkter": 93,
+      "serie_punkter": 94,
       "sidst_aendret": "2026-11-26",
-      "dage_uaendret": 0,
+      "dage_uaendret": 1,
       "aendring_30d_pct": -0.01,
       "hoejeste_i_serien": false,
       "laveste_i_serien": false,
@@ -66,13 +66,13 @@
       "enhed": "DKK",
       "vaerdi": 6.8097,
       "serie_start": "2026-06-19",
-      "serie_punkter": 93,
+      "serie_punkter": 94,
       "sidst_aendret": "2026-11-26",
-      "dage_uaendret": 0,
-      "aendring_30d_pct": 1.59,
+      "dage_uaendret": 1,
+      "aendring_30d_pct": 1.43,
       "hoejeste_i_serien": false,
       "laveste_i_serien": false,
-      "tekst": "USD/DKK gik ned den 26. november, fra 6,84 til 6,81 DKK. Over den seneste måned er den steget 1,59 procent."
+      "tekst": "USD/DKK gik ned den 26. november, fra 6,84 til 6,81 DKK. Over den seneste måned er den steget 1,43 procent."
     }
   ]
 }
